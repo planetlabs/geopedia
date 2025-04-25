@@ -1,0 +1,87 @@
+@external *;
+/*** css fix for javascript calculating ... extends nav_.css ***/ 
+.sgwebgis-mapToolbar {
+	right: 0px;
+	left: auto !important;  
+}
+@sprite table.sgwebui-toolbar-top-right,
+table.sgwebui-toolbar-top-left,
+table.sgwebui-toolbar {
+	gwt-image:"toolbar";
+}
+
+@sprite div.sgwebui-toolbar-first-top-right,
+.sgwebui-toolbar-first {
+	gwt-image:"toolbarRight";
+}
+table.sgwebui-toolbar-top-right > tbody > tr > td,
+table.sgwebui-toolbar-top-left > tbody > tr > td,
+.sgwebui-toolbar > tbody > tr > td {
+	vertical-align: top !important;
+}
+
+@sprite div.sgwebui-toolbar-last-top-right,
+.sgwebui-toolbar-last {
+	width: 8px;
+	gwt-image:"toolbar";
+}
+
+
+
+.sgwebui-toolbar div.gwt-PushButton,
+.sgwebui-toolbar div.gwt-ToggleButton {
+	background: none;
+	border: none;
+	padding: 1px;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.sgwebui-toolbar div.gwt-PushButton-up-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-up-hovering {
+	background: #fff;
+}
+
+.sgwebui-toolbar .gwt-ToggleButton img, 
+.sgwebui-toolbar .gwt-PushButton img {
+	margin: 4px;
+	padding: 0;
+}
+
+.sgwebui-toolbar div.gwt-PushButton-down,
+.sgwebui-toolbar div.gwt-PushButton-down-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-down,
+.sgwebui-toolbar div.gwt-ToggleButton-down-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-down-disabled {
+	background: secondColor;	
+}
+
+.sgwebui-toolbar div.gwt-PushButton-up-disabled,
+.sgwebui-toolbar div.gwt-PushButton-down-disabled,
+.sgwebui-toolbar div.gwt-ToggleButton-up-disabled {
+	opacity: .5;
+	filter: literal("alpha(opacity=50)");
+}
+
+div.cosylab-ModeSelectButton-SelectionPanel {
+	z-index: 1000;	
+}
+
+.sgwebui-toolbar .optionsPanel > div {
+	display: inline-block;
+	overflow: hidden;
+}
+@sprite .sgwebui-toolbar .optionsButton {
+	margin-top: 8px;
+	margin-right: 4px;
+	vertical-align: top;
+	cursor: pointer;
+	gwt-image: "optionsButton";
+}
+.sgwebui-toolbar .optionsButton div {display: none; }
+@sprite .sgwebui-toolbar .optionsButton:hover {
+	gwt-image: "optionsButtonOn";
+}

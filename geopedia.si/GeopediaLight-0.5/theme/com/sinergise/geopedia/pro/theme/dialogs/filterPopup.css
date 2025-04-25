@@ -1,0 +1,48 @@
+@external *;
+
+.gwt-DialogBox.filterPopupPanel .dialogContent {
+	padding: 7px 7px 50px 7px;
+	height: auto;
+}
+.gwt-DialogBox.filterPopupPanel .dialogContent .filtersPanel {
+	height: 100%;
+	overflow: auto;
+}
+.filtersPanel > div {
+	white-space: nowrap;
+}
+.filterPopupPanel .gwt-InlineLabel,
+.filterPopupPanel .gwt-CheckBox > label {
+	width: 200px;
+	text-align: right;
+	margin-right: 7px;
+	display: inline-block;
+}
+.filterPopupPanel .gwt-TextBox,
+.filterPopupPanel .sgwebui-TextEditor,
+.filterPopupPanel select {
+	width: 100px;
+	margin-left: 5px;
+}
+.filterPopupPanel select {
+	width: 80px;
+}
+.filterPopupPanel select.foreignId {
+	width: 112px;	
+}
+.filterPopupPanel .btnPanel {
+	position: absolute;
+	left: 227px;
+	bottom: 20px;
+}
+.filterPopupPanel .gwt-CheckBox > label {
+	float: left;
+}
+.filterPopupPanel .dialogContent > div > div > div > * {
+	vertical-align: middle;
+}
+.filterPopupPanel .btnPanel > * {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 4px;
+}

@@ -1,0 +1,57 @@
+@external *;
+
+.sgwebui-decoratedSplitPanel-SPLIT-NORTH,
+.sgwebui-decoratedSplitPanel-SPLIT-SOUTH,
+.sgwebui-decoratedSplitPanel-SPLIT-WEST,
+.sgwebui-decoratedSplitPanel-SPLIT-EAST {
+	overflow: visible !important;
+	background: #fff;
+}
+/********* HORIZONTAL SPLITTER ***********/
+.HDragger {
+	top: 50% !important;
+	bottom: auto !important;
+	margin-top: -41px;
+	overflov: visible;
+}
+
+.sgwebui-decoratedSplitPanel-SPLIT-EAST {
+	border-left: 1px solid #aaa;
+}
+.sgwebui-decoratedSplitPanel-SPLIT-WEST {
+	border-right: 1px solid #aaa;
+}
+@sprite .sgwebui-decoratedSplitPanel-SPLIT-WEST .HDragger {
+	gwt-image: "dragWest";
+	margin-left: 4px;
+	cursor: e-resize;
+	left: -4px !important;
+}
+@sprite .sgwebui-decoratedSplitPanel-SPLIT-EAST .HDragger {
+	gwt-image: "dragEast";
+	margin-left: -8px;
+	cursor: e-resize;
+}
+/********* VERTICAL SPLITTER ***********/
+.VDragger {
+	left: 50% !important;
+	margin-left: -41px;
+	right: auto !important;
+}
+.sgwebui-decoratedSplitPanel-SPLIT-NORTH {
+	border-bottom: 1px solid #aaa;
+}
+.sgwebui-decoratedSplitPanel-SPLIT-SOUTH {	
+	border-top: 1px solid #aaa;
+}
+@sprite .sgwebui-decoratedSplitPanel-SPLIT-SOUTH .VDragger {
+	gwt-image: "dragSouth";
+	cursor: n-resize;
+	margin-top: -9px;
+}
+@sprite .sgwebui-decoratedSplitPanel-SPLIT-NORTH .VDragger {
+	gwt-image: 'dragNorth';
+	margin-top: 4px;
+	cursor: n-resize;
+	top: -4px !important;
+}

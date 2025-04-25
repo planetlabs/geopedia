@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/common"/>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry excluding="com/sinergise/gwt/ui/public/**|com/sinergise/gwt/emul/" kind="src" path="src/gwt"/>
+	<classpathentry excluding="**" kind="src" path="src/gwt/com/sinergise/gwt/emul"/>
+	<classpathentry kind="src" path="src/theme"/>
+	<classpathentry kind="src" path="src/gwtext"/>
+	<classpathentry exported="true" kind="lib" path="/SineRepo/Web/gwt/2.4.0/lib/gwt-servlet.jar" sourcepath="/SineRepo/Web/gwt/2.4.0/lib/gwt-user.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.core.runtimeTarget/J2EE Runtime Library"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SGUtil-1.0"/>
+	<classpathentry kind="lib" path="/SineRepo/Util/apache-commons/fileupload/1.2.2/lib/commons-fileupload-1.2.2.jar" sourcepath="/SineRepo/Util/apache-commons/fileupload/1.2.2/src/commons-fileupload-1.2.2-src-java.zip"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/SineRepo/Web/gwt-visualization/1.1.2/gwt-visualization.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/SineRepo/Web/gwt-visualization/1.1.2/gwt-visualization-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/SineRepo/Web/gwt/2.4.0/lib/gwt-user.jar">
+		<accessrules>
+			<accessrule kind="accessible" pattern="**/junit/**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/SineRepo/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar" sourcepath="/SineRepo/Util/slf4j/1.6.1/src/slf4j-api-1.6.1-sources.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Misc/Hazelcast/3.2/lib/hazelcast-3.2.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Misc/Hazelcast/3.2/lib/hazelcast-client-3.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,137 @@
+@external *;
+
+/********** LAYER SELECTION DIALOG *************/
+.dialogLayers h1 {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.gwt-DialogBox.dialogLayers .wrapper > div.tableSelectorPanel {
+	bottom: 11px;
+    left: 15px;
+    position: absolute;
+    right: 11px;
+    top: 59px;
+    overflow: visible;
+}
+@if user.agent ie6 ie8 {
+	.gwt-DialogBox.dialogLayers .wrapper > div.tableSelectorPanel {margin: 15px 10px 10px; }
+	.gwt-DialogBox.dialogLayers .sgButton { margin-top: 10px; }
+}
+.dialogLayers .layerSelectionPanel {
+	height: 100%;
+}
+.gwt-DialogBox.dialogLayers .sgButton {
+	position: absolute;
+    right: 25px;
+    top: 26px;
+}
+.gwt-DialogBox.dialogLayers > .btnPanel {
+	bottom: 19px;
+    position: absolute;
+    right: 27px;
+}
+.dialogLayers > .btnPanel a {
+	margin: 0 3px;
+}
+.dialogLayers .filterPanel {
+	position: absolute;
+    right: 125px;
+    top: -33px;
+}
+.dialogLayers .filterPanel input {
+	margin-left: 8px;
+}
+.dialogLayers .layerSelectionPanel .categoryPanel {
+	bottom: 0;
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    width: 33%;
+    margin-left: -4px;
+    background: #eee;
+}
+.dialogLayers .layerSelectionPanel .categoryPanel > .gwt-Tree {
+	margin-right: 5px;
+}
+.dialogLayers .layerSelectionPanel .categoryPanel .category {
+	cursor: pointer;
+}
+.categoryPanel .gwt-Tree > .category {
+	padding: 0 0 0 20px !important;
+	margin-left: 20px;
+}
+.categoryPanel .gwt-Tree > .category > table {
+	margin-left: -16px;
+	font-weight: bold;
+}
+.categoryPanel .category.personal > div {
+	
+}
+.categoryPanel .gwt-TreeItem {
+	display: block !important;
+	padding: 3px 4px;
+	white-space: normal;
+}
+.categoryPanel .gwt-Tree .gwt-TreeItem:hover {
+	color: #0092ed;
+}
+.categoryPanel .gwt-Tree div.gwt-TreeItem-selected,
+.categoryPanel .gwt-Tree div.gwt-TreeItem-selected:hover {
+	background: #0092ed;
+	color: #fff;
+}
+.dialogLayers .layerSelectionPanel .tableList {
+	border-left: 1px solid #CCCCCC;
+    bottom: 0;
+    left: 33%;
+    position: absolute;
+    top: 0;
+    width: 67%;
+    margin-left: -4px;
+}
+.layerSelectionPanel .tableList .listPanel {
+	margin: 0 30px;
+	height: 100%;
+	overflow: auto;
+}
+
+.layerSelectionPanel .tableList .btnPanel .pagableArrow {
+	position: absolute;
+	width: 30px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	top: 0;
+	bottom: 0;
+	cursor: pointer;
+	left: 0;
+	transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-wekit-transition: all 0.4s ease;
+}
+.layerSelectionPanel .tableList .btnPanel .pagableArrow.next {
+	left: auto;
+	right: 0;
+}
+.layerSelectionPanel .tableList .btnPanel .pagableArrow img {
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	margin-top: -15px;
+}
+.layerSelectionPanel .tableList .btnPanel .pagableArrow:hover {
+	background: #eee;
+}
+.layerSelectionPanel .tableList .btnPanel .pagableArrow:active {
+	background: #bbb;
+	box-shadow: 0 2px 4px #aaa inset;
+}
+.layerSelectionPanel .tableList .btnPanel .pagableArrow.disabled {
+	background: none !important;
+	cursor: default;
+}
+.layerSelectionPanel .tableList .btnPanel .pagableArrow.disabled img {
+	opacity: .4;
+	filter: literal("alpha(opacity=40)");
+}

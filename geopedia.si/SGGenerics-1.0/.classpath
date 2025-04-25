@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/common"/>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry kind="src" path="src/gwt"/>
+	<classpathentry kind="src" path="src/theme"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SGUiElements-1.0"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SGUtil-1.0"/>
+	<classpathentry kind="lib" path="/SineRepo/Database/MySQL/5.0.8/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.core.runtimeTarget/J2EE Runtime Library"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/SineRepo/Util/apache-commons/fileupload/1.2.2/lib/commons-fileupload-1.2.2.jar" sourcepath="/SineRepo/Util/apache-commons/fileupload/1.2.2/src/commons-fileupload-1.2.2-src-java.zip"/>
+	<classpathentry kind="lib" path="/SineRepo/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar" sourcepath="/SineRepo/Util/slf4j/1.6.1/src/slf4j-api-1.6.1-sources.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Database/opencsv/2.3/lib/opencsv-2.3.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Documents/apachePOI/3.8/lib/poi-3.8-beta4-20110826.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Documents/apachePOI/3.8/lib/poi-ooxml-3.8-beta4-20110826.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Documents/apachePOI/3.8/lib/poi-ooxml-schemas-3.8-beta4-20110826.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

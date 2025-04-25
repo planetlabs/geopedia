@@ -1,0 +1,8 @@
+com.objectplanet.image.PngEncoder.jar	- any png writing, if you want it to go fast
+jts-1.12.jar				 			- any source processing (UpdateDOF etc.), which uses JTS index
+args4j-2.0.10.jar 			 			- if you need to run any command-line utilities
+commons-compress-1.1.jar 	 			- for reading XYZ files from .tar.gz for the MKD DEM processing
+servlet-api.jar				 			- anything in the com.sinergise.java.raster.web package
+google-gson-stream-1.7.1.jar 			- non-image requests (info etc.) of the PyramidServlet
+GDAL									- for reading obscure formats like .CIT
+gwt-servlet.jar							- for DEMService

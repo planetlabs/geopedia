@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name='com.sinergise.geopedia.core'/> 
+    <inherits name="com.google.gwt.core.Core" />
+    <inherits name="com.sinergise.SGCluster" />
+
+
+  <replace-with class="com.sinergise.gwt.util.http.IECrossSiteHTTPRequest">
+      <when-type-is class="com.sinergise.gwt.util.http.CrossSiteHTTPRequest"/>
+      <any>
+          <when-property-is name="user.agent" value="ie8" />
+          <when-property-is name="user.agent" value="ie9" />
+      </any>      
+  </replace-with>
+  
+	<source path="core"/>
+	<source path="theme"/>
+	<source path="ui"/>
+	
+</module>
+

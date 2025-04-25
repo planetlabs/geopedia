@@ -1,0 +1,206 @@
+@external *;
+
+/* ########## DECORATED BUTTON ########## */
+/* for generating different gradients use http://www.colorzilla.com/gradient-editor/ 
+   delete *filter* attribute if using complex gradient or rounded button - because for IE8- we will use image instead. IE9+ uses svg 
+*/
+
+.gwt-PushButton, a.btn, .gwt-ToggleButton, .gwt-PushButton, button, .sgButton {
+	border: none;
+	background: none;
+}
+
+@if !user.agent ie6 ie8 {
+	.gwt-PushButton, a.btn, a.btn.disabled:active, .gwt-ToggleButton, .gwt-PushButton, button, .sgButton {
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkYzVkMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzZmE4YjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: literal("-moz-linear-gradient(top, #7dc5d1 0%, #3fa8b8 100%)");
+		background: literal("-webkit-linear-gradient(top, #7dc5d1 0%,#3fa8b8 100%)");
+		background: literal("-o-linear-gradient(top, #7dc5d1 0%,#3fa8b8 100%)");
+		background: literal("linear-gradient(top, #7dc5d1 0%,#3fa8b8 100%)");
+		box-shadow: 0 1px 2px #666;
+		-moz-box-shadow: 0 1px 2px #666;
+		-webkit-box-shadow: 0 1px 2px #666;
+		color: #fff;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		padding: 4px 8px;
+	}
+	.gwt-PushButton-up-hovering,
+	a.btn:hover, button:hover, .gwt-ToggleButton-up-hovering, .sgButton-up-hovering {
+		color: #fff;
+	}
+	
+	.gwt-PushButton-down-hovering, 
+	a.btn:active, .gwt-ToggleButton-down, .gwt-ToggleButton-down-hovering, .gwt-PushButton-down-hovering, button:focus, .sgButton-down-hovering {
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNmYThiOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZGM1ZDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: literal("-moz-linear-gradient(top, #3fa8b8 0%, #7dc5d1 100%)");
+		background: literal("-webkit-linear-gradient(top, #3fa8b8 0%,#7dc5d1 100%)");
+		background: literal("linear-gradient(top, #3fa8b8 0%,#7dc5d1 100%)");
+		box-shadow: 0 1px 1px #666 inset;
+		-moz-box-shadow: 0 1px 1px #666 inset;
+		-webkit-box-shadow: 0 1px 1px #666 inset;
+		border: none;
+	}
+	
+	.gwt-PushButton-up-disabled,
+	.gwt-ToggleButton-up-disabled,
+	a.btn.disabled, a.btn.disabled:hover, button[disabled], .sgButton-up-disabled {
+		background: #ddd;
+		color: #555;
+		opacity: 1;
+		border: 1px solid #aaa;
+		cursor: default;
+		box-shadow: none;
+	}
+}
+
+@else {
+	a.btn { padding: 0 !important; background: none !important; border: none !important;}
+	a.btn span { display: inline-block; }
+	@sprite a.btn .txt {
+		gwt-image: "aUp";
+		line-height: 27px;
+		color: #fff;
+		padding: 0 4px;
+	}
+	@sprite a.btn .lSide { gwt-image: "aUpL" }
+	@sprite a.btn .rSide { gwt-image: "aUpR" }
+	
+	@sprite a.btn:active .txt {
+		gwt-image: "aDown";
+		line-height: 27px;
+		color: #fff;
+	}
+	@sprite a.btn:active .lSide { gwt-image: "aDownL" }
+	@sprite a.btn:active .rSide { gwt-image: "aDownR" }
+	
+	@sprite a.btn.disabled .txt {
+		gwt-image: "aDis";
+		line-height: 27px;
+		color: #555;
+	}
+	@sprite a.btn.disabled .lSide { gwt-image: "aDisL" }
+	@sprite a.btn.disabled .rSide { gwt-image: "aDisR" }
+	
+	@sprite 
+	.gwt-PushButton, .gwt-ToggleButton {
+	    gwt-image: 'btn_ie_up';
+	    background-position: right top;
+	    width: auto;
+	    margin-left: 8px;
+	    overflow: visible;
+	    border: none;
+	    height: auto;
+	    padding: 0;
+	}
+	@sprite 
+	.gwt-PushButton .html-face, .gwt-ToggleButton .html-face {
+		float: left;
+	    margin: 0 10px 0 -8px;
+	    padding: 7px 0px 7px 10px;
+	    gwt-image: 'btn_ie_up';
+	    background-position: left top;
+	    width: auto;
+	    display: block;
+	    height: auto;
+	}
+	
+	@sprite 
+	.gwt-PushButton-down-hovering,
+	.gwt-PushButton-down, .gwt-ToggleButton-down-hovering,
+	.gwt-ToggleButton-down {
+	    gwt-image: 'btn_ie_down';
+	    background-position: right top;
+	    height: auto;
+	    width: auto;
+	    overflow: visible;
+	    padding: 0;
+	    border: none;
+	}
+	@sprite 
+	.gwt-PushButton-down-hovering .html-face,
+	.gwt-PushButton-down .html-face, 
+	.gwt-ToggleButton-down-hovering .html-face,
+	.gwt-ToggleButton-down .html-face {
+	    gwt-image: 'btn_ie_down';
+	    background-position: left top;
+	    color: #fff;
+	    width: auto;
+	    height: auto;
+	}
+	
+	@sprite 
+	.gwt-PushButton-up-disabled,
+	.gwt-ToggleButton-up-disabled {
+	    display: inline-block;
+	    gwt-image: 'btn_ie_disabled';
+	    background-position: right top;
+	    width: auto;
+	    margin-left: 8px;
+	    overflow: visible;
+	    border: none;
+	    cursor: default;
+	}
+	@sprite 
+	.gwt-PushButton-up-disabled .html-face,
+	.gwt-ToggleButton-up-disabled  .html-face {
+		float: left;
+	    margin: 0 10px 0 -8px;
+	    padding: 7px 0px 7px 10px;
+	    gwt-image: 'btn_ie_disabled';
+	    background-position: left top;
+	    width: auto;
+	    display: block;
+	}
+	a.btn.disabled { border: none; }
+	a.btn.disabled .txt {
+		color: #aaa !important;
+	    text-shadow: none !important;
+	}
+	.gwt-Button {
+		filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#7dc5d1', endColorstr='#3fa8b8',GradientType=0 )");
+	}
+	.gwt-Button:focus {
+		filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#7dc5d1', endColorstr='#3fa8b8',GradientType=0 )");
+	}
+	
+	.sgButton {
+		margin: 0 10px 3px 7px;
+		padding: 0 5px;
+		border: none;
+	}
+	@sprite .sgButton {
+		gwt-image: "aUp";
+		color: #fff;
+		line-height: 28px;
+		overflow: visible !important;
+	}
+	@sprite .sgButton .lSide {
+		gwt-image: "aUpL";
+		position: absolute;
+		left: 0; top: 0;
+		display: block;
+		margin-left: -5px;
+	}
+	@sprite .sgButton .rSide {
+		gwt-image: "aUpR";
+		position: absolute;
+		top: 0; right: 0;
+		display: block;
+		margin-right: -5px;
+	}
+	@sprite .sgButton-down-hovering .lSide {
+		gwt-image: "aDownL";
+	}
+	@sprite .sgButton-down-hovering .rSide {
+		gwt-image: "aDownR";
+	}
+	@sprite .sgButton.sgButton-down-hovering {
+		gwt-image: "aDown";
+		color: #fff;
+	}
+	.sgButton-up-disabled { 
+		filter: literal("alpha(opacity=50)"); 
+	}
+}

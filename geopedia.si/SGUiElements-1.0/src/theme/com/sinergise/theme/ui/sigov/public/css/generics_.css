@@ -1,0 +1,29 @@
+input[type=text], input[type=password], select, textarea {
+	border: 1px solid #bbb;
+	padding: 3px 5px;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+div.paginator {
+	margin: 0;
+}
+
+tr.header div.gwt-Label {
+	float: none;
+}
+
+.counter {
+	color: #444;
+}
+
+.paginator a.back.disabled,
+.paginator a.fwd.disabled, 
+a.pagingTableNav-fwd-disabled, 
+.paginator a.back.disabled:active,
+.paginator a.fwd.disabled:active {
+	background-position: left top;
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+}

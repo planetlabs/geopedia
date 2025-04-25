@@ -1,0 +1,120 @@
+.sgwebgis-toolPanel {
+	border: solid rgb(0,64,128) 1px;
+}
+
+.sgwebgis-toolPanel .titleBar{
+	font-weight: bold;
+	background: rgb(128,196,255);
+	border-bottom: solid rgb(0,64,128) 2px;
+}
+
+.sgwebgis-toolPanel .titleBar TD {
+	vertical-align: middle;
+}
+
+.featuresSummaryHead {
+	margin: 0;
+	padding: 2px;
+	background: white;
+	border: solid rgb(0,196,255) 1px;
+	width: 100%;	
+}
+
+.featuresSummaryHead TD {
+	border: 0;
+}
+
+.featuresSummaryHead .titleLabel {
+	margin: 0;
+	padding: 2px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.featuresSummary {
+	font-size: 10px;
+}
+
+.featuresSummary A {
+	text-decoration: none;
+	color: black;
+}
+.featuresSummary A:ACTIVE {
+	color: black;
+}
+
+TABLE.featuresSummary {
+	border-collapse: collapse;
+	border: solid rgb(0,128, 196) 1px;
+	width: 100%;
+	padding-bottom: 4px;
+}
+
+.featuresSummary TD {
+	border: solid rgb(0,128, 196) 1px;
+}
+
+.featureInfoResultsHead {
+	margin: 0;
+	padding: 2px;
+	background: white;
+	border: solid rgb(0,196,255) 1px;
+	width: 100%;	
+}
+
+.featureInfoResultsHead TD {
+	border: 0;
+}
+
+.featureInfoResultsHead .titleLabel {
+	margin: 0;
+	padding: 2px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.featureSummaryResultsHead_Actions {
+	vertical-align: top;
+	border: none;
+}
+
+.featureSummaryResultsHead_Actions TD {
+	padding: 2px 0px 2px 0px;
+	border: none;
+}
+
+.featureInfoResults {
+	font-size: 10px;
+}
+
+.featureInfoResults A {
+	text-decoration: none;
+	color: black;
+}
+.featureInfoResults A:ACTIVE {
+	color: black;
+}
+
+TABLE.featureInfoResults {
+	border-collapse: collapse;
+	border: solid rgb(0,196,255) 1px;
+	width: 100%;
+}
+
+.featureInfoResults TD {
+	border: solid rgb(0,128, 196) 1px;
+}
+
+.formLabel {
+	text-align: left;
+	font-weight: bold;
+}
+
+.sgwebui-measurementResults .sgwebui-TitledPanel-body td {
+	padding: 2px;	
+}
+
+.sgwebui-measurementResults-segments {
+	font-size: 10px;
+}
+

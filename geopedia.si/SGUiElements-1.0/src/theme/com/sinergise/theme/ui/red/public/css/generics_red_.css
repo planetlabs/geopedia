@@ -1,0 +1,22 @@
+
+
+tr.title > td {
+	height:24px;
+	background: url("../img/titled_panel/titled_panel_head_bg.png") #d0d0d0 left top repeat-x !important;
+	color: #555 !important;
+	font-size: 13px;
+	border-top:1px solid #bbb;
+	border-bottom:1px solid #bbb;
+}
+
+table.sgwebui-messageBox {
+	width: 96%;
+}
+
+.sgwebui-simpleLoadingPanel {
+	background-color: #aaa;
+}
+
+.counter {
+	color: #333;	
+}

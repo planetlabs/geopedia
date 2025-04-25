@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+#noIE .sgwebui-decoratedButton .butTopCenterInner,
+#IE9 .sgwebui-decoratedButton .butTopCenterInner,
+ a.btn, a.btn.disabled.down {
+	border: 1px solid #bbb;
+	border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMWUxZTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #ffffff 0%, #e1e1e1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e1e1e1));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#e1e1e1 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#e1e1e1 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#e1e1e1 100%);
+	background: linear-gradient(top, #ffffff 0%,#e1e1e1 100%);
+	color: #444;
+	cursor: pointer;
+	padding: 3px 6px;
+}
+.gwt-PushButton-up-hovering .butTopCenterInner, 
+a.btn:hover {
+	color: #850202;
+}
+#noIE .sgwebui-decoratedButton.gwt-PushButton-down-hovering .butTopCenterInner,
+#I9E .sgwebui-decoratedButton.gwt-PushButton-down-hovering .butTopCenterInner,
+a.btn.down {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzcwMzMxMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iIzkyNDUxOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top, #703310 0%, #924518 99%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#703310), color-stop(99%,#924518));
+	background: -webkit-linear-gradient(top, #703310 0%,#924518 99%);
+	background: -o-linear-gradient(top, #703310 0%,#924518 99%);
+	background: -ms-linear-gradient(top, #703310 0%,#924518 99%);
+	background: linear-gradient(top, #703310 0%,#924518 99%);
+	border-color: #622b09;
+	color: #fff;
+}
+
+#IE .sgwebui-decoratedButton .butTopLeft {
+	height: 26px;
+	width: 8px;
+	background: url(../img/buttons/btn_ie.png) left top no-repeat;
+}
+#IE .sgwebui-decoratedButton .butTopLeftInner {
+	width: 6px;
+}
+#IE .sgwebui-decoratedButton .butTopCenterInner {
+    padding: 4px 6px 4px 0;
+}
+#IE .gwt-PushButton-down-hovering .butTopLeft {
+	background-position: left bottom;
+}
+
+tr.title > td {
+	height:24px;
+	background: url("../img/titled_panel/titled_panel_head_bg.png") #d0d0d0 left top repeat-x !important;
+	color: #555 !important;
+	font-size: 13px;
+	border-top:1px solid #bbb;
+	border-bottom:1px solid #bbb;
+}
+
+table.sgwebui-messageBox {
+	width: 96%;
+}
+
+.sgwebui-simpleLoadingPanel {
+	background-color: #aaa;
+}
+
+.counter {
+	color: #333;	
+}#noIE .sgwebui-quickSearch,
+#IE9 .sgwebui-quickSearch {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}.gwt-DecoratedTabBar {
+	background: url("../img/tab_single/tab_bg.png") left top repeat-x #9a0303;
+}
+.infoPanel > tbody > tr > td > table.gwt-DecoratedTabBar {
+	margin-top: 50px;
+}
+table.gwt-DecoratedTabBar > tbody > tr > td {
+	vertical-align: top !important;
+} 
+
+.gwt-TabBarItem {
+	margin: 0px 6px 2px 0;
+}
+.gwt-TabBarItem-selected {
+	margin-top: 3px;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem .tabMiddleCenter {
+	color: #fff;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem .tabMiddleCenter:hover {
+	color: #e3bd1a;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleCenter,
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleCenter:hover {
+	color: #850202;
+	padding-bottom: 5px;
+	line-height: 15px;
+}
+
+
+.gwt-TabPanelBottom {
+	background: url(../img/mainpanel_bg.png) left top repeat-x #fff;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopLeftInner, 
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopRightInner {
+	width: 4px;
+	height: 4px;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopCenterInner {
+	height: 4px;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleLeftInner,
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleRightInner {
+	width: 4px;
+}
+
+.gwt-TabPanelBottom > .tabContainer {
+	bottom: 39px;
+	top: 100px;
+}
+.sgwebui-TitledPanel {
+	border: none;
+}
+
+.sgwebui-TitledPanel > .title,
+.gwt-DisclosurePanel a.header {
+	background: url("../img/titled_panel/titled_panel_head_bg.png") repeat-x left top #d0d0d0;
+	color: #444;
+	font-weight: bold;
+	font-size: 13px;
+	vertical-align: middle !important;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+.gwt-DisclosurePanel-open .header {
+	color: #444 !important;
+}
+.gwt-DisclosurePanel-closed .header .title-label {
+	opacity: .6;
+	filter: alpha(opacity=60);
+}
+.gwt-DisclosurePanel .header {
+	color: #777;
+}
+.gwt-DisclosurePanel-open .header .title-label {
+	opacity:1;
+	filter: alpha(opacity=100);
+}
+.gwt-DisclosurePanel .header:hover  {
+	color: #850202;
+}
+
+.gwt-DisclosurePanel .content {
+	padding: 0;
+}
+
+.sgwebui-TitledPanel > div.body,
+.gwt-DisclosurePanel > tbody > tr > td > div  {
+	 background: url("../img/titled_panel/titled_panel_body_bg.png") repeat-x left top transparent;
+     color: #333;
+     padding: 12px !important;
+}
+
+.sgwebui-measurementResults .sgwebui-TitledPanel-body > td > table > tbody > tr > td:first-child {
+	width: 22px;
+}
+.sgwebui-measurementResults .sgwebui-TitledPanel-body > td > table > tbody > tr > td .gwt-Label {
+	font-weight: bold;
+}
+
+
+/**** LAYERS TREE ****/
+.sgwebgis-layersTree {
+	border: 1px solid #ccc;
+	*margin-right: -5px;
+}
+.sgwebgis-layersTree > .sgwebgis-layerWidget {
+	background: url(../img/titled_panel/layertree_cell.png) left top repeat-x #e9e9e9;
+	border-top: 1px solid #ccc;
+	margin-top: -1px;
+}
+.sgwebgis-layerWidget {
+	font-size: 12px;
+	height: 26px;
+}
+.sgwebgis-layerWidget .sgwebgis-layerLabel {
+	margin-left: 5px;
+	font-size: 12px;
+}
+.sgwebgis-layersTree span input {
+	margin-top: 5px;
+}
+.sgwebgis-styleComponentsWidget {
+	margin-top: 1px;
+}

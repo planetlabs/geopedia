@@ -1,0 +1,372 @@
+@external *;
+
+.withRoute .tableOverlays1 {
+	opacity: .4;
+	filter: literal("alpha(opacity=40)");
+}
+
+@sprite .waypointsPanel {
+	gwt-image: "routingBg";
+	background-position: left bottom;
+	background-repeat: repeat-x;
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #bbb;
+	padding: 10px 10px 6px;
+}
+
+.travelMode { 
+	margin-bottom: 10px; 
+	margin-left: 34px;
+}
+.travelMode .btn {
+	padding: 4px;
+	margin: 0;
+}
+
+.travelMode .DRIVING { 
+	border-radius: 4px 0 0 4px;
+}
+.travelMode button.WALKING { 
+	border-radius: 0 4px 4px 0;
+	margin-left: -1px;
+}
+@sprite .travelMode span {
+	display: block;
+	gwt-image: "travelmode1";
+}
+@sprite .travelMode .DRIVING.selected span {
+	gwt-image: "travelmode1On";
+}
+@sprite .travelMode .WALKING span {
+	gwt-image: "travelmode2";
+}
+@sprite .travelMode .WALKING.selected span {
+	gwt-image: "travelmode2On";
+}
+
+
+/************* WAYPOINTS **************/
+.waypointsHolder { clear: both;}
+.waypointSelector {
+	margin-bottom: 10px;
+    max-width: 450px;
+    min-width: 100px;
+    padding-left: 35px;
+    padding-right: 16px;
+    position: relative;
+}
+
+.waypointsPanel .btnPanel {
+	margin: 13px 2px 0 36px;
+	max-width: 450px;
+	height: 16px;
+}
+.btnClearWaypoints {
+	float: right;
+}
+
+.resultsBrowserPanel > div {
+	clear: both;
+}
+.routeBtnPanel, .distancePanel, .googleLogoPanel {
+	margin: 10px;
+	max-width: 500px;
+	clear: both;
+}
+@sprite .googleLogoPanel {
+	gwt-image: "google";
+	margin-top: -5px;
+	float: right;
+}
+.distancePanel {
+	border: 1px solid #c1b95c;
+	background: #eef1c2;
+	padding-right: 30px;
+}
+.routeBtnPanel > div {
+	float: left;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.routeBtnPanel .toggle {
+	padding: 0;	
+}
+.routeBtnPanel .toggle img {
+	margin: 4px;
+}
+
+.routeBtnPanel .search {
+	float: right;
+}
+.routeBtnPanel {
+	min-height: 30px;
+}
+.distancePanel div {
+	font-size: 13px;
+	color: #333;
+	margin: 5px;
+}
+.distancePanel div img {
+	margin-right: 6px;
+	vertical-align: middle;
+}
+@sprite .distancePanel .btnZoomToRoute {
+	gwt-image: "zoomto";
+	float: right;
+    margin-right: -25px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+@sprite .distancePanel .btnZoomToRoute:hover {
+	gwt-image: "zoomtoOver";
+}
+	
+
+@sprite .waypointSelector .symbol,
+.clickableMarker .txt {
+	gwt-image: "markerBg";
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: center;
+    text-indent: -1px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 0 #666;
+    fotn-size: 11px;
+}
+.clickableMarker .txt { margin: 6px; line-height: 16px; }
+@sprite a.clickableMarker {
+	gwt-image: "markerShadow";
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    height: 36px;
+    text-align: center;
+    width: 41px;
+    line-height: 24px;
+    text-indent: -14px;
+    text-shadow: 1px 1px 0 #666;
+    margin-left: -20px;
+    margin-top: -32px;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.waypointSelector .symbol div {
+	margin: 3px auto 0;
+}
+@sprite .symbol .groupA, .symbol .groupE,
+.groupA .txt, .groupE .txt {
+	gwt-image: "marker1";
+}
+@sprite .symbol .groupB, .symbol .groupF,
+.groupB .txt, .groupF .txt {
+	gwt-image: "marker2";
+}
+@sprite .symbol .groupC, .symbol .groupG,
+.groupC .txt, .groupG .txt {
+	gwt-image: "marker3";
+}
+@sprite .symbol .groupD, .symbol .groupH,
+.groupD .txt, .groupH .txt {
+	gwt-image: "marker4";
+}
+@sprite .waypointSelector .btnRemove {
+	gwt-image: "close";
+	position: absolute;
+	right: -5px;
+	top: -5px;
+	cursor: pointer;
+}
+@sprite .waypointSelector .btnRemove:hover {
+	gwt-image: "closeOver";
+}
+.waypointSelector .gwt-TextBox {
+	padding: 6px;
+	color: #555;
+	width: 100%;
+}
+.resultsBrowserPanel {
+	margin: 13px 10px 10px 1px;
+	border: 1px solid #c1b95c;
+	background: #eef1c2;
+	padding: 0;
+	min-width: 100px;
+	max-width: 400px;
+}
+.resultsBrowserPanel .header {
+	padding: 6px 6px 0;
+	margin-top: -13px;
+	position: relative;
+}
+.resultsBrowserPanel > img {
+	float: left;
+	margin-top: -13px;
+	margin-left: 10px;
+}
+
+.resultsBrowserPanel .gwt-Label {
+	float: left;
+	font-size: 13px;
+	margin-bottom: 6px;
+	font-weight: bold;
+	margin-right: 27px;
+}
+
+@sprite .resultsBrowserPanel .btnPrev,
+.resultsBrowserPanel .btnNext,
+.resultsBrowserPanel .btnPrev.disabled:hover {
+	gwt-image: "routeNavL";
+	cursor: pointer;
+	display: block;
+	text-indent: -10000px;
+	position: absolute;
+	top: 8px;
+	right: 17px;
+}
+@sprite .resultsBrowserPanel .btnNext,
+.resultsBrowserPanel .btnNext.disabled:hover {
+	gwt-image: "routeNavR";
+	right: 5px;
+}
+@sprite .resultsBrowserPanel .btnPrev:hover {
+	gwt-image: "routeNavLOn";
+}
+@sprite .resultsBrowserPanel .btnNext:hover {
+	gwt-image: "routeNavROn";
+}
+.resultsBrowserPanel a.disabled,
+.resultsBrowserPanel a.disabled {
+	opacity: 0.5;
+	cursor: default !important;
+	filter: literal("alpha(opacity=50)");
+}
+
+
+.resultsBrowserPanel .feature {
+	padding: 7px 6px 5px 26px;
+	color: #666;
+	display: block;
+	clear: both;
+	position: relative;
+}
+.resultsBrowserPanel .feature:hover {
+	background: #d4d88f;
+	cursor: pointer;
+	color: #333;
+}
+.resultsBrowserPanel .feature .symbol {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 3px;
+	background: none;
+}
+
+.textDirections { clear: both; }
+.textDirections > div { padding: 0 !important; }
+.googledir > div > table {
+	margin: 0 5px !important;
+	background: #fff !important;
+	font-weight: bold;
+	border: none !important;
+	border-bottom: 2px solid #0092ed !important;
+}
+div[jsdisplay="walking"] {
+	margin: 0 8px 5px !important;	
+}
+div[jsdisplay="walking"] > div {
+	background: #d6effc !important;
+}
+@sprite .googledir > div > table td:first-child {
+    gwt-image:"markA";
+    padding: 0 !important;
+    width: 23px !important;
+}
+.googledir > div > table td img {
+	visibility: hidden;
+	height: 35px;
+	width: 23px;
+}
+td[jscontent="address"] {
+	padding-left:8px;
+}
+@sprite div[jsinstance="*1"] > table td:first-child,
+div[jsinstance="1"] > table td:first-child {
+	gwt-image:"markB";
+}
+@sprite div[jsinstance="*2"] > table td:first-child,
+div[jsinstance="2"] > table td:first-child {
+	gwt-image:"markC";
+}
+@sprite div[jsinstance="*3"] > table td:first-child,
+div[jsinstance="3"] > table td:first-child {
+	gwt-image:"markD";
+}
+@sprite div[jsinstance="*4"] > table td:first-child,
+div[jsinstance="4"] > table td:first-child {
+	gwt-image:"markE";
+}
+@sprite div[jsinstance="*5"] > table td:first-child,
+div[jsinstance="5"] > table td:first-child {
+	gwt-image:"markF";
+}
+@sprite div[jsinstance="*6"] > table td:first-child,
+div[jsinstance="5"] > table td:first-child {
+	gwt-image:"markG";
+}
+@sprite div[jsinstance="*7"] > table td:first-child,
+div[jsinstance="5"] > table td:first-child {
+	gwt-image:"markH";
+}
+.googledir > div > div > div {
+	background: #EEF1C2;
+	text-align: center !important;
+    border: 1px solid #C1B95C;
+    padding: 3px !important;
+    margin: 7px;
+}
+.googledir > div > div > table td {
+	border-top: 1px dotted #ccc !important;
+}
+.googledir > div > div > table td[jseval="this.innerHTML = Distance.html"] {
+	padding-right: 8px !important;
+	padding-left: 8px !important;
+	font-style: italic;	
+}
+.google_impnote { 
+	margin-top: 3px;
+	font-style: italic;
+	color: #faa064;	
+}
+.googledir > div > div > table td:first-child {
+	font-size: 0;
+	padding-left: 8px !important;
+}
+.googledir > div > div > table td a {
+	color: #555;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 3px;
+    padding: 1px;
+}
+.googledir tr { cursor: default !important; }
+
+.googledir > div[jseval] {
+	text-align: center;
+	font-style: italic;
+	margin: 3px 0 5px;
+	color: #888;	
+	font-size: 11px;
+}
+@sprite .google_note {
+	margin: 3px 0;
+	padding-left: 20px;
+	gwt-image: "info16";
+	background-repeat: no-repeat;
+	background-position: left top;
+	font-style: italic;
+}

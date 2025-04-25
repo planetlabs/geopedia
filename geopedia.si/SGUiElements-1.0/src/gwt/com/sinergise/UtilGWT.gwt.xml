@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.0.3//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.0.3/distro-source/core/src/gwt-module.dtd">
+<module>
+    <inherits name="com.sinergise.gwt.emul.SGEmulation"/>
+    <inherits name="com.sinergise.Util"/>
+
+	<!-- Fall-through rule -->
+    <replace-with class="com.sinergise.gwt.util.UtilGwtImplOld">
+        <when-type-is class="com.sinergise.common.util.Util.UtilImpl"/>
+    </replace-with>
+    
+    <!-- Use edge for those that support typed arrays -->
+    <!-- IE 10, FF 4, Chrome 7, Safari 5.1, Opera 11.6, iOS Safari 4.2, Android 4.0 -->
+    <!--  -->
+    <replace-with class="com.sinergise.gwt.util.UtilGwtImplEdge">
+        <when-type-is class="com.sinergise.common.util.Util.UtilImpl"/>
+    	<any>
+      		<when-property-is name="user.agent" value="gecko1_8"/> 
+      		<when-property-is name="user.agent" value="safari" />
+      		<when-property-is name="user.agent" value="opera" />
+    	</any>        
+    </replace-with>
+
+    <source path="gwt/util" />
+
+	<entry-point class="com.sinergise.gwt.util.UtilGWT" />
+</module>

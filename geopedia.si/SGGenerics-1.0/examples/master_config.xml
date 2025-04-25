@@ -1,0 +1,23 @@
+<!-- master config file example -->
+<configuration>
+    
+    <includables>
+	    <file source="file" name="generics-includables.xml" position="0"/>
+	</includables>
+	
+    
+    <main>
+	    <file source="file" name="generics-kontrole-hr.xml" position="0"/>
+	    <file source="database" name="hrKontrole_generics-kontrole.xml" position="1"/>
+		<file source="file" name="generics-cwrs.xml" position="2"/>
+		<file source="file" name="generics-area.xml" position="3"/>
+		<file source="file" name="generics-animals.xml" position="4"/>
+	</main>
+	
+    <language>
+        <file name="languages/default.properties" language="default"/>
+        <file name="languages/en.properties" language="en"/>
+        <file name="languages/hr.properties" language="hr"/>
+        <file name="languages/mk.properties" language="mk"/>
+    </language>
+</configuration>

@@ -1,0 +1,136 @@
+domain=geopedia.me
+coordinatesystem = S
+dmvfile = /pedia/data/rawdmv/dmv125.raw
+
+db.host = 10.5.250.221
+db.user = pediawww
+db.pass = pediawww
+db.basedb = pedicamain
+
+updatedb.host = 10.5.250.221
+updatedb.user = pediaupdate
+updatedb.pass = pediaupdate
+updatedb.basedb = pedicamain
+
+#public.renderer.numhosts = 1
+public.renderer.numhosts = 2
+public.renderer.basepath = /rp
+public.renderer.host0 = sl1.geopedia.me
+public.renderer.host1 = sl2.geopedia.me
+
+
+copyright.geopedia.watermark = com/cosylab/gisopedia/servlets/logoText170.png
+copyright.geopedia.watermark.offsetLeft = 10
+copyright.geopedia.watermark.offsetBottom = 10
+
+public.renderer.featpath = /hlt
+
+copyright.list = sinergise, gurs, gi, globalvision
+
+copyright.sinergise.text = Sinergise
+copyright.sinergise.link = http://www.sinergise.com
+
+copyright.gurs.text = Geodetska uprava Republike Slovenije
+copyright.gurs.link = http://www.gu.gov.si
+
+copyright.gi.text = Geodetski in\u0161titut Slovenije 
+copyright.gi.link = http://www.gis.si/
+
+copyright.globalvision.text = Quo TM
+copyright.globalvision.link = http://www.kje.si/
+
+dataset.combos.number = 0
+
+dataset.combo0.datasets = dmc,dmv
+dataset.combo0.basepath = /pre/dmc+dmv
+dataset.combo0.maxlevel = 18
+dataset.combo0.numhosts = 5
+dataset.combo0.host0 = dmc01.geopedia.me
+dataset.combo0.host1 = dmc02.geopedia.me
+dataset.combo0.host2 = dmc03.geopedia.me
+dataset.combo0.host3 = dmc04.geopedia.me
+dataset.combo0.host4 = dmc05.geopedia.me
+
+dataset.combo1.datasets = dof,dmv
+dataset.combo1.basepath = /pre/dof+dmv
+dataset.combo1.maxlevel = 18
+dataset.combo1.numhosts = 5
+dataset.combo1.host0 = dmc01.geopedia.me
+dataset.combo1.host1 = dmc02.geopedia.me
+dataset.combo1.host2 = dmc03.geopedia.me
+dataset.combo1.host3 = dmc04.geopedia.me
+dataset.combo1.host4 = dmc05.geopedia.me
+
+static.datasets = dof
+
+
+dataset.dof.id = 1
+dataset.dof.name = Ortofoto
+dataset.dof.basepath = /dof/jpg
+dataset.dof.maxlevel = 18
+dataset.dof.defaultstate = off
+dataset.dof.numcopy = 1
+dataset.dof.copy0 = gurs
+dataset.dof.numhosts = 5
+dataset.dof.host0 = dof501.geopedia.me
+dataset.dof.host1 = dof502.geopedia.me
+dataset.dof.host2 = dof503.geopedia.me
+dataset.dof.host3 = dof504.geopedia.me
+dataset.dof.host4 = dof505.geopedia.me
+
+dataset.dmv.id = 3
+dataset.dmv.name = Relief
+dataset.dmv.exclude = tk
+dataset.dmv.basepath = /pre/dmv
+dataset.dmv.maxlevel = 18
+dataset.dmv.defaultstate = off
+dataset.dmv.numcopy = 1
+dataset.dmv.copy0 = gurs
+dataset.dmv.numhosts = 5
+dataset.dmv.host0 = dmv01.geopedia.me
+dataset.dmv.host1 = dmv02.geopedia.me
+dataset.dmv.host2 = dmv03.geopedia.me
+dataset.dmv.host3 = dmv04.geopedia.me
+dataset.dmv.host4 = dmv05.geopedia.me
+
+dataset.tk.id = 4
+dataset.tk.name = Topo
+dataset.tk.exclude = dmc,dmv,dof
+dataset.tk.basepath = /pre/dtk
+dataset.tk.maxlevel = 18
+dataset.tk.defaultstate = on
+dataset.tk.numcopy = 2
+dataset.tk.copy0 = gurs
+dataset.tk.copy0.limit = 9
+dataset.tk.copy1 = gi
+dataset.tk.numhosts = 5
+dataset.tk.host0 = dmv01.geopedia.me
+dataset.tk.host1 = dmv02.geopedia.me
+dataset.tk.host2 = dmv03.geopedia.me
+dataset.tk.host3 = dmv04.geopedia.me
+dataset.tk.host4 = dmv05.geopedia.me
+
+dataset.pzs.id = 5
+dataset.pzs.name = Topo
+dataset.pzs.exclude = dmc,dmv,dof,tk
+dataset.pzs.basepath = /pre/pzs/merged
+dataset.pzs.maxlevel = 16
+dataset.pzs.defaultstate = off
+dataset.pzs.defaultenabled = no
+dataset.pzs.numcopy = 1
+dataset.pzs.copy0 = gurs
+dataset.pzs.numhosts = 5
+dataset.pzs.host0 = dmv01.geopedia.me
+dataset.pzs.host1 = dmv02.geopedia.me
+dataset.pzs.host2 = dmv03.geopedia.me
+dataset.pzs.host3 = dmv04.geopedia.me
+dataset.pzs.host4 = dmv05.geopedia.me
+
+metadata.refresh.interval = 500
+
+
+webLinks.location=war/weblinks/
+
+dynamicRasters.basepath = /pre/layers/
+dynamicRasters.numhosts = 1
+dynamicRasters.host0 = dmv01.geopedia.me

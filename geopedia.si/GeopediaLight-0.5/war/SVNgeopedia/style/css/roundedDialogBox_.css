@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+.roundedDialogBox {
+	background-color: #FFFFFF;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+
+.roundedDialogBox-title {
+	background-color: #719cdb;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+
+.roundedDialogBox-title-highlighted {
+	background-color: red;
+}
+
+.cbg-RPP {
+	background-color: #FFFFFF;
+	border-color: #000000;
+	border-style: solid;
+}
+

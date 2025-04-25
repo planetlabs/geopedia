@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SGRaster">
+    <property name="sinergise.libraries.branch" value="1.0" />
+    <property file="${sinergise.build.properties}" />
+
+    <property name="SINEREPO" value="../SineRepo" />
+    <property name="SGUtil" value="../SGUtil-${sinergise.libraries.branch}" />
+    <property name="SGGeometry" value="../SGGeometry-${sinergise.libraries.branch}" />
+    <property name="SGRaster" value="../SGRaster-${sinergise.libraries.branch}" />
+    <property name="buildBase" value="${SGRaster}/build" />
+
+	<path id="lib.external">
+		<pathelement path="${SGUtil}/build/SGUtil-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+		<pathelement path="${SGGeometry}/build/SGGeometry-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+		<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/gwt-servlet.jar" />
+		<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/gwt-user.jar" />
+		<pathelement path="${SINEREPO}/Desktop/args4j/2.0.10/lib/args4j-2.0.10.jar" />
+		<pathelement path="${SINEREPO}/Util/apache-commons/compress/1.1/lib/commons-compress-1.1.jar" />
+		<pathelement path="${SINEREPO}/Graphics/jts/1.11/lib/jts-1.11.jar" />
+		<pathelement path="${SINEREPO}/Graphics/jai/1.1.3/lib/jai_codec.jar" />
+		<pathelement path="${SINEREPO}/Graphics/jai/1.1.3/lib/jai_core.jar" />
+		<pathelement path="${SINEREPO}/Graphics/jai_imageio/1.1/lib/jai_imageio.jar" />
+		<pathelement path="${SINEREPO}/WebServer/json/gson/1.7.1/lib/gson-1.7.1.jar" />
+		<pathelement path="${SINEREPO}/Graphics/objectplanet-pngencoder/2.0.2/lib/com.objectplanet.image.PngEncoder.jar" />
+		<pathelement path="${SINEREPO}/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar" />
+	</path>
+
+	<target name="clean">
+		<delete dir="${buildBase}" />
+		<mkdir dir="${buildBase}" />
+	</target>
+
+	<target name="compile" depends="clean">
+		<mkdir dir="${buildBase}" />
+		<mkdir dir="${buildBase}/classes" />
+		<javac srcdir="src/common:src/java" destdir="${buildBase}/classes" includes="**" source="1.6" target="1.6" compiler="modern" fork="yes" encoding="UTF-8" executable="${JAVA6}/bin/javac"
+			includeantruntime="false">
+			<classpath refid="lib.external" />
+			<compilerarg value="-Xlint:unchecked" />
+			<!-- Ignore warnings about sun proprietary API -->
+			<compilerarg value="-XDignore.symbol.file" />
+
+		</javac>
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar destfile="${buildBase}/SGRaster-${sinergise.libraries.branch}-SNAPSHOT.jar">
+			<fileset dir="${buildBase}/classes">
+				<include name="**" />
+			</fileset>
+		</jar>
+	</target>
+
+</project>

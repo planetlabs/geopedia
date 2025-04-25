@@ -1,0 +1,20 @@
+.sgwebgis-coordinateslabel-projLb, .sgwebgis-coordinateslabel-latLonLb {
+	margin-top: 2px;
+}
+
+.sgwebgis-zoomCtrl-ind-off, .sgwebgis-zoomCtrl-ind-on {
+	background-position: left center;
+}
+
+.sgwebgis-zoomCtrl-ind-off:hover,
+.sgwebgis-zoomCtrl-ind-on:hover {
+	background-position: center center;
+}
+.sgwebgis-zoomCtrl-ind-off.down,
+.sgwebgis-zoomCtrl-ind-on.down {
+	background-position: right center;
+}
+
+.sgwebgis-map-scaleDisplay {
+	bottom: 20px;
+}

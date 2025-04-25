@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SGCluster">
+<property name="sinergise.libraries.branch" value="1.0" />
+	<property file="${sinergise.build.properties}"/>
+<property name="buildBase" value="build"/>
+<property name="SGUtil" value="../SGUtil-${sinergise.libraries.branch}"/>
+<property name="SGGeometry" value="../SGGeometry-${sinergise.libraries.branch}"/>
+
+<property name="dependencies" value="SGUtil,SGGeometry" />
+
+<path id="lib.external">
+		<pathelement path="${SGUtil}/build/SGUtil-${sinergise.libraries.branch}-SNAPSHOT.jar"/>
+		<pathelement path="${SGGeometry}/build/SGGeometry-${sinergise.libraries.branch}-SNAPSHOT.jar"/>
+		
+		<pathelement path="${SINEREPO}/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar"/>
+		<pathelement path="${SINEREPO}/WebServer/json/gson/1.7.1/lib/gson-1.7.1.jar"/>
+		<pathelement path="${SINEREPO}/Util/apache-httpcomponents/core/4.2.3/lib/httpcore-4.2.3.jar"/>
+		<pathelement path="${SINEREPO}/Util/apache-httpcomponents/client/4.2.3/lib/httpclient-4.2.3.jar"/>
+		<pathelement path="${SINEREPO}/Util/apache-commons/logging/1.1.1/lib/commons-logging-1.1.1.jar"/>
+</path>
+
+<target name="clean">
+		<delete dir="${buildBase}" />   
+		<mkdir dir="${buildBase}" /> 
+</target>
+
+<target name="buildDeps">
+	<for list="${dependencies}" param="project">
+		<sequential>
+			<subant target="jar">
+				<fileset dir="${@{project}}" includes="build.xml" />
+			</subant>
+		</sequential>
+	</for>
+</target>
+
+<target name="compile" depends="clean">
+	<mkdir dir="${buildBase}"/>
+	<mkdir dir="${buildBase}/classes"/>
+ 	 <javac srcdir="src/common:src/java:src/configuration" destdir="${buildBase}/classes" includeantruntime="false" 
+ 	 includes="**" source="1.5" target="1.5" compiler="modern" fork="yes" encoding="UTF-8"
+ 	 executable="${JAVA6}/bin/javac">
+ 	        <classpath refid="lib.external"/>
+	  	    <compilerarg value="-Xlint:-unchecked"/>
+ 	 </javac>
+</target>	
+
+<target name="jar" depends="compile">
+	<jar destfile="${buildBase}/SGCluster-1.0-SNAPSHOT.jar">
+ 		<fileset dir="${buildBase}/classes">
+ 	    	<include name="**"/>
+ 	    </fileset>
+ 	</jar>
+</target>
+
+</project>

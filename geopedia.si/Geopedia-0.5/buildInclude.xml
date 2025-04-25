@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <property name="sinergise.libraries.branch" value="1.0" />
+
+    <property name="SGUtil" value="../SGUtil-${sinergise.libraries.branch}" />	
+	<property name="SGGeometry" value="../SGGeometry-${sinergise.libraries.branch}" />
+	<property name="SGRaster" value="../SGRaster-${sinergise.libraries.branch}" />
+	<property name="SGUiElements" value="../SGUiElements-${sinergise.libraries.branch}" />
+	<property name="SGMap" value="../SGMap-${sinergise.libraries.branch}" />
+	<property name="SGGenerics" value="../SGGenerics-${sinergise.libraries.branch}" />
+	<property name="SGCluster" value="../SGCluster-${sinergise.libraries.branch}" />
+	
+	<property name="dependencies" value="SGUtil,SGUiElements,SGGenerics,SGGeometry,SGRaster,SGMap,SGCluster" />
+
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+		<classpath>
+			<pathelement
+				location="${SINEREPO}/Util/ant/ant-contrib/1.0b2/lib/ant-contrib-1.0b2.jar" />
+		</classpath>
+	</taskdef>
+	
+	
+	<target name="buildGeopediaDeps">
+		<for list="${dependencies}" param="project">
+			<sequential>
+				<subant target="jar">
+					<fileset dir="${@{project}}" includes="build.xml" />
+				</subant>
+			</sequential>
+		</for>
+	</target>
+	
+	
+	<macrodef name="compile.GeopediaServer">
+		<attribute name="buildBaseDir"/>		
+		<element name="additionalSourcesPath" optional="yes"/>
+		<sequential>        	
+			<delete dir="@{buildBaseDir}/classes" />
+		    <mkdir dir="@{buildBaseDir}/classes" />
+    		<javac destdir="@{buildBaseDir}/classes" includes="**" source="1.6"
+				target="1.6" fork="yes" compiler="modern" debug="on" encoding="UTF-8">
+				<classpath refid="lib.ext.geopedia" />
+				<additionalSourcesPath />
+				<src path="${Geopedia}/src/common" />
+				<src path="${Geopedia}/src/server" />
+				<src path="${Geopedia}/src/external" />
+				<src path="${Geopedia}/src/legacy" />
+			</javac>
+	    	<copy todir="@{buildBaseDir}/classes/com/sinergise/geopedia/server/service/">
+				<fileset dir="${Geopedia}/src/server/com/sinergise/geopedia/server/service/">
+					<include name="*.png" />
+				</fileset>
+			</copy>
+			<copy todir="@{buildBaseDir}/classes/org/outerj/daisy/htmlcleaner/">
+				<fileset dir="${Geopedia}/src/external/org/outerj/daisy/htmlcleaner/">
+					<include name="cleanerconf.xml" />
+					<include name="xhtml-lat1.ent" />
+					<include name="xhtml-special.ent" />
+					<include name="xhtml-symbol.ent" />
+					<include name="xhtml1-strict.dtd" />
+					<include name="xhtml1-strict-modded.dtd" />
+					<include name="xhtml1-transitional-modded.dtd" />
+					<include name="xhtml1-transitional.dtd" />
+				</fileset>
+			</copy>	        
+		</sequential>
+	</macrodef>
+	
+	
+	
+	<macrodef name="jar.GeopediaServer">
+	    <attribute name="buildBaseDir" />
+	    <attribute name="jarTarget" default="@{buildBaseDir}/pedia-SNAPSHOT.jar" />
+	    <sequential>
+			<jar destfile="@{jarTarget}">
+				<fileset dir="@{buildBaseDir}/classes">
+					<include name="**" />
+					<exclude name="org/slf4j/**" />
+				</fileset>
+			</jar>			
+	    </sequential>
+	</macrodef>
+
+	<macrodef name="deploy.java.jar">
+        <attribute name="host" />
+		<attribute name="username" default="root" />
+		<attribute name="password" />
+		<attribute name="jar"/>
+    	<attribute name="remoteBaseDirectory" default="/pedia"/>
+
+		<sequential>
+       		<scp todir="@{username}:@{password}@@@{host}:@{remoteBaseDirectory}/lib/" sftp="true" trust="true">
+					<fileset file="@{jar}" />
+			</scp>
+		</sequential>
+    </macrodef>    
+    
+    <macrodef name="deploy.java.jars">
+        <attribute name="host" />
+		<attribute name="username" default="root" />
+		<attribute name="password" />
+        <attribute name="jarList"/>
+    	<attribute name="remoteBaseDirectory" default="/pedia"/>
+
+        <sequential>
+	        <for list="@{jarList}" param="project">
+				<sequential>
+				    <deploy.java.jar host="@{host}" password="@{password}" username="@{username}" remoteBaseDirectory="@{remoteBaseDirectory}" 
+				        jar="${@{project}}/build/@{project}*-SNAPSHOT.jar" />
+				</sequential>
+			</for>        
+		</sequential>
+    </macrodef>	 	
+		
+	<path id="geopediaServerSources">
+	    <pathelement path="${Geopedia}/src/common"/>
+	    <pathelement path="${Geopedia}/src/external"/>
+	    <pathelement path="${Geopedia}/src/server"/>
+	</path>
+	
+	<path id="lib.ext.core">
+        <pathelement path="${SGUtil}/build/SGUtil-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+        <pathelement path="${SGUiElements}/build/SGUiElements-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+        <pathelement path="${SGGeometry}/build/SGGeometry-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+        <pathelement path="${SGRaster}/build/SGRaster-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+        <pathelement path="${SGMap}/build/SGMap-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+        <pathelement path="${SGCluster}/build/SGCluster-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+        
+        <pathelement path="${Geopedia}/lib/fastutil-5.0.9.jar" />
+        <pathelement path="${Geopedia}/lib/nekodtd.jar" />
+        <pathelement path="${Geopedia}/lib/nekohtml.jar" />
+        <pathelement path="${SINEREPO}/WebServer/xerces/2.11.0/lib/xercesImpl.jar"/> 
+        <pathelement path="${SINEREPO}/WebServer/xerces/2.11.0/lib/xml-apis.jar"/> 
+
+        <pathelement path="${SINEREPO}/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar"/> 
+        <pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/gwt-servlet.jar" />
+        <pathelement path="${SINEREPO}/Database/MySQL/5.0.8/mysql-connector-java-5.0.8-bin.jar"/>
+        <pathelement path="${SINEREPO}/WebServer/rhino/1.7R4/lib/js.jar"/>
+        <pathelement path="${SINEREPO}/WebServer/json/gson/1.7.1/lib/gson-1.7.1.jar" />
+	</path>
+	
+	<path id="lib.ext.geopedia">
+		<path refid="lib.ext.core" />
+		<fileset dir="${Geopedia}">
+			<include name="lib/*.jar" />
+		</fileset>
+
+		<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/gwt-user.jar" />
+		<pathelement path="${SINEREPO}/Database/opencsv/2.3/lib/opencsv-2.3.jar" />
+		<pathelement path="${SINEREPO}/Database/javadbf/0.4.0/lib/javadbf.jar" />
+		<pathelement path="${SINEREPO}/Util/apache-commons/fileupload/1.2.2/lib/commons-fileupload-1.2.2.jar" />
+		<pathelement path="${SINEREPO}/Util/apache-commons/io/2.0.1/lib/commons-io-2.0.1.jar"/>
+        <pathelement path="${SINEREPO}/Util/slf4j/1.6.1/lib/slf4j-ext-1.6.1.jar" />
+		<pathelement path="${SINEREPO}/Web/jsr311/1.1.1/lib/jsr311-api-1.1.1.jar" />
+		<pathelement path="${SINEREPO}/WebServer/jersey/1.12/lib/jersey-core-1.12.jar" />
+		<pathelement path="${SINEREPO}/WebServer/jersey/1.12/lib/jersey-multipart-1.12.jar" />
+				
+		<pathelement path="${SGGenerics}/build/SGGenerics-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+				
+		<pathelement path="${Geopedia}/lib/poi-3.8beta4/ooxml-lib/dom4j-1.6.1.jar" />
+		<pathelement path="${Geopedia}/lib/poi-3.8beta4/ooxml-lib/stax-api-1.0.1.jar" />
+		<pathelement path="${Geopedia}/lib/poi-3.8beta4/ooxml-lib/xmlbeans-2.3.0.jar" />
+		<pathelement path="${Geopedia}/lib/poi-3.8beta4/poi-3.8-beta4-20110826.jar" />
+		<pathelement path="${Geopedia}/lib/poi-3.8beta4/poi-ooxml-3.8-beta4-20110826.jar" />
+		<pathelement path="${Geopedia}/lib/poi-3.8beta4/poi-ooxml-schemas-3.8-beta4-20110826.jar" />
+		
+		<pathelement path="${SINEREPO}/Util/apache-httpcomponents/client/4.2.3/lib/httpclient-4.2.3.jar"/>
+		<pathelement path="${SINEREPO}/Util/apache-httpcomponents/core/4.2.3/lib/httpcore-4.2.3.jar"/>
+		<pathelement path="${SINEREPO}/Util/apache-commons/codec/1.4/lib/commons-codec-1.4.jar"/>
+		
+		<pathelement path="${SINEREPO}/Graphics/gpx/1.0/lib/gpx-1.0.jar"/>
+		<pathelement path="${SINEREPO}/Graphics/gpx/1.1/lib/gpx-1.1.jar"/>
+	</path>
+		
+</project>

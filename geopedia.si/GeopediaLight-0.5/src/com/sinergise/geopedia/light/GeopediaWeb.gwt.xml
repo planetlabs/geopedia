@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.sinergise.geopedia.client.core'/>
+  <inherits name="com.sinergise.geopedia.themebundle.GeopediaThemeGis" />
+  <inherits name='com.sinergise.geopedia.client.resources'/>
+  <inherits name='com.sinergise.geopedia.client.components'/>
+  <inherits name='com.sinergise.geopedia.pro.GeopediaPro'/>
+  <inherits name="com.google.gwt.maps.GoogleMaps" />
+  
+  
+  
+  <set-property name="canvasElementSupport" value="maybe">
+	<any>
+		<when-property-is name="user.agent" value="ie6" />
+		<when-property-is name="user.agent" value="ie8" />
+	</any>			
+  </set-property>
+	
+  <replace-with class="com.google.gwt.dom.client.SGDOMImplIE8">
+    <when-type-is class="com.google.gwt.dom.client.DOMImpl" />
+    <when-property-is name="user.agent" value="ie8" />
+  </replace-with>
+  
+   <!-- Specify the paths for translatable code                    -->
+  <source path='client'/>
+  <source path='theme'/>
+  
+</module>

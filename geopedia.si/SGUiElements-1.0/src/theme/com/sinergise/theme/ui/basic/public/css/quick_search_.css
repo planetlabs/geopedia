@@ -1,0 +1,62 @@
+/***************** QUICK SEARCH **********************************/
+.sgwebui-quickSearch {
+	position: relative;
+}
+#noIE .sgwebui-quickSearch,
+#IE9 .sgwebui-quickSearch {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 1px 2px #777 inset;
+	padding: 3px 20px 3px 5px;
+	background: #fff;
+	border: 1px solid #999;
+	border-top: 1px solid #777;
+	border-bottom: 1px solid #bbb;
+}
+
+#IE .sgwebui-quickSearch {
+	background:url("../img/quick_search/quicksearch_ie.png") left top;
+	height: 18px;
+	padding: 3px 20px 3px 5px;
+	margin-right: 8px;
+}
+#IE .sgwebui-quickSearch .rSide {
+	background:url("../img/quick_search/quicksearch_ie.png") right top;
+	width: 8px;
+	display: block;
+	height: 24px;
+	position: absolute;
+	right: -8px;
+	top: 0;
+}
+
+.sgwebui-quickSearch input.textbox {
+	border: none;
+	margin: 0;
+	padding: 1px 0 0;
+	width: 100%;
+	height: 16px;
+}
+.sgwebui-quickSearch input.textbox-empty {
+	color: #aaa;
+}
+.sgwebui-quickSearch input.textbox:focus {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.sgwebui-quickSearch span.icon {
+	width: 14px;
+	height: 14px;
+	background: url("../img/quick_search/qs_submit.png") 0 0 no-repeat;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	display: block;
+	cursor: pointer;
+}
+.sgwebui-quickSearch span.icon:hover {
+	background-position: left bottom;
+} 

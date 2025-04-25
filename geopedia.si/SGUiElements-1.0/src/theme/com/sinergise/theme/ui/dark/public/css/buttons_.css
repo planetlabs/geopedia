@@ -1,0 +1,239 @@
+/* ########## DECORATED BUTTON ########## */
+#noIE .sgwebui-decoratedButton .butTopCenterInner,
+#IE9 .sgwebui-decoratedButton .butTopCenterInner, a.btn, a.btn.disabled.down {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjY2NiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0YjRiNGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #666666 0%, #4b4b4b 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#666666), color-stop(100%,#4b4b4b));
+	background: -webkit-linear-gradient(top, #666666 0%,#4b4b4b 100%);
+	background: -o-linear-gradient(top, #666666 0%,#4b4b4b 100%);
+	background: -ms-linear-gradient(top, #666666 0%,#4b4b4b 100%);
+	background: linear-gradient(top, #666666 0%,#4b4b4b 100%);
+	border: 1px solid #333;
+	border-bottom-color: #000;
+	border-top-color: #555;
+	color: #fff;
+	padding: 4px 8px;
+	box-shadow: 0 1px 0 #aaa inset;
+	-moz-box-shadow: 0 1px 0 #aaa inset;
+	-webkit-box-shadow: 0 1px 0 #aaa inset;
+}
+.gwt-PushButton-up-hovering .butTopCenterInner,
+a.btn:hover {
+	color: #fff !important;
+}
+
+#IE .sgwebui-decoratedButton .butTopCenterInner {
+    background: url(../img/buttons/btn_ie.png) right top no-repeat;
+    color: #fff;
+}
+
+#noIE .gwt-PushButton-down-hovering .butTopCenterInner,
+#IE9 .gwt-PushButton-down-hovering .butTopCenterInner {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRjN2IyMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2MTliMmIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #4c7b22 0%, #619b2b 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c7b22), color-stop(100%,#619b2b));
+	background: -webkit-linear-gradient(top, #4c7b22 0%,#619b2b 100%);
+	background: -o-linear-gradient(top, #4c7b22 0%,#619b2b 100%);
+	background: -ms-linear-gradient(top, #4c7b22 0%,#619b2b 100%);
+	background: linear-gradient(top, #4c7b22 0%,#619b2b 100%);
+	border:1px solid #365618;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	text-shadow: 0 1px 0 #000;
+}
+#IE .gwt-PushButton-down-hovering .butTopCenterInner {
+    background-position: right bottom;
+    color: #fff;
+}
+#IE .gwt-PushButton-down-hovering .butTopLeft {
+	background-position: left bottom;
+}
+
+#noIE .gwt-PushButton-up-disabled .butTopCenterInner,
+#IE9 .gwt-PushButton-up-disabled .butTopCenterInner{
+	cursor: default;
+	border-color: #999;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JiYmJiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5YTlhOWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #bbbbbb 0%, #9a9a9a 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bbbbbb), color-stop(100%,#9a9a9a));
+	background: -webkit-linear-gradient(top, #bbbbbb 0%,#9a9a9a 100%);
+	background: -o-linear-gradient(top, #bbbbbb 0%,#9a9a9a 100%);
+	background: -ms-linear-gradient(top, #bbbbbb 0%,#9a9a9a 100%);
+	background: linear-gradient(top, #bbbbbb 0%,#9a9a9a 100%);
+	box-shadow: 0 1px 0 #ddd inset;
+	-moz-box-shadow: 0 1px 0 #ddd inset;
+	-webkit-box-shadow: 0 1px 0 #ddd inset;
+}
+#IE .gwt-PushButton-up-disabled .butTopCenterInner {
+    background-position: right -28px;
+    color: #fff;
+}
+#IE .gwt-PushButton-up-disabled .butTopLeft {
+	background-position: left -28px;
+}
+
+.gwt-PushButton-up-disabled {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+/* ##########  ########## */
+
+div.sgwebui-detailsTab-pin,
+div.sgwebui-detailsTab-pinned {
+	width: 16px;
+	height: 16px;
+	background-image: url("../img/buttons/pin.png");
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	margin-left: 6px;
+	margin-bottom: -3px;
+	margin-right: -3px;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.sgwebui-innerTab .gwt-DecoratedTabBar .gwt-TabBarItem-selected div.sgwebui-detailsTab-pin,
+.sgwebui-innerTab .gwt-DecoratedTabBar .gwt-TabBarItem-selected div.sgwebui-detailsTab-pinned {
+	margin-bottom: -5px;
+}
+
+div.sgwebui-detailsTab-pin-hover {
+	background-image: url("../img/buttons/pinned.png");	
+	cursor: pointer;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+div.sgwebui-detailsTab-pinned {
+	background-image: url("../img/buttons/pinned.png");	
+	cursor: default;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+
+/**************** DECORATED ANCHOR ********************/
+/* for generating different gradients use http://www.colorzilla.com/gradient-editor/   
+delete *filter* attribute if using complex gradient or rounded button - because for IE8- we will use image instead. IE9+ uses svg */
+a.btn, a.btn.disabled.down {
+	overflow: visible;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxZjFmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNGU0ZTQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #f1f1f1 0%, #e4e4e4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1f1f1), color-stop(100%,#e4e4e4));
+	background: -webkit-linear-gradient(top,  #f1f1f1 0%,#e4e4e4 100%);
+	background: -o-linear-gradient(top,  #f1f1f1 0%,#e4e4e4 100%);
+	background: -ms-linear-gradient(top,  #f1f1f1 0%,#e4e4e4 100%);
+	background: linear-gradient(top,  #f1f1f1 0%,#e4e4e4 100%);
+	border: 1px solid #bbb;
+	border-bottom-color: #aaa;
+	border-top-color: #ccc;
+	color: #666;
+	padding: 5px 9px;
+	display: inline-block;
+	-moz-transition: color, border ease 0.3s;
+	-webkit-transition: color, border ease 0.3s;
+	-o-transition: color, border ease 0.3s;
+	transition: color, border ease 0.3s;
+    zoom:1;
+	cursor: pointer;
+	text-decoration: none;
+	margin: 0 3px 3px 0;
+	vertical-align: top;
+	position: relative;
+}
+#IE a.btn, #IE a.btn.disabled.down {
+	padding: 0 8px 0 0;
+	border: none;
+}
+#IE a.btn .rSide {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 28px;
+	width: 8px;
+	display: block;
+	background: url(../img/buttons/btn_ie.png) right top no-repeat;
+}
+a.btn:hover {
+	color: #0092ed;
+	text-decoration: none;
+}
+a.btn.icon, #IE a.btn.icon .txt {
+	padding-left: 26px;
+}
+#IE a.btn span.txt, #IE a.btn.disabled.down span.txt {
+    display: block;
+    padding: 5px 0 5px 8px;
+    background: url(../img/buttons/btn_ie.png) left top no-repeat;
+    height: 18px;
+}
+#IE a.btn span.rSide, #IE a.btn.disabled.down span.rSide {
+	background-position: right top;
+}
+a.btn img, 
+a.btn .spanImg {
+	float: left;
+	margin: -1px 0 -1px -20px;
+	border: none;
+	display: block;
+}
+#IE a.btn img, 
+#IE a.btn .spanImg {
+	position: absolute;
+	left: 6px;
+	top: 6px;
+	margin: 0;
+	display: block;
+}
+a.btn.down {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJmNzY5YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE2JSIgc3RvcC1jb2xvcj0iIzNjOTdjNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1NWI2ZTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #2f769a 0%, #3c97c6 16%, #55b6e9 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2f769a), color-stop(16%,#3c97c6), color-stop(100%,#55b6e9));
+	background: -webkit-linear-gradient(top,  #2f769a 0%,#3c97c6 16%,#55b6e9 100%);
+	background: -o-linear-gradient(top,  #2f769a 0%,#3c97c6 16%,#55b6e9 100%);
+	background: -ms-linear-gradient(top,  #2f769a 0%,#3c97c6 16%,#55b6e9 100%);
+	background: linear-gradient(top,  #2f769a 0%,#3c97c6 16%,#55b6e9 100%);
+	border:1px solid #608ea6;
+	border-top-color: #1d5c7d;
+	border-bottom-color: #79a1b6; 
+	box-shadow: 0 1px 0 rgba(255,255,255,.7);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.7);
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.7);
+	-o-box-shadow: 0 1px 0 rgba(255,255,255,.7);
+	text-shadow: 0 -1px 0 #026aa0;
+	color: #fff;
+	text-decoration: none;
+}
+
+a.btn.down span.txt {
+	color: #fff;
+	text-decoration: none;
+}
+#IE a.btn.down span.txt {
+	background-position: left bottom;
+	border: none;
+}
+#IE a.btn.down span.rSide {
+	background-position: right bottom;
+}
+a.btn.disabled {
+	opacity: .6;
+	filter: alpha(opacity=60);
+	text-shadow: none !important;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	cursor: default !important;
+} 
+
+a.btn.down.disabled, a.btn.disabled:hover,
+a.btn.down.disabled span.txt {
+	color: #666;
+	cursor: default !important;
+}

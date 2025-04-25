@@ -1,0 +1,77 @@
+/******************************** HORIZONTAL SPLITTER *****************************/
+
+.sgwebgis-hMapSplit-rightMap .hsplitter * td img,
+.sgwebgis-hMapSplit-leftMap .hsplitter * td img {
+	width: 4px !important; /* 13px total */
+	height: 85px !important;
+	overflow: visible;
+	display: block;
+}
+
+.sgwebgis-hMapSplit-rightMap .hsplitter * td img {
+	background: url("../img/map_splitter/hms_right_thumb.png") no-repeat transparent !important;
+	padding-right: 9px; /* 13px total */
+	cursor: e-resize;
+	
+	/*
+	-background-image: url(trPix.gif);
+	-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/map_splitter/hms_right_thumb.png', sizingMethod='crop') !important;
+	*/
+}
+
+.sgwebgis-hMapSplit-leftMap .hsplitter * td img {
+	background: url("../img/map_splitter/hms_left_thumb.png") no-repeat transparent !important;
+	padding-left: 9px; /* 13px total */
+	cursor: w-resize;
+	
+	/*
+	-background-image: url(trPix.gif);
+	-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/map_splitter/hms_left_thumb.png', sizingMethod='crop') !important;
+	*/
+}
+
+.sgwebgis-hMapSplit-rightMap .hsplitter,
+.sgwebgis-hMapSplit-leftMap .hsplitter {
+	cursor: default;
+	*width: 5px !important;
+}
+
+.sgwebgis-hMapSplit-rightMap .gwt-HorizontalSplitPanel-split {
+	background:url("../img/map_splitter/hms_right_border.png") repeat-y scroll left 0 transparent;
+	
+	/*
+	-background: url("trPix.gif") repeat-y scroll right 0 transparent;
+	-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/map_splitter/hms_right_border.png', sizingMethod='crop');
+	*/
+}
+
+.sgwebgis-hMapSplit-leftMap .gwt-HorizontalSplitPanel-split {
+	background:url("../img/map_splitter/hms_left_border.png") repeat-y scroll right 0 transparent;
+	
+	/*
+	-background: url("trPix.gif") repeat-y scroll right 0 transparent;
+	-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/map_splitter/hms_left_border.png', sizingMethod='crop');
+	*/
+}
+
+.sgwebgis-hMapSplit-rightMap .gwt-HorizontalSplitPanel-split {
+}
+
+.sgwebgis-hMapSplit-leftMap .gwt-HorizontalSplitPanel-split {
+	margin-left: -9px;	
+}
+
+.sgwebgis-hMapSplit-leftMap div.gwt-HorizontalSplitPanel-left {
+	margin-right:-9px !important;
+}
+
+.sgwebgis-hMapSplit-rightMap div.gwt-HorizontalSplitPanel-right {
+	margin-left:-9px !important;
+}
+
+/* .sgwebgis-hMapSplit-leftMap div.gwt-HorizontalSplitPanel-right {
+	overflow: hidden !important;
+}
+.sgwebgis-hMapSplit-rightMap div.gwt-HorizontalSplitPanel-left {
+	overflow: hidden !important;
+} */

@@ -1,0 +1,100 @@
+.sgwebgis-layersTree { border: none; }
+.sgwebgis-GroupTree-DisclosurePanel .layerGroupHeader {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMmYyZjIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #ffffff 0%, #eee 100%)");
+	background: literal("-webkit-linear-gradient(top, #ffffff 0%,#eee 100%)");
+	background: literal("linear-gradient(top, #ffffff 0%,#eee 100%)");
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 )");
+	color: #333;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	margin-top: -1px;
+	padding: 5px;
+}
+.sgwebgis-GroupTree-DisclosurePanel-closed:hover .layerGroupHeader {
+	color: #1D9FB2;
+}
+.sgwebgis-GroupTree-DisclosurePanel .sgwebgis-GroupTree-DisclosurePanel .layerGroupHeader {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMmYyZjIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #ffffff 0%, #eee 100%)");
+	background: literal("-webkit-linear-gradient(top, #ffffff 0%,#eee 100%)");
+	background: literal("linear-gradient(top, #ffffff 0%,#eee 100%)");
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 )");
+	border: 1px solid #ccc;
+	padding: 2px 4px;
+	margin-right: 5px;
+	border-radius: 5px;
+}
+.sgwebgis-GroupTree-DisclosurePanel-open .layerGroupHeader,
+.sgwebgis-GroupTree-DisclosurePanel .sgwebgis-GroupTree-DisclosurePanel-open .layerGroupHeader {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5ZjdmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiZWUzZTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #e9f7f9 0%, #bee3e9 100%)");
+	background: literal("-webkit-linear-gradient(top, #e9f7f9 0%,#bee3e9 100%)");
+	background: literal("linear-gradient(top, #e9f7f9 0%,#bee3e9 100%)");
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f7f9', endColorstr='#bee3e9',GradientType=0 )");
+	border-color: #38A5B6;
+}
+.layerGroupHeader .chkCont { margin-top: 5px; margin-left: 4px;}
+.sgwebgis-layerWidget .gwt-ToggleButton { margin: 0 2px; }
+
+.sgwebgis-GroupTree-DisclosurePanel .sgwebgis-GroupTree-DisclosurePanel .sgwebgis-tree-children.content { 
+	border: none; 
+	margin-right: 10px;
+	margin-left: 5px;
+}
+@sprite .sgwebgis-tree-children.content {
+	gwt-image: "shadow";
+	height: auto;
+}
+
+@if !user.agent ie6 ie8 {
+	.sgwebgis-layerWidget .gwt-ToggleButton-up, 
+	.sgwebgis-layerWidget .gwt-ToggleButton-up-hovering, 
+	.sgwebgis-layerWidget .gwt-ToggleButton-up-disabled, 
+	.sgwebgis-layerWidget .gwt-ToggleButton-down, 
+	.sgwebgis-layerWidget .gwt-ToggleButton-down-hovering, 
+	.sgwebgis-layerWidget .gwt-ToggleButton-down-disabled {
+		border-radius: 4px;
+		box-shadow: -1px -1px 2px #ccc inset;
+		background: #fff;
+		border: 1px solid #ccc;
+	}
+	.sgwebgis-layerWidget .gwt-ToggleButton-down, 
+	.sgwebgis-layerWidget .gwt-ToggleButton-down-hovering {
+		background: #b6e0f6;
+		border-color: #6895ac;
+		box-shadow: 1px 1px 2px #6895ac inset;
+	}
+	.sgwebgis-layerWidget .gwt-ToggleButton.gwt-popupButton {
+		width: 12px;
+		height: 15px;
+		margin-left: -2px;
+		text-align: center;
+		border-radius: 0 4px 4px 0;
+	}
+	
+}
+@else {
+	@sprite .sgwebgis-layerWidget .gwt-ToggleButton-up, 
+	.sgwebgis-layerWidget .gwt-ToggleButton-up-hovering, 
+	.sgwebgis-layerWidget .gwt-ToggleButton-up-disabled, 
+	.sgwebgis-layerWidget .gwt-ToggleButton-down, 
+	.sgwebgis-layerWidget .gwt-ToggleButton-down-hovering, 
+	.sgwebgis-layerWidget .gwt-ToggleButton-down-disabled {
+		gwt-image: "layerOff";
+	}
+	@sprite .sgwebgis-layerWidget .gwt-ToggleButton-down, 
+	.sgwebgis-layerWidget .gwt-ToggleButton-down-hovering {
+		gwt-image: "layerOn";
+	}
+	@sprite .sgwebgis-layerWidget .gwt-ToggleButton.gwt-popupButton {
+		gwt-image: "layerMini";
+	}
+	@sprite .sgwebgis-layerWidget .gwt-ToggleButton-down.gwt-popupButton,
+	.sgwebgis-layerWidget .gwt-ToggleButton-down-hovering.gwt-popupButton {
+		gwt-image: "layerMiniOn";
+	}
+}
+.sgwebgis-layerWidget .gwt-ToggleButton.gwt-popupButton img {
+	margin: 0px 0 0 -1px;
+}

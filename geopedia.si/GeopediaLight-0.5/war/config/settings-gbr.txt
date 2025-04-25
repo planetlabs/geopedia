@@ -1,0 +1,90 @@
+coordinatesystem = X
+dmvfile = c:\\dmv125.raw
+
+db.host = 10.5.250.224
+db.user = pediawww
+db.pass = pediawww
+db.basedb = pedicamain
+
+updatedb.host = 10.5.250.224
+updatedb.user = pediaupdate
+updatedb.pass = pediaupdate
+updatedb.basedb = pedicamain
+
+
+datasetHost.publicRenderer.id = 1
+datasetHost.publicRenderer.basepath = /rp
+datasetHost.publicRenderer.numhosts = 1
+datasetHost.publicRenderer.host0 = localhost:8888
+#datasetHost.publicRenderer.host0 = pr1.geopedia.si
+
+
+copyright.geopedia.watermark = com/sinergise/geopedia/server/service/logoText170.png
+copyright.geopedia.watermark.offsetLeft = 10
+copyright.geopedia.watermark.offsetBottom = 10
+
+public.renderer.featpath = /hlt
+
+copyright.list = sinergise
+
+copyright.sinergise.text = Sinergise
+copyright.sinergise.link = http://www.sinergise.com
+
+
+
+
+
+datasetHosts=main
+
+datasetHost.main.numhosts=1
+datasetHost.main.host0 = d000000000000000.sinergise.com
+datasetHost.main.host1 = d000000000000000.sinergise.com
+datasetHost.main.host2 = d000000000000000.sinergise.com
+datasetHost.main.host3 = d000000000000000.sinergise.com
+
+
+datasetHost.dynamicRasters.basepath = /pre/layers/
+datasetHost.dynamicRasters.numhosts = 1
+datasetHost.dynamicRasters.host0 = tnzstatic.geopedia.si
+
+
+dataset.count=3
+dataset.default={"defaultDataset":0,"datasets":{"PRO":[[0]],"DEFAULT":[[0,1,2]]}}
+
+dataset.0.id = 0
+dataset.0.name = Topo
+dataset.0.description = RAS250
+dataset.0.basepath = /gbr/ras250_gb/jpg/
+dataset.0.maxlevel = 13
+dataset.0.numcopy = 1
+dataset.0.copy0 = sinergise
+dataset.0.datasethost=main
+dataset.0.filetype=jpg
+
+
+dataset.1.id = 1
+dataset.1.name = 10K_all
+dataset.1.description = 10K_all
+dataset.1.basepath = /gbr/10K_all/
+dataset.1.maxlevel = 17
+dataset.1.numcopy = 1
+dataset.1.copy0 = sinergise
+dataset.1.datasethost=main
+dataset.1.filetype=png
+
+
+
+dataset.2.id = 2
+dataset.2.name = 20K_all
+dataset.2.description = 20K_all
+dataset.2.basepath = /gbr/20K_all/
+dataset.2.maxlevel = 16
+dataset.2.numcopy = 1
+dataset.2.copy0 = sinergise
+dataset.2.datasethost=main
+dataset.2.filetype=png
+
+metadata.refresh.interval = 500
+
+webLinks.location=weblinks/
+

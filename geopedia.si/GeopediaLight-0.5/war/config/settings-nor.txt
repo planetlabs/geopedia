@@ -1,0 +1,83 @@
+coordinatesystem = S
+dmvfile = c:\\dmv125.raw
+
+db.host = 10.5.250.222
+db.user = pediawww
+db.pass = pediawww
+db.basedb = pedicamain
+
+updatedb.host = 10.5.250.222
+updatedb.user = pediaupdate
+updatedb.pass = pediaupdate
+updatedb.basedb = pedicamain
+
+
+datasetHost.publicRenderer.id = 1
+datasetHost.publicRenderer.basepath = /rp
+datasetHost.publicRenderer.numhosts = 1
+datasetHost.publicRenderer.host0 = localhost:8888
+#datasetHost.publicRenderer.host0 = pr1.geopedia.si
+
+
+copyright.geopedia.watermark = com/sinergise/geopedia/server/service/logoText170.png
+copyright.geopedia.watermark.offsetLeft = 10
+copyright.geopedia.watermark.offsetBottom = 10
+
+public.renderer.featpath = /hlt
+
+copyright.list = sinergise
+
+copyright.sinergise.text = Sinergise
+copyright.sinergise.link = http://www.sinergise.com
+
+
+
+
+
+datasetHosts=main
+datasetHost.main.numhosts=1
+datasetHost.main.host0 = uv12static.geopedia.si
+
+
+datasetHost.dynamicRasters.basepath = /pre/layers/
+datasetHost.dynamicRasters.numhosts = 1
+datasetHost.dynamicRasters.host0 = dmv01.geopedia.si
+
+
+dataset.count=3
+dataset.default={"defaultDataset":0,"datasets":{"PRO":[[0,1,2]],"DEFAULT":[[0,1,2]]}}
+
+dataset.0.id = 0
+dataset.0.name = Topo
+dataset.0.description = Topo
+dataset.0.basepath = /nato/RasterData/GeoTIFF-M517Air
+dataset.0.maxlevel = 13
+dataset.0.numcopy = 1
+dataset.0.copy0 = sinergise
+dataset.0.datasethost=main
+dataset.0.filetype=png
+
+
+dataset.1.id = 1
+dataset.1.name = Topo
+dataset.1.description = Data1
+dataset.1.basepath = /nato/Imagery_2/GeoTIFF
+dataset.1.maxlevel = 18
+dataset.1.numcopy = 1
+dataset.1.copy0 = sinergise
+dataset.1.datasethost=main
+
+dataset.2.id = 0
+dataset.2.name = Topo
+dataset.2.description = Data2
+dataset.2.basepath = /nato/RasterData/N50-2011-GeoTIFF-UTM33
+dataset.2.maxlevel = 16
+dataset.2.numcopy = 1
+dataset.2.copy0 = sinergise
+dataset.2.datasethost=main
+dataset.2.filetype=png
+
+metadata.refresh.interval = 500
+
+webLinks.location=weblinks/
+

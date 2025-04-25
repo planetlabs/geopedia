@@ -1,0 +1,14 @@
+===================================================================================================
+ Mandatory
+===================================================================================================
+SGUtil project	(SGUtil-SNAPSHOT.jar)
+
+slf4j-api		(slf4j-api-<version>.jar)
+
+
+===================================================================================================
+ Optional
+===================================================================================================
+jts				(jts-<version>.jar)	advanced algorithms that need JTS indexes and operations
+gpx				(gpx-1.0.jar and gpx-1.1.jar) GPX input/output
+Oracle sdoapi   (ojdbc<java-version>.jar and sdoapi-<version>.jar) Oracle SDO input/output

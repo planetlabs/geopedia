@@ -1,0 +1,17 @@
+table.sgwebgis-coordinateslabel td {
+	vertical-align: middle !important;
+	padding-top: 4px
+}
+
+td.sgwebgis-coordinateslabel-projLb, div.sgwebgis-coordinateslabel-projLb {
+	width: 150px;
+	white-space: nowrap;
+	padding-left: 12px;
+}
+div.sgwebgis-coordinateslabel-projLb, div.sgwebgis-coordinateslabel-latLonLb {
+	*margin-top: -8px;
+}
+
+td.sgwebgis-coordinateslabel-spacer {
+	width: 30px;
+}

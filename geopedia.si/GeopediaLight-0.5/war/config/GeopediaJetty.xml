@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+<Configure id="server" class="org.mortbay.jetty.Server">
+
+  <Call name="addConnector">
+    <Arg>
+        <New class="org.mortbay.jetty.nio.SelectChannelConnector">              
+
+                      <!--  production (geopedia.si) -->
+                      <Set name="port"><SystemProperty name="jetty.port" default="80"/></Set>
+                </New>
+        </Arg>
+  </Call>
+                              
+  <New id="root" class="org.mortbay.jetty.servlet.Context">
+    <Arg><Ref id="server"/></Arg>
+    <Arg>/</Arg>
+    
+    <!-- testing and production -->
+    <Set name="ResourceBase">war</Set>
+   
+    <Set name="SessionHandler">
+      <New class="org.mortbay.jetty.servlet.SessionHandler"/>
+    </Set>
+    
+    <Call name="addServlet">
+      <Arg>
+        <New class="org.mortbay.jetty.servlet.ServletHolder">
+          <Arg> <New class="org.mortbay.jetty.servlet.DefaultServlet"/> </Arg>
+        </New>
+      </Arg>
+      <Arg>/</Arg>
+    </Call>
+    
+    <!--
+    <Set name="WelcomeFiles">
+      <Array type="java.lang.String"> <Item>Geopedia.jsp</Item> </Array>
+    </Set>
+    -->
+    
+    <!-- Jsp Servlet -->
+    <Call name="addServlet">
+      <Arg>
+        <New class="org.mortbay.jetty.servlet.ServletHolder">
+          <Arg><New class="org.apache.jasper.servlet.JspServlet" /></Arg>
+        </New>
+       </Arg>
+      <Arg>*.jsp</Arg>
+    </Call>
+    
+    <!-- Public Render Service -->
+    <Call name="addServlet">
+      <Arg> 
+        <New class="org.mortbay.jetty.servlet.ServletHolder">
+          <Arg><New class="com.sinergise.geopedia.server.service.PublicRenderServlet" /></Arg> 
+        </New>
+       </Arg>
+      <Arg>/rp/*</Arg>
+    </Call>
+    
+    <!-- Highlight Service -->
+    <Call name="addServlet">
+      <Arg> 
+        <New class="org.mortbay.jetty.servlet.ServletHolder">
+          <Arg><New class="com.sinergise.geopedia.server.service.HighlightServiceImpl" /></Arg> 
+        </New>
+       </Arg>
+      <Arg>/hlt/*</Arg>
+    </Call>
+    
+    <!-- Meta Service -->
+    <Call name="addServlet">
+      <Arg> 
+        <New class="org.mortbay.jetty.servlet.ServletHolder">
+          <Arg><New class="com.sinergise.geopedia.server.service.MetaServiceImpl" /></Arg> 
+        </New>
+       </Arg>
+      <Arg>/meta</Arg>
+    </Call>
+    
+    <!-- Session Service -->
+    <Call name="addServlet">
+      <Arg> 
+        <New class="org.mortbay.jetty.servlet.ServletHolder">
+          <Arg><New class="com.sinergise.geopedia.server.service.SessionServiceImpl" /></Arg> 
+        </New>
+       </Arg>
+      <Arg>/sess</Arg>
+    </Call>
+    
+    <!-- FeatureInfo Service -->
+    <Call name="addServlet">
+      <Arg> 
+        <New class="org.mortbay.jetty.servlet.ServletHolder">
+          <Arg><New class="com.sinergise.geopedia.server.service.FeatureServiceImpl" /></Arg> 
+        </New>
+       </Arg>
+      <Arg>/feat</Arg>
+    </Call>
+    
+     <!-- DMVService Service -->
+    <Call name="addServlet">
+      <Arg> 
+        <New class="org.mortbay.jetty.servlet.ServletHolder">
+          <Arg><New class="com.sinergise.geopedia.server.height.DMVServiceImpl" /></Arg> 
+        </New>
+       </Arg>
+      <Arg>/dmvService</Arg>
+    </Call>
+    
+    <!-- StylesIcons Service -->
+    <Call name="addServlet">
+      <Arg> 
+        <New class="org.mortbay.jetty.servlet.ServletHolder">
+          <Arg><New class="com.sinergise.geopedia.server.service.StylesIconServlet" /></Arg> 
+        </New>
+       </Arg>
+      <Arg>/sicon/*</Arg>
+    </Call>
+
+    <!-- Image Service -->
+    <Call name="addServlet">
+      <Arg> 
+        <New class="org.mortbay.jetty.servlet.ServletHolder">
+          <Arg><New class="com.sinergise.geopedia.server.service.ImageServlet" /></Arg> 
+        </New>
+       </Arg>
+      <Arg>/image/*</Arg>
+    </Call>
+    
+  </New>   
+  
+<Call name="start"/>
+</Configure>

@@ -1,0 +1,118 @@
+/* Style for tab panel with single outlined thumb, non-active thumbs are displayed as labels */
+
+/* Override GWT Standard Theme */
+
+.gwt-DecoratedTabBar .gwt-TabBarItem .tabTopLeft, 
+.gwt-DecoratedTabBar .gwt-TabBarItem .tabTopRight,
+.gwt-DecoratedTabBar .gwt-TabBarItem .tabTopCenter,
+.gwt-DecoratedTabBar .gwt-TabBarItem .tabMiddleLeft, 
+.gwt-DecoratedTabBar .gwt-TabBarItem .tabMiddleRight,
+.gwt-DecoratedTabBar .gwt-TabBarItem .tabMiddleCenter {
+	background: none; 
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected,
+.gwt-DecoratedTabBar .gwt-TabBarItem {
+	background: none;	
+	border: none;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem {
+	margin-right: 0px;	
+}
+
+.gwt-DecoratedTabBar .tabTopLeftInner,
+.gwt-DecoratedTabBar .tabMiddleLeftInner,
+.gwt-DecoratedTabBar .tabTopLeft,
+.gwt-DecoratedTabBar .tabMiddleLeft {
+	width: 0px;
+}
+
+.gwt-TabPanelBottom {
+	border: none;
+}
+div.gwt-TabPanelBottom > div > div {
+	overflow: visible; /*due to displaying horizontal scrollbar at bottom*/
+}
+
+.gwt-DecoratedTabBar {
+	border: none;
+}
+.gwt-TabPanelBottom {
+	background-color:  #fff;
+	padding: 0;
+}
+.gwt-TabPanelBottom > .tabContainer {
+	position: absolute;
+	left: 0;
+	top: 80px;
+	right: 0;
+	bottom: 30px;
+	overflow: auto;
+}
+.gwt-TabPanelBottom .gwt-TabPanelBottom > .tabContainer {
+	position: static;
+	top: auto;
+	bottom: auto;
+	overflow: visible;
+}
+/* ********************************************************** */
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopLeftInner, 
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopRightInner {
+	height: 9px;
+	width: 9px;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopCenterInner {
+	height: 9px;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleLeftInner, 
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleRightInner {
+	width: 9px;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopLeft, 
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopRight,
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopCenter,
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleLeft, 
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleRight,
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleCenter {
+	background: url("../img/tab_single/tab.png") no-repeat transparent;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopLeft {
+	background-position: left top;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopRight {
+	background-position: right top;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopCenter {
+	background-position: -9px top;	
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleLeft {
+	background-position: left bottom;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleRight {
+	background-position: right bottom;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleCenter {
+	background-position: -9px bottom;	
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem .tabMiddleCenter {
+	color: #666;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleCenter {
+	color: #333;	
+}
+
+
+

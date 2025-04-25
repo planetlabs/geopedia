@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SGUtil">
+    <property name="sinergise.libraries.branch" value="1.0" />
+    <property file="${sinergise.build.properties}" />
+	
+	<!-- default directory paths (will be overridden by build.properties file or sinergise.build.properties)-->
+	<property name="proguard.dir" value="${SINEREPO}/Util/proguard/4.10/lib" />
+	<property name="proguard.classpath" value="${proguard.dir}/proguard.jar" />
+	
+	
+	
+	<import file="buildAndroidLib.xml" />
+
+	<!-- Set defaults if not set in sinergise.build.properties file -->
+	<property name="SINEREPO" value="../SineRepo" />
+    <property name="SGUtil" value="../SGUtil-${sinergise.libraries.branch}" />
+    <property name="buildBase" value="${SGUtil}/build" />
+
+	<path id="lib.external">
+		<pathelement path="${SINEREPO}/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar" />
+		<pathelement path="${SINEREPO}/Desktop/args4j/2.0.10/lib/args4j-2.0.10.jar" />
+		<pathelement path="${SINEREPO}/Util/logback/1.0.1/lib/logback-core-1.0.1.jar" />
+		<pathelement path="${SINEREPO}/Util/logback/1.0.1/lib/logback-classic-1.0.1.jar" />
+		<pathelement path="${SINEREPO}/Util/log4j/1.2.16/lib/log4j-1.2.16.jar" />
+		<pathelement path="${SINEREPO}/Util/slf4j/1.6.1/lib/jul-to-slf4j-1.6.1.jar" />
+	</path>
+
+	<target name="clean">
+		<delete dir="${buildBase}" />
+		<mkdir dir="${buildBase}" />
+	</target>
+
+	<target name="refresh" if="eclipse.running">
+		<eclipse.convertPath fileSystemPath="${buildBase}" property="resourcePath"/>
+		<eclipse.refreshLocal resource="${resourcePath}" depth="infinite"/>
+	</target>
+
+	<target name="jar-common" depends="clean">
+		<mkdir dir="${buildBase}" />
+		<mkdir dir="${buildBase}/classes" />
+		<javac srcdir="src/common:src/java"
+		     destdir="${buildBase}/classes" includes="**" source="1.6" target="1.6" compiler="modern" fork="yes" encoding="UTF-8" includeantruntime="false" executable="${JAVA6}/bin/javac">
+			<classpath refid="lib.external" />
+		</javac>			 
+		<jar destfile="${buildBase}/SGUtil-common.jar">
+			<fileset dir="${buildBase}/classes">
+				<include name="**" />
+				<exclude name="com/sinergise/java/**" />
+				<exclude name="org/slf4j/**" />
+				<exclude name="com/sinergise/gwt/**" />
+			</fileset>
+		</jar>		
+	</target>
+	
+	<target name="compile">
+		<mkdir dir="${buildBase}" />
+		
+		<!--  try to build common geometry classes. This must succeed!! -->
+		<mkdir dir="${buildBase}/testCommon"/>
+        <compile.commonUtil buildBaseDir="${buildBase}/testCommon"/>
+		<delete dir="${buildBase}/testCommon"/>
+		
+        <delete dir="${buildBase}/classes" />
+		<mkdir dir="${buildBase}/classes" />
+		
+		<javac srcdir="src/common:src/java" destdir="${buildBase}/classes" includes="**" source="1.5" target="1.5" compiler="modern" fork="yes" encoding="UTF-8" includeantruntime="false" executable="${JAVA6}/bin/javac">
+			<classpath refid="lib.external" />
+			<compilerarg value="-Xlint:all"/>
+		</javac>
+		<antcall target="refresh" />
+	</target>
+	
+	<target name="compileAll">
+		<mkdir dir="${buildBase}" />
+		
+		<!--  try to build common geometry classes. This must succeed!! -->
+		<mkdir dir="${buildBase}/testCommon"/>
+        <compile.commonUtil buildBaseDir="${buildBase}/testCommon"/>
+		<delete dir="${buildBase}/testCommon"/>
+		
+        <delete dir="${buildBase}/classes" />
+		<mkdir dir="${buildBase}/classes" />
+		
+		<javac srcdir="src/common:src/java:src/gwt" destdir="${buildBase}/classes" includes="**" source="1.5" target="1.5" compiler="modern" fork="yes" encoding="UTF-8" includeantruntime="false" executable="${JAVA6}/bin/javac">
+			<classpath refid="lib.external" />
+			<compilerarg value="-Xlint:all"/>
+		</javac>
+		<antcall target="refresh" />
+	</target>
+	
+	<target name="jar" depends="compile">
+		<jar destfile="${buildBase}/SGUtil-${sinergise.libraries.branch}-SNAPSHOT.jar">
+			<fileset dir="${buildBase}/classes">
+				<include name="**" />
+				<exclude name="org/slf4j/**" />
+				<exclude name="com/sinergise/gwt/**" />
+			</fileset>
+		</jar>
+		<antcall target="refresh" />
+	</target>
+	
+	<target name="jarAll" depends="compileAll">
+		<jar destfile="${buildBase}/SGUtil-${sinergise.libraries.branch}-SNAPSHOT.jar">
+			<fileset dir="${buildBase}/classes">
+				<include name="**" />
+				<exclude name="org/slf4j/**" />
+				<exclude name="com/sinergise/gwt/**" />
+			</fileset>
+		</jar>
+		<antcall target="refresh" />
+	</target>
+
+	<target name="obfuscate">
+		<echo message="[=========================== Obfuscating full jar file ===========================]" />
+		<echo message="Jar src jar: ${buildBase}/SGUtil-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+		<echo message="Jar dst jar: ${buildBase}/SGUtil-${sinergise.libraries.branch}-OBFUSCATED-SNAPSHOT.jar" />
+
+		<java fork="yes" maxmemory="200m" classpath="${proguard.classpath}" classname="proguard.ProGuard">
+
+			<arg value="-libraryjars &lt;java.home>/lib/rt.jar" />
+			<arg value="-dontoptimize" />
+
+			<arg value="-injars ${buildBase}/SGUtil-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+			<arg value="-outjar ${buildBase}/SGUtil-${sinergise.libraries.branch}-OBFUSCATED-SNAPSHOT.jar" />
+			<arg value="@SGUtil.pro" />
+		</java>
+	</target>
+	
+</project>

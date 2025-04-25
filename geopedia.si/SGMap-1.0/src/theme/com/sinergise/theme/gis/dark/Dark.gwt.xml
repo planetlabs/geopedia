@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.0.3//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.0.3/distro-source/core/src/gwt-module.dtd">
+<module>
+     <inherits name="com.sinergise.theme.gis.basic.Basic" />
+     <inherits name="com.sinergise.theme.ui.dark.Dark" />
+     
+     <stylesheet src="css/gis_dark_full.css"/>
+</module>

@@ -1,0 +1,50 @@
+.sgwebui-toolbar-top-right,
+.sgwebui-toolbar-top-left,
+.sgwebui-toolbar-bottom-right,
+.sgwebui-toolbar-bottom-left {
+	height: 30px;	
+}
+div.sgwebui-toolbar-first-top-right,
+div.sgwebui-toolbar-last-top-right {
+	height: 30px;
+}
+
+div.sgwebui-toolbar-first-top-right {
+	width: 14px;
+}
+table.sgwebui-toolbar-top-right > tbody > tr > td, 
+table.sgwebui-toolbar-top-left > tbody > tr > td {
+	padding-right: 2px;
+	background: url(../img/toolbar/toolbar_separator.png) right center no-repeat;
+}
+.sgwebui-toolbar div.gwt-PushButton,
+.sgwebui-toolbar div.gwt-ToggleButton {
+	margin: 0;
+	width: 16px;
+	height: 16px;
+	padding: 6px 4px 4px;
+}
+
+.sgwebui-toolbar div.gwt-PushButton-up,
+.sgwebui-toolbar div.gwt-ToggleButton-up {
+	background: none;
+}
+.sgwebui-toolbar div.gwt-PushButton-up-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-up-hovering {
+	background:none repeat-x 0 0 #dcdadb;	
+}
+
+.sgwebui-toolbar div.gwt-PushButton-down,
+.sgwebui-toolbar div.gwt-PushButton-down-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-down,
+.sgwebui-toolbar div.gwt-ToggleButton-down-hovering {
+	background:none repeat-x scroll 0 0 #4f9aba;	
+}
+
+.sgwebui-toolbar div.gwt-PushButton-up-disabled,
+.sgwebui-toolbar div.gwt-PushButton-down-disabled,
+.sgwebui-toolbar div.gwt-ToggleButton-up-disabled {
+	background: #aaa;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}

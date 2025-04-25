@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SGUiElements">
+    <property name="sinergise.libraries.branch" value="1.0" />
+	<property file="${sinergise.build.properties}" />
+
+    <!-- Set defaults if not set in the sinergise.build.properties file -->
+    <property name="SINEREPO" value="../SineRepo" />
+    <property name="SGUtil" value="../SGUtil-${sinergise.libraries.branch}" />
+    <property name="SGUiElements" value="../SGUiElements-${sinergise.libraries.branch}" />
+    <property name="buildBase" value="${SGUiElements}/build" />
+	
+    
+	<!-- default directory paths (will be overridden by build.properties file or sinergise.build.properties)-->
+	<property name="proguard.dir" value="${SINEREPO}/Util/proguard/4.10/lib" />
+	<property name="proguard.classpath" value="${proguard.dir}/proguard.jar" />
+	
+	
+    
+	<path id="lib.external">
+		<pathelement path="${SGUtil}/build/SGUtil-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+
+		<pathelement path="${SINEREPO}/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar" />
+		<pathelement path="${SINEREPO}/WebServer/j2ee/6.0/lib/servlet-api.jar" />
+
+		<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/gwt-servlet.jar" />
+		<pathelement path="${SINEREPO}/Util/apache-commons/fileupload/1.2.2/lib/commons-fileupload-1.2.2.jar" />
+		
+		<pathelement path="${SINEREPO}/Misc/Hazelcast/3.2/lib/hazelcast-client-3.2.jar"/>
+		<pathelement path="${SINEREPO}/Misc/Hazelcast/3.2/lib/hazelcast-3.2.jar"/>
+	</path>
+
+	<target name="clean">
+		<delete dir="${buildBase}" />
+		<mkdir dir="${buildBase}" />
+	</target>
+
+	<target name="compile" depends="clean">
+		<mkdir dir="${buildBase}" />
+		<mkdir dir="${buildBase}/classes" />
+		<javac srcdir="src/common:src/java" destdir="${buildBase}/classes" includes="**" source="1.6" target="1.6"
+			compiler="modern" fork="yes" encoding="UTF-8" executable="${JAVA6}/bin/javac" includeantruntime="false">
+			<classpath refid="lib.external" />
+		</javac>
+	</target>
+
+	<target name="compileAll">
+		<mkdir dir="${buildBase}" />
+		<mkdir dir="${buildBase}/classes" />
+		<javac srcdir="src/common:src/java:src/gwt" destdir="${buildBase}/classes" includes="**" source="1.6" target="1.6"
+			compiler="modern" fork="yes" encoding="UTF-8" executable="${JAVA6}/bin/javac" includeantruntime="false">
+			<classpath refid="lib.external" />
+		</javac>
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar destfile="${buildBase}/SGUiElements-${sinergise.libraries.branch}-SNAPSHOT.jar">
+			<fileset dir="${buildBase}/classes">
+				<include name="**" />
+			</fileset>
+		</jar>
+	</target>
+	
+
+	<target name="jarAll" depends="compileAll">
+		<jar destfile="${buildBase}/SGUiElements-${sinergise.libraries.branch}-SNAPSHOT.jar">
+			<fileset dir="${buildBase}/classes">
+				<include name="**" />
+			</fileset>
+		</jar>
+	</target>
+	
+	<target name="obfuscate">
+		<echo message="[=========================== Obfuscating full jar file ===========================]" />
+		<echo message="Jar src jar: ${buildBase}/SGUiElements-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+		<echo message="Jar dst jar: ${buildBase}/SGUiElements-${sinergise.libraries.branch}-OBFUSCATED-SNAPSHOT.jar" />
+
+		<java fork="yes" maxmemory="200m" classpath="${proguard.classpath}" classname="proguard.ProGuard">
+
+			<arg value="-libraryjars &lt;java.home>/lib/rt.jar" />
+			<arg value="-dontoptimize" />
+
+			<arg value="-injars ${buildBase}/SGUiElements-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+			<arg value="-outjar ${buildBase}/SGUiElements-${sinergise.libraries.branch}-OBFUSCATED-SNAPSHOT.jar" />
+			<arg value="@SGUiElements.pro" />
+		</java>
+	</target>
+
+</project>

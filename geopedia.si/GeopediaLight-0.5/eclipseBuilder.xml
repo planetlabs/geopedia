@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="GeopediaLite">
+	<property name="Geopedia" value="../Geopedia-0.5" />
+	<property name="webdir" value="war" />
+	
+	<target name="build">
+		<copy todir="${webdir}/internalJS/">
+			<fileset
+				dir="${Geopedia}/js/">
+				<include name="*.js" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="clean">
+	</target>
+</project>

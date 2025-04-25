@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <property name="sinergise.libraries.branch" value="1.0" />
+	<property file="${sinergise.build.properties}" />
+	
+	<property name="pedia.workdir" value="build" />
+
+	<property name="SGUtil" value="../SGUtil-${sinergise.libraries.branch}" />
+	<property name="SGGeometry" value="../SGGeometry-${sinergise.libraries.branch}" />
+	<property name="SGRaster" value="../SGRaster-${sinergise.libraries.branch}" />
+	<property name="SGUiElements" value="../SGUiElements-${sinergise.libraries.branch}" />
+	<property name="SGMap" value="../SGMap-${sinergise.libraries.branch}" />
+	<property name="SGGenerics" value="../SGGenerics-${sinergise.libraries.branch}" />
+	<property name="GeopediaWidget" value="../GeopediaWidget-0.5" />
+	<property name="GeopediaGWTCore" value="../GeopediaGWTCore-0.5" />
+	<property name="Geopedia" value="../Geopedia-0.5" />
+
+	<property name="jar.target" value="pedia-SNAPSHOT.jar" />
+	<property name="dependencies" value="SGUtil,SGUiElements,SGGenerics,SGGeometry,SGRaster,SGMap" />
+
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+		<classpath>
+			<pathelement
+				location="${SINEREPO}/Util/ant/ant-contrib/1.0b2/lib/ant-contrib-1.0b2.jar" />
+		</classpath>
+	</taskdef>
+
+ 	<import file="sinergise-tasks.xml"/>
+	
+		<path id="widget.libs">
+ 	   	<pathelement path="${SINEREPO}/Web/piriti/0.8/lib/piriti-dev-0.8.jar"/>	   
+ 	    <pathelement path="${SINEREPO}/Web/piriti/0.8/lib/piriti-user-0.8.jar"/>
+ 	    <pathelement path="${SINEREPO}/Web/Totoe/0.4/lib/totoe-0.4.jar"/>
+		<pathelement path="${SINEREPO}/Util/velocity/1.7/lib/velocity-1.7-dep.jar"/>
+		<pathelement path="${SINEREPO}/Web/gin/1.5/lib/gin-1.5-post-gwt-2.2.jar"/>
+		<pathelement path="${SINEREPO}/Web/gin/1.5/lib/guice-snapshot.jar"/>
+		<pathelement path="${SINEREPO}/Web/gin/1.5/lib/javax.inject.jar"/>
+		<pathelement path="${SINEREPO}/Web/gin/1.5/lib/aopalliance.jar"/>
+		<pathelement path="${SINEREPO}/Web/gin/1.5/lib/guice-assistedinject-snapshot.jar"/>
+		
+		<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/gwt-servlet-deps.jar"/>
+		<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/validation-api-1.0.0.GA-sources.jar"/>
+		<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/validation-api-1.0.0.GA.jar"/>
+		
+ 	</path>
+ 	
+	<path id="app.classpath">
+		<fileset dir="${Geopedia}">
+			<include name="lib/*.jar" />
+		</fileset>
+		<pathelement path="${SINEREPO}/WebServer/rhino/1.7R4/lib/js.jar"/>
+		<pathelement path="${SINEREPO}/Database/MySQL/5.0.8/mysql-connector-java-5.0.8-bin.jar"/>
+		<pathelement path="${SGUtil}/build/SGUtil-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+		<pathelement path="${SGGeometry}/build/SGGeometry-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+		<pathelement path="${SGUiElements}/build/SGUiElements-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+		<pathelement path="${SGRaster}/build/SGRaster-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+		<pathelement path="${SGMap}/build/SGMap-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+		<pathelement path="${Generics}/build/Generics-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+		<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/gwt-servlet.jar" />
+		<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/gwt-user.jar" />
+		<pathelement path="${SINEREPO}/Database/opencsv/2.2/lib/opencsv-2.2.jar" />
+		<pathelement path="${SINEREPO}/Database/javadbf/0.4.0/lib/javadbf.jar" />
+		<pathelement path="${SINEREPO}/Util/apache-commons/fileupload/1.2.2/lib/commons-fileupload-1.2.2.jar" />
+		<pathelement path="${SGUtil}/build/SGUtil-SNAPSHOT.jar" />
+		<pathelement path="${SINEREPO}/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar" />
+		<pathelement path="${SINEREPO}/Util/slf4j/1.6.1/lib/slf4j-ext-1.6.1.jar" />
+		<pathelement path="${SINEREPO}/WebServer/json/gson/1.7.1/lib/gson-1.7.1.jar" />
+		<pathelement path="${SINEREPO}/Web/jsr311/1.1.1/lib/jsr311-api-1.1.1.jar" />
+		<pathelement path="${SINEREPO}/Web/jersey/1.12/lib/jersey-core-1.12.jar" />
+		<pathelement path="${SINEREPO}/Web/jersey/1.12/lib/jersey-multipart-1.12.jar" />
+		<pathelement path="${Geopedia}/lib/poi-3.8beta4/ooxml-lib/dom4j-1.6.1.jar" />
+		<pathelement path="${Geopedia}/lib/poi-3.8beta4/ooxml-lib/stax-api-1.0.1.jar" />
+		<pathelement path="${Geopedia}/lib/poi-3.8beta4/ooxml-lib/xmlbeans-2.3.0.jar" />
+		<pathelement path="${Geopedia}/lib/poi-3.8beta4/poi-3.8-beta4-20110826.jar" />
+		<pathelement path="${Geopedia}/lib/poi-3.8beta4/poi-ooxml-3.8-beta4-20110826.jar" />
+		<pathelement path="${Geopedia}/lib/poi-3.8beta4/poi-ooxml-schemas-3.8-beta4-20110826.jar" />
+		<pathelement path="${GeopediaGWTCore}/lib/gwt-maps.jar" />
+	</path>
+	
+	<path id="geopedia.sources.web.core">
+		<pathelement location="${Geopedia}/src/common" />
+		<pathelement location="${GeopediaGWTCore}/src/core" />
+		<pathelement location="${GeopediaGWTCore}/src/components" />
+		<pathelement location="${GeopediaGWTCore}/src/resources" />
+		
+		<!-- dependent project GWT source folders -->
+		<pathelement location="${SGUtil}/src/common" />
+		<pathelement location="${SGUtil}/src/gwt" />
+		<pathelement location="${SGUiElements}/src/common" />
+		<pathelement location="${SGUiElements}/src/gwt" />
+		<pathelement location="${SGUiElements}/src/theme" />
+		<pathelement location="${SGUiElements}/src/gwtext" />
+		<pathelement location="${SGGeometry}/src/common" />
+		<pathelement location="${SGGeometry}/src/gwt" />
+		<pathelement location="${SGMap}/src/common" />
+		<pathelement location="${SGMap}/src/theme" />
+		<pathelement location="${SGMap}/src/gwt" />
+		<pathelement location="${SGGenerics}/src/common" />
+		<pathelement location="${SGGenerics}/src/gwt" />
+	</path>
+
+	<target name="buildDeps">
+		<for list="${dependencies}" param="project">
+			<sequential>
+				<subant target="jar">
+					<fileset dir="${@{project}}" includes="build.xml" />
+				</subant>
+			</sequential>
+		</for>
+	</target>
+ 	
+	
+	<target name="pediagwt.compile">
+	    <mkdir dir="${pedia.workdir}" />
+		<javac destdir="${pedia.workdir}" includes="**" source="1.6"
+			target="1.6" fork="yes" compiler="modern" debug="on" encoding="UTF-8">
+			<classpath refid="app.classpath" />
+			<src path="${Geopedia}/src/common" />
+			<src path="${Geopedia}/src/server" />
+			<src path="${Geopedia}/src/external" />
+			<src path="${Geopedia}/src/legacy" />
+			
+		</javac>
+
+		<javac destdir="${pedia.workdir}" includes="**" source="1.6"
+			target="1.6" fork="yes" compiler="modern" debug="on" encoding="UTF-8">
+			<classpath refid="app.classpath" />
+
+			<classpath>
+				<pathelement path="${pedia.workdir}" />
+			</classpath>
+			<src path="${SGGenerics}/src/common" />
+			<src path="${SGGenerics}/src/gwt" />
+			<src path="${SGMap}/src/common" />
+			<src path="${SGMap}/src/gwt" />
+			<src path="${SGUiElements}/src/common" />
+			<src path="${SGUiElements}/src/gwt" />
+			<src path="${SGUiElements}/src/theme" />
+			<src path="${SGUtil}/src/common" />
+			<src path="${SGUtil}/src/gwt" />
+			<src path="${GeopediaGWTCore}/src/core" />
+			<src path="${GeopediaGWTCore}/src/components" />
+			<src path="${GeopediaGWTCore}/src/resources" />
+			
+
+		</javac>
+
+		<copy todir="${pedia.workdir}/com/sinergise/geopedia/server/service/">
+			<fileset
+				dir="${Geopedia}/src/server/com/sinergise/geopedia/server/service/">
+				<include name="*.png" />
+			</fileset>
+		</copy>
+
+
+		<copy todir="${pedia.workdir}/org/outerj/daisy/htmlcleaner/">
+			<fileset dir="${Geopedia}/src/external/org/outerj/daisy/htmlcleaner/">
+				<include name="cleanerconf.xml" />
+				<include name="xhtml-lat1.ent" />
+				<include name="xhtml-special.ent" />
+				<include name="xhtml-symbol.ent" />
+				<include name="xhtml1-strict.dtd" />
+				<include name="xhtml1-strict-modded.dtd" />
+				<include name="xhtml1-transitional-modded.dtd" />
+				<include name="xhtml1-transitional.dtd" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="pediagwt.jar" depends="pediagwt.compile">
+		<jar destfile="${jar.target}">
+			<fileset dir="${pedia.workdir}">
+				<include name="**" />
+				<exclude name="org/slf4j/**" />
+			</fileset>
+		</jar>
+	</target>
+	
+	<target name="pedialite.webapp">
+		<delete dir="${buildBase}/war" failonerror="false" quiet="true" />
+		<mkdir dir="${buildBase}/war/" />
+		<java failonerror="true" fork="yes" jvm="${JAVA6}/bin/java"
+			classname="com.google.gwt.dev.Compiler">
+			<classpath>
+			    <!-- additional paths -->
+				
+				<pathelement location="${GeopediaLite}/src" />
+				<pathelement location="${GeopediaLite}/theme" />
+				
+				<pathelement location="${Geopedia}/src/common" />
+				<pathelement location="${GeopediaGWTCore}/src/core" />
+				<pathelement location="${GeopediaGWTCore}/src/components" />
+				<pathelement location="${GeopediaGWTCore}/src/resources" />
+				
+				<!-- dependent project GWT source folders -->
+				<pathelement location="${SGUtil}/src/common" />
+				<pathelement location="${SGUtil}/src/gwt" />
+				<pathelement location="${SGUiElements}/src/common" />
+				<pathelement location="${SGUiElements}/src/gwt" />
+				<pathelement location="${SGUiElements}/src/theme" />
+				<pathelement location="${SGUiElements}/src/gwtext" />
+				<pathelement location="${SGGeometry}/src/common" />
+				<pathelement location="${SGGeometry}/src/gwt" />
+				<pathelement location="${SGMap}/src/common" />
+				<pathelement location="${SGMap}/src/theme" />
+				<pathelement location="${SGMap}/src/gwt" />
+				<pathelement location="${SGGenerics}/src/common" />
+				<pathelement location="${SGGenerics}/src/gwt" />
+
+				<!-- GWT library -->
+				<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/gwt-dev.jar" />
+				<!-- external libraries -->
+				<path refid="app.classpath" />
+
+			</classpath>
+			<jvmarg value="-Xmx2048M" />
+			<!-- GWT compiler arguments -->
+			<arg line="-logLevel INFO -localWorkers 1 -style OBF" />
+			<arg value="-war" />
+			<arg value="${buildBase}/war" />                    <!-- compile output destination -->
+			<arg value="${build.webappclass}" />      <!-- GWT XML -->
+		</java>
+		<!-- GZIP all files for faster downloading if webserver/browser supports it -->
+		<gzipallfiles directory="${buildBase}/war"/>
+	</target>
+
+	
+	<macrodef name="buildWidget">
+		<attribute name="buildBaseDir"/>
+		<attribute name="widgetEntryPoint"/>
+		<attribute name="widgetExtraPath"/>
+		
+		<sequential>
+		<mkdir dir="@{buildBaseDir}/classes" />
+		<delete dir="@{buildBaseDir}/webapp" failonerror="true" />
+		
+		<javac destdir="@{buildBaseDir}/classes" includes="**" source="1.6"
+			target="1.6" fork="yes" compiler="modern" debug="on" encoding="UTF-8">
+			<classpath refid="app.classpath" />
+			<classpath refid="widget.libs" />
+			<classpath>
+			    <pathelement path="${jar.target}"/>
+			</classpath>						
+			<src path="${GeopediaWidget}/src"/>
+		</javac>
+		
+		<java failonerror="true" fork="yes" jvm="${JAVA6}/bin/java" classname="com.google.gwt.dev.Compiler">
+			<classpath>
+			    <path refid="widget.libs" />
+			    <pathelement location="@{buildBaseDir}/classes"/>
+			    <path refid="geopedia.sources.web.core"/>
+			    <path refid="@{widgetExtraPath}"/>
+				<pathelement location="${GeopediaWidget}/src" />
+				<!-- GWT library -->
+				<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/gwt-dev.jar" />
+				<!-- external libraries -->
+				<path refid="app.classpath" />
+			</classpath>
+			<jvmarg value="-Xmx2512m" />
+			<!-- GWT compiler arguments -->
+			<arg line="-logLevel INFO -localWorkers 1 -style OBF" />
+			<arg value="-war" />
+			<arg value="@{buildBaseDir}/webapp" />                    <!-- compile output destination -->
+			<arg value="@{widgetEntryPoint}" />      <!-- GWT XML -->
+		</java>
+		<delete dir="@{buildBaseDir}/classes" failonerror="true" />
+		
+		<!-- GZIP all files for faster downloading if webserver/browser supports it -->
+		<gzipallfiles directory="${buildBase}/war"/>
+		</sequential>
+	</macrodef>
+	
+	<macrodef name="deployWidget">
+	    <attribute name="buildBaseDir"/>
+	    <attribute name="host"/>
+		<attribute name="username"/>
+		<attribute name="password"/>
+		<attribute name="webappname"/>
+		<sequential>
+			  <exec dir="@{buildBaseDir}/webapp" executable="rsync" failonerror="true">
+	    		<arg line="--delete -rav -e ssh  @{webappname} @{username}@@@{host}:/pedia/app/"/>
+	  		   </exec>
+		</sequential>
+	</macrodef>
+
+		<macrodef name="deployPedia">
+		<attribute name="host"/>
+		<attribute name="username"/>
+		<attribute name="password"/>
+		<attribute name="webappname"/>
+		<sequential>
+			  <sshexec host="@{host}" username="@{username}" password="@{password}" command="service pedia stop"/>
+			  <exec dir="${buildBase}/war" executable="rsync" failonerror="true">
+	    		<arg line="--delete -rav -e ssh @{webappname} @{username}@@@{host}:/pedia/app/"/>
+	  		  </exec>
+	  		  <mkdir dir="${buildBase}/war/geopediawidget" />
+	  		  <exec dir="${buildBase}/war" executable="rsync" failonerror="true">
+	    		<arg line="--delete -rav -e ssh  geopediawidget @{username}@@@{host}:/pedia/app/"/>
+	  		   </exec>
+	  		   
+	  		   		<for list="${dependencies}" param="project">
+			<sequential>
+				<scp todir="@{username}:@{password}@@@{host}:/pedia/lib/"
+					sftp="true" trust="true">
+					<fileset file="${@{project}}/build/@{project}-SNAPSHOT.jar" />
+				</scp>
+			</sequential>
+		</for>
+		<scp todir="@{username}:@{password}@@@{host}:/pedia/lib/" sftp="true" trust="true">
+			<fileset dir=".">
+				<include name="${jar.target}" />
+			</fileset>
+		</scp>
+		<sshexec host="@{host}" username="@{username}" password="@{password}" command="service pedia start"/>
+	  		   
+		</sequential>
+	</macrodef>
+		
+</project>

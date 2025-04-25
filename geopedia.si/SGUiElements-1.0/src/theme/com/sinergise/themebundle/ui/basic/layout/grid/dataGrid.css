@@ -1,0 +1,141 @@
+@external align_*;
+@def selectionBorderWidth 2px;
+
+.dataGridWidget {
+
+}
+
+.dataGridFirstColumn {
+}
+.dataGridFirstColumn {
+	padding-left: 7px !important;
+}
+
+.dataGridLastColumn {
+  
+}
+
+.dataGridFooter {
+  border-top: 2px solid #6f7277;
+  padding: 8px 15px;
+  text-align: left;
+  color: #4b4a4a;
+  text-shadow: #ddf 1px 1px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.dataGridHeader {
+	padding: 4px 10px;
+	border-bottom: 1px solid #aaa;
+	background: #fff;
+	color: #333;
+	text-shadow: none;
+	white-space: normal;
+	text-align: left;
+}
+.dataGridHeader::first-letter {
+    text-transform: uppercase;
+}
+
+.dataGridCell {
+  padding: 2px 10px !important;
+  overflow: hidden;
+}
+
+.dataGridFirstColumnFooter {
+  
+}
+
+.dataGridFirstColumnHeader {
+  
+}
+
+.dataGridLastColumnFooter {
+  
+}
+
+.dataGridLastColumnHeader {
+  
+}
+
+.dataGridSortableHeader {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.dataGridSortableHeader:hover {
+/*   color: #6c6b6b; */
+}
+
+.dataGridSortedHeaderAscending, .dataGridSortedHeaderDescending {
+	background: #ccc;
+	
+}
+
+.dataGridEvenRow {
+  background: #fff;
+}
+
+.dataGridEvenRowCell {
+/*   border: selectionBorderWidth solid #ffffff; */
+}
+
+.dataGridOddRow {
+  background: #f4f4f4;
+}
+.dataGridOddRowCell {
+/*   border: selectionBorderWidth solid #f3f7fb; */
+}
+
+.dataGridHoveredRow {
+/*   background: inherit; */
+}
+.clickableRow .dataGridOddRow:hover,
+.clickableRow .dataGridEvenRow:hover {
+	cursor: pointer;
+	background: #eee;
+}
+
+.dataGridHoveredRowCell {
+/*   border: selectionBorderWidth solid #eee; */
+}
+
+.dataGridKeyboardSelectedRow {
+/*   background: inherit; */
+}
+
+.dataGridKeyboardSelectedRowCell {
+/*   border: selectionBorderWidth solid #ffc; */
+}
+
+.dataGridSelectedRow {
+  background: #ddd !important;
+  height: auto;
+  overflow: auto;
+}
+
+.dataGridSelectedRowCell {
+/*   border: selectionBorderWidth solid #628cd5; */
+}
+
+/**
+ * The keyboard selected cell is visible over selection.
+ */
+.dataGridKeyboardSelectedCell {
+  border: none;
+}
+
+/* align sgDataGrid headers */
+th.align_center {
+	text-align: center;
+}
+th.align_justify {
+	text-align: justify;
+}
+th.align_left {
+	text-align: left;
+}
+th.align_right {
+	text-align: right;
+}

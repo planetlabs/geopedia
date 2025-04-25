@@ -1,0 +1,21 @@
+@external *;
+.sgwebui-toolbar div.gwt-PushButton, .sgwebui-toolbar div.gwt-ToggleButton {
+	background: none;
+	width: 26px;
+}
+@sprite .sgwebui-toolbar div.gwt-PushButton-up-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-up-hovering {
+	gwt-image:"toolBtnOver";
+}
+
+@sprite .sgwebui-toolbar div.gwt-PushButton-down,
+.sgwebui-toolbar div.gwt-PushButton-down-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-down,
+.sgwebui-toolbar div.gwt-ToggleButton-down-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-down-disabled {
+	gwt-image:"toolBtnDown";
+}
+@sprite .sgwebui-toolbar div.gwt-PushButton-up-disabled,
+.sgwebui-toolbar div.gwt-ToggleButton-up-disabled {
+	gwt-image:"toolBtnDis";
+}

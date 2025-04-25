@@ -1,0 +1,414 @@
+@external .butTopCenterInner, .gwt-*, .sgwebui-*, .butTop*, .butBottom*, .html-face, .pinnableTab, .pinnableTab *, .sgButton, .pinnableTab;
+.down {}
+/* ########## DECORATED BUTTON ########## */
+/* for generating different gradients use http://www.colorzilla.com/gradient-editor/ 
+   delete *filter* attribute if using complex gradient or rounded button - because for IE8- we will use image instead. IE9+ uses svg 
+*/
+.gwt-PushButton, .gwt-ToggleButton, a.btn, a.btn.disabled:active, button, .sgButton {
+	overflow: visible;
+	background: #f1f1f1;
+	border: 1px solid #bbb;
+	border-bottom-color: #aaa;
+	border-top-color: #ccc;
+	color: #666;
+	padding: 5px 9px;
+	display: inline-block;
+	-moz-transition: color, border ease 0.3s;
+	-webkit-transition: color, border ease 0.3s;
+	-o-transition: color, border ease 0.3s;
+	transition: color, border ease 0.3s;
+	cursor: pointer;
+	text-decoration: none;
+	margin: 0 3px 3px 0;
+	vertical-align: top;
+	position: relative;
+}
+
+.gwt-PushButton-up-hovering,
+.gwt-ToggleButton-up-hovering,
+a.btn:hover, button:hover, .sgButton-up-hovering {
+	color: #0092ed;
+	text-decoration: none;
+}
+
+@if user.agent ie6 {
+	div.gwt-PushButton, div.gwt-TogglehButton, button {
+		float: left;
+		position: static;
+	}
+}
+
+.gwt-PushButton-down-hovering,
+.gwt-ToggleButton-down-hovering, 
+a.btn:active, .sgButton-down-hovering {
+	background: #2f769a;
+	border:1px solid #608ea6;
+	border-top-color: #1d5c7d;
+	border-bottom-color: #79a1b6; 
+	color: #fff;
+	text-decoration: none;
+	transform: literal("translateY(1px)");
+	-moz-transform: literal("translateY(1px)");
+	-webkit-transform: literal("translateY(1px)");
+}
+
+a.btn img, 
+a.btn .spanImg,
+button > img {
+	display: inline-block;
+	margin-right: 6px;
+	border: none;
+	vertical-align: middle;
+}
+a.btn.rightImage img {
+	float: right;
+	margin-left: 6px;
+	margin-right: 0;
+}
+.sgwebui-imgButton {
+	white-space: nowrap;
+}
+@if user.agent ie6 {
+	button > img {
+		float: none;
+		display: inline-block;
+		margin: 0;
+	}
+}
+
+.gwt-PushButton img, .gwt-ToggleButton img {
+	padding: 0;
+}
+
+.gwt-PushButton-up-disabled, .gwt-ToggleButton-up-disabled,
+a.btn.disabled, button[type="disabled"] { 
+	opacity: .6; 
+	cursor: default;
+	transform: literal("translateY(0px)");
+	-moz-transform: literal("translateY(0px)");
+	-webkit-transform: literal("translateY(0px)");
+}
+.gwt-ToggleButton-down-hovering {
+	transform: literal("translateY(0px)");
+	-moz-transform: literal("translateY(0px)");
+	-webkit-transform: literal("translateY(0px)");
+}
+
+@if user.agent ie6 ie8 {
+	a.btn.disabled .txt {
+		color: #aaa !important;
+	    text-shadow: none !important;
+	}
+	a.btn img, 
+	a.btn .spanImg {
+		position: absolute;
+		left: 0;
+		top: 6px;
+		margin: 0;
+		display: block;
+	}
+	a.btn.rightImage img {
+		right: 6px;
+		left: auto;
+	}
+	a.btn.icon .txt,a.btn.icon.disabled:hover .txt {
+		padding-left: 28px !important;
+	}
+	a.btn.rightImage .txt,a.btn.rightImage.disabled:hover .txt {
+		padding-right: 24px !important;
+		padding-left: 0 !important;
+	}
+} @else {
+	a.btn.disabled, .gwt-PushButton-up-disabled {
+		opacity: .5;
+	}
+}
+
+
+.icon, .txt {}
+
+.closeTab, a.pin { display: inline-block; vertical-align: middle; }
+@sprite div.sgwebui-detailsTab-close, .closeableTab a {
+	gwt-image: "x";
+	margin: 0 0 0 3px;
+	cursor: pointer;
+	opacity: .5;
+	filter: literal("alpha(opacity=50)");
+}
+.closeableTab a:hover {
+	opacity: 1;
+	filter: literal("alpha(opacity=100)");
+}
+@sprite .closeableTab a:active {
+	gwt-image: "xHover";
+}
+@sprite div.sgwebui-detailsTab-close-hover {
+	gwt-image: "xHover";
+	opacity: 1;
+	filter: literal("alpha(opacity=100)");
+}
+
+@sprite div.sgwebui-detailsTab-pin,
+div.pinnableTab a.pin {
+	gwt-image: "pin";	
+	margin-left: 6px;
+	opacity: .5;
+	filter: literal("alpha(opacity=50)");
+}
+
+@sprite div.sgwebui-detailsTab-pin-hover, div.pinnableTab a.pin:hover {
+	gwt-image: "pinned";	
+	cursor: pointer;
+	opacity: 1;
+	filter: literal("alpha(opacity=100)");
+}
+
+@sprite div.sgwebui-detailsTab-pinned, div.pinnableTab a.pinned, div.pinnableTab a.pinned:hover {
+	gwt-image: "pinned";
+	cursor: default;
+	opacity: 0.5;
+	filter: literal("alpha(opacity=50)");
+}
+
+button.cosylab-upDownButton { 
+	padding: 0; 
+	min-height: 18px;
+	border: none;
+	background: none ;
+	position: relative;
+	margin-bottom: 0;
+	box-shadow: none;
+	background: none !important;
+}
+button.cosylab-upDownButton:hover {
+	transform: literal("translateY(0px)");
+	-moz-transform: literal("translateY(0px)");
+	-webkit-transform: literal("translateY(0px)");
+}
+@if !user.agent ie6 ie8 {
+	button.cosylab-upDownButton span {
+		width: 12px;
+		height: 10px;
+		display: block;
+		margin: 0 auto;
+		border-radius: 10px 10px 0 0;
+		border: 1px solid #ccc;
+		position: relative;
+	}
+	button.cosylab-upDownButton span.down {
+		border-radius: 0 0 10px 10px;
+		margin-top: -1px;
+	}
+	button.cosylab-upDownButton span:before {
+		width: 0;
+		height: 0;
+		border-bottom: 3px solid #555;
+		border-left: 3px solid transparent;
+		border-right: 3px solid transparent;
+		position: absolute;
+		content: "";
+		display: block;
+		left: 3px;
+		top: 3px;
+	}
+	button.cosylab-upDownButton span.down:before {
+		border-top: 3px solid #555;
+		border-bottom: 0;
+		top: 4px;
+	}
+} @else {
+	@sprite button.cosylab-upDownButton {
+		gwt-image: "spinner";
+	}
+}
+	
+button.cosylab-upDownButton span:hover {
+	box-shadow: 0 0 3px #aaa;
+}
+	
+button.cosylab-upDownButton table tr { line-height: 0;}
+
+.imageAnchor { cursor: pointer; display: inline-block; }
+.imageAnchor > img {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.imageAnchor > span {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.sgButton.iconOnly img { margin-right: 0;}
+
+
+
+/*** SGPushButton ****/
+.sgButton img, .sgButton .html-face {
+	display: inline-block;
+	vertical-align: middle;
+}
+.sgButton img { margin-right: 6px; }
+.sgButton img.fl-right { margin-right: 0; margin-left: 6px; }
+.sgButton input { padding: 0 !important; border: none !important; }
+@if user.agent ie6 {
+	.sgButton, .sgButton .html-face { zoom: 1; display: inline; }
+	.sgButton.iconOnly img { margin-top: 10px;}
+}
+@if user.agent ie6 ie8 {
+	.sgButton img.fl-right { margin-top: 6px; }
+}
+.sgButton-up-disabled {
+	opacity: .5;
+	cursor: default;
+	filter: literal("alpha(opacity=50)");
+}
+.sgButton.customBtn {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.inlineButtonPanel {
+	white-space: nowrap;
+}
+
+.inlineButtonPanel > * {
+	padding: 3px;
+	margin: 0 0 0 4px;
+	display: inline-block;
+}
+
+
+/**** custom buttons ***/
+@if !user.agent ie6 ie8 {
+	.sgButton-up-hovering.customBtn {
+		box-shadow: 0 0 20px rgba(255,255,255,.3) inset;
+		-moz-box-shadow: 0 0 20px rgba(255,255,255,.3) inset;
+		-webkit-box-shadow: 0 0 20px rgba(255,255,255,.3) inset;
+		color: #fff;
+	}
+	.sgButton.green {
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2YTIyZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyZTU5MDYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: literal("-moz-linear-gradient(top, #66a22d 0%, #2e5906 100%)");
+		background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#66a22d), color-stop(100%,#2e5906))");
+		background: literal("-webkit-linear-gradient(top, #66a22d 0%,#2e5906 100%)");
+		background: literal("-o-linear-gradient(top, #66a22d 0%,#2e5906 100%)");
+		border-color: #2e5906;
+	}
+	.sgButton-down-hovering.green {
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJlNTkwNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2NmEyMmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: literal("-moz-linear-gradient(top, #2e5906 0%, #66a22d 100%)");
+		background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#2e5906), color-stop(100%,#66a22d))");
+		background: literal("-webkit-linear-gradient(top, #2e5906 0%,#66a22d 100%)");
+		background: literal("-o-linear-gradient(top, #2e5906 0%,#66a22d 100%)");
+		border-color: #2e5906;
+	}
+	.sgButton.orange {
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I1NzMwYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4YTU4MDUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: literal("-moz-linear-gradient(top, #b5730b 0%, #8a5805 100%)");
+		background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#b5730b), color-stop(100%,#8a5805))");
+		background: literal("-webkit-linear-gradient(top, #b5730b 0%,#8a5805 100%)");
+		background: literal("-o-linear-gradient(top, #b5730b 0%,#8a5805 100%)");
+		border-color: #674100;
+	}
+	.sgButton-down-hovering.orange {
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzhhNTgwNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiNTczMGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: literal("-moz-linear-gradient(top, #8a5805 0%, #b5730b 100%)");
+		background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#8a5805), color-stop(100%,#b5730b))");
+		background: literal("-webkit-linear-gradient(top, #8a5805 0%,#b5730b 100%)");
+		background: literal("-o-linear-gradient(top, #8a5805 0%,#b5730b 100%)");
+		border-color: #674100;
+	}
+	.sgButton.red {
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2E2NGUxYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZjNiMTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: literal("-moz-linear-gradient(top, #a64e1b 0%, #7f3b12 100%)");
+		background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#a64e1b), color-stop(100%,#7f3b12))");
+		background: literal("-webkit-linear-gradient(top, #a64e1b 0%,#7f3b12 100%)");
+		border-color: #602a08;
+	}
+	.sgButton-down-hovering.red {
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdmM2IxMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhNjRlMWIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: literal("-moz-linear-gradient(top, #7f3b12 0%, #a64e1b 100%)");
+		background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#7f3b12), color-stop(100%,#a64e1b))");
+		background: literal("-webkit-linear-gradient(top, #7f3b12 0%,#a64e1b 100%)");
+		background: literal("-o-linear-gradient(top, #7f3b12 0%,#a64e1b 100%)");
+		border-color: #602a08;
+	}
+	.sgButton.yellow {
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q4YjIzYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhNjg5MmMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: literal("-moz-linear-gradient(top, #d8b23c 0%, #a6892c 100%)");
+		background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#d8b23c), color-stop(100%,#a6892c))");
+		background: literal("-webkit-linear-gradient(top, #d8b23c 0%,#a6892c 100%)");
+		background: literal("-o-linear-gradient(top, #d8b23c 0%,#a6892c 100%)");
+		border-color: #674100;
+	}
+	.sgButton-down-hovering.yellow {
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2E2ODkyYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOGIyM2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: literal("-moz-linear-gradient(top, #a6892c 0%, #d8b23c 100%)");
+		background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#a6892c), color-stop(100%,#d8b23c))");
+		background: literal("-webkit-linear-gradient(top, #a6892c 0%,#d8b23c 100%)");
+		background: literal("-o-linear-gradient(top, #a6892c 0%,#d8b23c 100%)");
+		border-color: #674100;
+	}
+} @else {
+	.sgButton.customBtn {
+		border: none;
+		background: none;
+		color: #fff !important;
+		overflow: visible !important;
+		line-height: 28px;
+		padding: 0 6px;
+		margin-left: 6px;
+		margin-right: 12px;
+	}
+	.sgButton.customBtn span {
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: block;
+		margin-left: -6px;
+	}
+	.sgButton.customBtn span.rSide {
+		left: auto;
+		right:0;
+		margin-left: 0;
+		margin-right: -6px;
+	}
+	@sprite .sgButton.green { gwt-image: "green"; }
+	@sprite .sgButton.green .lSide { gwt-image: "greenL"; }
+	@sprite .sgButton.green .rSide { gwt-image: "greenR"; }
+	
+	@sprite .sgButton-down-hovering.green { gwt-image: "greenAct"; }
+	@sprite .sgButton-down-hovering.green .lSide { gwt-image: "greenLAct"; }
+	@sprite .sgButton-down-hovering.green .rSide { gwt-image: "greenRAct"; }
+	
+	
+	@sprite .sgButton.yellow { gwt-image: "yellow"; }
+	@sprite .sgButton.yellow .lSide { gwt-image: "yellowL"; }
+	@sprite .sgButton.yellow .rSide { gwt-image: "yellowR"; }
+	
+	@sprite .sgButton-down-hovering.yellow { gwt-image: "yellowAct"; }
+	@sprite .sgButton-down-hovering.yellow .lSide { gwt-image: "yellowLAct"; }
+	@sprite .sgButton-down-hovering.yellow .rSide { gwt-image: "yellowRAct"; }
+	
+	
+	@sprite .sgButton.orange { gwt-image: "orange"; }
+	@sprite .sgButton.orange .lSide { gwt-image: "orangeL"; }
+	@sprite .sgButton.orange .rSide { gwt-image: "orangeR"; }
+	
+	@sprite .sgButton-down-hovering.orange { gwt-image: "orangeAct"; }
+	@sprite .sgButton-down-hovering.orange .lSide { gwt-image: "orangeLAct"; }
+	@sprite .sgButton-down-hovering.orange .rSide { gwt-image: "orangeRAct"; }
+	
+	
+	@sprite .sgButton.red { gwt-image: "red"; }
+	@sprite .sgButton.red .lSide { gwt-image: "redL"; }
+	@sprite .sgButton.red .rSide { gwt-image: "redR"; }
+	
+	@sprite .sgButton-down-hovering.red { gwt-image: "redAct"; }
+	@sprite .sgButton-down-hovering.red .lSide { gwt-image: "redLAct"; }
+	@sprite .sgButton-down-hovering.red .rSide { gwt-image: "redRAct"; }
+}

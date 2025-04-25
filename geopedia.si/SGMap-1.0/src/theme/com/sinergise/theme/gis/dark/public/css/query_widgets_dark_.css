@@ -1,0 +1,9 @@
+
+
+.sgwebgis-disclosureQueryWidget .sgwebgis-structuredQuery td {
+	border-bottom: 1px solid gray;	
+}
+
+.sgwebgis-disclosureQueryWidget table.sgwebgis-structuredQuery {
+	border-collapse: collapse;
+}

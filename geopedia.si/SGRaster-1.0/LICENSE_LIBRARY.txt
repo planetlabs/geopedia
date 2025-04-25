@@ -1,0 +1,68 @@
+For the purpose of this agreement, the following naming is used:
+
+- SGRaster is referred to as "Library";
+
+- The end-user application, provided by Sinergise to you and powered by the 
+"Library" is referred to as "Product";
+
+- The Contractual Authority which is the final buyer of the "Product", is 
+referred to as "Client".
+
+- "Source Code" refers to the "Library"'s source code package and/or repository
+and includes all resources provided in the package, regardles of their file
+format or purpose. The package may include or reference resources copyrighted by
+parties other than Sinergise, in which case corresponding licensing information
+is provided alongside the resource.
+
+The "Library"'s Source Code is released under the following license:
+
+--------------------------------------------------------------------------------
+
+Sinergise Ltd. Library Source Code License Agreement
+Copyright © 2012 Sinergise Ltd. All rights reserved.
+
+Please read this Source Code License Agreement carefully before using the source
+code.
+
+Sinergise Ltd. grants to the "Client" a perpetual, non-exclusive, no-charge,
+royalty-free, irrevocable copyright license, to use this "Source Code" within
+the "Product" under the following limitations:
+
+1) The "Source Code" should be used with and only with the "Product", its
+modifications and upgrades. No other use of the "Source Code" is allowed,
+including but not limited to, developing new software based on this
+"Source Code".
+
+2) The "Source Code" should only be used by contractors to which Sinergise has
+transferred the right to maintain the "Product". In case Sinergise is not able
+to support software development and maintenance in accordance with the dynamics
+and in Quality demanded by the "Client" or if Sinergise disappears from the
+market, the "Client" is entitled to transfer the "Source Code" to a new
+Contractor. In such case the "Client" is obligated to sign a non-disclosure
+agreement with the chosen new Contractor stating that the "Source Code" will not
+be turned over to third parties and that it will be used only for the purpose of
+maintenance and modifications of the "Product" on behalf of the Client.
+
+3) The "Client", or any third party appointed by the "Client", may use the
+"Source Code" solely for the purpose of maintaining the "Product" and only in
+the business premises of the "Client" unless it receives the written permission
+to do otherwise by Sinergise.
+
+4) It is not allowed to reproduce, prepare derivative works of, publicly
+display, publicly perform, or distribute this "Source Code" or any derivative
+works of this "Source Code" without written permission by Sinergise.
+
+5) You agree to indemnify, hold harmless and defend Sinergise Ltd. from and
+against any loss, damage, claims or lawsuits, including attorney's fees that
+arise or result from your use or distribution of the "Source Code".
+
+This software is provided by Sinergise "as is" and any express or implied
+warranties, including, but not limited to, the implied warranties of
+merchantability and fitness for a particular purpose are disclaimed. In no event
+shall Sinergise be liable for any direct, indirect, incidental, special,
+exemplary, or consequential damages (including, but not limited to, procurement
+of substitute goods or services; loss of use, data, or profits; or business
+interruption) however caused and on any theory of liability, whether in
+contract, strict liability, or tort (including negligence or otherwise) arising
+in any way out of the use of this software, even if advised of the possibility
+of such damage.

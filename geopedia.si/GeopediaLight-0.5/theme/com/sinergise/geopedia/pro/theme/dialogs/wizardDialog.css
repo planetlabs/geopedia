@@ -1,0 +1,95 @@
+@external *;
+
+/***** WIZARD *****/
+.gwt-DialogBox.wizard .buttonsPanel {
+	position: absolute;
+	left:0;
+	right: 0;
+	bottom:0;
+	margin: 0 40px 20px 40px;
+	text-align: right;
+}
+.gwt-DialogBox.wizard .stepHolder {
+	position: absolute;
+	left:0;
+	top: 105px;
+	bottom: 60px;
+	right: 11px;
+	overflow: auto;
+	padding: 0 20px;
+}
+.wizard .stepHolder .style {
+	height: 100%;
+}
+.wizard .layerToolbar > img {
+	display: none;
+}
+.wizard .layerToolbar {
+	padding-top: 7px;
+}
+.gwt-DialogBox.wizard .buttonsPanel .cancel,
+.gwt-DialogBox.wizard .buttonsPanel .prev {
+	position: absolute;
+	left: 0;
+	top: 15px;
+}
+.gwt-DialogBox.wizard .buttonsPanel .prev {
+	left: auto;
+	right: 100px;
+}
+.wizardStepPanel {
+	text-align: center;
+}
+.wizardStepPanel .step {
+	display: inline-block;
+	color: #777;
+	position: relative;
+	padding-left: 10px;
+}
+@sprite .wizardStepPanel .step b {
+	gwt-image: "wizBg";
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 32px;
+	overflow: visible;
+}
+.wizardStepPanel .step > img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 8px 0 0 18px;
+	opacity: .6;
+	filter: literal("alpha(opacity=60)");
+}
+@sprite .wizardStepPanel .step b:before {
+	float: left;
+	margin-left: -15px;
+	gwt-image: "stepArrow";
+	content: "";
+	display: block;
+	margin-top: 10px;
+}
+.wizardStepPanel .step:first-child b:before {
+	display: none;
+}
+.wizardStepPanel .step.active img,
+.wizardStepPanel .step:hover img {
+	opacity: 1;
+	filter: literal("alpha(opacity=100)");
+}
+.wizardStepPanel .step:hover {
+	color: #333;
+	cursor: pointer;
+}
+.wizardStepPanel .step.active,
+.wizardStepPanel .step.active:hover {
+	color: #0092ed;
+	cursor: default;
+}
+.wizardStepPanel .step span {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 20px 0 10px;
+	font-weight: bold;
+}

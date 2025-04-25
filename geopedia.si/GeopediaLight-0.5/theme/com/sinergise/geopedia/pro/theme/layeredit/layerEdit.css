@@ -1,0 +1,155 @@
+@external *;
+
+
+/**** FIELD EDITOR *****/
+.tabPanelContentHolder > .fieldsEditor {
+	position: relative;
+}
+.fieldsEditor > h3 {
+	margin: -6px 0 12px 6px;
+	font-size: 14px;
+	color: #0092ed;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+.fieldsEditor .dottedAnchor {
+	margin: 5px;
+}
+.fieldEditor .fieldsHolder {
+	border-top: 1px solid #bbb;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.fieldEditor .fieldHeader {
+	padding: 6px 10px;
+	border:1px solid #ccc;
+	margin-top: -1px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #f4f4f4;
+}
+.fieldEditor .fieldHeader > span {
+	font-size: 11px;
+	color: #888;
+	float: right;
+	margin-right: 5px;
+	margin-top: 2px;
+	display: none;
+}
+.editable .fieldHeader > span,
+.fieldEditor .fieldHeader:hover > span {
+	display: block;
+}
+.editable .repTextEditor > div {
+	display: block;
+}
+.fieldEditor.opened .fieldHeader {
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-bottom: none;
+	background: literal("-moz-linear-gradient(top, #efefef 0%, #e4e4e4 100%)");
+	background: literal("-webkit-linear-gradient(top, #efefef 0%,#e4e4e4 100%)");
+	background: literal("-o-linear-gradient(top, #efefef 0%,#e4e4e4 100%)");
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#e4e4e4',GradientType=0 )");
+	background: literal("linear-gradient(top, #efefef 0%,#e4e4e4 100%)");
+	border-bottom: 1px solid #bbb;
+}
+.fieldEditor .fieldHeader .moveUp,
+.fieldEditor .fieldHeader .moveDown {
+	float: left;
+	margin-right: 3px;
+	cursor: pointer;
+	opacity: .5;
+	filter: literal("alpha(opacity=50)");
+}
+.fieldEditor .fieldHeader .moveUp:hover,
+.fieldEditor .fieldHeader .moveDown:hover {
+	opacity: 1;
+	filter: literal("alpha(opacity=100)");
+}
+.fieldEditor .fieldHeader a.gwt-Anchor {
+	color: #555; 
+	font-weight: bold;
+	vertical-align: middle;
+	display: block;
+	margin-left: 5px;
+	cursor: pointer;
+	min-height: 16px;
+}
+.fieldEditor .fieldHeader a.gwt-Anchor:hover { 
+	text-decoration: none;
+	color: #0092ed;
+}
+.fieldEditor .fieldHeader a.btnDelete {
+	float: right;
+	margin-top: 1px;
+	opacity: .5;
+	filter: literal("alpha(opacity=50)");
+	cursor: pointer;
+}
+.fieldEditor .fieldHeader a.btnDelete:hover {
+	opacity: 1;
+	filter: literal("alpha(opacity=100)");
+}
+.fieldsEditor .fieldsHolder {
+	margin: 5px;
+}
+.fieldEditor {
+	margin-bottom: 5px;
+}
+.fieldEditor .editorHolder {
+	padding: 5px 10px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-top: none;
+	border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+}
+.fieldEditor .editorHolder .holderPanel {
+	margin: 7px 0 0;
+}
+.fieldEditor .editorHolder .holderPanel > .gwt-InlineLabel {
+	display: block;
+}
+.fieldEditor .editorHolder .holderPanel textarea,
+.fieldEditor .editorHolder .holderPanel > input {
+	width: 97%;
+}
+.fieldEditor .editorHolder .holderPanel .referenceHolder {
+	display: inline-block;
+	padding: 5px 0;
+}
+.flagsEditor > .gwt-CheckBox {
+	display: block;
+}
+.editorHolder .referenceHolder > * {
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 8px;
+}
+
+.stepHolder .fieldsEditor {
+	position: relative;
+	padding-top: 35px;
+}
+
+.repTextEditor {
+	margin: 5px 10px 10px;
+}
+.repTextEditor > * {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 6px;
+}
+.repTextEditor > img {
+	margin-top: 5px;
+}
+.repTextEditor input {
+	width: 90%;
+}
+.repTextEditor > div > .imageAnchor {
+	margin-left: 5px;
+}

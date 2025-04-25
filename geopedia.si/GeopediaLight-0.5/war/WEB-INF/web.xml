@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<!-- !!!! MODIFY TEMPLATE!!!! -->
+	<context-param>
+		<param-name>CONFIGURATION</param-name>
+		<param-value>developmentSVN</param-value>
+	</context-param>
+	
+<!-- Servlets -->
+  	<servlet>
+        <servlet-name>MetaService</servlet-name>
+        <servlet-class>com.sinergise.geopedia.server.service.MetaServiceImpl</servlet-class>
+    </servlet>
+
+	<servlet>
+		<servlet-name>PublicRenderService</servlet-name>
+		<servlet-class>com.sinergise.geopedia.server.service.renderers.PublicRenderServletImpl</servlet-class>		
+	</servlet>
+
+	<servlet>
+		<servlet-name>ImageService</servlet-name>
+		<servlet-class>com.sinergise.geopedia.server.service.ImageServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>FeatureService</servlet-name>
+		<servlet-class>com.sinergise.geopedia.server.service.FeatureServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>StylesIconService</servlet-name>
+		<servlet-class>com.sinergise.geopedia.server.service.StylesIconServlet</servlet-class>
+	</servlet>
+		
+	<servlet>
+		<servlet-name>SessionService</servlet-name>
+		<servlet-class>com.sinergise.geopedia.server.service.SessionServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>HighlightService</servlet-name>
+		<servlet-class>com.sinergise.geopedia.server.service.renderers.HighlightServletImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>PrintService</servlet-name>
+		<servlet-class>com.sinergise.geopedia.server.service.renderers.PrintServletImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>exportservice</servlet-name>
+		<servlet-class>com.sinergise.geopedia.server.service.ExportServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>importservice</servlet-name>
+		<servlet-class>com.sinergise.geopedia.server.service.ImportServiceImpl</servlet-class>
+	</servlet> 
+      
+      <servlet>
+      	<servlet-name>fileupload</servlet-name>
+      	<servlet-class>com.sinergise.geopedia.server.service.FileUploadServiceImpl</servlet-class>
+      </servlet>
+<!--        
+    <servlet>
+	    <servlet-name>RESTfulService</servlet-name>
+	    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+	    <init-param>
+	      <param-name>com.sun.jersey.config.property.packages</param-name>
+	      <param-value>com.sinergise.geopedia.server.rest</param-value>
+	    </init-param>
+	    <load-on-startup>1</load-on-startup>
+	</servlet>
+   --> 
+   
+    <servlet>
+        <servlet-name>JSPServlet</servlet-name>
+        <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+         <init-param>
+        <param-name>compilerSourceVM</param-name>
+        <param-value>1.6</param-value>
+    </init-param>
+    <init-param>
+        <param-name>compilerTargetVM</param-name>
+        <param-value>1.6</param-value>
+    </init-param>
+                <!-- JspServlet will pass the parameter to Ant's Javac-Task. -->
+        <init-param>
+            <param-name>compiler</param-name>
+            <param-value>javac1.5</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JSPServlet</servlet-name>
+        <url-pattern>*.jsp</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
+        <servlet-name>fileupload</servlet-name>
+        <url-pattern>*.upload</url-pattern>
+    </servlet-mapping>
+        
+	<servlet-mapping>
+        <servlet-name>fileupload</servlet-name>
+        <url-pattern>/fileUploadService</url-pattern>
+    </servlet-mapping>
+    
+	<servlet-mapping>
+        <servlet-name>exportservice</servlet-name>
+        <url-pattern>/exportService</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>importservice</servlet-name>
+        <url-pattern>/importService</url-pattern>
+    </servlet-mapping>
+    
+	<servlet-mapping>
+        <servlet-name>MetaService</servlet-name>
+        <url-pattern>/meta</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PublicRenderService</servlet-name>
+        <url-pattern>/rp/*</url-pattern>
+    </servlet-mapping>
+    
+     <servlet-mapping>
+        <servlet-name>HighlightService</servlet-name>
+        <url-pattern>/hlt/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PrintService</servlet-name>
+        <url-pattern>/rp/prnt/*</url-pattern>
+    </servlet-mapping>
+     
+         
+     
+     
+    <servlet-mapping>
+        <servlet-name>StylesIconService</servlet-name>
+        <url-pattern>/sicon/*</url-pattern>
+    </servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ImageService</servlet-name>
+		<url-pattern>/image/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>FeatureService</servlet-name>
+		<url-pattern>/feat</url-pattern>
+	</servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SessionService</servlet-name>
+        <url-pattern>/sess</url-pattern>
+    </servlet-mapping>
+        <!-- 
+    <servlet-mapping>
+    	<servlet-name>RESTfulService</servlet-name>
+    	<url-pattern>/rest/*</url-pattern>
+  	</servlet-mapping>
+	 -->
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>GeopediaLight.html</welcome-file>
+  </welcome-file-list>
+  
+  <listener>
+      <listener-class>com.sinergise.geopedia.app.InitializeServletContextListener</listener-class>
+  </listener>
+
+</web-app>
+  

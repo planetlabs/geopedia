@@ -1,0 +1,73 @@
+/* comment pagination styles */
+
+.CommentPagination {
+	border: 1px solid #CCCCCC;
+	/*padding: 3px;*/
+	/*width: 100%;*/
+}
+
+.CommentNumCurrent {
+    font-family:Arial,Helvetica,sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+
+	color:#000000;
+}
+
+.CommentNum {
+    font-family:Arial,Helvetica,sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+ 
+    color: #0033CC;    
+    text-decoration: underline;
+    cursor: pointer;   
+}
+
+/* comment panel styles */
+
+.CommentHeadUser {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 12px;	
+	color: #0033CC;
+	font-weight: bold;
+	padding-right: 3px;
+}
+
+.CommentHeadDateTime {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 11px;	
+	color: #000000;
+}
+
+.CommentaryBody {
+	/*display: block;*/
+	/*overflow: hidden;*/
+	
+	font-family: Arial,Helvetica,sans-serif;	
+	font-size: 12px;
+	color: #000000;
+	
+	margin-left:4px;
+	margin-top:4px;
+	margin-bottom: 4px;	
+	margin-right: 4px;
+	
+	/*width: 90%;*/
+	/*border: none;*/
+
+}
+
+.WriteNewCommentTextArea {
+	font-family: Arial,Helvetica,sans-serif;	
+	font-size: 12px;
+	color: #000000;
+
+	width: 90%;
+	
+	display: block;
+	overflow: auto;
+	
+}

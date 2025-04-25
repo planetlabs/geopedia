@@ -1,0 +1,155 @@
+@external *;
+
+/**** feature editor *****/
+.featureEditor {
+	height: 100%;
+}
+.featureEditor .metaEditor {
+	padding: 0 10px;
+	height: 100%;
+	overflow: auto;
+}
+.featureEdit.gwt-PopupPanel a {
+	display: block;
+	padding: 5px 10px;
+}
+.featureEdit.gwt-PopupPanel a:hover {
+	background: #fff;
+}
+.geomEditPanel {
+	position: absolute;
+	left: 50%;
+	top: 5px;
+	background: #f4f2cd;
+	margin-left: -280px;
+	padding: 5px 5px 5px 8px;
+	border: 1px solid #bcba7d;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow: 0 2px 3px #aaa;
+	-moz-box-shadow: 0 2px 3px #aaa;
+	-webkit-box-shadow: 0 2px 3px #aaa;
+}
+.geomEditPanel:hover {
+	opacity: 1;
+	filter: literal("alpha(opacity=100)");
+}
+.geomEditPanel > * {
+	vertical-align: middle !important;
+	display: inline-block;
+	margin-right: 6px;
+}
+.geomEditPanel > img {
+	float: left;
+	margin-right: 10px;
+}
+.geomEditPanel.error {
+	margin-left: -300px;
+	opacity: 1;
+	filter: literal("alpha(opacity=100)");
+}
+.geomEditPanel.error > span {
+	font-weight: bold;
+}
+
+
+/* basic dialog width and height is set in geopedia theme, popupStyle.css */
+.metaEditor {
+}
+.metaDialog .btnPanel {
+	position: absolute;
+	right: 35px;
+	top:25px;
+}
+.metaEditor .fieldHolder {
+	margin: 7px 0;
+}
+.metaEditor .fieldHolder > .gwt-InlineLabel {
+	display: block;
+}
+.metaEditor .fieldHolder > textarea {
+	width: 96%;
+	height: 80px;
+}
+.metaEditor .fieldHolder.checkbox > span.gwt-InlineLabel {
+	display: none;
+}
+.metaEditor .fieldHolder > input {
+	width: 97%;
+}
+.metaEditor .fieldHolder > table {
+	display: block;
+}
+
+.metaEditor .pictureDisplayer {
+	display: inline-block;
+	margin-right: 10px;
+}
+.pictureDisplayer > a > img {
+	border: 1px solid #ccc;
+	padding: 5px;
+	cursor: anchor;
+}
+.metaEditor .pictureMetaEditor {
+	margin: 5px 0;
+	padding-right: 120px;
+	position: relative;
+	min-height: 100px;
+	background: #f2f2f2;
+}
+.metaEditor .pictureMetaEditor.noImage {
+	min-height: 0;
+	background: #fff;
+}
+.metaEditor .pictureMetaEditor > a.btn {
+	position: absolute;
+	left: 220px;
+	top: 0;
+}
+.metaEditor .pictureMetaEditor > a.btn.addImg {
+	position: static;
+}
+.metaEditor .pictureMetaEditor > a.deleteBtn {
+	margin-top: 33px;
+}
+.pictureMetaEditor > form {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	border: 1px solid #ccc;
+	background: #f2f2f2;
+	padding: 5px;
+}
+.uploadImgForm p {
+	margin: 5px 0;
+	font-weight: bold;
+	text-align: center;
+	font-size: 13px;
+}
+.metaEditor .pictureMetaEditor > div,
+.metaEditor .pictureMetaEditor > a,
+.uploadImgForm input,
+.uploadImgForm a {
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.metaEditor .photoEditor {
+	margin: 5px 0;
+}
+
+.featureCoordinatesHolder {
+	margin: 5px 10px 0;
+}
+.featureCoordinatesHolder > span {
+	margin-right: 7px;
+}
+.featureCoordinatesHolder > input {
+	padding-right: 30px;
+}
+.featureCoordinatesHolder > a.confirmPointCoords {
+	margin-left: -21px;
+	margin-right: 5px;
+}

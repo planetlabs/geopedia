@@ -1,0 +1,27 @@
+
+.sgwebui-TitledPanel > .title, .gwt-DisclosurePanel a.header {
+	color: #FFF;
+	border-bottom: 1px solid #555;
+}
+.sgwebui-TitledPanel { border: none; }
+
+.gwt-DisclosurePanel .header, 
+.gwt-DisclosurePanel .header a, 
+.gwt-DisclosurePanel .header td {
+	color: #FFF;
+}
+
+.sgwebui-TitledPanel .sgwebui-TitledPanel-body > td,
+.gwt-DisclosurePanel table.content {
+     color: #333;
+}
+
+.sgwebui-TitledPanel > div.body, 
+.gwt-DisclosurePanel > tbody > tr > td > div {
+	background-color: #ddd;
+}
+
+.sgwebgis-structuredQuery tr.even,
+.sgwebgis-structuredQuery tr.odd,
+.sgwebui-unitConverter tr.even,
+.sgwebui-unitConverter tr.odd { background: none; }

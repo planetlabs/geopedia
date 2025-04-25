@@ -1,0 +1,22 @@
+/*************TOOLTIP*****************/
+.sgwebui-richtooltip {
+	background:url("../img/tooltip/help_mini.png") no-repeat scroll 5px 6px #f9f4c2;
+	border: 1px solid #D8CA29;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	font-size:11px;
+	padding:7px 7px 7px 23px;
+	max-width: 400px;
+	line-height: 15px;
+}
+.sgwebui-richtooltip ul {
+	padding-left:5px;
+	margin-left: 10px;
+}
+.sgwebui-richtooltip ul li {
+	list-style-image:none;
+	list-style-type:circle;
+	font-size: 11px;
+	color: #666;
+}

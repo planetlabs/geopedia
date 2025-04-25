@@ -1,0 +1,510 @@
+@external *;
+
+.grayBackground {
+	background:#333; 
+	opacity: 0.55;
+	filter: literal("alpha(opacity = 40)");
+	position: fixed;
+	left: 0;
+	width: 100%;
+	height:100%;
+	top:0;
+}
+
+.sgwebui-messageBox pre {
+	white-space: pre-wrap;
+	 white-space: -moz-pre-wrap;
+	 white-space: -pre-wrap;
+	 white-space: -o-pre-wrap;
+	 word-wrap: break-word;  
+}
+
+td.dialogMiddleCenter { height: 100%; }
+.sgDialogBox .dialogContent,
+.sgDialogBox .dialogContent > div {
+	height: 100%;
+	padding: 0;
+}
+.gwt-DialogBox.sgDialogBox .dialogMiddleCenterInner {
+	padding: 0;
+}
+
+.sgDialogContent {
+	padding: 10px 15px;
+}
+.resizable .sgDialogContent {
+	padding: 10px 15px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+}
+
+.dialogButtonPanel {
+	padding: 5px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	background: #f2f2f2;
+}
+.resizable .dialogButtonPanelHolder {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/*************TOOLTIP*****************/
+.sgwebui-richtooltip {
+	background:#f9f4c2;
+	border: 1px solid #D8CA29;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	font-size:11px;
+	padding:7px 7px 7px 23px;
+	max-width: 400px;
+	line-height: 15px;
+}
+.sgwebui-richtooltip ul {
+	padding-left:5px;
+	margin-left: 10px;
+}
+.sgwebui-richtooltip ul li {
+	list-style-image:none;
+	list-style-type:circle;
+	font-size: 11px;
+	color: #666;
+}
+
+.gwt-PopupPanel {
+	position: absolute;
+}
+.fadePopup {
+	padding: 20px;
+	background: #fff;
+	color: #333;
+	opacity: .7;
+	filter: literal("alpha(opacity=70)");
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+.changePasswordDialog tr {
+	background: none !important;
+}
+.changePasswordDialog .gwt-Label {
+	text-align: right;
+	margin-right: 8px;
+	white-space: nowrap;
+}
+
+/****** DIALOG BOX *****/
+.gwt-DialogBox { 
+	background: #fff;
+	box-shadow: 0 0px 15px #333;
+	-moz-box-shadow: 0 0px 15px #333;
+	-webkit-box-shadow: 0 0px 15px #333;
+/* 	clip: auto !important; */
+}
+@if user.agent ie6 ie8 {
+	.gwt-DialogBox {
+		border: 1px solid #bbb;
+	}
+}
+.gwt-DialogBox .Caption {
+	background: #aaa;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 8px 10px;
+	font-size: 120%;
+	cursor: move;
+	zoom: 1;
+	border-bottom: 1px solid #bbb;
+}
+.gwt-DialogBox .dialogMiddleCenterInner {
+	padding: 10px;
+}
+@sprite .gwt-DialogBox .actionClose,
+.centeredWidget .actionClose {
+	position: absolute;
+	right: -15px;
+	top: -15px;
+	gwt-image: "actionClose";
+	display: block;
+	cursor: pointer;
+}
+@sprite .gwt-DialogBox .actionClose:hover,
+.centeredWidget .actionClose:hover {
+	gwt-image: "actionCloseOver";
+	background: none;
+	background-color: transparent;
+}
+
+.gwt-DialogBox.resizable td.dialogMiddleCenter {
+	height: 100%;
+}
+.gwt-DialogBox.resizable .dialogContent {
+	max-width: 100%;
+	max-height: 100%;
+	overflow: visible;
+	padding: 0;
+	height: 100%;
+}
+@sprite .gwt-DialogBox.resizable .bottomRight {
+	cursor: nw-resize;
+	gwt-image: "dialogResize";
+	display: block;
+	margin: -9px 0 0 -9px;
+    position: absolute;
+}
+@sprite .gwt-DialogBox.resizable div.bottomRight:hover {
+	gwt-image: "dialogResizeOn";
+}
+
+.sgwebui-messageDialog div.gwt-Label {
+	margin-right: 10px;
+}
+.sgwebui-messageDialog input {
+	margin-bottom: 5px;
+}
+.sgwebui-messageDialog-buttons > table {
+	margin: 5px auto;
+}
+
+.gwt-PopupPanelGlass {
+    background-color: #000;
+    opacity: 0.3;
+    filter: literal("alpha(opacity=30)");
+}
+
+/**** sgdate picker ****/
+.sgDatePicker-calendarIcon {
+	cursor: pointer;
+}
+.gwt-DatePicker {
+	border: none;
+}
+/* !temporary hack! */
+.sgDatePicker-calendarPopup .yearInput {
+	display: inline-block;
+	margin-left: 7px;
+}
+
+.sgDatePicker-calendarPopup, .dateBoxPopup {
+	-moz-box-shadow: 0 3px 8px #aaa;
+	-webkit-box-shadow: 0 3px 8px #aaa;
+	box-shadow: 0 3px 8px #aaa;
+	background: #fff;
+}
+@if user.agent ie6 ie8 {
+	.sgDatePicker-calendarPopup {
+		border: 1px solid #ccc;
+	}
+}
+.datePickerMonthSelector {
+	background: #aaa;
+}
+table.datePickerDays { width: 100%; }
+
+@sprite .datePickerMonthSelector .control {
+	font-size: 0;
+	text-indent: -100px;
+	cursor: pointer;
+	gwt-image: "dateRight";
+	margin: 4px 2px;
+}
+@sprite .datePickerMonthSelector .datePickerPreviousMonthButton {
+	gwt-image: "dateLeft";
+}
+@sprite .datePickerMonthSelector .datePickerPreviousYearButton {
+	gwt-image: "yearLeft";
+}
+@sprite .datePickerMonthSelector .datePickerNextYearButton {
+	gwt-image: "yearRight";
+}
+
+@sprite .datePickerMonthSelector .datePickerNextMonthButton:hover {
+	gwt-image: "dateRightOver";
+}
+@sprite .datePickerMonthSelector .datePickerPreviousMonthButton:hover {
+	gwt-image: "dateLeftOver";
+}
+@sprite .datePickerMonthSelector .datePickerPreviousYearButton:hover {
+	gwt-image: "yearLeftOver";
+}
+@sprite .datePickerMonthSelector .datePickerNextYearButton:hover {
+	gwt-image: "yearRightOver";
+}
+
+td.datePickerMonth, .datePickerPreviousButton, .datePickerNextButton {
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+}
+td.datePickerMonth { padding: 1px 10px; }
+.datePickerWeekdayLabel, .datePickerWeekendLabel, .datePickerDayIsValue  {
+	background: #1e3651;
+	border: none;
+	color: #fff;
+	padding: 3px 5px;
+	font-size: 11px;
+    font-weight: bold;
+}
+.datePickerDay {
+	padding: 5px;
+	font-size: 10px;
+	text-align: right;
+}
+.datePickerDayIsToday {
+	background: #88912a;
+	color:#fff;
+}
+.datePickerDayIsWeekend {
+	background: #e7eaca;
+}
+.datePickerDayIsFiller {
+	color: #999;
+}
+.datePickerDayIsHighlighted {
+	background: #d8e1eb;
+	cursor: pointer;
+}
+.datePickerDayIsValue {
+	background: #1E3651;
+}
+
+
+/************** Drop Down Menu *********/
+div.sgwebui-menu {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U1ZTVlNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: literal("-moz-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%)");
+	background: literal("-webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5))");
+	background: literal("-webkit-linear-gradient(-45deg, #ffffff 0%,#e5e5e5 100%)");
+	background: literal("-o-linear-gradient(-45deg, #ffffff 0%,#e5e5e5 100%)");
+	background: linear-gradient(-45deg, #ffffff 0%,#e5e5e5 100%);
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 )");
+	box-shadow: 0 0 1px 1px #aaa;
+	-moz-box-shadow: 0 0 1px 1px #aaa;
+	-webkit-box-shadow: 0 0 1px 1px #aaa;
+}
+div.sgwebui-menu > div {
+	max-height: 300px;
+	overflow: auto;
+}
+@if user.agent ie6 ie8 {
+	div.sgwebui-menu {
+		border: 1px solid #bbb;
+	}
+}
+div.sgwebui-menu .itemCont {
+	clear: both;
+}
+div.sgwebui-menu .item {
+	cursor: pointer;
+	padding: 4px 10px 4px 25px;
+}
+div.sgwebui-menu .item.expanded {
+	padding-right: 15px;
+}
+div.sgwebui-menu .item.expanded:after {
+	content: "";
+	display: block;
+	float: right;
+	margin-top: -12px;
+	width: 0;
+	height: 0;
+	border-left: 4px solid #666;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	margin-right: -10px;
+}
+div.sgwebui-menu .item:hover {
+	background: #e2e2e2;
+}
+div.sgwebui-menu .item.nonselectable {
+	padding-left: 5px;
+}
+div.sgwebui-menu .item.nonselectable:hover {
+	background: none;
+}
+div.sgwebui-menu .item.selected {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk4YmVkZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZWVmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #98bede 0%, #deefff 100%)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#98bede), color-stop(100%,#deefff))");
+	background: literal("-webkit-linear-gradient(top, #98bede 0%,#deefff 100%)");
+	background: literal("-o-linear-gradient(top, #98bede 0%,#deefff 100%)");
+	background: literal("linear-gradient(top, #98bede 0%,#deefff 100%)");
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#98bede', endColorstr='#deefff',GradientType=0 )");
+	font-weight: bold;
+	zoom: 1;
+}
+div.sgwebui-menu div.separator {
+	border-top: 1px dashed #666;
+	margin: 5px;
+}
+div.sgwebui-menu div.separator > div {
+	display: none;
+}
+.itemCont.withIcon { position: relative; }
+.itemCont.withIcon .itemImg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 3px 3px 0;
+}
+
+.sgwebui-menu .item.disabled, .sgwebui-menu .item.disabled:hover {
+	opacity: .6;
+	filter: literal("alpha(opacity=60)");
+	cursor: default;
+	background: none;
+}
+
+.sgwebui-menu .option-buffer input {
+	width: 40px;
+}
+
+@if user.agent ie9 {
+	div.sgwebui-menu .item.selected, div.sgwebui-menu {
+		filter: none; 
+	}
+}
+@if user.agent ie6 ie8 ie9 {
+	.itemCont.withIcon .itemImg {
+		width: 16px !important;
+		height: 16px !important;
+	}
+}
+
+/***** IE6 popup *****/
+@sprite div.sgwebui-ie6popup {
+	position:absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 170px;
+	gwt-image: "ie6fixBg";
+	background-position:left bottom;
+	filter:literal("progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='../img/ie6popuped', src='../img/ie6popup/../img/ie6popup_bg.png')");
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-align:center;
+	z-index: 100000;
+}
+.sgwebui-ie6popup-center {
+	width: 840px;
+	margin: 0 auto;
+}
+@sprite .sgwebui-ie6popup-close a {
+	text-align:right;
+	display:block;
+	position:absolute;
+	left: 50%;
+	top: 0;
+	margin-left: 250px;
+	padding:3px 15px 0 0;
+	font-size:12px;
+	line-height:20px;
+	color:#000;
+	gwt-image: "ie6close";
+	background-position:left top;
+	text-decoration:none;
+}
+.sgwebui-ie6popup-close a:hover {
+	background-position:left top;
+	text-decoration:underline;
+	color: #000;
+}
+.sgwebui-ie6popup-left {
+	margin-top:5px;
+}
+.sgwebui-ie6popup-left h3 {
+	font-size: 14px;
+	color: #666;
+	margin: 10px 0 5px;
+	white-space:nowrap;
+}
+.sgwebui-ie6popup-left h1 {
+	font-size:35px;
+	white-space:nowrap;
+	margin:0 10px 0 10px;
+	color:#333;
+}
+.sgwebui-ie6popup-left a {
+	display: inline-block;
+	margin: 0px 20px 0 0;
+	font-size:11px;
+	text-align:center;		
+}
+@sprite .sgwebui-ie6popup .sgwebui-ie6popup-left a {
+	border:none;
+	padding-top: 50px;	
+	gwt-image:"ie6ie";
+	background-position: center -80px !important;
+	white-space:nowrap;
+	color:#333;
+	text-decoration:none;
+	width: auto;
+	height: auto;
+	filter: literal("alpha(opacity=50)");
+}
+.sgwebui-ie6popup .sgwebui-ie6popup-left a:hover {
+	color: #333;
+	filter: literal("alpha(opacity=100)");
+	text-decoration:none;
+}
+@sprite .sgwebui-ie6popup .sgwebui-ie6popup-left .ff {
+	gwt-image:"ie6ff";
+	width: auto;
+	height: auto;
+}
+@sprite .sgwebui-ie6popup .sgwebui-ie6popup-left .chrome {
+	gwt-image:"ie6chrome";
+	width: auto;
+	height: auto;
+}
+@sprite .sgwebui-ie6popup .sgwebui-ie6popup-left .opera {
+	gwt-image:"ie6opera";
+	width: 49px;
+	height: auto;
+}
+@sprite .sgwebui-ie6popup .sgwebui-ie6popup-left .safari {
+	gwt-image:"ie6safari";
+	width: auto;
+	height: auto;
+}
+
+
+/*** Notify cookies panel ****/
+.notifyCookiesPanel {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0,0,0,.7);
+	padding: 10px;
+	padding-left: 15px;
+	z-index: 100;
+	text-align: center;
+	box-shadow: 0 0 10px #555;
+}
+.notifyCookiesPanel > * {
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 0;
+	margin-right: 10px;
+}
+.notifyCookiesPanel > span {
+	color: #fff;
+	text-shadow: 0 1px 0 #333;
+}
+.cookiesExplanationDialog .dialogContent {
+	color: #555;
+}
+.cookiesExplanationDialog p {
+	margin-bottom: 15px;
+	margin-top: 5px;
+}

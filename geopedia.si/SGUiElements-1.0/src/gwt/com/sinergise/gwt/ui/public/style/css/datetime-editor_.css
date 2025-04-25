@@ -1,0 +1,15 @@
+.sgwebui-DateTimeEditor {
+  border: 1px solid gray;
+  background-color: white;
+  width: 25px;
+  padding: 2px 3px 2px 3px;
+  cursor: text;
+}
+
+.sgwebui-DateTimeEditor-editable {
+	cursor: pointer;
+}
+
+.sgwebui-DateTimeEditor-selected {
+	background-color: #FADDA3;
+}

@@ -1,0 +1,17 @@
+a, a:visited, a:hover {
+	color: #444;
+}
+input, select, textarea {
+	border: 1px solid #ccc;
+	padding: 3px 5px;
+}
+input:focus, select:focus, textarea:focus {
+	box-shadow: 0 0 3px #aaa;
+	-webkit-box-shadow: 0 0 3px #aaa;
+	-moz-box-shadow: 0 0 3px #aaa;
+	border-color: #1a6281;
+}
+input[type=checkbox], input[type=radio] {
+	border: none;
+}
+	

@@ -1,0 +1,49 @@
+@external *;
+
+/*** HEIGHT PROFILE *****/
+.heightProfileDialog .dialogMiddleCenterInner {
+	overflow: hidden;
+	max-height: 100%;
+	padding: 0;
+	max-width: 100%;
+}
+.heightProfileDialog h1 { margin: 10px 0 0 20px;}
+.heightProfileDialog .heightProfile {
+	margin: 0 10px;
+}
+
+.heightProfileDialog .info { margin-left: 20px; margin-bottom: 10px;}
+.heightProfileDialog .info .mainGroup > span {
+	display: inline-block;
+	margin-left: 10px;
+	color: #777;
+}
+.heightProfileDialog .mainGroup .gwt-HTML b {
+	color: #555;
+}
+
+.heightProfileDialog .info .mainGroup {
+	vertical-align: top;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+.heightProfileDialog .info .mainGroup.first {
+	margin-right: 20px;
+}
+
+.heightProfileDialog .info .mainGroup .title {
+	font-weight: bold;
+	float: left;
+	color: #0092ed;
+}
+
+@sprite .heightProfileDialog span.up span{
+	margin-right: 3px;
+	display: inline-block;
+	gwt-image: "heightUp";
+}
+@sprite .heightProfileDialog span.down span{
+	margin-right: 3px;
+	display: inline-block;
+	gwt-image: "heightDown";
+}

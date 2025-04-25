@@ -1,0 +1,35 @@
+/********* HORIZONTAL SPLITTER ***********/
+.gwt-SplitLayoutPanel > div {
+	overflow: visible !important;
+}
+div.sgwebui-decoratedSplitPanel-WEST, div.sgwebui-decoratedSplitPanel-CENTER {
+	overflow: hidden !important;
+}
+.gwt-SplitLayoutPanel-HDragger {
+	background: url(../img/split_panel/hms_right_all.png) left center repeat-y transparent;
+	width: 14px !important;
+	cursor: e-resize;
+}
+div.sgwebui-decoratedSplitPanel-CENTER {
+	margin-left: -6px;
+}
+
+
+/********* VERTICAL SPLITTER ***********/
+.gwt-SplitLayoutPanel .gwt-SplitLayoutPanel > div {
+	overflow: visible !important;
+}
+div.sgwebui-decoratedSplitPanel-WEST, div.sgwebui-decoratedSplitPanel-CENTER {
+	overflow: hidden !important;
+}
+.gwt-SplitLayoutPanel-VDragger {
+	background: url(../img/split_panel/vms_up_all.png) center top repeat-x transparent;
+	height: 14px !important;
+	cursor: n-resize;
+	border-bottom: 4px solid #544E4C;
+	margin-top: -9px;
+}
+.gwt-SplitLayoutPanel .gwt-SplitLayoutPanel div.sgwebui-decoratedSplitPanel-CENTER {
+	margin-left: 0;
+	min-height: 150px;
+}

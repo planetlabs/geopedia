@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="LiteInclude">
+    <import file="${SGUtil}/misc/antCommons.xml" />
+    <import file="${GeopediaGWTCore}/buildInclude.xml" />
+    
+	<taskdef resource="org/apache/catalina/ant/antlib.xml">
+		<classpath>
+			<pathelement
+				location="${SINEREPO}/WebServer/tomcat/6.0.33/lib/catalina-ant.jar"/>
+			</classpath>
+	</taskdef>
+	
+  
+	<path id="lib.ext.runtime">
+		<pathelement path="${SINEREPO}/Util/logback/0.9.28/lib/logback-core-0.9.28.jar"/>
+		<pathelement path="${SINEREPO}/Util/logback/0.9.28/lib/logback-classic-0.9.28.jar"/>
+	</path>
+    
+	
+	<macrodef name="filterAndCopy">
+			<attribute name="templateConfigFile"/>
+			<attribute name="fromTemplate"/>
+			<attribute name="toFile"/>
+			
+			<sequential>
+				<filter filtersfile="@{templateConfigFile}" />
+				<copy file="@{fromTemplate}" 
+					toFile="@{toFile}" filtering="true" overwrite="true" />
+			</sequential>
+		</macrodef>
+	
+	<macrodef name="GWTModule">
+		<attribute name="name"/>
+		<attribute name="buildBaseDir"/>
+		<sequential>
+			<fileset dir="@{buildBaseDir}/gwt/build@{name}"/>
+		</sequential>
+	</macrodef>
+	
+    <macrodef name="build.gwt.webapp.war">
+    	<attribute name="buildBaseDir"/>
+    	<attribute name="webappSRC"/>
+    	<attribute name="GWTModules"/>
+    	<attribute name="templateConfigFile"/>
+    	<sequential>
+    		<delete dir="@{buildBaseDir}/war"/>
+    		<mkdir dir="@{buildBaseDir}/war"/>
+    		<copy todir="@{buildBaseDir}/war/WEB-INF/lib" flatten="true">
+    	 		<path refid="lib.ext.geopedia"/>
+    			<path refid="lib.ext.runtime"/>
+    		</copy>
+    		<copy todir="@{buildBaseDir}/war/WEB-INF/lib" flatten="true">
+    	 		<fileset dir="${GeopediaLite}/war/WEB-INF/lib" includes="*.jar"/>
+    		</copy>
+
+    		<delete>
+    		    <fileset dir="@{buildBaseDir}/war/WEB-INF/lib" includes="jetty*.jar"/>
+    			<fileset dir="@{buildBaseDir}/war/WEB-INF/lib" includes="gwt-user.jar"/>
+    		</delete>
+    		
+    		<copy todir="@{buildBaseDir}/war" overwrite="true">    			
+   				<fileset dir="${GeopediaLite}/war" includes="lite.jsp,seo.jsp,favicon.ico"/>
+    		</copy>
+    		<!-- this section looks the same as the one above, but the upper one actually copy stuff from geopedialite, this one is for the translated geopedias if they have overwritten something  -->
+    		<copy todir="@{buildBaseDir}/war" overwrite="true">    			
+    			<fileset dir="@{webappSRC}" includes="lite.jsp,seo.jsp,favicon.ico"/>
+    	 	</copy>
+    	 
+    		<copy todir="@{buildBaseDir}/war/externalJS">
+    			<fileset dir="${GeopediaLite}/war/externalJS" includes="**"/>
+    		</copy>
+    		<copy todir="@{buildBaseDir}/war/internalJS">
+    			<fileset dir="${Geopedia}/js" includes="**"/>
+    		</copy>
+    		<copy todir="@{buildBaseDir}/war/WEB-INF/weblinks">
+    			<fileset dir="@{webappSRC}/weblinks" includes="**"/>
+    		</copy>
+    		<for list="@{GWTModules}" param="GWTModule">
+    			<sequential>
+    				<copy todir="@{buildBaseDir}/war/">
+    					<fileset dir="@{buildBaseDir}/gwt/build@{GWTModule}/"/>
+    				</copy>
+    			</sequential>
+    		</for>
+    		
+    		<filterAndCopy templateConfigFile="@{templateConfigFile}" fromTemplate="${GeopediaLite}/config/templates/WEB-INF/web.template.xml" toFile="@{buildBaseDir}/war/WEB-INF/web.xml" />
+    		<filterAndCopy templateConfigFile="@{templateConfigFile}" fromTemplate="${GeopediaLite}/config/templates/lite-base.template.jsp" toFile="@{buildBaseDir}/war/lite-base.jsp" />
+    		    		
+    		<war destfile="@{buildBaseDir}/Geopedia.war" webxml="@{buildBaseDir}/war/WEB-INF/web.xml">
+    			<classes dir="@{buildBaseDir}/classes"/>
+    			<fileset dir="@{buildBaseDir}/war" />
+    		</war>
+    	</sequential>
+    </macrodef>
+	
+    <macrodef name="compile.gwt.GeopediaLite">
+		<attribute name="buildBaseDir"/>		
+		<attribute name="entryPointClass"/>
+		<attribute name="moduleName"/>
+		<element name="additionalGWTBuild" optional="yes"/>
+		<sequential>        	
+		    
+			<mkdir dir="@{buildBaseDir}/gwt" />
+			<mkdir dir="@{buildBaseDir}/gwt/build@{moduleName}" />			
+			<java failonerror="true" fork="yes" jvm="${JAVA6}/bin/java"	classname="com.google.gwt.dev.Compiler">
+				<classpath>
+				    <!-- additional -->
+					<pathelement location="${GeopediaLite}/src" />
+					<pathelement location="${GeopediaLite}/theme" />
+					<!-- GeopediaGWTCore sources -->
+					<path refid="src.geopediaGWTCore"/>	
+					<!-- GWT library -->
+					<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/gwt-dev.jar" />
+					<!-- external libraries -->
+					<path refid="lib.ext.geopedia" />
+					<path refid="lib.ext.geopediaGWTCore" />
+				    <additionalGWTBuild />
+
+	
+				</classpath>
+				<jvmarg value="-Xmx2048M" />
+				<!-- GWT compiler arguments -->
+				<arg line="-logLevel INFO -localWorkers ${LOCALWORKERS} -style OBF" />
+				<arg value="-war" />
+				<arg value="@{buildBaseDir}/gwt/build@{moduleName}" />                    <!-- compile output destination -->
+				<arg value="@{entryPointClass}" />      <!-- GWT XML -->
+			</java>
+			<!-- GZIP all files for faster downloading if webserver/browser supports it -->
+			<gzipGWTOutput directory="@{buildBaseDir}/gwt/build@{moduleName}/@{moduleName}"/>
+		</sequential>
+	</macrodef>
+	
+    <macrodef name="compile.GeopediaLiteGWT">
+		<attribute name="buildBaseDir"/>		
+		<element name="additionalSourcesPath" optional="yes"/>
+		<sequential>        	
+		    <mkdir dir="@{buildBaseDir}/classes" />
+    		<javac destdir="@{buildBaseDir}/classes" includes="**" source="1.6"
+				target="1.6" fork="yes" compiler="modern" debug="on" encoding="UTF-8">
+				<classpath refid="lib.ext.geopedia" />
+				<classpath>
+				    <pathelement path="@{buildBaseDir}/classes" />
+				</classpath>
+			<additionalSourcesPath />
+			<src path="${SGGenerics}/src/common" />
+			<src path="${SGGenerics}/src/gwt" />
+			<src path="${SGCluster}/src/common" />
+			<src path="${SGCluster}/src/gwt" />
+			<src path="${SGMap}/src/common" />
+			<src path="${SGMap}/src/theme" />
+			<src path="${SGMap}/src/gwt" />
+			<src path="${SGUiElements}/src/common" />
+			<src path="${SGUiElements}/src/gwt" />
+			<src path="${SGUiElements}/src/theme" />
+			<src path="${SGUtil}/src/common" />
+			<src path="${SGUtil}/src/gwt" />
+			<src path="${GeopediaGWTCore}/src/core" />
+			<src path="${GeopediaGWTCore}/src/resources" />				
+			</javac>
+        </sequential>
+    </macrodef>
+    
+    <macrodef name="deploy.gwt.geopediamodule">
+		<attribute name="buildBaseDir"/>
+		<attribute name="host" />
+		<attribute name="username" default="root" />
+		<attribute name="password" />
+		<attribute name="moduleName" />
+    	<attribute name="remoteGeopediaBaseDirectory" default="/pedia"/>
+    	
+		<sequential>
+		    <sshexec host="@{host}" username="@{username}" password="@{password}" command="cd @{remoteGeopediaBaseDirectory}/app; rm -rf @{moduleName}"/>		    
+			<scp todir="@{username}:@{password}@@@{host}:@{remoteGeopediaBaseDirectory}/app/@{moduleName}/" sftp="true" trust="true">
+				<fileset dir="@{buildBaseDir}/gwt/build@{moduleName}/@{moduleName}" />
+			</scp>		    
+		</sequential>
+	</macrodef>
+    
+</project>

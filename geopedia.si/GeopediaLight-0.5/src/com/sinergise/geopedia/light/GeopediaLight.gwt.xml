@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='SVNgeopedia'>
+
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.sinergise.geopedia.client.core'/>
+  <inherits name="com.sinergise.geopedia.themebundle.GeopediaThemeGis" />
+  <inherits name='com.sinergise.geopedia.client.resources'/>
+  <inherits name='com.sinergise.geopedia.client.components'/>
+  <inherits name='com.sinergise.geopedia.pro.GeopediaPro'/>
+  
+    <set-property name="ClientBundle.enableInlining" value="false"/>
+<!--   <set-configuration-property name="CssResource.style" value="pretty"/>  -->
+
+  <set-property name="canvasElementSupport" value="maybe">
+	<any>
+		<when-property-is name="user.agent" value="ie6" />
+		<when-property-is name="user.agent" value="ie8" />
+	</any>			
+  </set-property>
+	
+  <replace-with class="com.google.gwt.dom.client.SGDOMImplIE8">
+    <when-type-is class="com.google.gwt.dom.client.DOMImpl" />
+    <when-property-is name="user.agent" value="ie8" />
+  </replace-with>
+
+  
+  <inherits name="com.google.gwt.maps.GoogleMaps" />
+  <script src="http://maps.google.com/maps?gwt=1&amp;file=api&amp;v=2&amp;key=ABQIAAAATpDQLsXSGRF6EsH2FNtoahRe7-XIA79eYLCH_0RazhLwhZynDxQTJmd9rWRt6S9UOdZzqLhD6SAFEA" />
+  
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='com.sinergise.geopedia.light.client.GeopediaLight'/>
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client'/>
+  <source path='theme'/>
+  
+  
+  <extend-property name="locale" values="sl"/>
+ 
+  <extend-property name="locale" values="en"/>
+  <extend-property name="locale" values="cs"/>
+
+  <set-property-fallback name="locale" value="sl"/>
+  
+  <!-- - logging  -->
+ <!-- 
+  <inherits name="com.google.gwt.logging.Logging"/>   
+  <set-property name="gwt.logging.logLevel" value="ALL"/>
+  <set-property name="gwt.logging.consoleHandler" value="ENABLED"/>
+  <set-property name="gwt.logging.popupHandler" value="DISABLED" />
+  <set-property name="gwt.logging.firebugHandler" value="ENABLED" />
+  <set-property name="gwt.logging.simpleRemoteHandler" value="DISABLED" />
+  
+  <set-property name="compiler.emulatedStack" value="true" />
+  <set-configuration-property name="compiler.emulatedStack.recordLineNumbers" value="true"/>
+  <set-configuration-property name="compiler.emulatedStack.recordFileNames" value="true"/>
+      -->
+   
+   
+  <!-- only build for gecko -->
+  <!-- 
+  <set-property name="user.agent" value="gecko1_8"/>  
+    -->
+  <!-- do not embed symbols to generated .html files
+   <set-property name="ClientBundle.enableInlining" value="false"/>
+  -->
+  
+</module>

@@ -1,0 +1,53 @@
+div.splashScreen {
+    background-color: rgba(255,255,255,.5);
+	position: absolute;
+	left: 0;
+    top: 0;
+	width: 100%;
+	height: 100%;
+    display: table;
+    z-index: 100;
+}
+
+@if user.agent ie6 ie8 {
+	div.splashScreen {
+		gwt-image:"whiteBg";
+	}
+}
+
+.splashScreen > div {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.splashScreen > div > img {
+	display: block;
+}
+
+.splashScreen > div > div {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+}
+@if user.agent ie6 {
+	.splashScreen > div > div {
+		margin-top: 200px;
+		position: absolute;
+		margin-left: -180px;
+	}
+}
+.splashScreen > div > div > div {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+
+.labelDark {
+	color: #666666;
+	text-shadow: 1px 1px 0 #fff;
+}
+
+.labelLight {
+	color: white;
+	text-shadow: 1px 1px 0 #333;
+}

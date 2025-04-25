@@ -1,0 +1,141 @@
+@external *;
+/*** css fix for javascript calculating ... extends nav_.css ***/ 
+.sgwebgis-mapToolbar {
+	right: 0px;
+	left: auto !important;  
+}
+@sprite table.sgwebui-toolbar-top-right,
+table.sgwebui-toolbar-top-left,
+table.sgwebui-toolbar {
+	gwt-image:"toolbar";
+}
+
+@sprite div.sgwebui-toolbar-first-top-right,
+.sgwebui-toolbar-first {
+	gwt-image:"toolbarRight";
+}
+table.sgwebui-toolbar-top-right > tbody > tr > td,
+table.sgwebui-toolbar-top-left > tbody > tr > td,
+.sgwebui-toolbar > tbody > tr > td {
+	vertical-align: top !important;
+}
+
+@sprite div.sgwebui-toolbar-last-top-right,
+.sgwebui-toolbar-last {
+	width: 8px;
+	gwt-image:"toolbar";
+}
+
+
+
+.sgwebui-toolbar div.gwt-PushButton,
+.sgwebui-toolbar div.gwt-ToggleButton {
+	background: #fff;
+	border: none;
+	height: 24px;
+	width: 24px;
+	padding: 1px 0;
+	margin: 0px 0 0 1px;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.sgwebui-toolbar .gwt-ToggleButton img, 
+.sgwebui-toolbar .gwt-PushButton img {
+	margin: 4px;
+	padding: 0;
+}
+
+.sgwebui-toolbar div.gwt-PushButton-down,
+.sgwebui-toolbar div.gwt-PushButton-down-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-down,
+.sgwebui-toolbar div.gwt-ToggleButton-down-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-down-disabled {
+	background: #eeeeee;	
+}
+
+.sgwebui-toolbar div.gwt-PushButton-up-disabled,
+.sgwebui-toolbar div.gwt-PushButton-down-disabled,
+.sgwebui-toolbar div.gwt-ToggleButton-up-disabled {
+	background: #d4ecf0;	
+	opacity: .5;
+	filter: literal("alpha(opacity=50)");
+}
+
+.sgwebui-toolbar :active, 
+.sgwebui-toolbar :focus, 
+.sgwebui-toolbar :visited, 
+.sgwebui-toolbar :hover {  
+	outline: none; 
+}
+
+div.cosylab-ModeSelectButton-SelectionPanel {
+	z-index: 1000;	
+}
+
+.sgwebui-toolbar .optionsPanel > div {
+	display: inline-block;
+	overflow: hidden;
+}
+@if user.agent ie6 {
+	.sgwebui-toolbar .optionsPanel > div {
+		display: inline;
+	}
+}
+@sprite .sgwebui-toolbar .optionsButton {
+	margin-top: 8px;
+	margin-right: 4px;
+	vertical-align: top;
+	cursor: pointer;
+	gwt-image: "optionsButton";
+}
+.sgwebui-toolbar .optionsButton div {display: none; }
+@sprite .sgwebui-toolbar .optionsButton:hover {
+	gwt-image: "optionsButtonOn";
+}
+
+
+/**** raster buttons ****/
+.sgwebgis-mapRasterButtons {
+	right: 10px;
+	left: auto !important;  
+}
+.sgwebgis-mapRasterButtons {
+	margin-top: 35px;
+}
+.sgwebgis-mapRasterButtons div {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	cursor: pointer;
+	margin: 0 3px;
+	padding: 4px 8px;
+	white-space: nowrap;
+	border: none;
+	width: auto;
+}
+.sgwebgis-mapRasterButtons .mapLayer-but-on {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNmYThiOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZGM1ZDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #3fa8b8 0%, #7dc5d1 100%)");
+	background: literal("-webkit-linear-gradient(top, #3fa8b8 0%,#7dc5d1 100%)");
+	background: literal("linear-gradient(top, #3fa8b8 0%,#7dc5d1 100%)");
+	box-shadow: 0 1px 1px #666 inset;
+	-moz-box-shadow: 0 1px 1px #666 inset;
+	-webkit-box-shadow: 0 1px 1px #666 inset;
+	color: #fff;
+	margin-top: 2px;
+}
+.sgwebgis-mapRasterButtons .mapLayer-but-off {
+	color: #333;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5ZjdmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiZWUzZTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #e9f7f9 0%, #bee3e9 100%)");
+	background: literal("-webkit-linear-gradient(top, #e9f7f9 0%,#bee3e9 100%)");
+	background: literal("linear-gradient(top, #e9f7f9 0%,#bee3e9 100%)");
+	box-shadow: 0 2px 2px #888;
+	-moz-box-shadow: 0 2px 2px #888;
+	-webkit-box-shadow: 0 2px 2px #888;
+}

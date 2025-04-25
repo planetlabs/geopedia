@@ -1,0 +1,26 @@
+a { color: #529CBA; }
+
+input[type="text"], input[type="password"], select, textarea {
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+.gwt-TabPanelBottom > .tabContainer { background: #fff; }
+
+.app-header { 
+	padding: 10px;
+}
+.app-header > img {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+.app-header .title {
+	display: inline-block;
+	color: #1a6281 !important;
+    font-size: 17px;
+    font-weight: bold;
+    text-shadow: 0 0 2px #fff;
+    text-decoration: none;
+    padding-left: 30px;
+}

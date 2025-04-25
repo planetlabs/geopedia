@@ -1,0 +1,16 @@
+===================================================================================================
+ Mandatory
+===================================================================================================
+slf4j-api	(slf4j-api-<version>.jar)
+
+===================================================================================================
+ Optional
+===================================================================================================
+args4j		(args4j-<version>.jar)	When using com.sinergise.java.util.cmdline.CmdLineParserSG
+
+log4j		(log4j-<version>.jar)	When using Log4JStatementLogger (deprecated)
+
+logback     (logback-core-<version>.jar)    When using logback filters
+			(logback-classic-<version>.jar)
+			
+jul-to-slf4j (jul-to-slf4j-<version>.jar) When using JulOverLogbackManager

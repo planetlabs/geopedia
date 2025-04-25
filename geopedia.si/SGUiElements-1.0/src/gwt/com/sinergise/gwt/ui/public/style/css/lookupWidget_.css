@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+
+.sgwebui-LookUpWidget {
+	width: 8.3em;
+}
+
+.sgwebui-LookUpWidget-button {
+	border: 1px solid gray;
+	padding: 0px;
+	background-color: transparent;
+	text-align: center;
+	vertical-align: bottom;
+	font-size: 10px;
+}
+
+.sgwebui-LookUpWidget-dialog {
+	background-color: #e7f7ed;
+}
+
+.sgwebui-ListFilter {
+	border: 1px solid #87ffb3;
+	/*background-color: red;*/
+}
+
+.sgwebui-ListLookupFilter-filter {
+	margin-bottom: 5px;
+}
+
+.listItemsWidget {
+	padding-bottom: 5px;
+}
+
+.listItemsWidget td {
+	padding-right: 5px;
+	padding-left: 5px;
+	vertical-align: top;
+	font-size: small;
+	border: none;
+	border-collapse: collapse;
+}
+

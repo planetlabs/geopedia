@@ -1,0 +1,109 @@
+@external tabTopRightInner, innerTabs, gwt-TabBarItem, tabTopLeftInner, tabTopCenterInner, gwt-TabBarItem-selected;
+
+@sprite .mainMenu.tabBar {
+	gwt-image: "tabBg";
+ 	background-position: left bottom;
+	background-repeat: repeat-x;
+	background-color: #fff;
+	height: auto;
+}
+.mainMenu.tabBar .tabItem:first-child { margin-left: 15px; }
+.mainMenu.tabBar .tabItem { 
+	vertical-align: bottom; 
+	margin-top: 10px;
+}
+.mainMenu.tabBar .tabItem .tabItemInner {
+	background: none;
+	border: none;
+	padding: 3px 5px;
+}
+.mainMenu.tabBar .tabItem:hover {
+	color: #1D9FB2;
+}
+@sprite .mainMenu.tabBar .tabItem.selected .left,
+.mainMenu.tabBar .tabItem.selected .right {
+	gwt-image: "tabEdge";
+	background-position: left bottom;
+	vertical-align: bottom;
+	float: none;
+}
+.mainMenu.tabBar .tabItem.selected .tabItemInner,
+.mainMenu.tabBar .tabItem.selected:hover .tabItemInner {
+	background: #fff;
+	border: none;
+	color: #333;
+}
+.mainMenu .tabContent {
+	padding: 10px;
+	width: auto;
+}
+.subMenu .tabContent {
+	padding: 0;
+}
+.subMenu.tabBar { padding: 3px; border-bottom: 1px solid #bbb; }
+.subMenu.tabBar .tabItem { margin: 3px 5px; }
+@if !user.agent ie6 ie8 {
+	.subMenu.tabBar .tabItem .left,
+	.subMenu.tabBar .tabItem .right { display: none; }
+	.subMenu.tabBar .tabItem {
+		background: literal("-moz-linear-gradient(top, #eaf7f9 0%, #c0e5ea 100%)");
+		background: literal("-webkit-linear-gradient(top, #eaf7f9 0%,#c0e5ea 100%)");
+		background: literal("-o-linear-gradient(top, #eaf7f9 0%,#c0e5ea 100%)");
+		background: literal("linear-gradient(top, #eaf7f9 0%,#c0e5ea 100%)");
+		box-shadow: 0 1px 2px #666;
+		-webkit-box-shadow: 0 1px 2px #666;
+		-moz-box-shadow: 0 1px 2px #666;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		padding: 4px 8px;
+		color: #000;
+		cursor: pointer;
+	}
+	.subMenu.tabBar .tabItem:hover {
+		box-shadow: 0 1px 3px #444;
+		-webkit-box-shadow: 0 1px 3px #444;
+		-moz-box-shadow: 0 1px 3px #444;
+	}
+	
+	.subMenu.tabBar .tabItem.selected,
+	.subMenu.tabBar .tabItem.selected:hover {
+		background: literal("-moz-linear-gradient(top, #90d4e0 0%, #46adbd 100%)");
+		background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#90d4e0), color-stop(100%,#46adbd))");
+		background: literal("-o-linear-gradient(top, #90d4e0 0%,#46adbd 100%)");
+		background: literal("linear-gradient(top, #90d4e0 0%,#46adbd 100%)");
+		padding: 4px 7px 4px;
+		border: 1px solid;
+		border-color: #658387 #6aa9b2 #46adbd;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		margin-bottom: -2px;
+		color: #fff;
+		cursor: default;
+	}
+} @else {
+	@sprite .innerTabs .gwt-TabBarItem .tabTopLeftInner {
+		gwt-image: "subL";
+	}
+	@sprite .innerTabs .gwt-TabBarItem .tabTopRightInner {
+		gwt-image: "subR";
+	}
+	@sprite .innerTabs .gwt-TabBarItem .tabTopCenterInner {
+		gwt-image: "sub";
+		padding: 0 4px;
+		border: none;
+		line-height: 20px;
+		margin: 0;
+	}
+	@sprite .innerTabs .gwt-TabBarItem-selected .tabTopLeftInner {
+		gwt-image: "subDownL";
+	}
+	@sprite .innerTabs .gwt-TabBarItem-selected .tabTopRightInner {
+		gwt-image: "subDownR";
+	}
+	@sprite .innerTabs .gwt-TabBarItem-selected .tabTopCenterInner {
+		gwt-image: "subDown";
+		border: none;
+	}
+}

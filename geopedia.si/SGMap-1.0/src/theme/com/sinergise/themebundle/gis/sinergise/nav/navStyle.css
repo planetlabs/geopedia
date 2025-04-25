@@ -1,0 +1,12 @@
+@external sgwebgis-*, sgwebgis *, *;
+
+/******************************** COORDS AND SCALE INPUT *****************************/
+.sgwebgis-coordinateslabel {
+	background: #fff;
+	border-top: 1px solid #ccc;
+	color: #222;
+	height: auto;
+	opacity: .6;
+	filter: literal("alpha(opacity=60)");
+}
+.app-version { bottom: 32px; }

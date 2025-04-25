@@ -1,0 +1,1031 @@
+@charset "utf-8";
+body {
+	margin: 0;
+	font: 12px Arial,Helvetica,sans-serif !important;
+	color: #555 !important;
+	padding:0;
+}
+html, body {
+	height: 100%;
+}
+a {
+	text-decoration:none;
+	color: #0092de;
+}
+a:focus {
+	outline: none;
+}
+a:hover {
+	text-decoration:underline;
+}
+button { *overflow: visible; }
+
+*::-moz-selection {
+    background: none repeat scroll 0 0 #0092ed;
+    color: #FFFFFF;
+}
+
+/**************** DECORATED ANCHOR ********************/
+a.btn, .btn, .toggle, .gwt-Button {
+	overflow: visible;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background: -moz-linear-gradient(top, #f1f1f1 0%, #e4e4e4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1f1f1), color-stop(100%,#e4e4e4));
+	background: -webkit-linear-gradient(top, #f1f1f1 0%,#e4e4e4 100%);
+	background: -o-linear-gradient(top, #f1f1f1 0%,#e4e4e4 100%);
+	background: linear-gradient(top, #f1f1f1 0%,#e4e4e4 100%);
+    background: url(images/btn_ie.png) left 1px no-repeat\0;
+	background: url(images/btn_ie.png) left 1px no-repeat\9;
+	border: 1px solid #bbb;
+	border-bottom-color: #aaa;
+	border-top-color: #ccc;
+	color: #666;
+	padding: 4px 9px;
+	display: inline-block;
+	box-shadow: 0 1px 0 #fbfbfb inset;
+	-moz-box-shadow: 0 1px 0 #fbfbfb inset;
+	-webkit-box-shadow: 0 1px 0 #fbfbfb inset;
+	-o-box-shadow: 0 1px 0 #fbfbfb inset;
+	text-shadow: 0 1px 0 #fff;
+	-moz-transition: color, border ease 0.3s;
+	-webkit-transition: color, border ease 0.3s;
+	-o-transition: color, border ease 0.3s;
+	transition: color, border ease 0.3s;
+    display: inline-block\0;
+    *display: inline;
+    zoom:1;
+/*     float: left\0; */
+    
+/*     float: left\9; */
+    padding: 1px 0 0 8px\0;
+	padding: 1px 0 0 8px\9;
+	border: none\0;
+	border: none\9;
+	cursor: pointer;
+}
+button.btn, div.btn, .toggle, .gwt-Button {
+	border: none\0;
+	*border:none;
+}
+
+a.btn :hover, .btn:hover, .btn-up-hovering, .toggle, .gwt-Button:hover  {
+	color: #0092ed;
+	text-decoration: none;
+}
+a.btn.icon {
+	padding-left: 26px;
+}
+a.btn span.txt, .toggle .html-face {
+	background: url(images/btn_ie.png) right top no-repeat\0;
+    display: block\0;
+    padding: 6px 8px 7px 0\0;
+	margin-right: -6px\0;
+	*background: url(images/btn_ie.png) right top no-repeat;
+    *display: block;
+    *padding: 6px 8px 7px 0;
+	*margin-right: -6px;
+	*float: left;
+	cursor: pointer;
+}
+.toggle .html-face {
+	background: url(images/btn_ie.png) right 1px no-repeat\0;
+	*background: url(images/btn_ie.png) right 1px no-repeat;
+}
+a.btn.icon span.txt {
+	line-height: 18px;
+	padding-bottom: 4px\0;
+	*padding-bottom: 4px;
+}
+a.btn img, a.btn .spanImg {
+	float: left;
+	margin: 0px 0 0 -20px;
+	margin-top: 5px\9;
+}
+a.btn .spanImg {
+	width: 17px;
+	height: 17px;
+}
+.btn:active, .btn.selected, .toggle-down, .toggle-down-hovering, .gwt-Button:active {
+	background: -moz-linear-gradient(top, #2f769a 0%, #3c97c6 16%, #55b6e9 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2f769a), color-stop(16%,#3c97c6), color-stop(100%,#55b6e9));
+	background: -webkit-linear-gradient(top, #2f769a 0%,#3c97c6 16%,#55b6e9 100%);
+	background: -o-linear-gradient(top, #2f769a 0%,#3c97c6 16%,#55b6e9 100%);
+	background: linear-gradient(top, #2f769a 0%,#3c97c6 16%,#55b6e9 100%);
+	border:1px solid #608ea6;
+	border-top-color: #1d5c7d;
+	border-bottom-color: #79a1b6; 
+	box-shadow: 0 1px 0 rgba(255,255,255,.7);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.7);
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.7);
+	-o-box-shadow: 0 1px 0 rgba(255,255,255,.7);
+	text-shadow: 0 -1px 0 #026aa0;
+	color: #fff;
+}
+a.btn:focus, a.btn:active, .toggle-down, .toggle-down-hovering  {
+	background-position: left bottom\0;
+	background-position: left bottom\9;
+	border: none\0;
+	*background: url(images/btn_ie.png) left bottom no-repeat;
+	*border: none;
+	text-decoration: none;
+}
+a.btn:active span.txt { color: #fff; }
+
+a.btn:focus span.txt, a.btn:active span.txt, .toggle.selected .html-face, 
+.toggle-down .html-face, .toggle-down-hovering  .html-face {
+	background-position: right bottom;
+	color: #fff\0;
+	*color: #fff;
+	text-decoration: none;
+}
+.btn.empty, .btn.icon.empty {padding: 4px; }
+.btn.icon.empty .spanImg {margin: 0; }
+
+.toggle { padding: 4px;padding:0 0 0 6px\0;*padding: 0 0 0 6px;border: none\0; *border: none;}
+.toggle .html-face {padding:6px 6px 6px 0\0;*padding: 6px 6px 6px 0; }
+.toggle span { 
+	display: block; width: 17px; height: 17px; background: url(images/icon.png) left top no-repeat;}
+.toggle-up-hovering span { background-position: left -17px;}
+.toggle-down-hovering span,
+.toggle-down span  { background-position: left -34px;}
+
+
+.tabPanelToolbar .btn span {
+	width: 17px;
+	height: 17px;
+	display: block;
+	background: url(image/btn-icons.png) left top no-repeat;	
+}
+.tabPanelToolbar .btn:hover span {
+	background-position: left -17px;	
+}
+.tabPanelToolbar .btn:active span, .tabPanelToolbar .btn.selected span, 
+.tabPanelToolbar .btn-down span, .tabPanelToolbar .btn-down-hovering:hover span {
+	background-position: left bottom;	
+}
+
+input[type="text"], input[type="password"], select, textarea {
+	-moz-transition: all ease 0.3s;
+	-webkit-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+	border-color: #bbb;
+}
+input[type="text"]:hover, input[type="password"]:hover, select:hover, textarea:hover {
+	border-color: #999;
+}
+input[type="text"]:focus, input[type="password"]:focus, select:focus, textarea:focus {
+	-moz-box-shadow: 0 1px 3px #bbb;
+	-webkit-box-shadow: 0 1px 3px #bbb;
+	box-shadow: 0 1px 3px #bbb;
+}
+
+.msgPanel { text-align: center; }
+.status, .msgPanel > div {
+	border: 1px solid #D8CA29;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	box-shadow: 0 3px 8px #ccc;
+	-moz-box-shadow: 0 3px 8px #ccc;
+	-webkit-box-shadow: 0 3px 8px #ccc;
+	background: url(images/icons/info_big.png) 12px 12px no-repeat #f9f4c2;
+	padding: 20px 15px 13px 50px;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	clear: both;
+	margin: 5px 0;
+	zoom: 1;
+	min-height: 22px;
+	text-align: left;
+}
+.status.error, .msgPanel .error { background-image: url(images/icons/error_big.png);min-width: 150px; }
+.msgPanel .ok { background-image: url(images/icons/ok_big.png);  }
+
+.hide { display: none !important; }
+
+
+/***** MAIN MAP ****/
+#main_map {
+	background-color: #fff;
+	position: absolute;
+	left:0;
+	top:0;
+	overflow:hidden;
+	width: 100%;
+	height: 100%;
+}
+#main_map div#border {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: transparent;
+	overflow: visible;
+	margin: 0;
+	padding:0;
+}
+.top {
+	background:url("images/tb.png") repeat-x scroll left top transparent;
+	height:4px;
+	left:0;
+	position:absolute;
+	width: 100%;
+	top:0;
+}
+.left {
+	background:url("images/lr.png") repeat-y scroll left top transparent;
+	height: 100%;
+	left:0;
+	position:absolute;
+	top:0;
+	width:3px;
+}
+.right {
+	background:url("images/lr.png") repeat-y scroll right top transparent;
+	height: 100%;
+	position:absolute;
+	right:0;
+	top:0;
+	width:3px;
+}
+.bottom {
+	background:url("images/tb.png") repeat-x scroll left bottom transparent;
+	bottom:0;
+	height:3px;
+	left:0;
+	position:absolute;
+	width: 100%;
+}
+.tl, .tr, .bl, .br {
+	background:url("images/corners.png") no-repeat scroll left top transparent;
+	height:7px;
+	width:7px;
+	position:absolute;
+}
+.tl {
+	left: 0;
+	top: 0;
+}
+.tr {
+	background-position: -7px top;
+	right:0;
+	top:0;
+}
+.bl {
+	background-position: left -7px;
+	bottom:0;
+	left:0;
+}
+.br {
+	background-position: -7px -7px;
+	bottom:0;
+	right:0;
+}
+
+
+/******************* RASTER TAB *********************/
+.geopedia-rastersTab {
+	position:absolute;
+	right:10px;
+	top:0;
+	height:21px;
+}
+.geopedia-rastersTab div {
+	background:url("images/tab_nav.png") no-repeat scroll right bottom transparent;
+	color:#666666;
+	display:block;
+	float:left;
+	font-size:12px;
+	height:21px;
+	margin-right:4px;
+	padding-right:3px;
+	text-decoration:none;
+}
+.geopedia-rastersTab div div {
+	background:url("images/tab_nav.png") no-repeat scroll left top transparent;
+	display:block;
+	line-height:18px;
+	margin-right:2px;
+	padding:0 3px 4px 8px;
+	text-align:center;
+	white-space: nowrap;
+}
+.geopedia-rastersTab div div .gwt-Anchor {
+	color: #333;
+}
+.geopedia-rastersTab div:hover div .gwt-Anchor {
+	color: #0092ed;
+	text-decoration: none;
+}
+.geopedia-rastersTab div.active:hover div .gwt-Anchor {
+	color: #333;
+}
+.geopedia-rastersTab div div:hover {
+	color: #0092ed;
+	cursor:pointer;
+}
+
+.geopedia-rastersTab div.active {
+	background:url("images/tab_nav2.png") no-repeat scroll right bottom transparent;
+	height:21px;
+	margin-top:4px;
+	padding-right:2px;
+}
+.geopedia-rastersTab div.active div {
+	background:url("images/tab_nav2.png") no-repeat scroll left top transparent;
+	line-height:14px;
+	color:#333;
+}
+.geopedia-rastersTab div.active div:hover {
+	color:#333;
+	cursor:default;
+}
+
+.geopedia-rastersTab .active .showMenu { 
+	float: left;
+	display: block;
+	margin: 0 1px 0 -5px;
+	width: 10px;
+	height: 14px;
+	background: url(images/tab_open.png) center center no-repeat;
+}
+
+.rasterPopup {
+	background: #cdeaf9;
+	padding: 8px;
+	margin-top: -4px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border: 1px solid #347a9e;
+	border-top-color: #3f7287;
+	border-bottom-color: #3585ab;
+	box-shadow: 0 2px 4px #555;
+	-moz-box-shadow: 0 2px 4px #555;
+	-webkit-box-shadow: 0 2px 4px #555;
+	color: #333;
+	opacity: .9;
+	filter: alpha(opacity=90);
+}
+.rasterPopup span {
+	display: block;
+	margin: 2px 0;
+	cursor: pointer;
+}
+.rasterPopup span label {
+	white-space: nowrap;
+	cursor: pointer;
+	margin-left: 3px;
+}
+.rasterPopup span:hover label {
+	color: #0092ed;
+}
+
+/******************* PANNING *********************/
+.geopedia-panCtrl {
+	background:url(images/default/controls/nav_bg.png) no-repeat top left;
+	height: 80px;
+	width: 80px;
+	position: absolute !important;
+	top: 10px;
+	left:10px;
+}
+.geopedia-panCtrl, .geopedia-zoomCtrl, .geopedia-scale {
+	opacity: 0.7;
+	-webkit-transition:all 0.4s ease;  
+	-moz-transition:all 0.4s ease;  
+	-o-transition:all 0.4s ease;  
+	transition:all 0.4s ease;
+}
+.geopedia-panCtrl:hover, .geopedia-zoomCtrl:hover, .geopedia-scale:hover {
+	opacity: 1;
+}
+.geopedia-panCtrl-left-on, .geopedia-panCtrl-right-on, .geopedia-panCtrl-up-on, .geopedia-panCtrl-down-on, .geopedia-panCtrl-dot-on {
+	cursor:pointer;
+	height: 22px;
+	width: 22px;
+	position: absolute;
+	left: 29px;
+	top: 7px;
+	background: url(images/default/controls/nav_hover.png) left top;
+}
+.geopedia-panCtrl-right-on {
+	left: 54px;
+	top: 30px;
+	background-position: -22px top;
+}
+.geopedia-panCtrl-down-on {
+	left: 29px;
+	top: 55px;
+	background-position: -44px top;
+}
+.geopedia-panCtrl-left-on {
+	left: 6px;
+	top: 28px;
+	background-position: -66px 1px;
+}
+.geopedia-panCtrl-dot-on {
+	height: 30px;
+	width: 30px;
+	left: 25px;
+	top: 25px;
+	background-position: -88px top;
+}
+
+/******************* SCALE BAR *********************/
+.geopedia-scale {
+	text-shadow:#fff 1px 1px 0px;
+	font-size:10px;
+	position:absolute;
+	bottom: 28px;
+	left:10px;
+	height:19px;
+}
+
+.geopedia-scale-bar_l  {
+	background:url(images/merilo.png) no-repeat top left;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/merilo.png', sizingMethod='scale');
+	height:15px;
+	display:block;
+	padding:3px 0px 2px 10px;
+	float:left;
+	text-align:center;
+	line-height:13px;
+	color: #333;
+}
+.geopedia-scale-bar_r  {
+	background:url(images/merilo.png) no-repeat top right;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/merilo.png', sizingMethod='scale');
+	height:19px;
+	display:block;
+	float:left;
+	width:8px;
+}
+
+.mapFooter a {
+	color: #444;
+	text-decoration:underline;
+}
+.mapFooter a, .mapFooter div {
+	display: inline;
+	white-space: nowrap;
+	margin: 0 5px 0 0;
+}
+.mapFooter a:hover {
+	text-decoration:none;
+}
+
+.sgwebgis-coordinateslabel {
+	position: absolute;
+	right: 11px;
+	bottom: 3px;
+	font-size: 11px;
+}
+.sgwebgis-coordinateslabel > div {
+	display: inline-block; margin-left: 10px; *display: inline; zoom: 1; }
+.sgwebgis-coordinateslabel-latLonLb { min-width: 160px; text-align: right;}
+
+/*.sgwebgis-mapOverlays {
+	background: #f6f6f6;
+	background:-moz-linear-gradient(-45deg, #f6f6f6 0%, #eeeeee 50%, #dddddd 51%, #f4f4f4 100%);
+	background:-webkit-linear-gradient(-45deg, #f6f6f6 0%, #eeeeee 50%, #dddddd 51%, #f4f4f4 100%);
+	background:-o-linear-gradient(-45deg, #f6f6f6 0%, #eeeeee 50%, #dddddd 51%, #f4f4f4 100%);
+	background:-ms-linear-gradient(-45deg, #f6f6f6 0%, #eeeeee 50%, #dddddd 51%, #f4f4f4 100%);
+	background:linear-gradient(-45deg, #f6f6f6 0%, #eeeeee 50%, #dddddd 51%, #f4f4f4 100%);
+}*/
+/* .sgwebgis-mapOverlays > div > div:first-child > div { box-shadow: 0 0 5px #bbb; } */
+.sgwebgis-map-zoomWindowBox-inner {background: #F8E800;}
+.sgwebgis-map-zoomWindowBox-outer {
+	background: url(images/cross.png) center center no-repeat; }
+.sgwebgis-map-zoomWheelBox-outer {
+	border:dotted 2px #F0C000;
+	background: url(images/cross.png) center center no-repeat;}
+.sgwebgis-map-zoomWheelBox-inner {margin: 1px;background: #F8E800;}
+
+/*************FEATURE INFO *********************/
+#geopedia-featureinfo ul {
+	padding:0;
+	margin:0;
+}
+#geopedia-featureinfo:focus {
+	outline: none;
+
+}
+img.tooManyResults {
+	float: right;
+	margin: -22px 5px 0 0;
+	width: 16px;
+	height: 16px;
+	background: url(images/icons/warning.png) left top no-repeat;
+}
+#geopedia-featureinfo ul li{
+	list-style-image:none;
+	list-style-type:none;
+}
+
+
+/** ZOOM TO, HIGHLIGHT ***/
+.SearchResultItem .highlight, .SearchResultItem .zoom,
+.SearchResultItem .btnInfo {
+	display:none;
+}
+.SearchResultItem-shown .highlight, .SearchResultItem-shown .zoom{
+	float: right;
+	display:block;
+}
+.SearchResultItem:hover .btnInfo {		
+	background-image: url(images/layer_info.png);
+	width: 14px;
+	height: 14px;
+	float: right;
+	display:block;
+}
+.SearchResultItem-theme, .SearchResultItem-table {
+	cursor: default !important;
+}
+div.btnHighlight:focus, button.btnZoomTo::-moz-focus-inner {
+	outline:none;
+	border: 0;
+}
+.SearchResultItem .zoom {
+	padding: 1px 0 0 6px\0 !important;
+	margin-right: 5px\0;
+	padding: 1px 0 0 6px\9 !important;
+	margin-right: 5px\9;
+	*margin-bottom: 3px;
+	box-shadow: none\0;
+}
+.SearchResultItem .zoom .txt {
+	padding: 6px 6px 6px 0\0 !important; 
+	height: 16px\0;
+	padding: 6px 6px 6px 0\9 !important; 
+	height: 16px\9; }
+.SearchResultItem .zoom .spanImg {
+	background: url(images/icons/btn_icons.png) left -111px no-repeat;
+	margin-top: 5px\0 !important;
+	margin-top: 5px\9 !important;
+}
+.SearchResultItem-shown .highlight {
+	margin: 0 5px;
+	margin-right: 10px\0 !important;
+	*margin-right: 10px !important;
+	*margin-top: 1px;
+	*margin-bottom: 3px;
+	box-shadow: none\0;
+}
+.SearchResultItem-shown .highlight span {
+	background: url(images/icons/highlight.png) left top no-repeat;
+	width: 9px;
+	height: 15px;
+	margin: 1px 3px;
+	*margin-top: 3px !important;
+}
+.SearchResultItem-shown .toggle.toggle-up-hovering span {
+	background-position: left -15px;
+}
+.SearchResultItem-shown .toggle-down,
+.SearchResultItem-shown .toggle-down-hovering {
+	margin-top: 1px\0;
+	*margin-top: 1px;
+}
+.SearchResultItem-shown .toggle-down span,
+.SearchResultItem-shown .toggle-down-hovering span {
+	background-position: left bottom;
+}
+
+
+
+#geopedia-featureinfo ul li {
+	*margin-bottom: -3px;
+}
+
+#geopedia-featureinfo .sloj {
+	background:url(images/layergroup.png) left top repeat-x #e3e3e3;
+	border-bottom: 1px solid #bbb;
+	color: #555;
+	font-size: 12px;
+	padding:4px 30px 4px 6px;
+}
+
+.SearchResultItem {
+	min-height:22px;
+	border-bottom:1px solid #ddd;
+	padding:2px 0;
+	cursor:pointer;
+}
+.SearchResultItem:hover {
+	background: url(images/layer_hover.png) repeat-x left bottom #fff;
+}
+.SearchResultItem.SearchResultItem-shown, div.SearchResultItem.SearchResultItem-shown:hover {
+	background: url("images/content_shadow.png") repeat-x scroll left top #F1F9FD;
+    padding-top: 3px;
+	border-bottom:none;
+}
+#geopedia-featureinfo .tocka {
+	float: left;
+	margin: 2px 5px 0 3px;
+	clear: left;
+	height:20px;
+}
+
+#geopedia-featureinfo .label {
+	float: none;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	margin-right: 5px;
+	vertical-align: top;
+}
+#geopedia-featureinfo div.SearchResultItem-shown .naslov {
+	padding-right: 50px;
+}
+#geopedia-featureinfo .naslov {
+	padding: 5px 5px 4px 30px;
+}
+.SearchResultItem-shown .naslov {
+	font-weight:bold;
+}
+.metaData {
+	clear: left;
+	margin-bottom:5px;
+	margin-left: 5px;
+}
+.metaData .gwt-Image, .Gisopedia-WikiTextOutput img {
+	border: 1px solid #ccc !important;
+	background:#fff;
+	padding: 3px;
+	margin-top:1px;
+	cursor:pointer;
+}
+.metaData .gwt-Image:hover, .Gisopedia-WikiTextOutput img:hover {
+	-moz-box-shadow: 0 0 3px #888;
+	-webkit-box-shadow: 0 0 3px #888;
+	box-shadow: 0 0 3px #888;	
+}
+.metaData .btn {
+	margin-top: -5px;
+	margin-top: -8px\9;
+}
+.metaData .btn img {
+	padding: 0;
+	border: 0 !important;
+	background: transparent;
+	margin-top: 0;
+	margin-top: 5px\9;
+	*margin-top: 5px;
+}
+.metaData .btn img:hover {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;	
+}
+	
+#geopedia-featureinfo .label {
+	height: auto;
+	padding-right: 9px;
+	background:url(images/arrow_grey.png) right 4px no-repeat;
+	font-size: 11px;
+	color: #333;
+	font-weight:bold;
+	line-height:16px;
+	*float: none;
+	*display: inline;
+	zoom: 1;
+} 
+#geopedia-featureinfo .details, #geopedia-featureinfo .Gisopedia-WikiTextOutput, 
+#geopedia-featureinfo .gwt-Label, #geopedia-featureinfo .gwt-HTML {
+	color: #555;
+	padding: 0 5px 0 0;
+	font-size: 11px;
+	line-height:16px;
+	min-height:13px;
+	display: inline-block;
+	*padding-left: 0;
+	*display: inline;
+	zoom: 1;
+}
+#geopedia-featureinfo .Gisopedia-WikiTextOutput p {
+	margin: 0;
+}
+#geopedia-featureinfo .Gisopedia-WikiTextOutput table {
+	clear: left;
+}
+#geopedia-featureinfo .content {
+	background:#f1f9fd;
+	border-bottom: 1px solid #ccc;
+	padding-top:5px;
+	*margin-top: -3px;
+}
+
+#geopedia-featureinfo .content .link-like {
+    cursor: pointer;
+    text-decoration: none;
+    color: #0092de;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin: 0 8px 4px 0;
+    font-size: 11px;
+}
+
+#geopedia-featureinfo .content .link-like:hover {
+    text-decoration: underline;
+}
+
+
+.themeInfoPanel ul, .contentPanel ul {
+	padding-left: 10px;
+	margin: 5px 0 10px;
+	
+}
+.themeInfoPanel ul li, .contentPanel ul li {
+	padding: 3px 0;
+	list-style: none outside url("images/bullet_list.png");
+	margin-left: 15px;
+}
+/*.themeInfoPanel ul li:hover, .contentPanel ul li:hover {
+	list-style: none outside url("images/bullet_list_hover.png");
+}*/
+
+
+/*** acions ****/
+.geopedia-action-zoombox-outer {
+	border: dashed #0099FF 1px;
+}
+
+
+.geopedia-action-zoombox-inner {
+	background: #0099FF;
+	filter: alpha(opacity = 40);
+	-moz-opacity: .40;
+	opacity: .40;
+}
+
+.geopedia-action-zoomwheelx-outer { 
+	border: double #0099FF 3px;
+}
+
+.geopedia-action-zoomwheel-inner {
+	background: #0099FF;
+	filter: alpha(opacity = 20);
+	-moz-opacity: .20;
+	opacity: .20;
+}
+
+
+
+/*********** DIALOG BOX ***********/
+.grayBackground {
+	background:-moz-radial-gradient(50% 50% 90deg,ellipse closest-side, #888, #000);
+	background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 800, from(#888), to(#000)); 
+	background-color:#333;
+	opacity: 0.55;
+	filter: alpha(opacity = 40);
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height:100%;
+	top:0;
+	z-index:100;
+}
+.loadingPanel {
+	background: url(images/loading2.gif) center center no-repeat;
+	min-height: 300px;
+}
+.notificationsPanel {
+    background: url(images/loading2.gif) no-repeat scroll 12px 6px #EEF1C2;
+    border-bottom: 1px solid #CCCCCC;
+    color: #777777;
+    font-style: italic;
+    min-height: 16px;
+    padding: 7px 5px 5px 35px;
+    text-align: left;
+}
+
+/*********** DIALOG BOX **********/
+.gwt-DialogBox {
+	z-index:101;
+	background: rgba(255,255,255,.7);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	box-shadow: 0 0 10px #333;
+	-moz-box-shadow: 0 0 10px #333;
+	-webkit-box-shadow: 0 0 10px #333;
+	padding: 10px;
+	padding: 0\9;
+	padding: 0\0;
+	background: none\0;
+	background: none\9;
+	box-shadow: none\0;
+}
+.gwt-DialogBox > div {
+	border: 1px solid #aaa;
+	background: #fff;
+	background: none\0;
+	border: none\0;
+	background: none\9;
+	border: none\9;
+}
+
+.gwt-DialogBox table td {
+	padding:0;
+}
+.gwt-DialogBox .dialogTop {
+	
+}
+.gwt-DialogBox .dialogTopLeftInner, 
+.gwt-DialogBox .dialogTopRightInner, 
+.gwt-DialogBox .dialogBottomLeftInner, 
+.gwt-DialogBox .dialogBottomRightInner {
+	background: url(images/widgets/dialog/dialog_corners.png) left top no-repeat\0;
+	*background: url(images/widgets/dialog/dialog_corners.png) left top no-repeat;
+	*width: 16px\0;
+	*height: 16px\0;
+	height: 16px\9;
+	width: 16px\9;
+	display:block\0;
+}
+.gwt-DialogBox .dialogTopCenterInner { 
+	height: 9px;
+	background: url(images/dragger.png) repeat; 
+	cursor:move;
+}
+.gwt-DialogBox .dialogTopCenterInner, 
+.gwt-DialogBox .dialogBottomCenterInner {
+	width: auto;
+	background: url(images/widgets/dialog/dialog_tb.png) left top repeat-x\0;
+	display:block\0;
+	height:16px\0;
+	background: url(images/widgets/dialog/dialog_tb.png) left top repeat-x\9;
+	display:block\9;
+	height:16px\9;
+}
+.gwt-DialogBox .dialogBottomCenterInner {
+	background-position:left bottom;
+}
+ 
+.gwt-DialogBox .dialogMiddleLeft, 
+.gwt-DialogBox .dialogMiddleRight {
+	height: auto;
+	background: url(images/widgets/dialog/dialog_lr.png) left top repeat-y\0;
+	width:16px\0;
+	background: url(images/widgets/dialog/dialog_lr.png) left top repeat-y\9;
+	width:16px\9;
+}
+
+.gwt-DialogBox .dialogMiddleLeftInner, 
+.gwt-DialogBox .dialogMiddleRightInner {
+	width: 16px\0;
+}
+
+.gwt-DialogBox .dialogTopRightInner {
+	background-position: right top;
+}
+.gwt-DialogBox .dialogMiddleLeft {
+	background-position: left top;
+}
+.gwt-DialogBox .dialogMiddleRight {
+	background-position: right top;
+}
+.gwt-DialogBox .dialogBottomLeftInner {
+	background-position: left bottom;
+}
+.gwt-DialogBox .dialogBottomCenterInner {
+	background-position: left bottom;
+}
+.gwt-DialogBox .dialogBottomRightInner {
+	background-position: right bottom;
+}
+.gwt-DialogBox .dialogMiddleCenter {
+	background:#fff;
+	height: 100%;
+}
+.gwt-DialogBox .dialogMiddleCenterInner {
+	height: 100%;
+	border: 1px solid #aaa\0;
+	margin: -1px 0 0 -1px\0;
+	border: 1px solid #aaa\9;
+	margin: -1px 0 0 -1px\9;
+	position:relative;
+	min-width:480px;
+/* 	max-height: 450px; */
+}
+
+.gwt-DialogBox .contentPanel, .gwt-DialogBox .content {
+	max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px 20px 20px;
+    padding: 20px\9;
+    padding: 20px\0;
+    width: 460px;
+}
+
+/**** html dialog *****/
+.gwt-DialogBox.htmlDialog {
+	background: none;
+    border: medium none;
+    height: 100% !important;
+    left: 0 !important;
+    padding: 0;
+    top: 0 !important;
+    width: 100% !important;
+    text-align: center;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.gwt-DialogBox.htmlDialog > div {
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+    border: medium none;
+    margin-top: 2%;
+    padding: 10px;
+    padding: 0\9;
+    background: none\9;	
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.gwt-DialogBox.htmlDialog > div > table {
+	border: 1px solid #ccc;
+	*border: none;
+	border: none\9;
+}
+.gwt-DialogBox.htmlDialog .dialogTopCenterInner {
+}
+.htmlDialog .dialogMiddleCenterInner {
+	padding: 0;
+	height:100%;
+}
+.htmlDialog .contentPanel {
+	width: auto !important;
+	padding: 5px;
+}
+.htmlDialog .contentPanel iframe {
+	border:none;
+}
+
+
+.panoramicImageDialog .gwt-DialogBox .contentPanel {
+	padding-right: 0;
+}
+
+
+
+.centeredTable {
+	position:fixed;
+	width: 100%;
+	height:100%;
+	vertical-align: middle;
+	text-align:center;
+	z-index:100;
+	left: 0;
+	top: 0;
+}
+
+.centeredTable img {
+	background:url(images/white_px.png) left top;
+	padding: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 0 0 6px #333;
+	-webkit-box-shadow: 0 0 6px #333;
+	box-shadow: 0 0 6px #333;
+}
+
+.actionClose {
+	position:absolute;
+	width: 34px;
+	height:34px;
+	top: -30px;
+	top: -20px\9;
+	right: -20px;
+	background:url(images/widgets/dialog/window_close.png) left top no-repeat;
+	display:block;
+	cursor:pointer;
+	z-index:1000;
+}
+.actionClose:hover {
+	background-position:right top;
+}
+
+.gwt-DialogBox.resizable .bottomRight {
+	cursor: nw-resize;
+	background: url(images/widgets/dialog/dialog_resize.png) left bottom no-repeat;
+	display: block;
+	margin: -24px 0 0 -24px;
+    position: absolute;
+}
+.gwt-DialogBox.resizable div.bottomRight.down {
+	background-position: left top;
+}

@@ -1,0 +1,63 @@
+@external .SOUTH, .NORTH, .WEST, .EAST, .CENTER;
+
+.splitPanel {}
+.splitter {}
+.splitPanel.CENTER { overflow: visible !important; }
+
+@sprite .splitter.SOUTH > div {
+	gwt-image: "borderS";
+	cursor: s-resize;
+}
+@sprite .splitter.NORTH > div {
+	gwt-image: "borderN";
+	cursor: n-resize;
+}
+@sprite .splitter.EAST > div {
+	gwt-image: "borderE";
+	cursor: e-resize;
+}
+@sprite .splitter.WEST > div {
+	gwt-image: "borderW";
+	cursor: w-resize;
+}
+
+.contentHolder > .minimizer,
+.contentHolder > .content {
+	position: absolute;
+	left: 0;
+	top: 0px;
+	bottom:0px;
+	right: 0px;
+}
+.contentHolder > .content {
+	height: auto !important;
+	background: #fff;
+}
+.contentHolder > .minimizer > a {
+	width: 100%;
+	height: 100%;
+}
+@sprite .contentHolder.SOUTH > .minimizer {
+	gwt-image: "southMinimizer";
+	text-align: center;
+	top: auto;
+}
+@sprite .contentHolder.NORTH > .minimizer {
+	gwt-image: "northMinimizer";
+	text-align: center;
+	bottom: auto;
+}
+@sprite .contentHolder.WEST > .minimizer {
+	gwt-image: "westMinimizer";
+	text-align: center;
+	right: auto;
+}
+@sprite .contentHolder.EAST > .minimizer {
+	gwt-image: "eastMinimizer";
+	text-align: center;
+	left: auto;
+}
+.contentHolder.SOUTH > .minimizer img,
+.contentHolder.NORTH > .minimizer  img {
+	margin-top:6px;
+}

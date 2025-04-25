@@ -1,0 +1,85 @@
+@external *;
+
+@if !user.agent ie6 ie8 {
+	.gwt-DecoratedTabBar-flow .tabTopCenterInner {
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhZjdmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiZGUzZTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: literal("linear-gradient(top, #eaf7f9 0%,#bde3e9 100%)");
+		box-shadow: 0 1px 2px #666;
+		-moz-box-shadow: 0 1px 2px #666;
+		-webkit-box-shadow: 0 1px 2px #666;
+		color: #444;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		padding: 4px 6px;
+	}
+	
+	.gwt-DecoratedTabBar-flow .gwt-TabBarItem-selected .tabTopCenterInner {
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNmYThiOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZGM1ZDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: literal("linear-gradient(top, #3fa8b8 0%,#7dc5d1 100%)");
+		box-shadow: 0 1px 1px #666 inset;
+		-moz-box-shadow: 0 1px 1px #666 inset;
+		-webkit-box-shadow: 0 1px 1px #666 inset;
+		color: #fff;
+		padding: 5px 6px 3px;
+	}
+}
+@else {
+	@sprite .gwt-DecoratedTabBar-flow .gwt-TabBarItem .tabTopLeftInner {
+		gwt-image: "subL";
+	}
+	@sprite .gwt-DecoratedTabBar-flow .gwt-TabBarItem .tabTopRightInner {
+		gwt-image: "subR";
+	}
+	@sprite .gwt-DecoratedTabBar-flow .gwt-TabBarItem .tabTopCenterInner {
+		gwt-image: "sub";
+		padding: 0 4px;
+		border: none;
+		line-height: 22px;
+	}
+	
+	@sprite .gwt-DecoratedTabBar-flow .gwt-TabBarItem-selected .tabTopLeftInner {
+		gwt-image: "subDownL";
+	}
+	@sprite .gwt-DecoratedTabBar-flow .gwt-TabBarItem-selected .tabTopRightInner {
+		gwt-image: "subDownR";
+	}
+	@sprite .gwt-DecoratedTabBar-flow .gwt-TabBarItem-selected .tabTopCenterInner {
+		gwt-image: "subDown";
+		border: none;
+	}
+	.gwt-DecoratedTabBar-flow > tbody > tr > td { height: auto !important;}
+}
+
+@if !user.agent ie6 ie8 {
+	.sgwebgis-resultActionsToolbar .gwt-PushButton,
+	.sgwebgis-resultActionsToolbar .gwt-ToggleButton,
+	.sgwebui-ImageLabel.title .gwt-PushButton,
+	.sgwebui-ImageLabel.title .gwt-ToggleButton,
+	.parcel_title .gwt-PushButton,
+	.parcel_title .gwt-ToggleButton {
+	border-radius: 4px;
+		box-shadow: -1px -1px 2px #ccc inset;
+		-moz-box-shadow: -1px -1px 2px #ccc inset;
+		-webkit-box-shadow: -1px -1px 2px #ccc inset;
+		background: #fff;
+		border: 1px solid #ccc;
+	}
+	.sgwebgis-resultActionsToolbar .gwt-PushButton-down,
+	.sgwebgis-resultActionsToolbar .gwt-ToggleButton-down,
+	.sgwebui-ImageLabel.title .gwt-PushButton-down,
+	.sgwebui-ImageLabel.title .gwt-ToggleButton-down,
+	.sgwebgis-resultActionsToolbar .gwt-PushButton-down-hovering,
+	.sgwebgis-resultActionsToolbar .gwt-ToggleButton-down-hovering,
+	.sgwebui-ImageLabel.title .gwt-PushButton-down-hovering,
+	.sgwebui-ImageLabel.title .gwt-ToggleButton-down-hovering,
+	.parcel_title .gwt-PushButton-down-hovering,
+	.parcel_title .gwt-ToggleButton-down,
+	.parcel_title .gwt-ToggleButton-down-hovering {
+		background: #b6e0f6;
+		border-color: #6895ac;
+		box-shadow: 1px 1px 2px #6895ac inset;
+		-moz-box-shadow: 1px 1px 2px #6895ac inset;
+		-webkit-box-shadow: 1px 1px 2px #6895ac inset;
+	}
+}

@@ -1,0 +1,112 @@
+@external *;
+
+.cosylab-ModeSelectButton-SelectionPanel,
+.textPropertyPanel {
+	background: #eee;
+    border: 1px solid #999;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: 0 0 5px #555;
+    -moz-box-shadow: 0 0 5px #555;
+    -webkit-box-shadow: 0 0 5px #555;
+}
+.cosylab-ModeSelectButton-SelectionPanel { margin-left: -40px; }
+.cosylab-ModeSelectButton-SelectionPanel td {
+	padding: 0;
+	font-size: 12px;
+}
+.cosylab-ModeSelectButton-SelectionPanel-Option td {
+	padding: 3px;
+}
+.cosylab-ModeSelectButton-SelectionPanel-Option, .textPropertyPanel tr {
+	background: #fff;
+	border: none;
+}
+.textPropertyPanel tr:hover, .cosylab-ModeSelectButton-SelectionPanel-Option tr:hover {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGVkZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #ffffff 0%, #ededed 100%)");
+	background: literal("-webkit-linear-gradient(top, #ffffff 0%,#ededed 100%)");
+	background: literal("-o-linear-gradient(top, #ffffff 0%,#ededed 100%)");
+	background: literal("linear-gradient(to bottom, #ffffff 0%,#ededed 100%)");
+	cursor: pointer;
+}
+.gwt-PopupPanel tr td {
+	padding: 2px 5px;
+}
+.gwt-PopupPanel span input {
+	margin: 2px 4px 3px 0;
+	float: left;
+}
+.cosylab-ModeSelectButton-SelectionPanel-Option-selected,
+.cosylab-ModeSelectButton-SelectionPanel-Option-selected:hover {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkYzVkMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzZmE4YjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #7dc5d1 0%, #3fa8b8 100%)");
+	background: literal("-webkit-linear-gradient(top, #7dc5d1 0%,#3fa8b8 100%)");
+	background: literal("-o-linear-gradient(top, #7dc5d1 0%,#3fa8b8 100%)");
+	background: literal("linear-gradient(top, #7dc5d1 0%,#3fa8b8 100%)");
+	color: #fff;
+}
+.cosylab-ModeSelectButton-SelectionPanel-Option td, .gwt-PopupPanel tr td {
+	vertical-align: middle !important;
+}
+.gwt-PopupPanel tr td label {
+	cursor: pointer;
+	float: left;
+	margin-top: 2px;
+}
+
+.datePickerMonthSelector {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkYzVkMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzZmE4YjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #7dc5d1 0%, #3fa8b8 100%)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#7dc5d1), color-stop(100%,#3fa8b8))");
+	background: literal("-webkit-linear-gradient(top, #7dc5d1 0%,#3fa8b8 100%)");
+	background: literal("-o-linear-gradient(top, #7dc5d1 0%,#3fa8b8 100%)");
+	background: literal("linear-gradient(top, #7dc5d1 0%,#3fa8b8 100%)");
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#7dc5d1', endColorstr='#3fa8b8',GradientType=0 )");
+	color: #fff;
+}
+.datePickerWeekdayLabel, .datePickerWeekendLabel {
+	background: #3fa8b8;
+}
+.datePickerDayIsWeekend {
+	background: #ddd;
+}
+.datePickerDay:hover, .datePickerDayIsWeekend:hover {
+	background: #daf1f5;
+}
+.datePickerDayIsToday {
+	background: #7dc5d1;
+}
+.datePickerDayIsValue, .datePickerDayIsValue:hover {
+    background: none repeat scroll 0 0 #3fa8b8;
+    color: #FFFFFF;
+}
+
+
+/************ dialog box ***********/
+.gwt-DialogBox {
+	clip: auto !important;
+	border: 3px solid #3FA8B8;
+	border-radius: 5px;
+}
+.gwt-DialogBox .Caption { 
+	font-weight: bold;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkYzVkMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzZmE4YjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #7dc5d1 0%, #3fa8b8 100%)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#7dc5d1), color-stop(100%,#3fa8b8))");
+	background: literal("-webkit-linear-gradient(top, #7dc5d1 0%,#3fa8b8 100%)");
+	background: literal("-o-linear-gradient(top, #7dc5d1 0%,#3fa8b8 100%)");
+	background: literal("linear-gradient(top, #7dc5d1 0%,#3fa8b8 100%)");
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#7dc5d1', endColorstr='#3fa8b8',GradientType=0 )");
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 4px 8px;
+	cursor: move;
+}
+.gwt-DialogBox .dialogMiddleCenterInner { padding: 0; }
+@if user.agent ie9 {
+	.datePickerMonthSelector,
+	.gwt-DialogBox .Caption { filter: none; }
+}

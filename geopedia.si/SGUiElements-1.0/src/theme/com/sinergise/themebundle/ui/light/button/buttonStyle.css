@@ -1,0 +1,213 @@
+@external .butTopCenterInner, .gwt-*, .sgwebui-*, .butTop*, .butBottom*, .html-face, .pinnableTab, .pinnableTab *, .sgButton, .pinnableTab;
+.down {}
+/* ########## DECORATED BUTTON ########## */
+/* for generating different gradients use http://www.colorzilla.com/gradient-editor/ 
+   delete *filter* attribute if using complex gradient or rounded button - because for IE8- we will use image instead. IE9+ uses svg 
+*/
+.gwt-PushButton, .gwt-ToggleButton, button, .sgButton {
+	background: #f2f2f2;
+	background: literal("-moz-linear-gradient(top, #f2f2f2 0%, #dbdbdb 100%)"); 
+	background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#dbdbdb))");
+	background: literal("-webkit-linear-gradient(top, #f2f2f2 0%,#dbdbdb 100%)"); 
+	background: literal("-o-linear-gradient(top, #f2f2f2 0%,#dbdbdb 100%)"); 
+	background: literal("-ms-linear-gradient(top, #f2f2f2 0%,#dbdbdb 100%)");
+	background: literal("linear-gradient(to bottom, #f2f2f2 0%,#dbdbdb 100%)");
+	box-shadow: 0 2px 2px #aaa;
+	color: #333;
+	text-shadow: 0 1px 0 #fff;
+	border: none;
+	padding: 5px 9px;
+	display: inline-block;
+	-moz-transition: color, border ease 0.3s;
+	-webkit-transition: color, border ease 0.3s;
+	-o-transition: color, border ease 0.3s;
+	transition: color, border ease 0.3s;
+	cursor: pointer;
+	text-decoration: none;
+	margin: 0 3px 3px 0;
+	position: relative;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.gwt-PushButton-up-hovering,
+.gwt-ToggleButton-up-hovering,
+button:hover, .sgButton-up-hovering {
+	box-shadow: 0 2px 2px #aaa, 0 0 20px rgba(255,255,255,.3) inset;
+	color: mainColor;
+}
+
+.gwt-PushButton-down-hovering,
+.gwt-ToggleButton-down-hovering, 
+.gwt-ToggleButton-down, 
+a.btn:active, .sgButton-down-hovering {
+	background: secondColor;
+	box-shadow: 0 2px 2px #bbb inset;
+	transform: literal("translateY(1px)");
+	-moz-transform: literal("translateY(1px)");
+	-webkit-transform: literal("translateY(1px)");
+}
+
+a.btn img, 
+a.btn .spanImg,
+button > img,
+.sgButton > img {
+	display: inline-block;
+	margin-right: 6px;
+	border: none;
+	vertical-align: middle;
+}
+a.btn.rightImage img {
+	float: right;
+	margin-left: 6px;
+	margin-right: 0;
+}
+.sgwebui-imgButton {
+	white-space: nowrap;
+}
+.gwt-PushButton img, .gwt-ToggleButton img {
+	padding: 0;
+}
+
+.gwt-PushButton-up-disabled, .gwt-ToggleButton-up-disabled,
+a.btn.disabled, button[type="disabled"] { 
+	opacity: .6; 
+	cursor: default;
+	transform: literal("translateY(0px)");
+	-moz-transform: literal("translateY(0px)");
+	-webkit-transform: literal("translateY(0px)");
+}
+.gwt-ToggleButton-down-hovering {
+	transform: literal("translateY(0px)");
+	-moz-transform: literal("translateY(0px)");
+	-webkit-transform: literal("translateY(0px)");
+}
+
+.icon, .txt {}
+
+button.cosylab-upDownButton { 
+	padding: 0; 
+	min-height: 18px;
+	border: none;
+	background: none ;
+	position: relative;
+	margin-bottom: 0;
+	box-shadow: none;
+	background: none !important;
+}
+button.cosylab-upDownButton:hover {
+	transform: literal("translateY(0px)");
+	-moz-transform: literal("translateY(0px)");
+	-webkit-transform: literal("translateY(0px)");
+}
+@if !user.agent ie6 ie8 {
+	button.cosylab-upDownButton span {
+		width: 12px;
+		height: 10px;
+		display: block;
+		margin: 0 auto;
+		border-radius: 10px 10px 0 0;
+		border: 1px solid #ccc;
+		position: relative;
+	}
+	button.cosylab-upDownButton span.down {
+		border-radius: 0 0 10px 10px;
+		margin-top: -1px;
+	}
+	button.cosylab-upDownButton span:before {
+		width: 0;
+		height: 0;
+		border-bottom: 3px solid #555;
+		border-left: 3px solid transparent;
+		border-right: 3px solid transparent;
+		position: absolute;
+		content: "";
+		display: block;
+		left: 3px;
+		top: 3px;
+	}
+	button.cosylab-upDownButton span.down:before {
+		border-top: 3px solid #555;
+		border-bottom: 0;
+		top: 4px;
+	}
+}
+	
+button.cosylab-upDownButton span:hover {
+	box-shadow: 0 0 3px #aaa;
+}
+	
+button.cosylab-upDownButton table tr { line-height: 0;}
+
+.imageAnchor { cursor: pointer; display: inline-block; }
+.imageAnchor > * {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+
+/*** SGPushButton ****/
+.sgButton img, .sgButton .html-face {
+	display: inline-block;
+	vertical-align: middle;
+}
+.sgButton img { margin-right: 6px; }
+.sgButton img.fl-right { margin-right: 0; margin-left: 6px; }
+.sgButton input { padding: 0 !important; border: none !important; }
+.sgButton.iconOnly img {
+	margin: 0;
+}
+
+.sgButton-up-disabled {
+	opacity: .5;
+	cursor: default;
+	filter: literal("alpha(opacity=50)");
+}
+.sgButton.customBtn {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: #fff;
+	font-weight: bold;
+}
+.inlineButtonPanel {
+	white-space: nowrap;
+}
+
+.inlineButtonPanel > * {
+	padding: 3px;
+	margin: 0 0 0 4px;
+	display: inline-block;
+}
+
+
+/**** custom buttons ***/
+.sgButton-up-hovering.customBtn {
+	box-shadow: 0 0 20px rgba(255,255,255,.3) inset;
+	-moz-box-shadow: 0 0 20px rgba(255,255,255,.3) inset;
+	-webkit-box-shadow: 0 0 20px rgba(255,255,255,.3) inset;
+	color: #fff;
+}
+.sgButton-down-hovering.customBtn {
+	box-shadow: 0 0 20px rgba(255,255,255,.3) inset, 0 2px 3px #aaa inset;
+	-moz-box-shadow: 0 0 20px rgba(255,255,255,.3) inset, 0 2px 3px #aaa inset;
+	-webkit-box-shadow: 0 0 20px rgba(255,255,255,.3) inset, 0 2px 3px #aaa inset;
+	color: #fff;
+}
+.sgButton.green {
+	background: #66a22d;
+	border-color: #2e5906;
+}
+.sgButton.orange {
+	background: #b5730b;
+	border-color: #674100;
+}
+.sgButton.red {
+	background: #a64e1b;
+	border-color: #602a08;
+}
+.sgButton.yellow {
+	background: #d8b23c;
+	border-color: #a6892c;
+}

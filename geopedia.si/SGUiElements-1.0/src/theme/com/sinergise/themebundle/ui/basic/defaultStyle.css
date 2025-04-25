@@ -1,0 +1,104 @@
+@external *;
+/***** COMMON SETTINGS ***/
+* { margin: 0; padding: 0; }
+body, html {
+	height: 100%;
+	width: 100%;
+	
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+#root  { height: 100%; }
+/* #IE9 * { filter: none; } */
+
+.fl-left { float: left; }
+.fl-right { float: right; }
+.clear { clear: both; }
+.hide { display: none; }
+.breaker { display: block; clear: both; height: 1px; visibility: hidden; }
+
+a img { border: none; }
+
+.strong,
+.bold {
+	font-weight: bold;
+}
+
+input[type=text], input[type=password], select, textarea {
+	border: 1px solid #bbb;
+	padding: 3px 5px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+input[type=text]:focus,input[type=password]:focus, select:focus, textarea:focus {
+	border-color: #999;
+	box-shadow: 0 0 3px #aaa;
+	-webkit-box-shadow: 0 0 3px #aaa;
+	-moz-box-shadow: 0 0 3px #aaa;
+}
+input[type=checkbox], input[type=radio] { border: none; }
+option { padding: 0 5px 0 3px; }
+
+input.gwt-TextBox-empty {
+	color: #999;
+	font-style: italic;
+}
+
+.gwt-CheckBox, .gwt-RadioButton { margin-right: 7px; }
+.gwt-CheckBox input, .gwt-RadioButton input {
+	display: inline-block;
+	margin: 2px 5px 2px 2px;
+}
+
+@if user.agent ie6 {
+	input[type=button] { overflow: visible; }
+}
+
+input[disabled], textarea[disabled], select[disabled] { background: #ddd; }
+
+table { border-collapse: collapse; }
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.clearfix {
+	display: block;
+}
+html[xmlns] .clearfix {
+   display: block;
+}
+* html .clearfix {
+   height: 1%;
+   overflow: visible;
+}
+
+@sprite div.sgwebui-simpleLoadingPanel, .glassPanel {
+	background-color: #fff;
+	opacity: 0.5;
+	filter: literal("alpha(opacity=50)");
+	gwt-image: "processWorking";
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/******* MESSAGES *****/
+table.sgwebui-messageBox {
+	border: 1px solid #D8CA29;
+	background: #f9f4c2;
+	width: auto;
+	max-width: 800px;
+}
+.sgwebui-messageBox td {
+	padding: 4px; 
+}
+.sgwebui-messageBox div.gwt-HTML {
+	margin-left: 5px;
+}

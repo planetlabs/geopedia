@@ -1,0 +1,6 @@
+.arkod-infoPanel-tabBar {
+	background: url("../img/tab_single/tab_bg.png") left bottom repeat-x;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleCenter {
+	color: #fff;
+}

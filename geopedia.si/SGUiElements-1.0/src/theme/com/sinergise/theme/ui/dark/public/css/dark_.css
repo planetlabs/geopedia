@@ -1,0 +1,158 @@
+/**** INPUTS ****/
+input[type="text"], input[type="password"], select, textarea  {
+	border: 1px solid #999;
+	background: #fff;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+span input {
+	*border: none;
+}
+
+span > input {
+	border: none;
+}
+.sgwebui-quickSearch input:focus {
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border: none;
+}
+
+input:focus, select:focus, textarea:focus {
+	-moz-box-shadow: 0 1px 2px #aaa;
+	box-shadow: 0 1px 2px #aaa;
+	-webkit-box-shadow: 0 1px 2px #aaa;
+	border: 1px solid #555;
+}
+
+.gwt-PopupPanelGlass {
+	z-index: 100;
+}
+
+.gwt-Button {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+    background: url("../img/titled_panel/titled_panel_head_bg.png") repeat-x scroll 0 0 #3C3C3C;
+    border: 1px solid #444;
+    color: #fff;
+}
+.gwt-Button:hover, .gwt-Button:active {
+	background: url("../img/buttons/decorated_button.png") -30px -81px;
+	border: 1px solid #2e5906 !important;
+}
+	
+
+
+/*** POPUP WINDOW *****/
+div.sgwebui-messageDialog {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 0 0 5px #333;
+	-webkit-box-shadow: 0 0 5px #333;
+	box-shadow: 0 0 5px #333;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    z-index: 10000;
+    max-width: 500px;
+}
+div.sgwebui-messageDialog > div {
+	border: 1px solid #999;
+}
+.gwt-DialogBox .dialogTopLeft,
+.gwt-DialogBox .dialogTopRight,
+.gwt-DialogBox .dialogMiddleLeft,
+.gwt-DialogBox .dialogMiddleRight,
+.gwt-DialogBox .dialogBottomLeft,
+.gwt-DialogBox .dialogBottomCenter,
+.gwt-DialogBox .dialogBottomRight {
+	background: none !important;
+	display: none;
+}
+.gwt-DialogBox .Caption {
+	background: url(../img/titled_panel/titled_panel_head_bg.png) repeat-x 0 -2px #3c3c3c;
+	color: #fff;
+	cursor: move;
+	font-size: 15px;
+    text-transform: uppercase;
+    border-top: none;
+    border-bottom: 1px solid #bbb;
+}
+div.dialogContent {
+	padding: 7px;
+}
+div.sgwebui-messageDialog table.sgwebui-messageBox {
+	margin: 0 0 10px;
+}
+
+/**** CALENDAR ****/
+.sgDatePicker-calendarPopup {
+	border: 1px solid #999;
+	-moz-box-shadow: 0 0 6px #999;
+	-webkit-box-shadow: 0 0 6px #999;
+	box-shadow: 0 0 6px #999;
+	background: #fff;
+	z-index: 100;
+}
+.gwt-DatePicker {
+	border: none;
+}
+.gwt-DatePicker td {
+	padding: 0;
+}
+td.datePickerMonth, .datePickerPreviousButton, .datePickerNextButton {
+	color: #fff;
+	font-size: 12px;
+}
+
+.datePickerMonthSelector {
+	background: url(../img/titled_panel/titled_panel_head_bg.png) repeat-x 0 -2px;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	font-weight: bold;
+	cursor: pointer;
+	border-bottom: 1px solid #094402;
+}
+.datePickerDay, .datePickerWeekdayLabel, .datePickerWeekendLabel {
+	font-size: 11px;
+}
+.datePickerWeekdayLabel, .datePickerWeekendLabel {
+	border-top: 1px solid #aaa;
+	background: #777;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	border-bottom: 1px solid #555;
+	font-size: 12px;
+}
+.datePickerMonthSelector td, .datePickerDays td {
+	padding: 6px 4px;
+}
+.datePickerDayIsFiller {
+	color: #888 !important;
+}
+.datePickerDayIsWeekend {
+	color: #555 !important;
+}
+.datePickerDayIsWeekend {
+	background: #eee;
+}
+.datePickerDay {
+	color: #333;
+	cursor: pointer;
+}
+.datePickerDay:hover, .datePickerDayIsWeekend:hover {
+	background: #bcd9a1;
+}
+.datePickerDayIsToday {
+	background: #e0e18b;
+}
+.datePickerDayIsValue, .datePickerDayIsValue:hover {
+	background: #639f2c;
+	color: #fff;
+}

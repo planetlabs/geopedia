@@ -1,0 +1,4 @@
+
+Contains JAXB classes for GPX 1.1 schema.
+Jar was generated from XSD schema at http://www.topografix.com/GPX/1/1 with 
+'Generate JAXB Classes from a Schema' tool from Dali Java Persistance Tool Eclipse plugin.

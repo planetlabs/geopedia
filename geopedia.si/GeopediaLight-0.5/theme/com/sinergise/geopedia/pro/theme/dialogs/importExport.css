@@ -1,0 +1,132 @@
+@external *;
+
+@sprite .StackCont { 
+	padding-bottom: 1px; 
+	gwt-image: "shadowPro"; 
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	margin-bottom: 5px;
+}
+.settingsStack { width: 100%; margin: 6px 0 10px; }
+.gwt-StackPanelItem {
+	cursor: pointer;
+	font-size: 14px;
+}
+.gwt-StackPanelItem:hover,
+.gwt-StackPanelItem-selected {	color: #0092ed;}
+
+.gwt-StackPanelItem .title {
+	padding: 4px 10px;
+	background: literal("-moz-linear-gradient(top, #efefef 0%, #e4e4e4 100%)");
+	background: literal("-webkit-linear-gradient(top, #efefef 0%,#e4e4e4 100%)");
+	background: literal("-o-linear-gradient(top, #efefef 0%,#e4e4e4 100%)");
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#e4e4e4',GradientType=0 )");
+	background: literal("linear-gradient(top, #efefef 0%,#e4e4e4 100%)");
+	box-shadow: 0 1px 0 rgba(255,255,255,.4) inset;
+	border-bottom:1px solid #bbb;
+	border-top:1px solid #bbb;
+	margin-top: -1px;
+	zoom: 1;
+}
+.gwt-StackPanelItem-selected .title {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwOTJkZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNTgwYzAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #0092de 0%, #0580c0 100%)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#0092de), color-stop(100%,#0580c0))");
+	background: literal("-webkit-linear-gradient(top, #0092de 0%,#0580c0 100%)");
+	background: literal("-o-linear-gradient(top, #0092de 0%,#0580c0 100%)");
+	background: literal("linear-gradient(top, #0092de 0%,#0580c0 100%)");
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#0092de', endColorstr='#0580c0',GradientType=0 )");
+	border-color: #0580c0;
+	color: #fff;
+}
+.gwt-StackPanelItem .detailsText { 
+	font-size: 0.8em; 
+	color: #777;
+	background: literal("rgba(255,255,255,.4)");
+	box-shadow: 0 1px 1px #aaa inset;
+	padding: 1px 5px;
+	border-radius: 10px;
+	float: right;
+}
+.gwt-StackPanelItem-selected .detailsText { color: #fff; }
+.gwt-StackPanelContent > div { 
+	background: #f6f6f6;
+	padding: 10px;
+	border-radius: 3px;
+	max-height: 165px;
+	overflow: auto;
+	box-shadow: 0 1px 3px #ccc inset;
+}
+.gwt-StackPanelContent .gwt-CheckBox { 
+	display: inline-block; 
+	zoom: 1; 
+	margin: 0 5px 0 0;
+	padding: 3px;
+	width: 125px; vertical-align: top;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.gwt-StackPanelContent .gwt-CheckBox:hover {background: #fff; color: #0092ed;} 
+.gwt-StackPanelContent .gwt-CheckBox input {float: left; cursor: pointer; }
+.gwt-StackPanelContent .gwt-CheckBox label {
+	padding-left: 2px; 
+	display: block; 
+	margin-top: 2px; 
+	white-space: nowrap;
+	width: 100px; overflow: hidden; 
+	cursor: pointer;
+}
+.gwt-StackPanelContent .gwt-CheckBox.geometry {
+	width: auto;
+}
+.gwt-StackPanelContent .gwt-CheckBox.geometry label {
+	display: inline-block;
+    font-weight: bold;
+    margin-left: 8px;
+    overflow: visible;
+    width: auto;
+}
+
+.importBase { position: relative; }
+
+
+/***** IMPORT STYLES ****/
+.uploadTxt { 
+	margin-top: 4px; 
+}
+.uploadForm .btn { 
+	margin-top: 10px; 
+}
+
+input.layerName { 
+	width: 500px;
+}
+
+.formatGroup .label, .formatGroup .value {
+	float: left; 
+	margin-right: 10px; 
+}
+.formatGroup .value { 
+	color: #555; 
+	font-weight: bold; 
+}
+
+.groupCode {margin-bottom: 5px; }
+.groupCode .include,
+.groupCode .gwt-CheckBox.include label,
+.groupCode .gwt-CheckBox.codelist,
+.gwt-StackPanelContent .codelist label  { width: auto; }
+.groupCode span.include:hover { background: none; }
+.groupCode .gwt-CheckBox.codelist {margin-left: 5px; }
+.gwt-StackPanelContent .codelist label { 
+	float: left; margin-right: 4px; 
+}
+
+.uploadFile { 
+	margin-bottom: 10px; 
+}
+
+
+.importBase .ok { margin-top: 50px; }
+	

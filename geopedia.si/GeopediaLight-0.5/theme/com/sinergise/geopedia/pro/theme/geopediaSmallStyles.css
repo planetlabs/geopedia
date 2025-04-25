@@ -1,0 +1,22 @@
+@external *;
+
+.smallApp #logo {
+	clip: rect(0px, 42px, 37px, 0);
+}
+.smallApp #header .search {
+	margin-left: 70px;
+	width: 235px;
+}
+.smallApp #header .search input { width: 190px; }
+.smallApp .topBar { margin-left: 70px; }
+.smallApp #header .toolbarHolder {left: 325px; }
+
+.smallApp .geomEditPanel {
+	left: auto;
+	right: 2px;
+	top: 32px;
+}
+
+.smallApp .editor .centeredContent {
+	width: 700px;
+}

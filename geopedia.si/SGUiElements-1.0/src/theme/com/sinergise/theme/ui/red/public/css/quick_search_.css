@@ -1,0 +1,6 @@
+#noIE .sgwebui-quickSearch,
+#IE9 .sgwebui-quickSearch {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}

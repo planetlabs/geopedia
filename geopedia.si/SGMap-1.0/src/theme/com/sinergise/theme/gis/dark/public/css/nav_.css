@@ -1,0 +1,11 @@
+.sgwebgis-mapComponent .sgwebgis-coordinateslabel {
+	background: url("../img/map/footer_px.png") repeat scroll right top transparent;
+	padding: 5px 10px;
+	border-top: 1px solid #333333;
+	color: #fff;
+	height: 20px;
+}
+.sgwebgis-coordinateslabel-projLb, .sgwebgis-coordinateslabel-latLonLb {
+	padding: 0;
+}
+.sgwebgis-fixedOverlay > a { margin-top: 3px; margin-left: 10px; }

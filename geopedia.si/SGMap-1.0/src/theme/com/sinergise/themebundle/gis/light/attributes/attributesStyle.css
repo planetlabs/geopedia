@@ -1,0 +1,54 @@
+@external *;
+
+.sgwebgis-tabbedAttrPanel .gwt-DisclosurePanel { width: 100%; }
+
+table.sgwebgis-resultActionsToolbar {
+	width: 100%; /* chrome fix */
+}
+.sgwebgis-resultActionsToolbar td {
+	padding: 0 !important;
+}
+.sgwebgis-resultActionsToolbar .gwt-PushButton,
+.sgwebgis-resultActionsToolbar .gwt-ToggleButton,
+.sgwebui-ImageLabel.title .gwt-PushButton,
+.sgwebui-ImageLabel.title .gwt-ToggleButton,
+.resultHeader .gwt-PushButton, 
+.resultHeader .gwt-ToggleButton {
+	padding: 3px;
+	background: none;
+	margin-left: 3px;
+	margin-bottom: 0;
+	cursor: pointer;
+	height: auto;
+	box-shadow: none;
+}
+.sgwebgis-resultActionsToolbar .gwt-PushButton img,
+.sgwebgis-resultActionsToolbar .gwt-ToggleButton img,
+.sgwebui-ImageLabel.title .gwt-PushButton img,
+.sgwebui-ImageLabel.title .gwt-ToggleButton img,
+.resultHeader .gwt-PushButton img, 
+.resultHeader .gwt-ToggleButton img {
+	vertical-align: middle;
+}
+.resultHeader .gwt-PushButton, 
+.resultHeader .gwt-ToggleButton {
+	float: right !important;
+}
+.resultHeader > .gwt-InlineLabel {
+	margin-top: 4px;
+	display: inline-block;
+}
+
+.sgwebui-ImageLabel.title .gwt-ToggleButton-down-hovering,
+.resultHeader .gwt-ToggleButton-down-hovering,
+.sgwebgis-resultActionsToolbar .gwt-ToggleButton-down-hovering {
+	transform: literal("translateY(0px)");
+	-moz-transform: literal("translateY(0px)");
+	-webkit-transform: literal("translateY(0px)");
+}
+
+.sgwebgis-tabbedAttrPanel-details tr.title > td {
+	background: #fff;
+	border-bottom: 3px solid headingColor;
+	color: headingColor;
+}

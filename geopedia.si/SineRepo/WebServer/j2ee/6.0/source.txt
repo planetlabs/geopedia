@@ -1,0 +1,7 @@
+Taken from Apache Tomcat 7
+
+partial implementation of J2EE 6.0 (http://wiki.apache.org/tomcat/TomcatVersions)
+- Java Servlet 3.0 (JSR 315)
+- Java Server Pages 2.2 (JSR 245)
+- Expression Language 2.2 (JSR 245)
+- Common Annotations for the Java Platform 1.1 (JSR 250)

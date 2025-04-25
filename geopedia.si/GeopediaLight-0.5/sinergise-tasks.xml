@@ -1,0 +1,20 @@
+<project>
+    <target name="utilityTask.gzipFile">
+		<gzip src="${fileToGZip}" destfile="${fileToGZip}.gz"/>
+	</target>
+    
+	<macrodef name="gzipGWTOutput">
+		<attribute name="directory"/>
+		<sequential>
+			<foreach target="utilityTask.gzipFile" param="fileToGZip">
+				<path>
+					<fileset dir="@{directory}" casesensitive="yes">
+						<include name="**/*.html"/>
+						<include name="**/deferredjs/**/*.js"/>
+					</fileset>
+				</path>
+			</foreach>			
+		</sequential>
+	</macrodef>
+	
+</project>

@@ -1,0 +1,8 @@
+<?xml version = '1.0'?>
+<states>
+  <state>
+	<PeriodicTasks count="1">
+		<Task0 name="IsAliveTask" period="600"/>
+	</PeriodicTasks>
+  </state>
+</states>

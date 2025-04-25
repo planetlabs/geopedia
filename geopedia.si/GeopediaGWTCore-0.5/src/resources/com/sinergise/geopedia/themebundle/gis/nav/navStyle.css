@@ -1,0 +1,116 @@
+.sgwebgis-panCtrl {
+	position: absolute !important;
+	left: 10px;
+	top: 10px;
+}
+.sgwebgis-zoomCtrl {
+	position: absolute !important;
+	left: 37px;
+	top: 98px;
+}
+.sgwebgis-panCtrl-down-on {
+	left: 29px;
+}
+
+
+/*** small height of map ****/
+@sprite .smallHeight div.sgwebgis-zoomCtrl-main {
+	gwt-image: "sliderSmall";
+}
+.smallHeight .sgwebgis-zoomCtrl {
+	height: 43px;
+	margin-left: 60px;
+	top: 30px;
+}
+.smallHeight .sgwebgis-zoomCtrl-ind-on,
+.smallHeight .sgwebgis-zoomCtrl-ind-off {
+	display: none;
+}
+
+.rastersTabPanel {
+	position: absolute;
+	right: 10px;
+	top: 0;
+}
+.rastersTabPanel > div {
+	display: inline-block;
+	margin-left: 3px;
+	
+	vertical-align: top;
+}
+@sprite .rastersTabPanel .left {
+	gwt-image: "rastTabL";
+	display: inline-block;
+}
+@sprite .rastersTabPanel .right {
+	gwt-image: "rastTabR";
+	display: inline-block;
+}
+@sprite .rastersTabPanel div > div {
+	gwt-image: "rastTab";
+	display: inline-block;
+	line-height: value('rastTabR.getHeight','px');
+	padding: 0 3px;
+	vertical-align: top;
+}
+@sprite .gpdLightMap .rastersTabPanel .left {
+	gwt-image: "rastTabLOp";
+}
+@sprite .gpdLightMap .rastersTabPanel .right {
+	gwt-image: "rastTabROp";
+}
+@sprite .gpdLightMap .rastersTabPanel div > div {
+	gwt-image: "rastTabOp";
+}
+.rastersTabPanel div a {
+	color: #666;
+	cursor: pointer;
+}
+.rastersTabPanel div:hover a {
+	color: #0092ed;
+}
+.rastersTabPanel .active { margin-top: 4px; }
+@sprite .gwt-SplitLayoutPanel .rastersTabPanel .active .left {
+	gwt-image: "rastTabActL";
+}
+@sprite .gwt-SplitLayoutPanel .rastersTabPanel .active .right {
+	gwt-image: "rastTabActR";
+}
+@sprite .gwt-SplitLayoutPanel .rastersTabPanel .active > div {
+	gwt-image: "rastTabAct";
+	line-height: 20px;
+	
+}
+.rastersTabPanel div.active a {
+	color: #333;
+	display: inline-block;
+	vertical-align: top;
+}
+.rastersTabPanel div a.gwt-Anchor {
+	margin-right: -4px;
+	padding-right: 7px;
+	margin-left: -4px;
+	padding-left: 7px;
+}
+@sprite .rastersTabPanel .active .showMenu {
+	gwt-image: "showMenu";
+	margin-bottom: -2px;
+}
+@if user.agent ie6 {
+	.rastersTabPanel > div,
+	.rastersTabPanel div > div { display: inline; }
+}
+
+.sgwebgis-coordinateslabel {
+    font-size: 11px;
+    position: absolute;
+    left: auto !important;
+    background: none;
+    border: none;
+    padding: 0 10px;
+}
+.sgwebgis-coordinateslabel div {
+	padding: 0;
+	margin-left: 10px;
+	margin-right: 0;
+}

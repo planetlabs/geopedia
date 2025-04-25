@@ -1,0 +1,43 @@
+/************ DIALOG BOX ***********/
+.gwt-DialogBox {
+	border: 1px solid #aaa;
+	box-shadow: 0 4px 8px #333;
+	-moz-box-shadow: 0 4px 8px #333;
+	-webkit-box-shadow: 0 4px 8px #333;
+}
+.gwt-DialogBox > div {
+	border: 1px solid #fff;
+}
+
+div.dialogTopCenterInner {
+	color: #333;
+	font-size: 15px;
+	font-weight: bold;
+}
+.gwt-DialogBox .Caption { cursor: move; }
+
+.dialogContent {
+	padding: 7px;
+}
+a.actionClose {
+	position: absolute;
+	right: -18px;
+	top: -18px;
+	display: block;
+	width: 36px;
+	height: 37px;
+	cursor: pointer;
+	background: url(../img/dialog/dialog_close.png) left top no-repeat;
+}
+
+/* apply style name "squared" to dialog box (addStyleName("squared")) to achieve squared dialog box without rounded corners **/
+.squared tr.dialogBottom,
+.squared td.dialogTopLeft, .squared td.dialogTopRight,
+.squared td.dialogMiddleLeft, .squared td.dialogMiddleRight { 
+	display: none;
+}
+
+.squared .Caption {
+	background: none; 
+	border: none; 
+}

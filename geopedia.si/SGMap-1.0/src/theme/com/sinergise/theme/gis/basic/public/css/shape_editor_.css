@@ -1,0 +1,11 @@
+.pointEditor-marker {
+	background-color: transparent;
+	-moz-border-radius:14px;
+	-webkit-border-radius: 14px;
+	border: 3px solid rgb(85, 170, 255);
+	border-radius: 14px;
+}
+
+.pointEditor-marker-selected {
+	border-color: rgb(255, 0, 0);
+}

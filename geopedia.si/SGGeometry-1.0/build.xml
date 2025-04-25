@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SGGeometry">
+    <property name="sinergise.libraries.branch" value="1.0" />
+	<property file="${sinergise.build.properties}" />
+
+	<property name="SINEREPO" value="../SineRepo" />
+	<property name="SGUtil" value="../SGUtil-${sinergise.libraries.branch}" />
+	<property name="SGGeometry" value="." />
+	
+    <property name="buildBase" value="build"/>
+
+    <import file="buildInclude.xml" />
+
+	<path id="lib.external">
+		<pathelement path="${SGUtil}/build/SGUtil-${sinergise.libraries.branch}-SNAPSHOT.jar" />
+		<pathelement path="${SINEREPO}/Graphics/jts/1.11/lib/jts-1.11.jar" />
+		<pathelement path="${SINEREPO}/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar" />
+		<pathelement path="${SINEREPO}/Graphics/gpx/1.0/lib/gpx-1.0.jar" />
+		<pathelement path="${SINEREPO}/Graphics/gpx/1.1/lib/gpx-1.1.jar" />
+		
+		<pathelement path="${SINEREPO}/WebServer/j2ee/5.0/lib/servlet-api.jar"/>
+		<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/gwt-servlet.jar"/>
+	</path>
+
+	
+	<target name="clean">
+		<delete dir="${buildBase}" />
+		<mkdir dir="${buildBase}" />
+	</target>
+
+	<target name="refresh" if="eclipse.running">
+		<eclipse.convertPath fileSystemPath="${buildBase}" property="resourcePath" />
+		<eclipse.refreshLocal resource="${resourcePath}" depth="infinite" />
+	</target>
+
+	<target name="compile" depends="clean">
+		<mkdir dir="${buildBase}" />
+		<!--  try to build common geometry classes. This must succeed!! -->
+		<mkdir dir="${buildBase}/test1"/>
+		 <compile.commonGeometries buildBaseDir="${buildBase}/test1"/>
+		<delete dir="${buildBase}/test1"/>
+		<mkdir dir="${buildBase}/classes" />
+		
+		<javac srcdir="src/common:src/java" destdir="build/classes" includes="**" source="1.5" target="1.5" compiler="modern"
+			fork="yes" encoding="UTF-8" executable="${JAVA6}/bin/javac" includeantruntime="false">
+			<classpath refid="lib.external" />
+		</javac>
+		<antcall target="refresh" />
+	</target>
+	
+	
+	<target name="jar" depends="compile">
+		<jar destfile="${buildBase}/SGGeometry-${sinergise.libraries.branch}-SNAPSHOT.jar">
+			<fileset dir="${buildBase}/classes">
+				<include name="**" />
+			</fileset>
+		</jar>
+		<antcall target="refresh" />
+	</target>
+
+</project>

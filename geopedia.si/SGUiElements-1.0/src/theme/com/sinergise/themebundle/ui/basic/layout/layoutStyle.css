@@ -1,0 +1,540 @@
+@external *;
+/********* HORIZONTAL SPLITTER ***********/
+.HDragger {
+	top: 50% !important;
+	bottom: auto !important;
+	margin-top: -41px;
+	overflov: visible;
+}
+@sprite .sgwebui-decoratedSplitPanel-SPLIT-WEST {
+	gwt-image: "splitWest";
+	overflow: visible !important;
+}
+@sprite .sgwebui-decoratedSplitPanel-SPLIT-EAST {
+	gwt-image: "splitEast";
+	overflow: visible !important;
+}
+@sprite .sgwebui-decoratedSplitPanel-SPLIT-WEST .HDragger {
+	gwt-image: "dragWest";
+	margin-left: 4px;
+	cursor: e-resize;
+	left: -4px !important;
+}
+@sprite .sgwebui-decoratedSplitPanel-SPLIT-EAST .HDragger {
+	gwt-image: "dragEast";
+	margin-left: -8px;
+	cursor: e-resize;
+}
+/********* VERTICAL SPLITTER ***********/
+.VDragger {
+	left: 50% !important;
+	margin-left: -41px;
+	right: auto !important;
+}
+@sprite .sgwebui-decoratedSplitPanel-SPLIT-NORTH,
+.newSplitter.NORTH {
+	gwt-image: 'splitNorth';
+	overflow: visible !important;
+}
+@sprite .sgwebui-decoratedSplitPanel-SPLIT-SOUTH {	
+	gwt-image: "splitSouth";
+	overflow: visible !important;
+}
+@sprite .sgwebui-decoratedSplitPanel-SPLIT-SOUTH .VDragger {
+	gwt-image: "dragSouth";
+	cursor: n-resize;
+	margin-top: -9px;
+}
+@sprite .sgwebui-decoratedSplitPanel-SPLIT-NORTH .VDragger {
+	gwt-image: 'dragNorth';
+	margin-top: 4px;
+	cursor: n-resize;
+	top: -4px !important;
+}
+
+
+/**************************  SGTabPanel  **********************************/
+.gwt-TabBar, .gwt-DecoratedTabBar {
+	font-size: 12px;
+	border: none;
+}
+.gwt-TabBar .gwt-TabBarItem, .gwt-DecoratedTabBar .gwt-TabBarItem,
+.gwt-TabBar .gwt-TabBarItem-selected, 
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected {
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+.gwt-DecoratedTabPanel { width: 100%; height: 100%; }
+.gwt-TabPanelBottom { 
+	height: 100%; 
+	position: relative;
+	border: none;
+	padding: 0;
+}
+.gwt-TabBarItem {
+	cursor: pointer;
+	margin-right: 5px;
+	color: #888;
+}
+.gwt-TabBarItem:hover {
+	color: #0092ed;
+}
+.gwt-TabBarItem-selected, .gwt-TabBarItem-selected:hover {
+	cursor: default;
+	color: #555;
+}
+.gwt-TabBarItem .tabMiddleCenterInner {
+	background: #ededed;
+	border: 1px solid #ccc;
+	padding: 4px 7px;
+	white-space: nowrap;
+}
+.gwt-TabBarItem-selected .tabMiddleCenterInner {
+	background: #fff;
+	cursor: default;
+}
+
+.mainMenu-tabBar .imageTab img { margin-right: 5px; vertical-align: middle; display: inline-block; }
+.mainMenu-tabBar .imageTab span {vertical-align: middle; display: inline-block;}
+
+.gwt-TabPanelBottom > .tabContainer {
+	position: absolute;
+	left: 0;
+	top: 0px;
+	right: 0;
+	bottom: 0px;
+	overflow: auto;
+}
+.gwt-TabPanelBottom .gwt-TabPanelBottom > .tabContainer, .gwt-TabPanelBottom .gwt-TabPanelBottom {
+	position: static;
+	top: auto;
+	bottom: auto;
+	overflow: visible;
+	height: auto;
+}
+@if user.agent ie6 ie8 ie9 {
+	.gwt-TabPanelBottom {
+		position: absolute;
+		top: 75px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: auto;
+	}
+}
+.verticalTabPanel .gwt-TabPanelBottom,
+.verticalTabPanel .gwt-TabPanelBottom > .tabContainer {
+	position: static;
+}
+@if user.agent ie6 {
+	body, html{ overflow: hidden !important; }
+}
+
+
+.sgwebui-localeBar.langAsPopup {
+	padding-right:20px;
+}
+.langAsPopup .gwt-ToggleButton {
+	position: absolute;
+	right: 5px;
+	top: 3px;
+	background: none;
+	border: none;
+}
+.langAsPopup .langImgHolder img {
+	display: none;
+}
+.langAsPopup .langImgHolder img.selected {
+	display: block;
+	position: absolute;
+	top: 0;
+}
+
+.langAsPopup.openedDropDown .langImgHolder img {
+	display: block;
+}
+.langAsPopup.openedDropDown .langImgHolder img:hover {
+	opacity:0.6;
+}
+.langAsPopup.openedDropDown > .langImgHolder {
+	position: absolute;
+	padding-top: 20px;
+	background: #eee;
+	cursor:pointer;
+}
+.langAsPopup .gwt-ToggleButton .gwt-Image {
+    position: absolute;
+    right: 14px;
+    top: 0;
+    opacity: 0.75;
+}
+.langAsPopup .gwt-ToggleButton .gwt-Image:hover {
+    opacity: 0.4;
+}
+
+/***************** Titled Panel ***********************/
+.sgwebui-TitledPanel {
+	width: auto !important;
+}
+.sgwebui-TitledPanel > div.body {
+	width: auto !important;
+}
+
+.sgwebui-TitledPanel .sgwebui-ImageLabel select { margin-right: 10px; }
+
+.sgwebui-TitledPanel > .title,
+.gwt-DisclosurePanel a.header {
+	padding: 3px 5px 3px 10px;
+	background: #d1d1d1;
+	border-bottom: 1px solid #aaa;
+	color: #555;
+	font-weight: bold;
+	font-size: 12px;
+	text-decoration: none;
+	min-height: 22px;
+}
+.gwt-DisclosurePanel a.header td > img {
+	margin: 1px 3px 0 0;
+}
+.sgwebui-TitledPanel.noImg > .title > .title-label { margin-top: 4px; }
+
+.gwt-DisclosurePanel .header > table {
+	height:100%;
+	vertical-align:middle;
+}
+
+.gwt-DisclosurePanel a.header:hover {
+	text-decoration: none;
+	color: #0092ed;
+}
+.gwt-DisclosurePanel-open a.header {
+	background: #ededed;
+}
+
+@sprite .sgwebui-TitledPanel > div.body,
+.gwt-DisclosurePanel .content,
+.sgTogglePanelContent {
+	gwt-image: "shadow";
+	background-repeat: repeat-x;
+	background-color: #fff;
+	background-position: left top;
+	background-color: #eee;
+	color: #333;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+	overflow: visible;
+}
+
+.sgwebui-ImageLabel > .right {
+	float: right !important;
+	margin-top: 2px;
+}
+.sgwebui-ImageLabel > .left {
+}
+
+.gwt-DisclosurePanel .content {
+	margin-left: 0px;	
+	border-left: none;
+}
+
+.sgwebui-ImageLabel .title-image, 
+.sgwebui-ImageLabel .title-image > img,
+.sgwebui-ImageLabel .title-label {
+	display: inline-block;
+	vertical-align: middle;
+}
+.sgwebui-ImageLabel .title-image > img {
+	margin-right: 5px;
+}
+@if user.agent ie6 {
+	.sgwebui-ImageLabel .title-image {
+		display: inline;
+	}
+	.sgwebui-ImageLabel .title-label {
+		display: inline;
+	}
+	.sgwebui-ImageLabel > .right {
+		margin-top: -23px;
+	}
+}
+
+.sgwebui-TitledPanel .sgwebui-ImageLabel .title-image {
+	margin-top: 5px;
+}
+.sgwebui-TitledPanel .sgwebui-ImageLabel .title-label {
+	margin-left: 5px;
+	margin-top: 4px;	
+}
+.sgwebui-ImageLabel.noImg .title-label {
+	margin-left: 0;
+}
+.lb-error { color: #f00; }
+
+.sgwebui-TitledPanel-noImg .sgwebui-ImageLabel td.sgwebui-ImageLabel-image  {
+	padding-left: 5px;
+    width: 0px;
+    visibility: hidden;
+}
+
+
+
+/************************ QUICK SEARCH ******************************/
+.sgwebui-quickSearch {
+	position: relative;
+}
+@if !user.agent ie6 ie8 {
+	.sgwebui-quickSearch {
+	border-radius: 5px;
+	box-shadow: 0 1px 2px #777 inset;
+	padding: 3px 20px 3px 5px;
+	background: #fff;
+	border: 1px solid #999;
+	border-top: 1px solid #777;
+	border-bottom: 1px solid #bbb;
+	}
+} @else {
+	@sprite .sgwebui-quickSearch {
+		gwt-image: "qsIe";
+		width: auto;
+		height: 18px;
+		padding: 5px 20px 3px 5px;
+		margin-right: 8px;
+		overflow: visible !important;
+	}
+	@sprite .sgwebui-quickSearch .rSide {
+		gwt-image: "qsIeRight";
+		position: absolute;
+		right: -7px;
+		top: 0;
+	}
+}
+
+
+.sgwebui-quickSearch input.textbox {
+	border: none;
+	margin: 0;
+	padding: 1px 0 0;
+	width: 100%;
+	height: 16px;
+	background: none;
+}
+.sgwebui-quickSearch input.textbox-empty {
+	color: #aaa;
+}
+.sgwebui-quickSearch input.textbox:focus {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+@sprite .sgwebui-quickSearch span.icon {
+	gwt-image: "qsSubmit";
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+}
+@sprite .sgwebui-quickSearch span.icon:hover {
+	gwt-image: "qsSubmitHover";
+} 
+
+/* ###### LAYERS TREE FILTER ###### */
+
+.sgwebui-filter {
+	width: 130px;
+	position: relative;
+}
+@if !user.agent ie6 ie8 { 
+	.sgwebui-filter {
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		box-shadow: 0 1px 2px #777 inset;
+		padding: 3px 20px 3px 5px;
+		background: #fff;
+		border: 1px solid #999;
+		border-top: 1px solid #777;
+		border-bottom: 1px solid #bbb;
+	}
+}
+@else {
+	@sprite .sgwebui-filter {
+		gwt-image: "qsIe";
+		background-position:left top;
+		height: 18px;
+		width: 130px;
+		padding: 3px 20px 3px 5px;
+		margin-right: 8px;
+		overflow: visible;
+	}
+	@sprite .sgwebui-filter .rSide {
+		gwt-image: "qsIeRight";
+		background-position: right top;
+		width: 7px;
+		display: block;
+		height: 24px;
+		position: absolute;
+		right: -7px;
+		top: 0;
+	}
+}
+
+.sgwebui-filter input.textbox {
+	border: none;
+	margin: 0;
+	padding: 1px 0 0;
+	width: 100%;
+	height: 16px;
+	background: none;
+}
+.sgwebui-filter input.textbox-empty {
+	color: #aaa;
+}
+.sgwebui-filter input.textbox:focus {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.sgwebui-filter.on input.textbox {
+	color: #5A5A5A;
+}
+
+@sprite .sgwebui-filter span.icon {
+	gwt-image: "filterIcon";
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	display: block;
+}
+
+@sprite .sgwebui-filter.on span.icon {
+	gwt-image: "filterIcon2";
+	cursor: pointer;
+}
+
+@sprite .sgwebui-filter.on span.icon:hover {
+	gwt-image: "filterIcon3";
+}
+
+.sgVerticalLayoutPanel > div {
+	overflow: auto;
+}
+.sgVerticalLayoutPanel > div > div {
+	overflow: hidden;
+}
+
+
+.sgTogglePanelHeader .sgToggleAnchor {
+	display: block;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.sgTogglePanelHeader .sgToggleAnchor img,
+.sgTogglePanelHeader.modifiedHeader .sgToggleAnchor {
+	float: left;
+	margin-right: 5px;
+	padding: 0;
+}
+.sgTogglePanelHeader.modifiedHeader {
+	padding: 5px 10px;
+}
+
+.sgFlowFormTabHeader .sgwebui-ImageLabel {
+	padding: 4px 0;
+	white-space: nowrap;
+	text-transform: uppercase;
+}
+.sgFlowFormTabHeader .sgwebui-ImageLabel .title-label {
+	margin-top: 1px;
+}
+.sgFlowFormTabHeader .imageAnchor {
+	float: right;
+    margin-left: 6px;
+    margin-top: 5px;
+}
+
+
+/**** multiselect dropdown ****/
+.msDD {
+	margin: 10px 0;
+}
+
+.msDD>a {
+	display: block;
+	padding: 5px 10px;
+	text-align: left !important;
+	font-weight: bold;
+	color: black;
+}
+
+.enostavniLabel{
+	padding: 0px 5px 0px 0px;
+	font-weight: bold;
+	color: black;
+}
+
+
+.msDD>a img {
+	float: right;
+}
+
+.msDD>gwt-InlineLabel {
+	font-weight: bold;
+	color: black;
+}
+
+
+.msDDPreview {
+	padding: 0 5px 2px;
+	font-size: 11px;
+	margin: 0 2px;
+}
+
+.msDDPreview>div {
+	margin-top: 3px;
+	color: #777;
+	padding-left: 12px;
+	clear: both;
+}
+
+.msDDPreview>div:before {
+	content: ".";
+	font-size: 22px;
+	float: left;
+	margin-left: -13px;
+	margin-top: -13px;
+}
+.multiselectPanel > span {
+	display: block;
+    margin-bottom: 3px;
+    padding-left: 20px;
+}
+.multiselectPanel > span input {
+    margin-left: -20px;
+}
+.withClosePopup > a.close {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -30px;
+	display: block;
+	height: 30px;
+	opacity: 0;
+}
+.withClosePopup > a.close.bottom {
+	top: auto;
+	bottom: -30px;
+}
+
+/**** sgdatagrid chrome fix ****/
+.sgDataGrid > div > div > div > div > div > div {
+	overflow-y: scroll;
+	overflow-x: hidden !important;
+}
+.sgDataGrid > div > div > div > div > div > table {
+	position: relative;
+}

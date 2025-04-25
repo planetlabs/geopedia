@@ -1,0 +1,373 @@
+@external *;
+
+.grayBackground {
+	background:#333; 
+	opacity: 0.55;
+	filter: literal("alpha(opacity = 40)");
+	position: fixed;
+	left: 0;
+	width: 100%;
+	height:100%;
+	top:0;
+}
+
+.sgwebui-messageBox pre {
+	white-space: pre-wrap;
+	 white-space: -moz-pre-wrap;
+	 white-space: -pre-wrap;
+	 white-space: -o-pre-wrap;
+	 word-wrap: break-word;  
+}
+
+.gwt-PopupPanel {
+	position: absolute;
+}
+
+td.dialogMiddleCenter { height: 100%; }
+.sgDialogBox .dialogContent,
+.sgDialogBox .dialogContent > div {
+	height: 100%;
+	padding: 0;
+}
+.gwt-DialogBox.sgDialogBox .dialogMiddleCenterInner {
+	padding: 0;
+}
+
+.sgDialogContent {
+	padding: 10px 15px;
+}
+.resizable .sgDialogContent {
+	padding: 10px 15px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+}
+
+.dialogButtonPanel {
+	padding: 5px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	background: #f2f2f2;
+}
+.resizable .dialogButtonPanelHolder {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+
+.changePasswordDialog tr {
+	background: none !important;
+}
+.changePasswordDialog .gwt-Label {
+	text-align: right;
+	margin-right: 8px;
+	white-space: nowrap;
+}
+
+/****** DIALOG BOX *****/
+.gwt-DialogBox { 
+	background: #fff;
+	box-shadow: 0 0px 15px #333;
+	-moz-box-shadow: 0 0px 15px #333;
+	-webkit-box-shadow: 0 0px 15px #333;
+/* 	clip: auto !important; */
+}
+@if user.agent ie6 ie8 {
+	.gwt-DialogBox {
+		border: 1px solid #bbb;
+	}
+}
+.gwt-DialogBox .Caption {
+	background: mainColor;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 8px 10px;
+	font-size: 120%;
+	cursor: move;
+	box-shadow: 0 10px 15px rgba(255,255,255,.25) inset;
+}
+.gwt-DialogBox .dialogMiddleCenterInner {
+	padding: 10px;
+}
+@sprite .gwt-DialogBox .actionClose,
+.centeredWidget .actionClose {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	gwt-image: "dialogClose";
+	display: block;
+	cursor: pointer;
+	opacity: .6;
+}
+.gwt-DialogBox .actionClose:hover,
+.centeredWidget .actionClose:hover {
+	opacity: 1;
+}
+
+.gwt-DialogBox.resizable td.dialogMiddleCenter {
+	height: 100%;
+}
+.gwt-DialogBox.resizable .dialogContent {
+	max-width: 100%;
+	max-height: 100%;
+	overflow: visible;
+	padding: 0;
+	height: 100%;
+}
+@sprite .gwt-DialogBox.resizable .bottomRight {
+	cursor: nw-resize;
+	gwt-image: "dialogResize";
+	display: block;
+	margin: -9px 0 0 -9px;
+    position: absolute;
+}
+@sprite .gwt-DialogBox.resizable div.bottomRight:hover {
+	gwt-image: "dialogResizeOn";
+}
+
+.sgwebui-messageDialog div.gwt-Label {
+	margin-right: 10px;
+}
+.sgwebui-messageDialog input {
+	margin-bottom: 5px;
+}
+.sgwebui-messageDialog-buttons > table {
+	margin: 5px auto;
+}
+
+.gwt-PopupPanelGlass {
+    background-color: #000;
+    opacity: 0.3;
+    filter: literal("alpha(opacity=30)");
+}
+
+/**** sgdate picker ****/
+.sgDatePicker-calendarIcon {
+	cursor: pointer;
+}
+.gwt-DatePicker {
+	border: none;
+}
+.sgDatePicker-calendarPopup .yearInput {
+	display: inline-block;
+	margin-left: 7px;
+}
+
+.sgDatePicker-calendarPopup, .dateBoxPopup {
+	-moz-box-shadow: 0 3px 8px #aaa;
+	-webkit-box-shadow: 0 3px 8px #aaa;
+	box-shadow: 0 3px 8px #aaa;
+	background: #fff;
+}
+@if user.agent ie6 ie8 {
+	.sgDatePicker-calendarPopup {
+		border: 1px solid #ccc;
+	}
+}
+table.datePickerDays { width: 100%; }
+
+@sprite .datePickerMonthSelector .control {
+	gwt-image: "dateRight";
+	font-size: 0;
+	text-indent: -100px;
+	cursor: pointer;
+	margin: 4px 2px;
+	opacity: .6;
+}
+@sprite .datePickerMonthSelector .datePickerPreviousMonthButton {
+	gwt-image: "dateLeft";
+}
+@sprite .datePickerMonthSelector .datePickerPreviousYearButton {
+	gwt-image: "yearLeft";
+}
+@sprite .datePickerMonthSelector .datePickerNextYearButton {
+	gwt-image: "yearRight";
+}
+.datePickerMonthSelector .control:hover {
+	opacity: 1;
+}
+
+td.datePickerMonth, .datePickerPreviousButton, .datePickerNextButton {
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+}
+td.datePickerMonth { padding: 1px 10px; }
+.datePickerWeekdayLabel, .datePickerWeekendLabel, .datePickerDayIsValue  {
+	background: secondColor;
+	border: none;
+	color: #fff;
+	padding: 3px 5px;
+	font-size: 11px;
+    font-weight: bold;
+}
+.datePickerDay {
+	padding: 5px;
+	font-size: 10px;
+	text-align: right;
+}
+.datePickerMonthSelector {
+	background: #fff;
+	border-bottom: 3px solid mainColor;
+}
+.datePickerMonthSelector td {
+	padding: 3px;
+}
+td.datePickerMonth {
+	font-size: 14px;
+	font-weight: normal;
+	padding: 0 10px;
+	text-transform: uppercase;
+	padding: 8px;
+	color: #555;
+}
+.datePickerWeekdayLabel, .datePickerWeekendLabel, .datePickerDayIsValue {
+	background: #f1f1f1;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxZjFmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkNGQ0ZDQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #f1f1f1 0%, #d4d4d4 100%)");
+	background: literal("-webkit-linear-gradient(top, #f1f1f1 0%,#d4d4d4 100%)");
+	background: literal("-o-linear-gradient(top, #f1f1f1 0%,#d4d4d4 100%)");
+	background: literal("-ms-linear-gradient(top, #f1f1f1 0%,#d4d4d4 100%)");
+	background: literal("linear-gradient(to bottom, #f1f1f1 0%,#d4d4d4 100%)");
+    font-weight: normal;
+    border-bottom: 2px solid secondColor;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 0 1px 0 #fff;
+}
+.datePickerDay {
+    background: #f2f2f2;
+    border: 1px solid #ddd;
+    color: #555;
+    font-size: 12px;
+    padding: 8px;
+    text-shadow: 0 1px 0 #fff;
+}
+.datePickerDayIsFiller {
+	color: #aaa;
+}
+.datePickerDayIsWeekend {
+	background: #e2e2e2;
+}
+.datePickerDayIsToday {
+	background: #fff;
+}
+.datePickerDayIsHighlighted {
+	box-shadow: 0 2px 2px rgba(0,0,0,.3);
+}
+.datePickerDayIsValue {
+	font-weight: bold;
+	background: mainColor;
+	color: #fff;
+	box-shadow: 0 2px 2px rgba(0,0,0,.3) inset;
+}
+.sgDatePicker-calendarIcon.disabled {
+	cursor: default;
+	opacity: .5;
+}
+
+/************** Drop Down Menu *********/
+div.sgwebui-menu {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U1ZTVlNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: literal("-moz-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%)");
+	background: literal("-webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5))");
+	background: literal("-webkit-linear-gradient(-45deg, #ffffff 0%,#e5e5e5 100%)");
+	background: literal("-o-linear-gradient(-45deg, #ffffff 0%,#e5e5e5 100%)");
+	background: linear-gradient(-45deg, #ffffff 0%,#e5e5e5 100%);
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 )");
+	box-shadow: 0 0 1px 1px #aaa;
+	-moz-box-shadow: 0 0 1px 1px #aaa;
+	-webkit-box-shadow: 0 0 1px 1px #aaa;
+}
+div.sgwebui-menu > div {
+	max-height: 300px;
+	overflow: auto;
+}
+@if user.agent ie6 ie8 {
+	div.sgwebui-menu {
+		border: 1px solid #bbb;
+	}
+}
+div.sgwebui-menu .itemCont {
+	clear: both;
+}
+div.sgwebui-menu .item {
+	cursor: pointer;
+	padding: 4px 10px 4px 25px;
+}
+div.sgwebui-menu .item.expanded {
+	padding-right: 15px;
+}
+div.sgwebui-menu .item.expanded:after {
+	content: "";
+	display: block;
+	float: right;
+	margin-top: -12px;
+	width: 0;
+	height: 0;
+	border-left: 4px solid #666;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	margin-right: -10px;
+}
+div.sgwebui-menu .item:hover {
+	background: #e2e2e2;
+}
+div.sgwebui-menu .item.nonselectable {
+	padding-left: 5px;
+}
+div.sgwebui-menu .item.nonselectable:hover {
+	background: none;
+}
+div.sgwebui-menu .item.selected {
+	font-weight: bold;
+	background: mainColor;
+	color: #fff;
+}
+div.sgwebui-menu div.separator {
+	border-top: 1px dashed #666;
+	margin: 5px;
+}
+div.sgwebui-menu div.separator > div {
+	display: none;
+}
+.itemCont.withIcon { position: relative; }
+.itemCont.withIcon .itemImg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 3px 3px 0;
+}
+
+.sgwebui-menu .item.disabled, .sgwebui-menu .item.disabled:hover {
+	opacity: .6;
+	filter: literal("alpha(opacity=60)");
+	cursor: default;
+	background: none;
+}
+
+.sgwebui-menu .option-buffer input {
+	width: 40px;
+}
+
+@ie user.agent ie9 {
+	div.sgwebui-menu .item.selected, div.sgwebui-menu {
+		filter: none; 
+	}
+}
+@ie user.agent ie6 ie8 ie9 {
+	.itemCont.withIcon .itemImg {
+		width: 16px !important;
+		height: 16px !important;
+	}
+}

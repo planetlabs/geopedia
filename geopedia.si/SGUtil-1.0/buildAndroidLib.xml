@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    
+    <!--  build common utility classes. This must be kept as small as possible for mobile use! -->
+    <macrodef name="compile.commonUtil">
+	    <attribute name="buildBaseDir"/>	
+	    <sequential> 
+	    		<mkdir dir="@{buildBaseDir}" />
+				<mkdir dir="@{buildBaseDir}/classes" />
+				<javac srcdir="${SGUtil}/src/common;${SGUtil}/src/java"
+			     destdir="@{buildBaseDir}/classes" source="1.6" target="1.6" 
+			     compiler="modern" fork="yes" encoding="UTF-8" includeantruntime="false" 
+			     debug="on" executable="${JAVA6}/bin/javac">
+					<classpath>
+					    <pathelement path="${SINEREPO}/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar" />
+					</classpath>
+					
+					<include name="com/sinergise/common/util/**"/>
+					<include name="com/sinergise/java/util/*"/>				
+				</javac>	
+	    </sequential>
+	</macrodef>
+</project>

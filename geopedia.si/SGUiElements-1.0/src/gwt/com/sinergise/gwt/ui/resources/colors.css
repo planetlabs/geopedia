@@ -1,0 +1,4 @@
+@eval mainColor com.sinergise.gwt.ui.resources.ThemeScheme.getMainColor();
+@eval secondColor com.sinergise.gwt.ui.resources.ThemeScheme.getSecondColor();
+@eval textColor com.sinergise.gwt.ui.resources.ThemeScheme.getTextColor();
+@eval headingColor com.sinergise.gwt.ui.resources.ThemeScheme.getHeadingColor();

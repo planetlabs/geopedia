@@ -1,0 +1,111 @@
+@external *;
+
+.sgwebgis-layerWidget { padding: 3px 5px; }
+.layerElements { display: block; }
+.chkCont { 
+	margin-right: 5px;
+}
+.sgwebgis-styleComponentsWidget { 
+	text-align: right;
+	white-space: nowrap; 
+}
+.sgwebgis-layerLabel, 
+.sgwebgis-styleComponentsWidget > div, 
+.legendImage, .chkCont { 
+	display: inline-block;
+	vertical-align: middle;
+}
+.legendImage { margin-right: 5px; }
+a.legendAnchor { display: inline-block; vertical-align: middle; margin-right: 5px; cursor: pointer;}
+.sgwebgis-layerLabel { padding-top: 2px; vertical-align: middle; }
+
+.sgwebgis-layersTree {
+	border: 1px solid #ccc;
+	background: #fff;	
+}
+
+.sgwebgis-GroupTree-DisclosurePanel a {
+	text-decoration: none;
+}
+.sgwebgis-GroupTree-DisclosurePanel .layerGroupHeader {
+	padding: 3px 5px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	width: auto;
+}
+.layerGroupHeader > .groupToggler { 
+	float: left; 
+	margin-right: 5px; 
+	margin-top: 4px; 
+}
+
+@if user.agent ie6 {
+	.sgwebgis-styleComponentsWidget > div { display: inline; zoom: 1; }
+}
+
+.layerGroupHeader .sgwebgis-layerWidget { padding: 0; }
+.layerGroupHeader .sgwebgis-layerLabel { margin-top: 3px; font-weight: bold; cursor: pointer; }
+.layerGroupHeader .chkCont { margin-top: 7px; }
+
+.layerGroupHeader .gwt-ToggleButton {
+	margin-bottom: 0;
+}
+
+/* ###### LAYER STYLE CONTROL BUTTONS ###### */
+
+.sgwebgis-layerWidget .gwt-ToggleButton-up, 
+.sgwebgis-layerWidget .gwt-ToggleButton-up-hovering, 
+.sgwebgis-layerWidget .gwt-ToggleButton-up-disabled, 
+.sgwebgis-layerWidget .gwt-ToggleButton-down, 
+.sgwebgis-layerWidget .gwt-ToggleButton-down-hovering, 
+.sgwebgis-layerWidget .gwt-ToggleButton-down-disabled {
+	background: #bbb;
+	border: none;
+	height: 24px;
+	width: 24px;
+	margin-left: 2px;
+	cursor: pointer;
+	padding: 0;
+}
+.sgwebgis-layerWidget .gwt-ToggleButton img { 
+	margin: 4px;
+	padding: 0;
+}
+
+.sgwebgis-layerWidget .gwt-ToggleButton-down, 
+.sgwebgis-layerWidget .gwt-ToggleButton-down-hovering {
+	background: #c4e7ec;
+}
+
+.sgwebgis-tree-children { 
+	padding-left: 20px;
+	border-bottom: 1px solid #aaa;
+}
+
+.htmlLegend {
+	margin-left: 16px;
+}
+.htmlLegend table td,
+.htmlLegend > table {
+    border: none;
+    font-weight: normal;
+    font-size: 11px;
+    color: #888;
+    padding: 2px;
+}
+.htmlLegend table td > div {
+	display: block;
+	margin-right: 4px;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #999;
+}
+.htmlLegend table.bigIcons td > div {
+	width: 16px;
+	height: 16px;
+}
+.htmlLegend table td > div img {
+	display: block;
+}
+
+

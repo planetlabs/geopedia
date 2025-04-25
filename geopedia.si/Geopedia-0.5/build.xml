@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Geopedia">
+	<property name="sinergise.libraries.branch" value="1.0" />
+	<property file="${sinergise.build.properties}" />
+	<property name="Geopedia" value="../Geopedia-0.5" />
+	<property name="buildDirectory" value="build" />
+	<import file="${Geopedia}/buildInclude.xml" />
+    
+    <target name="compile">
+        <compile.GeopediaServer buildBaseDir="${buildDirectory}">
+            <additionalSourcesPath>
+				<src path="${Geopedia}/src/utility" />
+				<src path="${SGCluster}/src/configuration" />           
+            </additionalSourcesPath>
+        </compile.GeopediaServer>
+        <jar.GeopediaServer buildBaseDir="${buildDirectory}"/>            
+	</target>
+	
+    <target name="compileServer">
+        <compile.GeopediaServer buildBaseDir="${buildDirectory}" />
+        <jar.GeopediaServer buildBaseDir="${buildDirectory}"/>            
+    </target>
+	
+</project>

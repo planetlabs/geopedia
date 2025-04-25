@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SGMap">
+
+	<property name="sinergise.libraries.branch" value="1.0" />
+    <property file="${sinergise.build.properties}"/>
+    <property name="buildBase" value="build"/>
+    <property name="SINEREPO" value="../SineRepo" />
+    <property name="SGUtil" value="../SGUtil-${sinergise.libraries.branch}"/>
+    <property name="SGGeometry" value="../SGGeometry-${sinergise.libraries.branch}"/>
+    <property name="SGUiElements" value="../SGUiElements-${sinergise.libraries.branch}"/>
+    <property name="SGGenerics" value="../SGGenerics-${sinergise.libraries.branch}"/>
+    <property name="SGRaster" value="../SGRaster-${sinergise.libraries.branch}"/>
+
+
+	<path id="lib.external">
+ 		<pathelement path="${SGUtil}/build/SGUtil-${sinergise.libraries.branch}-SNAPSHOT.jar"/>
+ 		<pathelement path="${SGGeometry}/build/SGGeometry-${sinergise.libraries.branch}-SNAPSHOT.jar"/>
+ 		<pathelement path="${SGUiElements}/build/SGUiElements-${sinergise.libraries.branch}-SNAPSHOT.jar"/>
+ 		<pathelement path="${SGGenerics}/build/SGSGGenerics-${sinergise.libraries.branch}-SNAPSHOT.jar"/>
+ 		<pathelement path="${SGRaster}/build/SGRaster-${sinergise.libraries.branch}-SNAPSHOT.jar"/>
+ 		
+		<pathelement path="${SINEREPO}/WebServer/j2ee/5.0/lib/servlet-api.jar"/>
+		<pathelement path="${SINEREPO}/Web/gwt/2.4.0/lib/gwt-servlet.jar"/>
+ 		<pathelement path="${SINEREPO}/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar"/>
+ 		<pathelement path="${SINEREPO}/Graphics/jts/1.12/lib/jts-1.12.jar" />
+ 		<pathelement path="${SINEREPO}/Documents/apachePOI/3.8/lib/poi-3.8-beta4-20110826.jar"/>
+ 		<pathelement path="${SINEREPO}/Documents/apachePOI/3.8/lib/poi-ooxml-3.8-beta4-20110826.jar"/>
+ 		<pathelement path="${SINEREPO}/Database/opencsv/2.3/lib/opencsv-2.3.jar"/>
+ </path>
+
+<target name="clean">
+		<delete dir="${buildBase}" />   
+		<mkdir dir="${buildBase}" /> 
+</target>
+
+<target name="compile" depends="clean">
+	<mkdir dir="${buildBase}"/>
+	<mkdir dir="${buildBase}/classes"/>
+ 	 <javac srcdir="src/common:src/java" destdir="${buildBase}/classes" includeantruntime="false" 
+ 	 includes="**" source="1.5" target="1.5" compiler="modern" fork="yes" encoding="UTF-8"
+ 	 executable="${JAVA6}/bin/javac">
+ 	        <classpath refid="lib.external"/>
+	  	    <compilerarg value="-Xlint:-unchecked"/>
+ 	 </javac>
+</target>	
+        
+
+<target name="jar" depends="compile">
+	<jar destfile="${buildBase}/SGMap-${sinergise.libraries.branch}-SNAPSHOT.jar">
+ 		<fileset dir="${buildBase}/classes">
+ 	    	<include name="**"/>
+ 	    </fileset>
+ 	</jar>
+</target>
+
+</project>

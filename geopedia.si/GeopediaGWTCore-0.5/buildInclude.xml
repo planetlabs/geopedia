@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="GeopediaGWTCore" >
+      <path id="src.geopediaGWTCore">
+		<pathelement location="${Geopedia}/src/common" />
+		<pathelement location="${GeopediaGWTCore}/src/core" />
+		<pathelement location="${GeopediaGWTCore}/src/components" />
+		<pathelement location="${GeopediaGWTCore}/src/resources" />
+		
+		<!-- dependent project GWT source folders -->
+		<pathelement location="${SGUtil}/src/common" />
+		<pathelement location="${SGUtil}/src/gwt" />
+		<pathelement location="${SGUiElements}/src/common" />
+		<pathelement location="${SGUiElements}/src/gwt" />
+		<pathelement location="${SGUiElements}/src/theme" />
+		<pathelement location="${SGUiElements}/src/gwtext" />
+		<pathelement location="${SGGeometry}/src/common" />
+		<pathelement location="${SGGeometry}/src/gwt" />
+		<pathelement location="${SGMap}/src/common" />
+		<pathelement location="${SGMap}/src/theme" />
+		<pathelement location="${SGMap}/src/gwt" />
+		<pathelement location="${SGGenerics}/src/common" />
+		<pathelement location="${SGGenerics}/src/gwt" />
+		<pathelement location="${SGCluster}/src/common" />
+		<pathelement location="${SGCluster}/src/gwt" />
+	</path>
+	    
+    <path id="lib.ext.geopediaGWTCore">
+        <pathelement path="${GeopediaGWTCore}/lib/gwt-maps.jar" />
+    </path>
+</project>

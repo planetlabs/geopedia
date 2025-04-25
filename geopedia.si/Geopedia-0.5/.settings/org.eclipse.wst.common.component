@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Geopedia-0.5">
+        <wb-resource deploy-path="/" source-path="/src/common"/>
+        <wb-resource deploy-path="/" source-path="/src/server"/>
+        <wb-resource deploy-path="/" source-path="/src/external"/>
+    </wb-module>
+</project-modules>

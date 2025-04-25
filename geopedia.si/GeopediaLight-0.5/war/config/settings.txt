@@ -1,0 +1,240 @@
+coordinatesystem = S
+dmvfile = c:\\dmv125.raw
+
+db.host = 10.5.250.102
+db.user = pediawww
+db.pass = pediawww
+db.basedb = pedicamain
+
+updatedb.host = 10.5.250.20
+updatedb.user = pediaupdate
+updatedb.pass = pediaupdate
+updatedb.basedb = pedicamain
+
+
+datasetHost.publicRenderer.id = 1
+datasetHost.publicRenderer.basepath = /rp
+datasetHost.publicRenderer.numhosts = 1
+datasetHost.publicRenderer.host0 = localhost:8888
+#datasetHost.publicRenderer.host0 = pr1.geopedia.si
+
+
+copyright.geopedia.watermark = com/sinergise/geopedia/server/service/logoText170.png
+copyright.geopedia.watermark.offsetLeft = 10
+copyright.geopedia.watermark.offsetBottom = 10
+
+public.renderer.featpath = /hlt
+
+copyright.list = sinergise, gurs, gi, globalvision, arhivslovenije
+
+copyright.sinergise.text = Sinergise
+copyright.sinergise.link = http://www.sinergise.com
+
+copyright.gurs.text = Geodetska uprava Republike Slovenije
+copyright.gurs.link = www.gu.gov.si
+
+copyright.gi.text = Geodetski in\u0161titut Slovenije 
+copyright.gi.link = www.gis.si
+
+copyright.globalvision.text = Quo TM
+copyright.globalvision.link = http://www.kje.si/
+
+copyright.arhivslovenije.text = Arhiv RR
+copyright.arhivslovenije.link = http://www.arhiv.gov.si/
+
+
+
+datasetHosts=main
+datasetHost.main.numhosts=5
+datasetHost.main.host0 = dmc01.geopedia.si
+datasetHost.main.host1 = dmc02.geopedia.si
+datasetHost.main.host2 = dmc03.geopedia.si
+datasetHost.main.host3 = dmc04.geopedia.si
+datasetHost.main.host4 = dmc05.geopedia.si
+
+#datasetHosts=main
+#datasetHost.main.numhosts=1
+#datasetHost.main.host0 = siS201.geopedia.si
+#datasetHost.main.host0 = dmc01.geopedia.si
+#datasetHost.main.host1 = dmc02.geopedia.si
+#datasetHost.main.host2 = dmc03.geopedia.si
+#datasetHost.main.host3 = dmc04.geopedia.si
+#datasetHost.main.host4 = dmc05.geopedia.si
+
+
+datasetHost.dynamicRasters.basepath = /pre/layers/
+datasetHost.dynamicRasters.numhosts = 1
+datasetHost.dynamicRasters.host0 = dmv01.geopedia.si
+
+dataset.count=16
+dataset.default={"defaultDataset":4,"datasets":{"PRO":[[2,14],[3,1,12,13],[4,6,7,5,0],[9,10,11]],"DEFAULT":[[2, 15],[3,1,12,13],[4]]}} 
+
+dataset.1.id = 1
+dataset.1.name = Vi\u0161ine
+dataset.1.description = Vi\u0161ine
+dataset.1.basepath = /pre/dmc
+dataset.1.maxlevel = 18
+dataset.1.numcopy = 1
+dataset.1.copy0 = gurs
+dataset.1.datasethost=main
+
+dataset.2.id = 2
+dataset.2.name = Ortofoto
+dataset.2.description = Ortofoto 2009
+dataset.2.basepath = /pre/dof
+dataset.2.maxlevel = 18
+dataset.2.numcopy = 1
+dataset.2.copy0 = gurs
+dataset.2.datasethost=main
+
+dataset.3.id = 3
+dataset.3.name = Relief
+dataset.3.description = Relief
+dataset.3.basepath = /pre/dmv
+dataset.3.maxlevel = 18
+dataset.3.numcopy = 1
+dataset.3.copy0 = gurs
+dataset.3.datasethost=main
+
+dataset.0.id = 0
+dataset.0.name = Topo
+dataset.0.description = Topo 2007
+dataset.0.basepath = /pre/dtk
+dataset.0.maxlevel = 18
+dataset.0.numcopy = 2
+dataset.0.copy0 = gurs
+dataset.0.copy0.limit = 9
+dataset.0.copy1 = gi
+dataset.0.datasethost=main
+
+
+dataset.4.id = 4
+dataset.4.name = Topo
+dataset.4.description = Topo 2011
+dataset.4.basepath = /pre/layers/dtk_2011
+dataset.4.maxlevel = 18
+dataset.4.numcopy = 2
+dataset.4.copy0 = gi
+dataset.4.datasethost=main
+
+dataset.5.id = 5
+dataset.5.name = Topo
+dataset.5.description = Topo Quo
+dataset.5.basepath = /pre/pzs/merged
+dataset.5.maxlevel = 16
+dataset.5.defaultenabled = no
+dataset.5.numcopy = 1
+dataset.5.copy0 = globalvision
+dataset.5.datasethost=main
+
+dataset.6.id = 6
+dataset.6.name = Topo
+dataset.6.description = Topo 2011 sence
+dataset.6.basepath = /pre/layers/dtk_2011_shadows
+dataset.6.maxlevel = 18
+dataset.6.defaultenabled = no
+dataset.6.numcopy = 1
+dataset.6.copy0 = gi
+dataset.6.datasethost=main
+
+dataset.7.id = 7
+dataset.7.name = Topo
+dataset.7.description = Topo 2011 svetla
+dataset.7.basepath = /pre/layers/dtk_2011_light
+dataset.7.maxlevel = 18
+dataset.7.defaultenabled = no
+dataset.7.numcopy = 1
+dataset.7.copy0 = gi
+dataset.7.datasethost=main
+
+dataset.8.id = 8
+dataset.8.name = Ortofoto
+dataset.8.description = Ortofoto 2011
+dataset.8.basepath = /pre/layers/L8760
+dataset.8.maxlevel = 18
+dataset.8.defaultenabled = no
+dataset.8.numcopy = 1
+dataset.8.copy0 = gurs
+dataset.8.datasethost=main
+
+dataset.9.id = 9
+dataset.9.name = Arhiv
+dataset.9.description = Zemljevid Kranjske 1832
+dataset.9.basepath = /pre/layers/L6859
+dataset.9.maxlevel = 13
+dataset.9.defaultenabled = no
+dataset.9.numcopy = 1
+dataset.9.copy0 = arhivslovenije
+dataset.9.datasethost=main
+dataset.9.filetype=png
+
+dataset.10.id = 10
+dataset.10.name = Arhiv
+dataset.10.description = Zemljevid Kranjske 1550
+dataset.10.basepath = /pre/layers/L6858
+dataset.10.maxlevel = 10
+dataset.10.defaultenabled = no
+dataset.10.numcopy = 1
+dataset.10.copy0 = arhivslovenije
+dataset.10.datasethost=main
+dataset.10.filetype=png
+
+dataset.11.id = 11
+dataset.11.name = Arhiv
+dataset.11.description = Kozlerjev zemljevid 1853
+dataset.11.basepath = /pre/layers/L6575
+dataset.11.maxlevel = 12
+dataset.11.defaultenabled = no
+dataset.11.numcopy = 1
+dataset.11.copy0 = arhivslovenije
+dataset.11.datasethost=main
+dataset.11.filetype=png
+
+dataset.12.id = 12
+dataset.12.name = Vi\u0161ine
+dataset.12.description = Relief + ortofoto
+dataset.12.basepath = /pre/dof+dmv
+dataset.12.maxlevel = 18
+dataset.12.defaultenabled = no
+dataset.12.numcopy = 1
+dataset.12.copy0 = gurs
+dataset.12.datasethost=main
+
+dataset.13.id = 13
+dataset.13.name = Vi\u0161ine
+dataset.13.description = Relief + vi\u0161ine
+dataset.13.basepath = /pre/dmc+dmv
+dataset.13.maxlevel = 18
+dataset.13.defaultenabled = no
+dataset.13.numcopy = 1
+dataset.13.copy0 = gurs
+dataset.13.datasethost=main
+
+dataset.14.id = 14
+dataset.14.name = Ortofoto
+dataset.14.description = Ortofoto 2006
+dataset.14.basepath = /pre/dof_2006
+dataset.14.maxlevel = 18
+dataset.14.defaultenabled = no
+dataset.14.numcopy = 1
+dataset.14.copy0 = gurs
+dataset.14.datasethost=main
+
+
+dataset.15.id = 15
+dataset.15.name = WMS
+dataset.15.description = WMS test
+dataset.15.maxlevel = 18
+dataset.15.defaultenabled = no
+dataset.15.numcopy = 1
+dataset.15.copy0 = gurs
+dataset.15.type = WMS
+dataset.15.wmsBaseURL = http://services.geopedia.si/wms/wmsTest2011
+dataset.15.wmsLayerName = b2
+dataset.15.wmsParameters = {"VERSION":"1.3.0","FORMAT":"image/png"}
+
+
+metadata.refresh.interval = 500
+
+webLinks.location=weblinks/
+

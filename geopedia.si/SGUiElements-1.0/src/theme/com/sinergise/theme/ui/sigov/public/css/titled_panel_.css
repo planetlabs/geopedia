@@ -1,0 +1,48 @@
+.sgwebui-TitledPanel > .title,
+.gwt-DisclosurePanel a.header {	
+	background: url(../img/titled_panel/titled_panel_head_bg.png) left -85px repeat-x;
+}
+.sgwebui-TitledPanel > div.body,
+.gwt-DisclosurePanel > tbody > tr > td > div {
+	background-color: #f1f1f1;
+}
+
+.gwt-DisclosurePanel.gwt-DisclosurePanel-closed a.header {
+	background-position: left top;
+	border-bottom: 2px solid #fff;
+	color: #555;
+}
+.gwt-DisclosurePanel.gwt-DisclosurePanel-closed:hover a.header {
+	color: #fff;
+	background-position: left -85px;
+}
+.gwt-DisclosurePanel .header td {
+	color: #555;
+}
+.gwt-DisclosurePanel-open .header td,
+.gwt-DisclosurePanel-closed .header:hover td {
+	color: #fff;
+}
+
+.gwt-DisclosurePanel a.header > .sgwebgis-resultActionsToolbar {
+	margin: -5px !important;
+    width: 100%;
+}
+
+.sgwebgis-structuredQuery .gwt-TextBox {
+	text-align: right;
+}
+.sgwebgis-structuredQuery .btnShowLookup {
+	background: url(../img/lookup.png) left top;
+	clear: right;
+    cursor: pointer;
+    display: block;
+    display: block;
+    float: right;
+    font-size: 0;
+    height: 16px;
+    text-indent: -1000px;
+    width: 16px;
+    margin-left: 3px;
+    margin-top: 3px;
+}

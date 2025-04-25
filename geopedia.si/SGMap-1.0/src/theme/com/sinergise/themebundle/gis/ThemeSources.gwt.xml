@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<inherits name="com.sinergise.WebGIS" />
+	<inherits name="com.sinergise.themebundle.ui.ThemeSources"/>
+	<source path="basic"/>
+	<source path="blue"/>
+	<source path="dark"/>
+	<source path="light"/>
+	<source path="sigov"/>
+	<source path="sinergise"/>
+</module>

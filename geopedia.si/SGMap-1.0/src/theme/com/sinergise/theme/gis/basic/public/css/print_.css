@@ -1,0 +1,25 @@
+.sgwebgis-print .sgwebui-TitledPanel-title .sgwebui-ImageLabel td {
+	background: #fff;
+	font-weight: bold;
+	color: #000 !important;
+	font-size: 16px;
+	border-bottom: 5px solid #ccc;
+	padding-bottom: 5px;
+}
+
+.sgwebgis-print .sgwebui-TitledPanel-title td.sgwebui-ImageLabel-image {
+	width: 0px;
+}
+
+.sgwebgis-print .sgwebui-TitledPanel-body > td {
+	background: none !important;	
+}
+
+td.sgwebgis-print-results-fieldLabel {
+	font-weight: bold;
+}
+
+.sgwebgis-print-results td {
+	padding: 2px;
+	border-bottom: 1px dotted #ccc;
+}

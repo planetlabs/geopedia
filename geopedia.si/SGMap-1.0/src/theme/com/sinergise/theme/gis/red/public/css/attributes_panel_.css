@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+.sgwebgis-tabbedAttrPanel div.gwt-DecoratedTabBar-flow {
+	padding: 3px 6px;	
+	background:url("../img/attributes_panel/subtab_bg.png") left bottom repeat-x #df8282;
+}
+.gwt-DecoratedTabBar .gwt-TabBarRest {
+	height: 0 !important;
+	clear: both;
+}
+
+table.sgwebgis-tabbedAttrPanel { width: 100%; } 
+.sgwebgis-tabbedAttrPanel div.gwt-DecoratedTabBar-flow {
+	background: none;
+}
+.sgwebgis-tabbedAttrPanel .gwt-DecoratedTabBar-flow .gwt-TabBarItem {
+	margin-top: 0;
+}
+.sgwebgis-tabbedAttrPanel .gwt-TabBarItem .tabTopCenter {
+	line-height: 14px;
+}
+.sgwebgis-tabbedAttrPanel .gwt-TabBarItem .tabTopCenter,
+.sgwebgis-tabbedAttrPanel .gwt-DecoratedTabBar .gwt-TabBarItem .tabTopCenterInner,
+.sgwebgis-tabbedAttrPanel .gwt-DecoratedTabBar .gwt-TabBarItem .tabTopLeftInner, 
+.sgwebgis-tabbedAttrPanel .gwt-DecoratedTabBar .gwt-TabBarItem .tabTopRightInner  {
+	color: #fff;
+	height: auto;
+}
+.sgwebgis-tabbedAttrPanel .gwt-TabBarItem-selected .tabTopCenter,
+.sgwebgis-tabbedAttrPanel .gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopCenterInner,
+.sgwebgis-tabbedAttrPanel .gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopLeftInner, 
+.sgwebgis-tabbedAttrPanel .gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopRightInner  {
+	height: auto;
+	color: #850202;
+}
+.sgwebgis-tabbedAttrPanel .gwt-TabBarItem-selected .tabMiddleCenter {
+	padding: 0 !important;
+}
+
+.sgwebgis-resultActionsToolbar .gwt-Label {
+	color: #555;
+}
+.sgwebui-table-row-header td {
+	background:url("../img/titled_panel/layertree_cell.png") repeat-x scroll left top #E9E9E9 !important;
+	border-bottom: 1px solid #ccc !important;
+	color: #777;
+}
+.sgwebui-table-row-header td.sgwebui-table-columnorder-asc, 
+.sgwebui-table-row-header td.sgwebui-table-columnorder-desc {
+	background: url("../img/titled_panel/titled_panel_body_bg.png") repeat-x scroll left top !important;
+	color: #555;
+}
+tr.sgwebui-table-row-odd {
+	background: #f2f2f2;
+}
+tr.sgwebui-table-row-even {
+	background: #f9f9f9;
+}

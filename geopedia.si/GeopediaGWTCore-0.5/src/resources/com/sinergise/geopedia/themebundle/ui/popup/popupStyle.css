@@ -1,0 +1,448 @@
+@external *;
+.grayBackground {
+	background:literal("-moz-radial-gradient(50% 50% 90deg,ellipse closest-side, #888, #000)");
+	background: literal("-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 800, from(#888), to(#000))"); 
+}
+
+@if !user.agent ie6 ie8 {
+	.gwt-DialogBox {
+		background: rgba(255,255,255,.7);
+		border-radius: 10px;
+		box-shadow: 0 0 10px #333;
+		padding: 10px;
+	}
+	.gwt-DialogBox > div {
+		border: 1px solid #aaa;
+		background: #fff;
+	}
+	
+}
+@else {
+	.gwt-DialogBox, .gwt-DialogBox > div {
+		padding: 0;
+		background: none;
+		border: none;
+	}
+	@sprite .gwt-DialogBox .dialogTopLeftInner,
+	.centeredBox .tl { gwt-image: "TL"}
+	@sprite .gwt-DialogBox .dialogTopRightInner,
+	.centeredBox .tr { gwt-image: "TR"}
+	@sprite .gwt-DialogBox .dialogBottomLeftInner,
+	.centeredBox .bl { gwt-image: "BL"}
+	@sprite .gwt-DialogBox .dialogBottomRightInner,
+	.centeredBox .br { gwt-image: "BR"}
+	@sprite .gwt-DialogBox .dialogTopCenterInner,
+	.centeredBox .tm { gwt-image: "top"; cursor: move;}
+	@sprite .gwt-DialogBox .dialogBottomCenterInner,
+	.centeredBox .bm { gwt-image: "bottom"}
+	@sprite .gwt-DialogBox .dialogMiddleLeft,
+	.centeredBox .lm { gwt-image: "left"}
+	@sprite .gwt-DialogBox .dialogMiddleRight,
+	.centeredBox .rm { gwt-image: "right"}
+	.gwt-DialogBox .dialogMiddleRightInner,
+	.dialogMiddleLeftInner { width: getWidth("left", "px");}
+	.gwt-DialogBox .Caption { 
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		right: 20px;
+	}
+	.centeredBox .borders {
+		position: absolute;
+	}
+	.centeredBox .tl {
+		left: -19px; top: -19px;
+	}
+	.centeredBox .tr {
+		right: -19px; top: -19px;
+	}
+	.centeredBox .tm {
+		left: 0; top: -19px; right: 0;
+	}
+	.centeredBox .lm {
+		left: -19px; top: 0; bottom: 0;
+	}
+	.centeredBox .rm {
+		right: -19px; top: 0; bottom: 0;
+	}
+	.centeredBox .bl {
+		bottom: -19px; left: -19px;
+	}
+	.centeredBox .br {
+		bottom: -19px; right: -19px;
+	}
+	.centeredBox .bm {
+		left: 0; right: 0; bottom: -19px;
+	}
+	.gwt-DialogBox .dialogContent {
+		padding: 10px !important;
+	}
+}
+@if user.agent ie6 {
+	.gwt-DialogBox { max-width: 640px; }
+}
+.gwt-DialogBox > div > table {
+	width: 100%;
+}
+	
+@if user.agent ie6 ie8 ie9 {
+	.gwt-DialogBox .gwt-TabPanelBottom { position: static; overflow: visible; }
+}
+
+@sprite .gwt-DialogBox .Caption {
+	gwt-image: "dragger";
+	background-repeat: repeat-x;
+	background-color: #fff;
+	padding: 0;
+	border: none;
+	height: 8px;
+}
+.gwt-DialogBox table td {
+	padding:0;
+}
+.gwt-DialogBox .dialogMiddleCenter {
+	background: #fff;
+	height: 100%;
+}
+.gwt-DialogBox .dialogContent {
+	min-height: 100px;
+	min-width: 300px;
+	overflow: auto;
+	padding: 10px 20px 20px;
+	max-width: 800px;
+	max-height: 550px;
+}
+.gwt-DialogBox .dialogContent > div {
+	height: 100%;
+}
+
+.gwt-DialogBox.width500 .dialogContent { width: 500px; }
+.gwt-DialogBox.width600 .dialogContent { width: 600px; }
+.gwt-DialogBox.width800 .dialogContent { width: 800px; }
+.gwt-DialogBox.height500 .dialogContent { height: 500px; }
+.gwt-DialogBox.maxheight500 .dialogContent { max-height: 500px; }
+
+@if user.agent ie6 ie8 {
+	.gwt-DialogBox .dialogMiddleCenterInner { border: 1px solid #aaa; }
+	.gwt-DialogBox .actionClose {margin: 10px 10px 0 0; }
+}
+@sprite .dialogMiddleCenter h1 {
+	padding-bottom: 15px;
+	padding-left: 10px;
+	gwt-image: "shadow";
+	background-position: left bottom;
+	background-size: 100% 30%;
+	background-repeat: no-repeat;
+	margin: 0;
+	font-size:20px;
+	color: #555;
+	font-weight:normal;
+}
+.dialogMiddleCenter h2, .centeredWidget h2 {
+	text-transform:uppercase;
+	color: #0092DE;
+	font-size:14px;
+	margin-bottom: 5px;
+	margin-top:10px;
+}
+
+
+/****** DATE PICKER *****/
+.datePickerMonthSelector {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwOTJkZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNTgwYzAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #0092de 0%, #0580c0 100%)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#0092de), color-stop(100%,#0580c0))");
+	background: literal("-webkit-linear-gradient(top, #0092de 0%,#0580c0 100%)");
+	background: literal("-o-linear-gradient(top, #0092de 0%,#0580c0 100%)");
+	background: literal("linear-gradient(top, #0092de 0%,#0580c0 100%)");
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#0092de', endColorstr='#0580c0',GradientType=0 )");
+	border-color: #0580c0;
+	color: #fff;
+}
+.datePickerWeekdayLabel, 
+.datePickerWeekendLabel, 
+.datePickerDayIsValue {
+	background: literal("-moz-linear-gradient(top, #efefef 0%, #e4e4e4 100%)");
+	background: literal("-webkit-linear-gradient(top, #efefef 0%,#e4e4e4 100%)");
+	background: literal("-o-linear-gradient(top, #efefef 0%,#e4e4e4 100%)");
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#e4e4e4',GradientType=0 )");
+	background: literal("linear-gradient(top, #efefef 0%,#e4e4e4 100%)");
+	color: #555;
+	border-bottom: 1px solid #bbb;
+}
+.datePickerDayIsValue { 
+	background: #0092ed;
+	color: #fff;
+}
+.datePickerDayIsToday {
+	background: #bbb;
+}
+.datePickerDayIsWeekend {
+	background: #ddd;
+}
+
+
+/****** custom dialog **********/
+.loginDialog {
+	left: 50% !important;
+	top: 50% !important;
+	margin: -150px 0 0 -300px;
+}
+.loginDialog .loadingIndicator.fullFrame {
+	bottom: 0;
+	right: 0;
+	width: auto;
+	height: auto;
+	margin: 15px;
+}
+.loginDialog .Caption {
+	display: none;
+}
+.loginDialog .centeredContent { 
+	width: 500px; 
+	padding-top: 20px !important; 
+}
+.loginDialog .boxHeader { display: none; }
+
+.linksDialog .centeredContent {
+    width: 600px;
+}
+.shareDialog .centeredContent {
+    width: 450px;
+}
+.newsDialog .centeredContent { 
+	width: 500px;
+}
+.importDialog .centeredContent { 
+	width: 600px;
+	min-height: 200px;
+}
+.metaDialog .centeredContent {
+	padding: 10px 0 0;
+	width: 800px;
+	max-height: 500px;
+	overflow: hidden;
+}
+
+.infoDialog .centeredContent {
+	width: 700px;
+	margin-top: -21px;
+}
+.infoDialog .centeredContent > table {
+	margin-top: 0;
+}
+
+.editor .innerContent {
+	padding-bottom: 50px;
+	position: relative;
+}
+.editor .innerContent .boxFooter {
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	bottom: 5px;
+	text-align: center;
+}
+.editor .centeredContent {
+	padding: 10px 0 0;
+	width: 900px;
+}
+
+.liteInfoDialog .centeredContent {
+	width: 700px;
+}
+.dialogLayers .innerContent .boxFooter {
+	position: absolute;
+	right: 30px;
+	top: 15px;
+}
+.newsDialog .boxFooter, 
+.linksDialog .boxFooter,
+.loginDialog .boxFooter,
+.shareDialog .boxFooter,
+.liteInfoDialog .boxFooter,
+.importDialog  .boxFooter .shadow {
+	display: none !important;
+}
+.gwt-DialogBox.panoramicImageDialog .dialogContent {
+	padding: 0;
+}
+.importDialog .innerContent {
+	height: 450px;
+}
+/****** centered widget **********/
+div.centeredWidget {
+	position: absolute;
+	left: 0;
+    top: 0;
+	width: 100%;
+	height: 100%;
+    display: table;
+}
+.centeredWidget > div {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+@if user.agent ie6 ie8 {
+	div.centeredWidget > div {
+		margin-top: 15px;
+	}
+}
+.centeredWidget > div > img {
+	display: block;
+}
+
+.centeredWidget > div > div {
+    display: table;
+    margin: 0 auto;
+    position: relative;
+}
+.centeredWidget .outerContent {
+	background-color: rgba(255,255,255,.7);
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 0 6px #333;
+}
+
+.centeredWidget .actionClose {
+	position: relative;
+	float: right;
+	margin: -10px;
+}
+@if user.agent ie6 ie8 {
+	.centeredWidget .outerContent {padding: 0; }
+}
+.centeredWidget .outerContent .innerContent,
+.centeredWidget .outerContent > img {
+	background: #fff;
+	border: 1px solid #ccc;
+	text-align: left;
+}
+.centeredWidget .outerContent > div.innerContent > .centeredContent {
+	padding: 10px 20px 20px;
+	border-top: none;
+	overflow: auto;
+	margin-top: -11px;
+}
+.centeredWidget .outerContent > div.innerContent > img.centeredContent {
+	margin-top: 0;
+}
+.centeredBox .boxHeader {
+    padding: 10px 20px 0;
+    text-align: left;
+}
+.centeredBox .boxHeader h1 {
+	color: #555555;
+    font-size: 20px;
+    font-weight: normal;
+}
+@sprite .centeredBox .innerContent .shadow {
+	gwt-image: "shadow";
+	display: block;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 11px;
+}
+.centeredBox .boxHeader .btnPanel {
+	position: absolute;
+	right: 25px;
+	top: 15px;
+}
+.centeredWidget .outerContent > div.innerContent > .blobDisplay {
+	padding: 0;
+	display: block;
+}
+
+.dialogTabPanel .tabPanelContentHolder {
+	overflow: auto;
+    padding: 0 20px;
+    height: 100%;
+}
+
+.sgwebui-messageDialog .dialogContent {
+	min-height: 0;
+	min-width: 0;
+}
+.sgwebui-messageDialog table.sgwebui-messageBox {
+	background: none;
+	border: none;
+}
+
+.sgwebui-richtooltip {
+	background: #F9F4C2;
+	padding: 8px;
+}
+/**** html dialog *****/
+.gwt-DialogBox.htmlDialog {
+	background: none;
+    border: medium none;
+    height: 100% !important;
+    left: 0 !important;
+    padding: 0;
+    top: 0 !important;
+    width: 100% !important;
+    text-align: center;
+    box-shadow: none;
+}
+.gwt-DialogBox.htmlDialog > div {
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+    border: medium none;
+    margin-top: 2%;
+    padding: 10px;
+    display: inline-block;
+}
+.gwt-DialogBox.htmlDialog > div > table {
+	border: 1px solid #ccc;
+}
+.htmlDialog .dialogMiddleCenterInner {
+	padding: 0;
+	height:100%;
+}
+.htmlDialog .dialogContent {
+	width: auto !important;
+	padding: 5px;
+}
+.htmlDialog .dialogContent iframe {
+	border:none;
+}
+
+@if user.agent ie6 ie8 {
+	.gwt-DialogBox.htmlDialog > div {
+		padding: 0;
+    	background: none;
+	}
+	.gwt-DialogBox.htmlDialog > div > table {
+		border: none;
+	}
+}
+
+
+/**** panoramic *****/
+@if user.agent ie6 {
+	.panoramicImageDialog.gwt-DialogBox {
+		width: 440px;
+	}
+}
+.panoramicImageDialog .boxHeader { display: none; }
+.panoramicImageDialog .centeredContent {
+	height: 300px;
+	width: 400px;
+	overflow: hidden;
+	padding: 0 !important;
+	margin-top: 0 !important;
+}
+.panoramicImageDialog .navButtons span {
+	display: inline-block;
+	opacity: .6;
+	filter: literal("alpha(opacity=60)");
+	cursor: pointer;
+	margin: 0 5px;
+}
+.panoramicImageDialog .navButtons > span:hover {
+	opacity: 1;
+	filter: literal("alpha(opacity=100)");
+}

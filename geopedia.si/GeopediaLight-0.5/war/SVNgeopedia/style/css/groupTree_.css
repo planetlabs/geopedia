@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+
+.sgwebgis-groupTree {
+}
+
+.sgwebgis-tree-children {
+	padding-left: 24px;
+}
+
+.sgwebgis-GroupTree-DisclosurePanel {
+	border: none;
+}
+
+.sgwebgis-GroupTree-DisclosurePanel .layerGroupHeader {
+	border: 	none;
+	background: rgb(196,220,255);
+	width:		100%;
+}
+.sgwebgis-GroupTree-DisclosurePanel .header {
+	border: 	none;
+	background: none;
+	width:		100%;
+	text-decoration: none;
+}
+
+.sgwebgis-layerWidget, .sgwebgis-layerLabel {
+	font-size: 9pt;
+}
+
+.sgwebgis-layerWidget-active {
+	background: yellow;
+}
+
+.sgwebgis-layerWidget-active .sgwebgis-layerLabel {
+	font-weight: bold;
+}
+
+.sgwebgis-layerWidget-notShowing .sgwebgis-layerLabel {
+	color: rgb(128,128,128);
+}

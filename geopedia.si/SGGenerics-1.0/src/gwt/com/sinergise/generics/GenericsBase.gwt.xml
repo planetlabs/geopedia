@@ -1,0 +1,6 @@
+<module>
+	<!-- Generics module without the CSS -->
+	<inherits name='com.sinergise.WebUI'/>
+	<source path="gwt" />
+	<source path="core" />
+</module>

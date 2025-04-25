@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/common"/>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry excluding="com/sinergise/gwt/emul/" kind="src" path="src/gwt"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/SineRepo/Util/log4j/1.2.16/lib/log4j-1.2.16.jar" sourcepath="/SineRepo/Util/log4j/1.2.16/src/log4j-1.2.16.src.zip">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/SineRepo/Desktop/args4j/2.0.10/lib/args4j-2.0.10.jar" sourcepath="/SineRepo/Desktop/args4j/2.0.10/src/args4j-2.0.10-src.zip">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/SineRepo/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar" sourcepath="/SineRepo/Util/slf4j/1.6.1/src/slf4j-api-1.6.1-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/SineRepo/Util/logback/1.0.1/lib/logback-core-1.0.1.jar" sourcepath="/SineRepo/Util/logback/1.0.1/src/logback-core-1.0.1-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/SineRepo/Util/logback/1.0.1/lib/logback-classic-1.0.1.jar" sourcepath="/SineRepo/Util/logback/1.0.1/src/logback-classic-1.0.1-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/SineRepo/Util/slf4j/1.6.1/lib/jul-to-slf4j-1.6.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.core.runtimeTarget/J2EE Runtime Library">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.utility"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,101 @@
+.sgwebui-TitledPanel {
+	border: 1px solid #aaa;
+	width: auto !important;
+}
+.sgwebui-TitledPanel > div.body {
+	width: auto !important;
+}
+
+.sgwebui-TitledPanel .sgwebui-ImageLabel select { margin-right: 10px; }
+
+.sgwebui-TitledPanel > .title,
+.gwt-DisclosurePanel a.header {
+	height: 20px;
+	padding: 5px;
+	background: url("../img/titled_panel/titled_panel_head_bg.png") repeat-x #aaa;
+	border-bottom: 1px solid #aaa;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 12px;
+}
+/* .sgwebui-TitledPanel > .title > div { vertical-align: middle; } */
+
+.gwt-DisclosurePanel .header > table {
+	height:100%;
+	vertical-align:middle;
+}
+
+.gwt-DisclosurePanel .header, 
+.gwt-DisclosurePanel .header a, 
+.gwt-DisclosurePanel .header td {
+	color: #FFF;
+	font-weight: bold;
+	font-size: 12px;
+	vertical-align: middle !important;
+}
+
+
+.sgwebui-TitledPanel > div.body,
+.gwt-DisclosurePanel > tbody > tr > td > div {
+	 background: url(../img/titled_panel/titled_panel_body_bg.png) repeat-x left top #eee;
+     color: #333;
+     padding: 12px !important;
+}
+
+.gwt-DisclosurePanel > tbody > tr > td > div { 
+	width: auto !important; 
+}
+
+.sgwebui-ImageLabel > .right {
+	float: right;
+	margin-top: -2px;
+}
+.sgwebui-ImageLabel > .left {
+	float: left;
+	margin-top: -2px;
+}
+#IE .sgwebui-ImageLabel > .right {
+	*margin-top: -21px;
+}
+
+/** Override the background defined above */
+.gwt-DisclosurePanel div.genericTableWidget {
+	background: none;
+}
+
+.gwt-DisclosurePanel .content {
+	margin-left: 0px;	
+	border-left: none;
+}
+
+.sgwebui-ImageLabel .title-image {
+	width: 18px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+.sgwebui-ImageLabel .title-label {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin-left: 5px;
+	margin-top: 2px;	
+	vertical-align: top;
+}
+
+.sgwebgis-selectableQueryWidget table tr {
+	background: none;
+}
+.sgwebgis-structuredQuery .fieldWidget { text-align: right; }
+.sgwebgis-structuredQuery tr td, .sgwebgis-structuredQuery tr td.first {
+	padding: 3px 0;
+}
+
+.lb-error { color: #f00; }
+
+.sgwebui-TitledPanel-noImg .sgwebui-ImageLabel td.sgwebui-ImageLabel-image  {
+	padding-left: 5px;
+    width: 0px;
+    visibility: hidden;
+}
+

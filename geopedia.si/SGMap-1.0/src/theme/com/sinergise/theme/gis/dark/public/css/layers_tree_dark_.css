@@ -1,0 +1,63 @@
+.sgwebgis-layerWidget, div.sgwebgis-layerLabel {
+	text-transform: uppercase;
+	padding-left: 5px;
+}
+
+.sgwebgis-layersTree div.sgwebgis-layerLabel {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+table.sgwebgis-layersTree {
+	border: 1px solid #333;
+    background: #FFF;
+    width: 100%;
+    margin: 0 0 3px 0;
+    padding: 0px;
+}
+
+/********* SEPARATE LAYER ****************/
+.sgwebgis-GroupTree-DisclosurePanel .layerGroupHeader {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #aaa;
+	cursor: pointer;
+	background: #f4f4f4;
+	background: -moz-linear-gradient(top, #f4f4f4 0%, #dddddd 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(100%,#dddddd));
+	background: -webkit-linear-gradient(top, #f4f4f4 0%,#dddddd 100%);
+	background: -o-linear-gradient(top, #f4f4f4 0%,#dddddd 100%);
+	background: -ms-linear-gradient(top, #f4f4f4 0%,#dddddd 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#dddddd',GradientType=0 );
+	background: linear-gradient(top, #f4f4f4 0%,#dddddd 100%);
+}
+.layerGroupHeader .sgwebgis-layerLabel{
+	cursor: pointer !important;
+}
+.layerGroupHeader > tbody > tr > td {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.sgwebgis-GroupTree-DisclosurePanel .header > tbody > tr > td:first-child {
+	display: none;
+}
+table.sgwebgis-layerWidget .sgwebgis-layerLabel {
+	margin-top: 3px;
+}
+table.sgwebgis-layerWidget input {
+	margin-top: 7px;
+}
+table.sgwebgis-layerWidget .sgwebgis-styleComponentsWidget {
+	margin-top: 1px;
+	margin-right: 3px;
+}
+
+.sgwebgis-tree-children div.sgwebgis-layerLabel {
+	text-transform: none !important;	
+}
+
+.sgwebgis-GroupTree-DisclosurePanel > tbody > tr > td > div {
+	padding: 5px 5px 5px 16px !important;
+}
+
+	

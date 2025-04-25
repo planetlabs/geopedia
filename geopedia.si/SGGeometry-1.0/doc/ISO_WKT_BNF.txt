@@ -1,0 +1,163 @@
+!! GENERAL !!
+
+<empty set> ::=  EMPTY
+<z m> ::= ZM | Z | M
+<just z> ::= Z
+<double quote> ::= !! See Subclause 13.1.9, "<spatial reference system>"
+<letters> ::= !! See Subclause 13.1.9, "<spatial reference system>"
+<element id> ::= <signed integer>
+<element tag> ::= <double quote> <letters> <double quote>
+<maxsidelength> ::= MAXSIDELENGTH <number>
+<signed integer> ::= !! See Subclause 5.3, "<literal>", in Part 2 of ISO/IEC 9075
+
+!! POINT !!
+
+<point text representation> ::= POINT [ <z m> ] <point text>
+<point text> ::= <empty set> | <left paren> <point> <right paren>
+<point> ::=  <x> <y> [ <z> ] [ <m> ]
+<x> ::=  <number>
+<y> ::=  <number>
+<z> ::=  <number>
+<m> ::=  <number>
+
+!! POINT composites !!
+
+<coords sequence> ::= <empty set> | <left paren> <point> { <comma> <point> }... <right paren>
+
+<multipoint text representation> ::= MULTIPOINT [ <z m> ] <multipoint text>
+<multipoint text> ::= <empty set> | <left paren> <point text> { <comma> <point text > }... <right paren>
+
+!! CURVE !!
+
+<curve text representation> ::= <linestring text representation> | <circularstring text representation> | <circle text representation> | <geodesic text representation>
+	| <elliptical text representation> | <nurbs text representation> | <clothoid text representation> | <spiral text representation> | <compoundcurve text representation>
+	
+<linestring text representation> ::= LINESTRING [ <z m> ] <coords sequence>
+<circularstring text representation> ::= CIRCULARSTRING [ <z m> ] <coords sequence>
+<circle text representation> ::= CIRCLE [ <z m> ] <coords sequence>
+<geodesic text representation> ::= GEODESICSTRING [ <z m> ] <coords sequence>
+<elliptical text representation> ::= ELLIPTICALCURVE [ <z m> ] <elliptical text>
+<nurbs text representation> ::= NURBSCURVE [ <z m> ] <nurbs text>
+<clothoid text representation> ::= CLOTHOID [ <z m> ] <clothoid text>
+<spiral text representation> ::= SPIRALCURVE [ <z m> ] <spiral text>
+
+
+
+<elliptical text> ::= <empty set> | <left paren> <referencelocation text representation> 
+	<comma> <uaxislength text representation> <comma> <vaxislength text representation>
+	<comma> <startangle text representation> <comma> <endangle text representation>
+	[ <comma> <startm text representation> <comma> <endm text representation> ] <right paren>
+<referencelocation text representation> ::= REFERENCELOCATION <affineplacement text representation>
+<uaxislength text representation> ::= UAXISLENGTH <length text>
+<vaxislength text representation> ::= VAXISLENGTH <length text>
+<startangle text representation> ::= STARTANGLE <angle text>
+<endangle text representation> ::= ENDANGLE <angle text>
+<startm text representation> ::= STARTM <number>
+<endm text representation> ::= ENDM <number>
+<length text> ::= <empty set> | <number>
+<affineplacement text representation> ::= AFFINEPLACEMENT [ <just z> ] <affineplacement text>
+<affineplacement text> ::= <empty set> | <left paren> <location text representation> <comma> <referencedirections text representation> <right paren>
+<location text representation> ::= LOCATION [ <just z> ] <point text>
+<referencedirections text representation> ::= REFERENCEDIRECTIONS <referencedirections text>
+<referencedirections text> ::= <empty set> | <left paren> <vector text representation> { <comma> <vector text representation> }... <right paren>
+
+<nurbs text> ::= <empty set> | <left paren> <degree text representation> <comma> <controlpoints text representation> <comma> <knots text representation> 
+	[ <comma> <startm text representation> <comma> <endm text representation> ] <right paren>
+<degree text representation> ::= DEGREE <signed integer>
+<controlpoints text representation> ::= CONTROLPOINTS [ <just z> ] <controlpoints text>
+<knots text representation> ::= KNOTS <knots text>
+<controlpoints text> ::= <empty set> | <left paren> <nurbspoint text representation> { <comma> <nurbspoint text representation> }... <right paren>
+<knots text> ::= <empty set> | <left paren> <knot text representation> { <comma> <knot text representation> }... <right paren>
+<nurbspoint text representation> ::= NURBSPOINT <nurbspoint text>
+<nurbspoint text> ::= <empty set> | <left paren> <weightedpoint text representation> <comma> <weight text representation> <right paren> <weightedpoint text representation> ::= WEIGHTEDPOINT [ <just z> ] <point text>
+<weight text representation> ::= WEIGHT <number>
+<knot text representation> ::= KNOT <knot text>
+<knot text> ::= <empty set> | <left paren> <value text representation> <comma> <multiplicity text representation> <right paren> <value text representation> ::= VALUE <number>
+<multiplicity text representation> ::= MULTIPLICITY <signed integer>
+
+<clothoid text> ::= <empty set> | <left paren> <referencelocation text representation> <comma> <scalefactor text representation>
+<comma> <startdistance text representation> <comma> <enddistance text representation> [ <comma> <startm text representation> <comma> <endm text representation> ] <right paren>
+<scalefactor text representation> ::= SCALEFACTOR <scalefactor text>
+<startdistance text representation> ::= STARTDISTANCE <distance text>
+<enddistance text representation> ::= ENDDISTANCE <distance text>
+<scalefactor text> ::= <empty set> | <number>
+<distance text> ::= <empty set> | <number>
+
+<spiral text> ::= <empty set> | <left paren> <referencelocation text representation> <comma> <spirallength text representation>
+	<comma> <startcurvature text representation> <comma> <endcurvature text representation> <comma> <spiraltype text representation>
+	[ <comma> <startm text representation> <comma> <endm text representation> ] <right paren>
+<spirallength text representation> ::= LENGTH <spirallength text>
+<startcurvature text representation> ::= STARTCURVATURE <curvature text>
+<endcurvature text representation> ::= ENDCURVATURE <curvature text>
+<spiraltype text representation> ::= SPIRALTYPE <spiraltype text>
+<spirallength text> ::= <empty set> | <number>
+<curvature text> ::= <empty set> | <number>
+<spiraltype text> ::= <empty set> | <letters>
+
+!! CURVE composites !!
+
+<curve sequence> ::= <empty set> | <left paren> <curve text> { <comma> <curve text> }... <right paren>
+<linestring sequence> ::= <empty set> | <left paren> <coords sequence> { <comma> <coords sequence> }... <right paren>
+
+<curve text> ::= <coords sequence> | <circularstring text representation> | <circle text representation> | <geodesic text representation> | <elliptical text representation>
+	| <nurbs text representation> | <clothoid text representation> | <spiral text representation> | <compoundcurve text representation>
+
+<compoundcurve text representation> ::= COMPOUNDCURVE [ <z m> ] <curve sequence>
+
+<multicurve text representation> ::= MULTICURVE [ <z m> ] <curve sequence> | <multilinestring text representation>
+
+<multilinestring text representation> ::= MULTILINESTRING [ <z m> ] <linestring sequence>
+
+
+!! SURFACES !!
+
+<surface text representation> ::= <curvepolygon text representation> | <polyhedralsurface text representation>
+
+<curvepolygon text representation> ::= CURVEPOLYGON [ <z m> ] <curve sequence> | <polygon text representation>
+<polygon text representation> ::= POLYGON [ <z m> ] <linestring sequence> | <triangle text representation>
+<triangle text representation> ::= TRIANGLE [ <z m> ] <coords sequence>
+<triangle text> ::= <empty set> | <left paren> <point> <comma> <point> <comma> <point> <right paren>
+
+<polyhedralsurface text representation> ::= POLYHEDRALSURFACE [ <z m> ] <polyhedralsurface text> | <tin text representation>
+<polyhedralsurface text> ::= <empty set> | <left paren> PATCHES <polygonpatches text> <right paren>
+<polygonpatches text> ::= <left paren> <polygon text representation> { <comma> <polygon text representation> }... <right paren>
+
+<tin text representation> ::= TIN [ <z m> ] <tin text>
+<tin text> ::= <empty set> | <left paren> PATCHES <trianglepatches text> [ ELEMENTS <tinelement list> ] [ <maxsidelength> ] <right paren>
+<trianglepatches text> ::= <left paren> <triangle text> { <comma> <triangle text> }... <right paren>
+<tinelement list> ::= <left paren> <tinelementtype text> { <comma> <tinelementtype text> }... <right paren>
+<tinelementtype text> ::= <randompoints representation> | <groupspot representation> | <boundary representation> | <breakline representation> | <softbreak representation>
+	| <controlcontour representation> | <breakvoid representation> | <drapevoid representation> | <void representation> | <hole representation> | <stopline representation>
+<randompoints representation> ::= POINTS <elementlabel text> <multipoint text representation>
+<groupspot representation> ::= GROUPSPOT <elementlabel text> <multipoint text representation>
+<boundary representation> ::= BOUNDARY <elementlabel text> <polygon text representation>
+<breakline representation> ::= BREAKLINE <elementlabel text> <linestring text representation>
+<softbreak representation> ::= SOFTBREAK <elementlabel text> <linestring text representation>
+<controlcontour representation> ::= CONTROLCONTOUR <elementlabel text> <linestring text representation>
+<breakvoid representation> ::= BREAKVOID <elementlabel text> <polygon text representation>
+<drapevoid representation> ::= DRAPEVOID <elementlabel text> <polygon text representation>
+<void representation> ::= VOID <elementlabel text> <polygon text representation>
+<hole representation> ::= HOLE <elementlabel text> <polygon text representation>
+<stopline representation ::= STOPLINE <elementlabel text> <linestring text representation>
+<elementlabel text> ::= [ ID <element id> ] [ TAG <element tag> ]
+
+<surface text> ::= CURVEPOLYGON <curve sequence> | <linestring sequence>
+
+!! SURFACE composites !!
+
+<multisurface text representation> ::= MULTISURFACE [ <z m> ] <multisurface text> | <multipolygon text representation>
+<multipolygon text representation> ::= MULTIPOLYGON [ <z m> ] <multipolygon text>
+
+<multisurface text> ::= <empty set> | <left paren> <surface text> { <comma> <surface text> }... <right paren>
+<multipolygon text> ::= <empty set> | <left paren> <linestring sequence> { <comma> <linestring sequence> }... <right paren>
+
+
+!! COLLECTION !!
+
+<collection text representation> ::= <multipoint text representation> | <multicurve text representation> | <multisurface text representation> | <geometrycollection text representation>
+<geometrycollection text representation> ::= GEOMETRYCOLLECTION [ <z m> ] <geometrycollection text>
+<geometrycollection text> ::= <empty set> | <left paren> <well-known text representation> { <comma> <well-known text representation> }... <right paren>
+
+!! EVERYTHING !!
+
+<well-known text representation> ::= <point text representation> | <curve text representation> | <surface text representation> | <collection text representation>

@@ -1,0 +1,1 @@
+jetty-web.xml : put this into your webcontent directory (called "war" or similar) to enable slf4j loading on the server-side in GWT hosted mode

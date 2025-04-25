@@ -1,0 +1,70 @@
+@external *;
+/**** multiselect dropdown ****/
+.msDD {
+	margin: 10px 0;
+}
+
+.msDD>a {
+	display: block;
+	padding: 5px 10px;
+	text-align: left !important;
+}
+
+.msDD>a img {
+	float: right;
+}
+
+.msDDPreview {
+	padding: 0 5px 2px;
+	font-size: 11px;
+	margin: 0 2px;
+}
+
+.msDDPreview>div {
+	margin-top: 3px;
+	color: #777;
+	padding-left: 12px;
+	clear: both;
+}
+
+.msDDPreview>div:before {
+	content: ".";
+	font-size: 22px;
+	float: left;
+	margin-left: -13px;
+	margin-top: -13px;
+}
+
+.multiselectPanel > div > span {
+	display: block;
+    margin-bottom: 3px;
+    padding-left: 20px;
+}
+
+.multiselectPanel {
+	max-height: 420px;
+	overflow: auto;
+}
+
+.multiselectPanel > div > span input {
+    margin-left: -20px;
+}
+
+.multiselectPanel>span {
+	display: block;
+	margin-bottom: 3px;
+}
+
+.withClosePopup > a.close {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -30px;
+	display: block;
+	height: 30px;
+	opacity: 0;
+}
+.withClosePopup > a.close.bottom {
+	top: auto;
+	bottom: -30px;
+}

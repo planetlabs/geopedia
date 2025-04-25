@@ -1,0 +1,67 @@
+@external *;
+
+/* ########## DECORATED BUTTON ########## */
+/* for generating different gradients use http://www.colorzilla.com/gradient-editor/ 
+   delete *filter* attribute if using complex gradient or rounded button - because for IE8- we will use image instead. IE9+ uses svg 
+*/
+.gwt-PushButton, .gwt-ToggleButton, a.btn, a.btn.disabled:active, a.btn.disabled:hover, button, .sgButton {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiNGI0YjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #dddddd 0%, #b4b4b4 100%)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#dddddd), color-stop(100%,#b4b4b4))");
+	background: literal("-webkit-linear-gradient(top, #dddddd 0%,#b4b4b4 100%)");
+	background: literal("-o-linear-gradient(top, #dddddd 0%,#b4b4b4 100%)");
+	background: literal("linear-gradient(top, #dddddd 0%,#b4b4b4 100%)");
+	color: #666;
+	border: 1px solid #aaa;
+}
+.gwt-PushButton-up-hovering,
+.gwt-ToggleButton-up-hovering,
+a.btn:hover, button:hover, .sgButton-up-hovering {
+	color: #fff;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzUwOWFiYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzNjc0ODMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #509aba 0%, #367483 100%)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#509aba), color-stop(100%,#367483))");
+	background: literal("-webkit-linear-gradient(top, #509aba 0%,#367483 100%)");
+	background: literal("-o-linear-gradient(top, #509aba 0%,#367483 100%)");
+	background: literal("linear-gradient(top, #509aba 0%,#367483 100%)");
+	border-color: #337b95;
+}
+
+.gwt-PushButton-down-hovering, .gwt-ToggleButton-down-hovering, .gwt-ToggleButton-down,
+a.btn:active, button:focus, .sgButton-down-hovering, .gwt-ToggleButton-down-disabled {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM2NzQ4MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1MDlhYmEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("linear-gradient(top, #367483 0%,#509aba 100%)");
+	background: literal("-moz-linear-gradient(top, #367483 0%, #509aba 100%)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#367483), color-stop(100%,#509aba))");
+	background: literal("-webkit-linear-gradient(top, #367483 0%,#509aba 100%)");
+	background: literal("-o-linear-gradient(top, #367483 0%,#509aba 100%)");
+	color: #fff;
+	border-color: #337b95;
+}
+a.btn.disabled, .gwt-PushButton-up-disabled, .sgButton-up-disabled, .gwt-ToggleButton-down-disabled {
+	filter: literal("alpha(opacity=60)");
+	opacity: .5;
+}
+.gwt-ToggleButton-down-disabled img {
+	opacity: 1;
+}
+@if user.agent ie6 ie8 {
+	a.btn img, 
+	a.btn .spanImg {
+		left: 6px;
+	}
+	@sprite .gwt-PushButton, .gwt-ToggleButton, a.btn, a.btn.disabled:active, a.btn.disabled:hover, button, .sgButton {
+		gwt-image: "btn"; height: auto;
+	}
+	@sprite .gwt-PushButton-up-hovering,
+	.gwt-ToggleButton-up-hovering,
+	a.btn:hover, button:hover, .sgButton-up-hovering {
+		gwt-image: "btnOver"; height: auto;
+	}
+	@sprite .gwt-PushButton-down-hovering, .gwt-ToggleButton-down-hovering, .gwt-ToggleButton-down,
+	a.btn:active, button:focus, .sgButton-down-hovering {
+		gwt-image: "btnOn"; height: auto;
+	}
+	
+}
+@if user.agent ie9 { a.btn, .gwt-PushButton, .gwt-ToggleButton, button { filter: none; } }

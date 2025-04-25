@@ -1,0 +1,462 @@
+<well-known binary representation> ::= <well-knownzm binary representation> | <well-knownz binary representation> | <well-knownm binary representation> | <well-known2d binary representation>
+
+<well-knownzm binary representation> ::= <pointzm binary representation> | <curvezm binary representation> | <surfacezm binary representation> | <collectionzm binary representation>
+<well-knownz binary representation> ::= <pointz binary representation> | <curvez binary representation> | <surfacez binary representation> | <collectionz binary representation>
+<well-knownm binary representation> ::= <pointm binary representation> | <curvem binary representation> | <surfacem binary representation> | <collectionm binary representation>
+<well-known2d binary representation> ::= <point binary representation> | <curve binary representation> | <surface binary representation> | <collection binary representation>
+
+<pointzm binary representation> ::= <byte order> <wkbpointzm> [ <wkbpointzm binary> ]
+<pointz binary representation> ::= <byte order> <wkbpointz> [ <wkbpointz binary> ]
+<pointm binary representation> ::= <byte order> <wkbpointm> [ <wkbpointm binary> ]
+<point binary representation> ::= <byte order> <wkbpoint> [ <wkbpoint binary> ]
+
+<curvezm binary representation> ::= <linestringzm binary representation> | <circularstringzm binary representation> | <circlezm binary representation> | <geodesiczm binary representation>
+	| <ellipticalzm binary representation> | <nurbszm binary representation> | <clothoidzm binary representation> | <spiralzm binary representation> | <compoundcurvezm binary representation>
+
+<curvez binary representation> ::= <linestringz binary representation> | <circularstringz binary representation> | <circlez binary representation> | <geodesicz binary representation>
+	| <ellipticalz binary representation> | <nurbsz binary representation> | <clothoidz binary representation> | <spiralz binary representation> | <compoundcurvez binary representation>
+
+<curvem binary representation> ::= <linestringm binary representation> | <circularstringm binary representation> | <circlem binary representation> | <geodesicm binary representation>
+	| <ellipticalm binary representation> | <nurbsm binary representation> | <clothoidm binary representation> | <spiralm binary representation> | <compoundcurvem binary representation>
+	
+<curve binary representation> ::= <linestring binary representation> | <circularstring binary representation> | <circle binary representation> | <geodesic binary representation>
+	| <elliptical binary representation> | <nurbs binary representation> | <clothoid binary representation> | <spiral binary representation> | <compoundcurve binary representation>
+	
+<linestringzm binary representation> ::= <byte order> <wkblinestringzm> [ <num> <wkbpointzm binary>... ]
+<linestringz binary representation> ::= <byte order> <wkblinestringz> [ <num> <wkbpointz binary>... ]
+<linestringm binary representation> ::= <byte order> <wkblinestringm> [ <num> <wkbpointm binary>... ]
+<linestring binary representation> ::= <byte order> <wkblinestring> [ <num> <wkbpoint binary>... ]
+
+<circularstringzm binary representation> ::= <byte order> <wkbcircularstringzm> [ <num> <wkbpointzm binary>... ]
+<circularstringz binary representation> ::= <byte order> <wkbcircularstringz> [ <num> <wkbpointz binary>... ]
+<circularstringm binary representation> ::= <byte order> <wkbcircularstringm> [ <num> <wkbpointm binary>... ]
+<circularstring binary representation> ::= <byte order> <wkbcircularstring> [ <num> <wkbpoint binary>... ]
+
+<circlezm binary representation> ::= <byte order> <wkbcirclezm> [ <num> <wkbpointzm binary>... ]
+<circlez binary representation> ::= <byte order> <wkbcirclez> [ <num> <wkbpointz binary>... ]
+<circlem binary representation> ::= <byte order> <wkbcirclem> [ <num> <wkbpointm binary>... ]
+<circle binary representation> ::= <byte order> <wkbcircle> [ <num> <wkbpoint binary>... ]
+
+<geodesiczm binary representation> ::= <byte order> <wkbgeodesiczm> [ <num> <wkbpointzm binary>... ]
+<geodesicz binary representation> ::= <byte order> <wkbgeodesicz> [ <num> <wkbpointz binary>... ]
+<geodesicm binary representation> ::= <byte order> <wkbgeodesicm> [ <num> <wkbpointm binary>... ]
+<geodesic binary representation> ::= <byte order> <wkbgeodesic> [ <num> <wkbpoint binary>... ]
+
+<ellipticalzm binary representation> ::= <byte order> <wkbellipticalzm> [ <wkbreferencelocationzm binary> <wkbuaxislength> <wkbvaxislength> <wkbstartangle> <wkbendangle> <wkbstartm> <wkbendm> ]
+<ellipticalz binary representation> ::= <byte order> <wkbellipticalz> [ <wkbreferencelocationz binary> <wkbuaxislength> <wkbvaxislength> <wkbstartangle> <wkbendangle> ]
+<ellipticalm binary representation> ::= <byte order> <wkbellipticalm> [ <wkbreferencelocationm binary> <wkbuaxislength> <wkbvaxislength> <wkbstartangle> <wkbendangle> <wkbstartm> <wkbendm> ]
+<elliptical binary representation> ::= <byte order> <wkbelliptical> [ <wkbreferencelocation binary> <wkbuaxislength> <wkbvaxislength> <wkbstartangle> <wkbendangle> ]
+
+<wkbreferencelocationzm binary> ::= <affineplacementz binary representation>
+<wkbreferencelocationz binary> ::= <affineplacementz binary representation>
+<wkbreferencelocationm binary> ::= <affineplacement binary representation>
+<wkbreferencelocation binary> ::= <affineplacement binary representation>
+
+<affineplacementz binary representation> ::= <byte order> <wkbaffineplacementz> [ <wkblocationz> <wkbreferencedirectionsz> ]
+<affineplacement binary representation> ::= <byte order> <wkbaffineplacement> [ <wkblocation> <wkbreferencedirections> ]
+
+<wkblocationz> ::= <wkbpointz binary>
+<wkblocation> ::= <wkbpoint binary>
+
+<wkbreferencedirectionsz> ::= <num> <wkbvectorz binary>...
+<wkbreferencedirections> ::= <num> <wkbvector binary>...
+
+<nurbszm binary representation> ::= <byte order> <wkbnurbszm> [ <wkbdegree> <wkbcontrolpointsz binary> <wkbknots binary> <wkbstartm> <wkbendm>]
+<nurbsz binary representation> ::= <byte order> <wkbnurbszm> [ <wkbdegree> <wkbcontrolpointsz binary> <wkbknots binary> ]
+<nurbsm binary representation> ::= <byte order> <wkbnurbszm> [ <wkbdegree> <wkbcontrolpoints binary> <wkbknots binary> <wkbstartm> <wkbendm> ]
+<nurbs binary representation> ::= <byte order> <wkbnurbszm> [ <wkbdegree> <wkbcontrolpoints binary> <wkbknots binary> ]
+<wkbcontrolpointsz binary> ::= <num> <nurbspointz binary representation>...
+<wkbcontrolpoints binary> ::= <num> <nurbspoint binary representation>...
+<nurbspointz binary representation> ::= <byte order> [ <wkbweightedpointz> <bit> [ <wkbweight> ] ]
+<nurbspoint binary representation> ::= <byte order> [ <wkbweightedpoint> <bit> [ <wkbweight> ] ]
+<wkbweightedpointz> ::= <wkbpointz binary>
+<wkbweightedpoint> ::= <wkbpoint binary>
+<wkbknots binary> ::= <num> <knot binary representation>...
+<knot binary representation> ::= <byte order> [ <wkbvalue> <wkbmultiplicity> ]
+
+<clothoidzm binary representation> ::= <byte order> <wkbclothoidzm> [ <wkbreferencelocationzm binary> <wkbscalefactor> <wkbstartdistance> <wkbenddistance> <wkbstartm> <wkbendm> ]
+<clothoidz binary representation> ::= <byte order> <wkbclothoidz> [ <wkbreferencelocationz binary> <wkbscalefactor> <wkbstartdistance> <wkbenddistance> ]
+<clothoidm binary representation> ::= <byte order> <wkbclothoidm> [ <wkbreferencelocationm binary> <wkbscalefactor> <wkbstartdistance> <wkbenddistance> <wkbstartm> <wkbendm> ]
+<clothoid binary representation> ::= <byte order> <wkbclothoid> [ <wkbreferencelocation binary> <wkbscalefactor> <wkbstartdistance> <wkbenddistance> ]
+
+<spiralzm binary representation> ::= <byte order> <wkbspiralzm> [ <wkbreferencelocationzm binary> <wkbspirallength> <wkbstartcurvature> <wkbendcurvature> <wkbspiraltype> <wkbstartm> <wkbendm> ]
+<spiralz binary representation> ::= <byte order> <wkbspiralz> [ <wkbreferencelocationz binary> <wkbspirallength> <wkbstartcurvature> <wkbendcurvature> <wkbspiraltype> ]
+<spiralm binary representation> ::= <byte order> <wkbspiralm> [ <wkbreferencelocationm binary> <wkbspirallength> <wkbstartcurvature> <wkbendcurvature> <wkbspiraltype> <wkbstartm> <wkbendm> ]
+<spiral binary representation> ::= <byte order> <wkbspiral> [ <wkbreferencelocation binary> <wkbspirallength> <wkbstartcurvature> <wkbendcurvature> <wkbspiraltype> ]
+
+<compoundcurvezm binary representation> ::= <byte order> <wkbcompoundcurvezm> [ <num> <wkbcurvezm binary>... ]
+<compoundcurvez binary representation> ::= <byte order> <wkbcompoundcurvez> [ <num> <wkbcurvez binary>... ]
+<compoundcurvem binary representation> ::= <byte order> <wkbcompoundcurvem> [ <num> <wkbcurvem binary>... ]
+<compoundcurve binary representation> ::= <byte order> <wkbcompoundcurve> [ <num> <wkbcurve binary>... ]
+
+<surfacezm binary representation> ::= <curvezmpolygonzm binary representation> | <polyhedralsurfacezm binary representation> 
+<surfacez binary representation> ::= <curvepolygonz binary representation> | <polyhedralsurfacez binary representation>
+<surfacem binary representation> ::= <curvepolygonm binary representation> | <polyhedralsurfacem binary representation>
+<surface binary representation> ::= <curvepolygon binary representation> | <polyhedralsurface binary representation>
+
+<curvepolygonzm binary representation> ::= <byte order> <wkbcurvepolygonzm> [ <num> <wkbringzm binary>... ] | <polygonzm binary representation>
+<curvepolygonz binary representation> ::= <byte order> <wkbcurvepolygonz> [ <num> <wkbringz binary>... ] | <polygonz binary representation>
+<curvepolygonm binary representation> ::= <byte order> <wkbcurvepolygonm> [ <num> <wkbringm binary>... ] | <polygonm binary representation>
+<curvepolygon binary representation> ::= <byte order> <wkbcurvepolygon> [ <num> <wkbring binary>... ] | <polygon binary representation>
+
+<polygonzm binary representation> ::= <byte order> <wkbpolygonzm> [ <num> <wkblinearringzm binary>... ] | <trianglezm binary representation>
+<polygonz binary representation> ::= <byte order> <wkbpolygonz> [ <num> <wkblinearringz binary>... ] | <trianglez binary representation>
+<polygonm binary representation> ::= <byte order> <wkbpolygonm> [ <num> <wkblinearringm binary>... ] | <trianglem binary representation>
+<polygon binary representation> ::= <byte order> <wkbpolygon> [ <num> <wkblinearring binary>... ] | <triangle binary representation>
+
+<trianglezm binary representation> ::= <byte order> <wkbtrianglezm> [ <wkbpointzm binary> <wkbpointzm binary> <wkbpointzm binary> ]
+<trianglez binary representation> ::= <byte order> <wkbtrianglez> [ <wkbpointz binary> <wkbpointz binary> <wkbpointz binary> ]
+<trianglem binary representation> ::= <byte order> <wkbtrianglem> [ <wkbpointm binary> <wkbpointm binary> <wkbpointm binary> ]
+<triangle binary representation> ::= <byte order> <wkbtriangle> [ <wkbpoint binary> <wkbpoint binary> <wkbpoint binary> ]
+
+<polyhedralsurfacezm binary representation> ::= <byte order> <wkbpolyhedralsurfacezm> [ <num> <wkbpolygonpatchzm binary>... ] | <tinzm binary representation>
+<polyhedralsurfacez binary representation> ::= <byte order> <wkbpolyhedralsurfacez> [ <num> <wkbpolygonpatchz binary>... ] | <tinz binary representation>
+<polyhedralsurfacem binary representation> ::= <byte order> <wkbpolyhedralsurfacem> [ <num> <wkbpolygonpatchm binary>... ] | <tinm binary representation>
+<polyhedralsurface binary representation> ::= <byte order> <wkbpolyhedralsurface> [ <num> <wkbpolygonpatch binary>... ] | <tin binary representation>
+
+<tinzm binary representation> ::= <byte order> <wkbtinzm> [ <num> <wkbtrianglepatchzm binary>... <nume> <wkbtinelement binary>... <wkbmaxsidelength> ]
+<tinz binary representation> ::= <byte order> <wkbtinz> [ <num> <wkbtrianglepatchz binary>... <nume> <wkbtinelement binary>... <wkbmaxsidelength> ]
+<tinm binary representation> ::= <byte order> <wkbtinm> [ <num> <wkbtrianglepatchm binary>... <nume> <wkbtinelement binary>... <wkbmaxsidelength> ]
+<tin binary representation> ::= <byte order> <wkbtin> [ <num> <wkbtrianglepatch binary>... <nume> <wkbtinelement binary>... <wkbmaxsidelength> ]
+
+<tinelement binary representation> ::= <byte order> <tinelement element type> <tinelement element id> <tinelement element tag> <well-known binary representation>
+<tinelement element type> ::= <byte> <letters>
+<tinelement element id> ::= <signed integer>
+<tinelement element tag> ::= <byte> <letters>
+
+<collectionzm binary representation> ::= <multipointzm binary representation> | <multicurvezm binary representation> | <multisurfacezm binary representation> | <geometrycollectionzm binary representation>
+<collectionz binary representation> ::= <multipointz binary representation> | <multicurvez binary representation> | <multisurfacez binary representation> | <geometrycollectionz binary representation>
+<collectionm binary representation> ::= <multipointm binary representation> | <multicurvem binary representation> | <multisurfacem binary representation> | <geometrycollectionm binary representation>
+<collection binary representation> ::= <multipoint binary representation> | <multicurve binary representation> | <multisurface binary representation> | <geometrycollection binary representation>
+
+<multipointzm binary representation> ::= <byte order> <wkbmultipointzm> [ <num> <pointzm binary representation>... ]
+<multipointz binary representation> ::= <byte order> <wkbmultipointz> [ <num> <pointz binary representation>... ]
+<multipointm binary representation> ::= <byte order> <wkbmultipointm> [ <num> <pointm binary representation>... ]
+<multipoint binary representation> ::= <byte order> <wkbmultipoint> [ <num> <point binary representation>... ]
+
+<multicurvezm binary representation> ::= <byte order> <wkbmulticurvezm> [ <num> <curvezm binary representation>... ] | <multilinestringzm binary representation>
+<multicurvez binary representation> ::= <byte order> <wkbmulticurvez> [ <num> <curvez binary representation>... ] | <multilinestringz binary representation>
+<multicurvem binary representation> ::= <byte order> <wkbmulticurvem> [ <num> <curvem binary representation>... ] | <multilinestringm binary representation>
+<multicurve binary representation> ::= <byte order> <wkbmulticurve> [ <num> <curve binary representation>... ] | <multilinestring binary representation>
+
+<multilinestringzm binary representation> ::= <byte order> <wkbmultilinestringzm> [ <num> <linestringzm binary representation>... ]
+<multilinestringz binary representation> ::= <byte order> <wkbmultilinestringz> [ <num> <linestringz binary representation>... ]
+<multilinestringm binary representation> ::= <byte order> <wkbmultilinestringm> [ <num> <linestringm binary representation>... ]
+<multilinestring binary representation> ::= <byte order> <wkbmultilinestring> [ <num> <linestring binary representation>... ]
+
+<multisurfacezm binary representation> ::= <byte order> <wkbmultisurfacezm> [ <num> <surfacezm binary representation>... ] | <multipolygonzm binary representation>
+<multisurfacez binary representation> ::= <byte order> <wkbmultisurfacez> [ <num> <surfacez binary representation>... ] | <multipolygonz binary representation>
+<multisurfacem binary representation> ::= <byte order> <wkbmultisurfacem> [ <num> <surfacem binary representation>... ] | <multipolygonm binary representation>
+<multisurface binary representation> ::= <byte order> <wkbmultisurface> [ <num> <surface binary representation>... ] | <multipolygon binary representation>
+<multipolygonzm binary representation> ::= <byte order> <wkbmultipolygonzm>
+[ <num> <polygonzm binary representation>... ]
+<multipolygonz binary representation> ::= <byte order> <wkbmultipolygonz>
+[ <num> <polygonz binary representation>... ]
+<multipolygonm binary representation> ::= <byte order> <wkbmultipolygonm>
+[ <num> <polygonm binary representation>... ]
+<multipolygon binary representation> ::= <byte order> <wkbmultipolygon>
+[ <num> <polygon binary representation>... ]
+<geometrycollectionzm binary representation> ::= <byte order> <wkbgeometrycollectionzm>
+[ <num> <well-knownzm binary representation>... ]
+<geometrycollectionz binary representation> ::= <byte order> <wkbgeometrycollectionz>
+[ <num> <well-knownz binary representation>... ]
+<geometrycollectionm binary representation> ::= <byte order> <wkbgeometrycollectionm>
+[ <num> <well-knownm binary representation>... ]
+<geometrycollection binary representation> ::= <byte order> <wkbgeometrycollection>
+[ <num> <well-known binary representation>... ]
+<wkbpolygonpatchzm binary> ::= <polygonzm binary representation>
+<wkbpolygonpatchz binary> ::= <polygonz binary representation>
+<wkbpolygonpatchm binary> ::= <polygonm binary representation>
+<wkbpolygonpatch binary> ::= <polygon binary representation>
+<wkbtrianglepatchzm binary> ::= <trianglezm binary representation>
+<wkbtrianglepatchz binary> ::= <trianglez binary representation>
+<wkbtrianglepatchm binary> ::= <trianglem binary representation>
+<wkbtrianglepatch binary> ::= <triangle binary representation>
+<wkbtinelement binary> ::= <tinelement binary representation>
+<wkbcurvezm binary> ::= <linestringzm binary representation>
+| <circularstringzm binary representation>
+| <circlezm binary representation>
+| <geodesiczm binary representation>
+| <ellipticalzm binary representation>
+| <nurbszm binary representation>
+| <clothoidzm binary representation>
+| <spiralzm binary representation>
+| <compoundcurvezm binary representation>
+<wkbcurvez binary> ::= <linestringz binary representation>
+| <circularstringz binary representation>
+| <circlez binary representation>
+| <geodesicz binary representation>
+| <ellipticalz binary representation>
+| <nurbsz binary representation>
+| <clothoidz binary representation>
+| <spiralz binary representation>
+| <compoundcurvez binary representation>
+<wkbcurvem binary> ::= <linestringm binary representation>
+| <circularstringm binary representation>
+| <circlem binary representation>
+| <geodesicm binary representation>
+| <ellipticalm binary representation>
+| <nurbsm binary representation>
+| <clothoidm binary representation>
+| <spiralm binary representation>
+| <compoundcurvem binary representation>
+<wkbcurve binary> ::= <linestring binary representation>
+| <circularstring binary representation>
+| <circle binary representation>
+| <geodesic binary representation>
+| <elliptical binary representation>
+| <nurbs binary representation>
+| <clothoid binary representation>
+| <spiral binary representation>
+| <compoundcurve binary representation>
+<wkbringzm binary> ::= <linestringzm binary representation>
+| <circularstringzm binary representation>
+| <circlezm binary representation>
+| <geodesiczm binary representation>
+| <ellipticalzm binary representation>
+| <nurbszm binary representation>
+| <clothoidzm binary representation>
+| <spiralzm binary representation>
+| <compoundcurvezm binary representation>
+<wkbringz binary> ::= <linestringz binary representation>
+| <circularstringz binary representation>
+| <circlez binary representation>
+| <geodesicz binary representation>
+| <ellipticalz binary representation>
+| <nurbsz binary representation>
+| <clothoidz binary representation>
+| <spiralz binary representation>
+| <compoundcurvez binary representation>
+<wkbringm binary> ::= <linestringm binary representation>
+| <circularstringm binary representation>
+| <circlem binary representation>
+| <geodesicm binary representation>
+| <ellipticalm binary representation>
+| <nurbsm binary representation>
+| <clothoidm binary representation>
+| <spiralm binary representation>
+| <compoundcurvem binary representation>
+<wkbring binary> ::= <linestring binary representation>
+| <circularstring binary representation>
+| <circle binary representation>
+| <geodesic binary representation>
+| <elliptical binary representation>
+| <nurbs binary representation>
+| <clothoid binary representation>
+| <spiral binary representation>
+| <compoundcurve binary representation>
+<wkbpointzm binary> ::= <wkbx> <wkby> <wkbz> <wkbm>
+<wkbpointz binary> ::= <wkbx> <wkby> <wkbz>
+<wkbpointm binary> ::= <wkbx> <wkby> <wkbm>
+<wkbpoint binary> ::= <wkbx> <wkby>
+<wkbx> ::= <double>
+<wkby> ::= <double>
+<wkbz> ::= <double>
+<wkbm> ::= <double>
+<num> ::= <uint32>
+<nume> ::= <uint32>
+<wkbmaxsidelength> ::= <double>
+<wkbuaxislength> ::= <double>
+<wkbvaxislength> ::= <double>
+<wkbstartangle> ::= <double>
+<wkbendangle> ::= <double>
+<wkbstartm> ::= <double>
+<wkbendm> ::= <double>
+<wkbdegree> ::= <byte>
+<wkbweight> ::= <double>
+<wkbvalue> ::= <double>
+<wkbmultiplicity> ::= <byte>
+<wkbscalefactor> ::= <double>
+<wkbstartdistance> ::= <double>
+<wkbenddistance> ::= <double>
+<wkbspirallength> ::= <double>
+<wkbstartcurvature> ::= <double>
+<wkbendcurvature> ::= <double>
+<wkbspiraltype> ::= <byte> <letters>
+<wkblinearringzm> ::= <num> <wkbpointzm binary>...
+<wkblinearringz> ::= <num> <wkbpointz binary>...
+<wkblinearringm> ::= <num> <wkbpointm binary>...
+<wkblinearring> ::= <num> <wkbpoint binary>...
+<wkbpointzm> ::= <uint32>
+<wkbpointz> ::= <uint32>
+<wkbpointm> ::= <uint32>
+<wkbpoint> ::= <uint32>
+<wkblinestringzm> ::= <uint32>
+<wkblinestringz> ::= <uint32>
+<wkblinestringm> ::= <uint32>
+<wkblinestring> ::= <uint32>
+<wkbcircularstringzm> ::= <uint32>
+<wkbcircularstringz> ::= <uint32>
+<wkbcircularstringm> ::= <uint32>
+<wkbcircularstring> ::= <uint32>
+<wkbcirclezm> ::= <uint32>
+<wkbcirclez> ::= <uint32>
+<wkbcirclem> ::= <uint32>
+<wkbcircle> ::= <uint32>
+<wkbgeodesiczm> ::= <uint32>
+<wkbgeodesicz> ::= <uint32>
+<wkbgeodesicm> ::= <uint32>
+<wkbgeodesic> ::= <uint32>
+<wkbellipticalzm> ::= <uint32>
+<wkbellipticalz> ::= <uint32>
+<wkbellipticalm> ::= <uint32>
+<wkbelliptical> ::= <uint32>
+<wkbnurbszm> ::= <uint32>
+<wkbnurbsz> ::= <uint32>
+<wkbnurbsm> ::= <uint32>
+<wkbnurbs> ::= <uint32>
+<wkbclothoidzm> ::= <uint32>
+<wkbclothoidz> ::= <uint32>
+<wkbclothoidm> ::= <uint32>
+<wkbclothoid> ::= <uint32>
+<wkbspiralzm> ::= <uint32>
+<wkbspiralz> ::= <uint32>
+<wkbspiralm> ::= <uint32>
+<wkbspiral> ::= <uint32>
+<wkbcompoundcurvezm> ::= <uint32>
+<wkbcompoundcurvez> ::= <uint32>
+<wkbcompoundcurvem> ::= <uint32>
+<wkbcompoundcurve> ::= <uint32>
+<wkbtrianglezm> ::= <uint32>
+<wkbtrianglez> ::= <uint32>
+<wkbtrianglem> ::= <uint32>
+<wkbtriangle> ::= <uint32>
+<wkbpolygonzm> ::= <uint32>
+<wkbpolygonz> ::= <uint32>
+<wkbpolygonm> ::= <uint32>
+<wkbpolygon> ::= <uint32>
+<wkbcurvepolygonzm> ::= <uint32>
+<wkbcurvepolygonz> ::= <uint32>
+<wkbcurvepolygonm> ::= <uint32>
+<wkbcurvepolygon> ::= <uint32>
+<wkbtinzm> ::= <uint32>
+<wkbtinz> ::= <uint32>
+<wkbtinm> ::= <uint32>
+<wkbtin> ::= <uint32>
+<wkbpolyhedralsurfacezm> ::= <uint32>
+<wkbpolyhedralsurfacez> ::= <uint32>
+<wkbpolyhedralsurfacem> ::= <uint32>
+<wkbpolyhedralsurface> ::= <uint32>
+<wkbmultipointzm> ::= <uint32>
+<wkbmultipointz> ::= <uint32>
+<wkbmultipointm> ::= <uint32>
+<wkbmultipoint> ::= <uint32>
+<wkbmultilinestringzm> ::= <uint32>
+<wkbmultilinestringz> ::= <uint32>
+<wkbmultilinestringm> ::= <uint32>
+<wkbmultilinestring> ::= <uint32>
+<wkbmulticurvezm> ::= <uint32>
+<wkbmulticurvez> ::= <uint32>
+<wkbmulticurvem> ::= <uint32>
+<wkbmulticurve> ::= <uint32>
+<wkbmultisurfacezm> ::= <uint32>
+<wkbmultisurfacez> ::= <uint32>
+<wkbmultisurfacem> ::= <uint32>
+<wkbmultisurface> ::= <uint32>
+<wkbmultipolygonzm> ::= <uint32>
+<wkbmultipolygonz> ::= <uint32>
+<wkbmultipolygonm> ::= <uint32>
+<wkbmultipolygon> ::= <uint32>
+<wkbgeometrycollectionzm> ::= <uint32>
+<wkbgeometrycollectionz> ::= <uint32>
+<wkbgeometrycollectionm> ::= <uint32>
+<wkbgeometrycollection> ::= <uint32>
+<wkbaffineplacementz> ::= <uint32>
+<wkbaffineplacement> ::= <uint32>
+<byte order> ::= <big endian>
+| <little endian>
+<big endian> ::= !! See Description
+<little endian> ::= !! See Description
+<byte> ::= !! See Description
+<uint32> ::= !! See Description
+<double> ::= !! See Description
+<bit> ::= !! See Description
+
+=================================================
+<well-known binary representation> <uint32> Value
+<wkbpoint> 1 (one)
+<wkblinestring> 2
+<wkbpolygon> 3
+<wkbmultipoint> 4
+<wkbmultilinestring> 5
+<wkbmultipolygon> 6
+<wkbgeometrycollection> 7
+<wkbcircularstring> 8 or 1000001
+<wkbcompoundcurve> 9 or 1000002
+<wkbcurvepolygon> 10 or 1000003
+<wkbmulticurve> 11 or 1000004
+<wkbmultisurface> 12 or 1000005
+<wkbpolyhedralsurface> 15
+<wkbtin> 16
+<wkbtriangle> 17
+<wkbcircle> 18
+<wkbgeodesicstring> 19
+<wkbellipticalcurve> 20
+<wkbnurbscurve> 21
+<wkbclothoid> 22
+<wkbspiralcurve> 23
+<wkbaffineplacement> 102
+<wkbpointz> 1001
+<wkblinestringz> 1002
+<wkbpolygonz> 1003
+<wkbmultipointz> 1004
+<wkbmultilinestringz> 1005
+<wkbmultipolygonz> 1006
+<wkbgeometrycollectionz> 1007
+<wkbcircularstringz> 1008
+<wkbcompoundcurvez> 1009
+<wkbcurvepolygonz> 1010
+<wkbmulticurvez> 1011
+<wkbmultisurfacez> 1012
+<wkbpolyhedralsurfacez> 1015
+<wkbtinz> 1016
+<wkbtrianglez> 1017
+<wkbcirclez> 1018
+<wkbgeodesicstringz> 1019
+<wkbellipticalcurvez> 1020
+<wkbnurbscurvez> 1021
+<wkbclothoidz> 1022
+<wkbspiralcurvez> 1023
+<wkbaffineplacementz> 1102
+<wkbpointm> 2001
+<wkblinestringm> 2002
+<wkbpolygonm> 2003
+<wkbmultipointm> 2004
+<wkbmultilinestringm> 2005
+<wkbmultipolygonm> 2006
+<wkbgeometrycollectionm> 2007
+<wkbcircularstringm> 2008
+<wkbcompoundcurvem> 2009
+<wkbcurvepolygonm> 2010
+<wkbmulticurvem> 2011
+<wkbmultisurfacem> 2012
+<wkbpolyhedralsurfacem> 2015
+<wkbtinm> 2016
+<wkbtrianglem> 2017
+<wkbcirclem> 2018
+<wkbgeodesicstringm> 2019
+<wkbellipticalcurvem> 2020
+<wkbnurbscurvem> 2021
+<wkbclothoidm> 2022
+<wkbspiralcurvem> 2023
+<wkbpointzm> 3001
+<wkblinestringzm> 3002
+<wkbpolygonzm> 3003
+<wkbmultipointzm> 3004
+<wkbmultilinestringzm> 3005
+<wkbmultipolygonzm> 3006
+<wkbgeometrycollectionzm> 3007
+<wkbcircularstringzm> 3008
+<wkbcompoundcurvezm> 3009
+<wkbcurvepolygonzm> 3010
+<wkbmulticurvezm> 3011
+<wkbmultisurfacezm> 3012
+<wkbpolyhedralsurfacezm> 3015
+<wkbtinzm> 3016
+<wkbtrianglezm> 3017
+<wkbcirclezm> 3018
+<wkbgeodesicstringzm> 3019
+<wkbellipticalcurvezm> 3020
+<wkbnurbscurvezm> 3021
+<wkbclothoidzm> 3022
+<wkbspiralcurvezm> 3023

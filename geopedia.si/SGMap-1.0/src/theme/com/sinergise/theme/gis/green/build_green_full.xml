@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ !
+ ! Ant build file for combining style sheets
+ !
+ !-->
+<project name="SGWebUI Full Basic Theme" default="all" >
+
+  
+	<description>
+        Build file for combining theme style sheets
+	</description>
+
+    <property name="CSS_SRC_DIR" value="public/css" />
+    <property name="CSS_TGT_FILE" value="public/css/gis_green_full.css" />
+    <property name="YUI" value="../../../../../../../../SineRepo/Util/yuicompressor/2.4.2/lib/yuicompressor-2.4.2.jar" />
+    
+    <target name="all" 
+		description="concatenates and compresses style sheets"
+		depends="concat, compress"/>
+    
+    <target name="concat" description="Concatenate CSS source files">
+        <echo message="Concating ${CSS_TGT_FILE}" />
+        <concat destfile="${CSS_TGT_FILE}">
+            <fileset dir="${CSS_SRC_DIR}" includes="*_.css" excludes="${CSS_TGT_FILE}"/>
+        </concat>
+        <echo message="${CSS_TGT_FILE} concatenated" />
+    </target>
+    
+    <target name="compress" description="Compresses CSS target file">
+        <echo message="Compressing ${CSS_TGT_FILE}" />
+        <apply executable="java" parallel="false" verbose="true">
+            <fileset file="${CSS_TGT_FILE}" />
+            <arg line="-jar" />
+            <arg path="${YUI}" />
+            <arg value="--charset" />
+            <arg value="ANSI" />
+            <arg value="-o" />
+            <arg value="${CSS_TGT_FILE}" />
+        </apply>
+        <echo message="${CSS_TGT_FILE} compressed" />
+    </target>
+	
+</project>

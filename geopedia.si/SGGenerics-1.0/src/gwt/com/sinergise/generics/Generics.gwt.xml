@@ -1,0 +1,4 @@
+<module>
+	<inherits name='com.sinergise.generics.GenericsBase'/>
+ 	<stylesheet src="Generics.css"/>
+</module>

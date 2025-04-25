@@ -1,0 +1,176 @@
+@external *;
+
+
+
+.styleEditor, .symbolizerEditor {
+	padding: 7px 7px 7px 40px;
+	min-height: 115px;
+}
+.styleEditor > .outlines, 
+.styleEditor > .filling {
+	clear: both;
+	margin-bottom: 10px;
+}
+.styleEditor > img,
+.outlines > img,
+.filling > img,
+.symbolizerEditor > img {
+	float: left;
+	margin-left: -35px;
+}
+.stylerPanel {
+	margin-bottom: 5px;
+}
+.stylerPanel > .gwt-Label {
+    font-weight: bold;
+}
+.styleEditor h3 {
+	text-shadow: 0 1px 0 #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #ccc;
+}
+@sprite .linearSelector .items a {
+	gwt-image: "toggle";
+	display: inline-block;
+	cursor: pointer;
+	margin: 2px;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+}
+@sprite .linearSelector .items a.selected {
+	gwt-image: "toggleOn";
+	color: #fff;
+}
+
+.linearSelector.colorPicker {
+	position: relative;
+	padding-right: 90px;
+}
+.linearSelector.colorPicker > input {
+	position: absolute;
+	right: 0;
+	top: 2px;
+}
+.gwt-DialogBox .linearSelector.colorPicker > input {
+	position: static;
+}
+
+.linearSelector .items,
+.styleEditor > span,
+.styleEditor > div {
+	display: block;
+	margin-right: 6px;
+}
+.styleEditor > span {
+	font-weight: bold;
+	margin: 0 0 3px 3px;
+}
+.styleEditor > div.breaker {
+	display: block;
+	height: 5px;
+}
+.styleEditor input {
+	vertical-align: middle;
+}
+
+.symbolPicker .items {
+    vertical-align: top;
+}
+.symbolPicker input {
+	margin-top: 2px;
+}
+
+.linearSelector .items a b,
+.linearSelector .items a img {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	vertical-align: middle;
+	text-align: center;
+	margin-top: 6px;
+}
+.linearSelector .items a b { 
+	width: auto;
+	height: auto;
+}
+.linearSelector .items a.symbol img {
+	width: 20px;
+	height: 20px;
+	margin-top: 3px;
+}
+.linearSelector .items a.color img {
+	width: 14px;
+	height: 14px;
+}
+@sprite .lineWidthPicker a.width1 b {
+	gwt-image: "lineWidth1"
+}
+@sprite .lineWidthPicker a.width3 b {
+	gwt-image: "lineWidth3"
+}
+@sprite .lineWidthPicker a.width6 b {
+	gwt-image: "lineWidth6"
+}
+@sprite .lineWidthPicker a.width10 b {
+	gwt-image: "lineWidth10"
+}
+@sprite .lineStylePicker a.none b,
+.fillStylePicker a.none b {
+	gwt-image: "trans"
+}
+@sprite .lineStylePicker a.dashes b {
+	gwt-image: "lineStyleDashed"
+}
+@sprite .lineStylePicker a.dots_dashes b {
+	gwt-image: "lineStyleDashDot"
+}
+@sprite .lineStylePicker a.dots b {
+	gwt-image: "lineStyleDot"
+}
+@sprite .lineStylePicker a.solid b {
+	gwt-image: "lineStyleSolid"
+}
+
+@sprite .fillStylePicker a.slashes b {
+	gwt-image: "fillFwd"
+}
+@sprite .fillStylePicker a.backslashes b {
+	gwt-image: "fillBack"
+}
+@sprite .fillStylePicker a.horLines b {
+	gwt-image: "fillHor"
+}
+@sprite .fillStylePicker a.verLines b {
+	gwt-image: "fillVer"
+}
+@sprite .fillStylePicker a.grid b {
+	gwt-image: "fillGrid"
+}
+@sprite .fillStylePicker a.diagGrid b {
+	gwt-image: "fillDiaGrid"
+}
+@sprite .fillStylePicker a.dots b {
+	gwt-image: "fillDots"
+}
+@sprite .fillStylePicker a.triangles b {
+	gwt-image: "fillTria"
+}
+.fillStylePicker a.solid b {
+	background: #777;
+	box-shadow: 0 1px 0 #eee;
+	-moz-box-shadow: 0 1px 0 #eee;
+	-webkit-box-shadow: 0 1px 0 #eee;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	width: 14px;
+	height: 14px;
+}

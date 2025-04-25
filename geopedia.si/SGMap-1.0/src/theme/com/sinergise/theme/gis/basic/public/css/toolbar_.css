@@ -1,0 +1,123 @@
+/*** css fix for javascript calculating ... extends nav_.css ***/ 
+.sgwebgis-mapRasterButtons, .sgwebgis-mapToolbar {
+	right: 0;
+	left: auto !important;  
+}
+.sgwebgis-mapRasterButtons {
+	margin-top: 25px;
+}
+
+table.sgwebui-toolbar-top-right,
+table.sgwebui-toolbar-top-left {
+	background: url("../img/toolbar/top_bg.png") repeat-x left bottom transparent;	
+}
+
+.sgwebui-toolbar-top-right,
+.sgwebui-toolbar-top-left,
+.sgwebui-toolbar-bottom-right,
+.sgwebui-toolbar-bottom-left {
+	height: 33px;	
+}
+
+div.sgwebui-toolbar-first-top-right {
+	width: 10px;
+	height: 33px;
+	background: url("../img/toolbar/top_right_first_bg.png") no-repeat left bottom transparent;
+}
+table.sgwebui-toolbar-top-right > tbody > tr > td,
+table.sgwebui-toolbar-top-left > tbody > tr > td {
+	vertical-align: top !important;
+}
+
+div.sgwebui-toolbar-last-top-right {
+	width: 8px;
+	height: 33px;
+	background: url("../img/toolbar/top_bg.png") repeat-x left bottom transparent;	
+}
+
+
+
+.sgwebui-toolbar div.gwt-PushButton,
+.sgwebui-toolbar div.gwt-ToggleButton {
+	background:url("../img/toolbar/btn_bg.png") no-repeat scroll 0 0 transparent;
+	background-color: transparent;
+	border: none;
+	height: 20px;
+	width: 20px;
+	padding: 4px;
+	margin-top: 1px;
+	margin-left: 1px;
+}
+
+.sgwebui-toolbar .gwt-ToggleButton img, 
+.sgwebui-toolbar .gwt-PushButton img {
+	padding: 0px;	
+}
+
+.sgwebui-toolbar div.gwt-PushButton-down,
+.sgwebui-toolbar div.gwt-PushButton-down-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-down,
+.sgwebui-toolbar div.gwt-ToggleButton-down-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-down-disabled {
+	background-position: 0px -28px;	
+}
+
+.sgwebui-toolbar div.gwt-PushButton-up-disabled,
+.sgwebui-toolbar div.gwt-PushButton-down-disabled,
+.sgwebui-toolbar div.gwt-ToggleButton-up-disabled {
+	background-position: 0px -56px;	
+	opacity: 1;
+}
+
+.sgwebui-toolbar :active, 
+.sgwebui-toolbar :focus, 
+.sgwebui-toolbar :visited, 
+.sgwebui-toolbar :hover {  
+	outline: none; 
+}
+
+div.cosylab-ModeSelectButton-SelectionPanel {
+	z-index: 1000;	
+}
+
+.sgwebui-toolbar .optionsPanel > div {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.sgwebui-toolbar .optionsButton {
+	margin-top: 3px;
+	margin-right: 4px;
+	border-radius: 16px;
+	-moz-border-radius: 16px;
+	-webkit-border-radius: 16px;
+	width: 14px;
+	height: 14px;
+	cursor: pointer;
+}
+#IE .sgwebui-toolbar .optionsButton {
+	background: url(../img/toolbar/optionsButton.png) left top;
+}
+#noIE .sgwebui-toolbar .optionsButton:before,
+#IE9 .sgwebui-toolbar .optionsButton:before {
+	width: 0;
+	height: 0;
+	float: left;
+	display: block;
+	content: "";
+	border-top: 4px solid #777;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	margin: 6px 0 0 3px;
+}
+.sgwebui-toolbar .optionsButton div {display: none; }
+.sgwebui-toolbar .optionsButton:hover {
+	box-shadow: 0 1px 2px #ccc inset;
+	-moz-box-shadow: 0 1px 2px #ccc inset;
+	-webkit-box-shadow: 0 1px 2px #ccc inset;
+	background: #fff;
+}
+#IE .sgwebui-toolbar .optionsButton:hover {
+	background-position: left bottom;
+	background: none;
+}

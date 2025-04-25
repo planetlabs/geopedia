@@ -1,0 +1,222 @@
+@external *;
+
+.helpPanel .imageAnchor {
+	position: absolute;
+	right: -9px;
+	top: -8px;
+}
+
+/***** PRO STACK PANELS ***/
+.gwt-DialogBox .pro {
+	max-height: 550px;
+	width: 600px;
+}
+.dialogTabPanel { 
+	width: 100%; 
+}
+table.dialogTabPanel {
+	height: 350px;
+}
+
+.dialogTabPanel .editTabFirst {
+	margin-left: 15px !important;
+}
+.dialogTabPanel .gwt-TabBarFirst-wrapper { width: 45%; }
+.dialogTabPanel .gwt-TabBarItem, .dialogTabPanel .gwt-TabPanelBottom { border: none; padding: 0; }
+.dialogTabPanel .gwt-TabBarItem { padding: 1px 5px 4px; color: #555; }
+.dialogTabPanel .gwt-TabBarItem-selected {
+	border: 1px solid #ccc;
+	border-top: none;
+	border-radius: 0 0 4px 4px;
+	background: #fff;	
+	color: #333;
+	padding: 3px 5px 5px;
+	cursor: default;
+}
+.dialogTabPanel .gwt-TabBarItem-selected .gwt-Label:hover { color: #333; }
+
+@if user.agent ie6 ie8 {
+	@sprite .dialogMiddleCenter .pro h1 {
+		gwt-image: "shadowPro";
+		background-repeat: no-repeat;
+		background-position: center bottom;
+	}
+
+}
+
+
+.pro .buttonPanel .disabled {
+	display: none;
+}
+
+
+.layerTabPanel .sgwebui-ImageLabel > div {
+	margin: 0;
+}
+.layerTabPanel .sgwebui-ImageLabel > div img {
+	margin-right: 5px;
+}
+
+.general .gwt-InlineLabel {
+	display: block;
+}
+.general .gwt-Label {
+	margin-bottom: 5px;
+}
+.general .holderPanel {
+	margin: 5px 10px;
+}
+.general .holderPanel input {
+	width: 97%;
+}
+.themeEditor .general .tabPanelContentHolder {
+	bottom: 10px;
+	overflow: hidden;
+}
+.mceEditor .mceLayout {
+	height: 349px !important;
+	margin-bottom: 20px;
+}
+td.mceIframeContainer > iframe { height: 320px !important; }
+
+
+.dottedAnchor {
+	cursor: pointer;
+	border: 2px dashed #ddd;
+    border-radius: 5px;
+    display: block;
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px;
+    text-align: left;
+    color: #888;
+}
+.dottedAnchor:hover {
+	border-color: #bbb;
+	color: #555;
+	text-decoration: none;
+}
+.dottedAnchor img {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 6px;
+}
+
+
+/*********** MANDATORY FIELDS **************/
+div.mandatory > span,
+div.mandatory > div {
+	font-weight: bold;
+}
+div.missingMandatory > span,
+div.missingMandatory > div {
+	color: #900;
+}
+div.mandatory > span:after {
+	content: "*";
+	margin-left: 4px;
+	color: #900;
+}
+@sprite .gwt-DialogBox.theme .mainBtnPanel {
+	position: absolute;
+	left: 0px;
+	padding-top: 7px;
+	right: 0;
+	bottom: 3px;
+	gwt-image: "shadowPro"; 
+	background-repeat: no-repeat;
+	text-align: center;
+	background-size: 100% 30%;
+}
+
+
+.tableStylePopup {
+	box-shadow: 0 0 10px #777;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding: 10px;
+	background: #fff;
+}
+.tableStylePopup .popupContent {
+/* 	background: #f1f1f1; */
+}
+.tableStylePopup .popupContent h3 {
+	margin-top: 0;
+}
+.tableStylePopup .popupContent textarea {
+	min-width: 300px;
+}
+.tableStylePopup .advancedEditor {
+	height: 100%;
+}
+
+#sidebar .tabPanelContentHolder > .style,
+#sidebar .tabPanelContentHolder > .style > .advancedEditor {
+	height: 100%;
+}
+
+.editor .buttonPanel {
+	position: absolute;
+	right: 30px;
+	top: 25px;
+}
+
+.editingPanel {
+	padding: 5px 10px 2px;
+	border-bottom: 1px solid #ccc;
+	background: literal("-moz-linear-gradient(top, #fff 40%, #eaeaea 100%)");
+	background: literal("-webkit-linear-gradient(top, #fff 40%,#eaeaea 100%)");
+	background: literal("-o-linear-gradient(top, #fff 40%,#eaeaea 100%)");
+	background: literal("linear-gradient(top, #fff 40%,#eaeaea 100%)");
+}
+.editingPanel > img,
+.wizard .buttonsPanel > img,
+.layerToolbar > img {
+	width: 100% !important;
+	margin-bottom: -4px;
+	background-size: 100% 11px !important;
+}
+.layerToolbar {
+	text-align: center;
+	padding: 0 5px 5px;
+}
+@sprite .layerToolbar a {
+	gwt-image: "toggle";
+	margin: 0 3px;
+	text-align: center;
+}
+@sprite .layerToolbar a:active {
+	gwt-image: "toggleOn";
+}
+.layerToolbar a img { 
+	margin: 5px 0 0 1px;
+}
+.boxFooter .editingPanel {
+	background: none;
+	border: none;
+}
+.boxFooter .editingPanel > img {
+	display: none;
+}
+.editingPanel h2 {
+	color: #0092ed;
+	font-size: 15px;
+	text-transform :uppercase;
+	margin: 4px 0;
+}
+.editingPanel a.btn.fl-right {
+	margin: 0 0 0 5px;
+}
+.editingPanel .gwt-Anchor {
+	margin-top: 6px;
+	display: inline-block;
+	margin-left: 10px;
+}
+@sprite .editor .mainBtnPanel {
+	padding-top: 7px;
+	gwt-image: "shadowPro"; 
+	background-repeat: no-repeat;
+	text-align: center;
+	background-size: 100% 30%;
+}

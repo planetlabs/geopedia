@@ -1,0 +1,164 @@
+/***** ROOT WINDOW ***/
+body, html, .gwt-SplitLayoutPanel, .mapDecorator, .dataPanel {
+	height: 100%;
+	width: 100%;
+}
+#root {
+	height: 100%;
+}
+
+#IE9 * { filter: none; }
+.gwt-SplitLayoutPanel, .mapDecorator {
+	position: relative;
+}
+.dataPanel {
+	position: absolute;
+	left: 0;
+	height: auto;
+	bottom: 0;
+}
+
+.title-header {
+	background: url(../img/tab_single/header_shadow.png) left bottom repeat-x #ddd;
+	height: 69px;
+}
+.header-logo {
+	font-size: 20px;
+	text-shadow: 0 1px 0 #eee;
+	color: #666;
+	font-weight: bold;
+	margin: 10px 0 0 15px;
+	text-decoration: none;
+	float: left;
+}
+
+.header, 
+.header a, 
+.header td {
+	font-weight: bold;
+}
+
+.breaker { display: block; clear: both; height: 1px; visibility: hidden; }
+/******* MESSAGES *****/
+table.sgwebui-messageBox {
+	border: 1px solid #D8CA29;
+	background: #f9f4c2;
+	max-width: 800px;
+}
+.sgwebui-messageBox div.gwt-HTML {
+	padding-left: 5px;
+}
+
+/***** UNIT CONVERTER *****/
+
+td.sgwebui-unitConverter-fieldLabel,
+td.sgwebui-unitConverter-fieldWidget {
+	padding-right: 10px;	
+}
+
+
+/***** CALENDAR ****/
+.sgDatePicker-calendarIcon { cursor: pointer; }
+.sgwebgis-queryCondDatePeriodWidget { margin-top: 5px; float: right; }
+.sgwebgis-queryCondDatePeriodWidget .gwt-Label { text-align: right;}
+
+.sgDatePicker-calendarPopup { z-index: 100; }
+
+.sgwebgis-queryCondDatePeriodWidget .gwt-Label,
+.sgwebgis-queryCondDatePeriodWidget > table { float: left; margin-right: 10px; clear: left;}
+.sgwebgis-queryCondDatePeriodWidget .gwt-Label { margin-top: 3px; min-width: 40px; }
+.sgwebgis-queryCondDatePeriodWidget > table {clear: none; margin-bottom: 10px;margin-right: 0; }
+
+/************ SKYPE PLUGIN *********/
+body span.skype_pnh_left_span,
+body span.skype_pnh_dropart_span,
+body span.skype_pnh_right_span { 
+	display: none !important;
+}
+body span.skype_pnh_container span.skype_pnh_highlighting_inactive_common * {
+	background: none !important;
+	font-weight: normal !important;
+	font: 12px Arial, Heltica, sans-serif !important;
+	padding: 0 !important;
+}
+
+
+/************** MENUS *********/
+
+div.sgwebui-menu {
+	background: #ffffff;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U1ZTVlNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5));
+	background: -webkit-linear-gradient(-45deg, #ffffff 0%,#e5e5e5 100%);
+	background: -o-linear-gradient(-45deg, #ffffff 0%,#e5e5e5 100%);
+	background: -ms-linear-gradient(-45deg, #ffffff 0%,#e5e5e5 100%);
+	background: linear-gradient(-45deg, #ffffff 0%,#e5e5e5 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 );
+	box-shadow: 0 0 1px 1px #aaa;
+}
+div.sgwebui-menu .itemCont {
+	clear: both;
+}
+div.sgwebui-menu .item {
+	cursor: pointer;
+	padding: 4px 10px 4px 25px;
+}
+div.sgwebui-menu .item.expanded {
+	padding-right: 15px;
+}
+div.sgwebui-menu .item.expanded:after {
+	content: "";
+	display: block;
+	float: right;
+	margin-top: -12px;
+	width: 0;
+	height: 0;
+	border-left: 4px solid #666;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	margin-right: -10px;
+}
+div.sgwebui-menu .item:hover {
+	background: #e2e2e2;
+}
+div.sgwebui-menu .item.nonselectable {
+	padding-left: 5px;
+}
+div.sgwebui-menu .item.nonselectable:hover {
+	background: none;
+}
+div.sgwebui-menu .item.selected {
+	background: #98bede;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk4YmVkZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZWVmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #98bede 0%, #deefff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#98bede), color-stop(100%,#deefff));
+	background: -webkit-linear-gradient(top, #98bede 0%,#deefff 100%);
+	background: -o-linear-gradient(top, #98bede 0%,#deefff 100%);
+	background: -ms-linear-gradient(top, #98bede 0%,#deefff 100%);
+	background: linear-gradient(top, #98bede 0%,#deefff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98bede', endColorstr='#deefff',GradientType=0 );
+	font-weight: bold;
+}
+div.sgwebui-menu div.separator {
+	border-top: 1px dashed #666;
+	margin: 5px;
+}
+div.sgwebui-menu div.separator > div {
+	display: none;
+}
+div.sgwebui-menu .itemImg {
+	float: left;
+	margin: 3px 3px 0;
+}
+
+.sgwebui-menu .item.disabled, .sgwebui-menu .item.disabled:hover {
+	opacity: .6;
+	filter: alpha(opacity=60);
+	cursor: default;
+	background: none;
+}
+
+.sgwebui-menu .option-buffer input {
+	width: 40px;
+}

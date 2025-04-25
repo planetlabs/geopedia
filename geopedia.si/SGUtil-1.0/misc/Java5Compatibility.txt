@@ -1,0 +1,4 @@
+
+Oracle Java stored procedures
+- 11.2.0.1.0: Java 1.5.0_10
+- 10.2.0.5.0: Java 1.4.2_04

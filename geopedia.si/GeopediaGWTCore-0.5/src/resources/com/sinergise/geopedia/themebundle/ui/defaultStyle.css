@@ -1,0 +1,73 @@
+@external *;
+body {
+	color: #555;
+}
+textarea, input, select {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+a {
+	text-decoration:none;
+	color: #0092de;
+}
+a:hover { text-decoration: underline; }
+
+ul, ol {
+    padding-left: 20px;
+}
+.themeInfoPanel p {
+	margin-bottom: 0;
+}
+.layerDescription table th,
+.themeInfoPanel table th { 
+	border-bottom: 2px solid #0092ed;
+	background: #ffffff;
+	background: literal("-moz-linear-gradient(top, #ffffff 0%, #ededed 100%)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ededed))");
+	background: literal("-webkit-linear-gradient(top, #ffffff 0%,#ededed 100%)");
+	background: literal("-o-linear-gradient(top, #ffffff 0%,#ededed 100%)");
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 )");
+	background: literal("linear-gradient(top, #ffffff 0%,#ededed 100%)");
+	text-align: center;
+	font-weight: bold;
+	color: #555;
+	padding: 3px 5px;
+	zoom: 1;
+}
+.layerDescription h3,
+.themeInfoPanel h3 { 
+	font-size: 14px; 
+	font-weight: bold; 
+	color: #555; 
+	margin: 10px 0 5px; 
+}
+
+
+/*** to have link to two images ***/
+.categoryPanel .category.personal > div,
+.categoryPanel .category.favourite > div {
+	padding: 5px 4px;
+	font-weight: bold;
+	tex-transform: uppercase;
+}
+.categoryPanel .category.personal > div:after,
+.categoryPanel .category.favourite > div:after {
+	float: right;
+	content: "";
+	margin-top: -2px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+@sprite .categoryPanel .category.personal > div:after {
+	gwt-image: "user";
+}
+@sprite .categoryPanel .category.favourite > div:after {
+	gwt-image: "star";
+}
+@sprite .categoryPanel .category.personal > div.gwt-TreeItem-selected:after {
+	gwt-image: "userWhite";
+}
+@sprite .categoryPanel .category.favourite > div.gwt-TreeItem-selected:after {
+	gwt-image: "starWhite";
+}

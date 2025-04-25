@@ -1,0 +1,108 @@
+/* general table properties */
+.sgwebui-StyledFlexTable {
+	border-spacing: 0;
+	border-bottom: solid #4040c0 2px;
+}
+
+.sgwebui-StyledFlexTable table {
+	border-collapse:separate;
+	empty-cells:hide;
+}
+
+.sgwebui-StyledFlexTable td {
+	font-family: sans-serif;
+	font-size: 90%;
+	padding: 5px;
+}
+
+.sgwebui-StyledFlexTable td {
+	border-top: solid #8080ff 1px;
+}
+
+.sgwebui-StyledFlexTable tr.headerRow td {
+	border-bottom: solid #4040c0 1px;
+}
+
+/* header styling */
+.sgwebui-StyledFlexTable tr.headerRow {
+	font-weight: bold;
+}
+
+.sgwebui-StyledFlexTable tr.headerRow td {
+	background-color: #c0c0ff;
+	border-top: solid #4040c0 2px;
+}
+
+/* top-left corner */
+.sgwebui-StyledFlexTable .headerRow .headerColumn {
+	border-top: none;
+	background: none;
+}
+
+.sgwebui-StyledFlexTable tr .headerColumn {
+	font-weight: bold;
+	background-color: #e0e0ff;
+}
+
+/* even-odd stripes */
+.sgwebui-StyledFlexTable tr.evenRow {
+}
+
+.sgwebui-StyledFlexTable tr.oddRow {
+    background-color: #f4f4ff;
+}
+
+/* generic hover - no even/odd/header dependency */
+.sgwebui-StyledFlexTable tr.styledFlexTableHover {
+}
+.sgwebui-StyledFlexTable tr.styledFlexTableHover td.styledFlexTableHover {
+}
+
+/* dependent styles (hover) need to be specified after the main ones */
+
+/* whole row hover (including header column) */
+.sgwebui-StyledFlexTable tr.oddRow-hover td {
+}
+.sgwebui-StyledFlexTable tr.evenRow-hover td {
+} 
+
+/* row hover - no header column */
+.sgwebui-StyledFlexTable tr.oddRow-hover {
+	
+}
+.sgwebui-StyledFlexTable tr.evenRow-hover {
+	
+} 
+
+/* header row hover */
+.sgwebui-StyledFlexTable tr.headerRow-hover {
+}
+
+/* column shading */
+
+.sgwebui-StyledFlexTable tr td.evenColumn {
+}
+
+.sgwebui-StyledFlexTable tr td.oddColumn {
+}
+
+.sgwebui-StyledFlexTable tr.headerRow .oddColumn {
+}
+
+.sgwebui-StyledFlexTable tr.headerRow .evenColumn {
+}             
+
+/* cell hover */
+.sgwebui-StyledFlexTable tr td.evenColumn-hover {
+}
+.sgwebui-StyledFlexTable tr td.oddColumn-hover {
+}
+
+.sgwebui-StyledFlexTable tr.headerRow .oddColumn-hover {
+}
+
+.sgwebui-StyledFlexTable tr.headerRow .evenColumn-hover {
+}
+
+.sgwebui-StyledFlexTable tr td.headerColumn-hover {
+}

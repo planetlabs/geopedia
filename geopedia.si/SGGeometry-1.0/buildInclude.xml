@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    
+    <!--  build common geometry classes. This must be kept as small as possible for mobile use! -->
+    <macrodef name="compile.commonGeometries">
+	    <attribute name="buildBaseDir"/>	
+	    <sequential> 
+	    	<mkdir dir="@{buildBaseDir}" />
+	    	<delete dir="@{buildBaseDir}/classes" />
+			<mkdir dir="@{buildBaseDir}/classes" />
+			<javac srcdir="${SGGeometry}/src/common:${SGUtil}/src/common"
+			     destdir="@{buildBaseDir}/classes" source="1.6" target="1.6" 
+			     compiler="modern" fork="yes" encoding="UTF-8" includeantruntime="false" 
+			     debug="on" executable="${JAVA6}/bin/javac">
+				<classpath>
+				    <pathelement path="${SINEREPO}/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar" />
+				</classpath>
+				<include name="com/sinergise/common/geometry/geom/**"/>
+				<include name="com/sinergise/common/geometry/util/**"/>
+				<include name="com/sinergise/common/geometry/crs/**"/>
+				<include name="com/sinergise/common/geometry/symbology/**"/>
+				<exclude name="com/sinergise/common/geometry/util/Coordina*"/>
+				<exclude name="com/sinergise/common/geometry/util/CoordStringUtil*"/>
+			</javac>	
+	    </sequential>
+	</macrodef>
+</project>

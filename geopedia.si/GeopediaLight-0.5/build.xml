@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="GeopediaLite" default="all">
+	<property name="sinergise.libraries.branch" value="1.0" />
+	<property file="${sinergise.build.properties}" />
+	<property name="Geopedia" value="../Geopedia-0.5" />
+	<property name="GeopediaLite" value="../GeopediaLight-0.5" />
+	<property name="GeopediaGWTCore" value="../GeopediaGWTCore-0.5" />
+	<property name="buildDirectory" value="build" />
+	
+	<import file="${Geopedia}/buildInclude.xml" />
+	<import file="${GeopediaLite}/buildInclude.xml" />
+
+
+	<target name="updateGenerated">
+		<filterAndCopy templateConfigFile="${GeopediaLite}/config/development.cfg.properties" fromTemplate="${GeopediaLite}/config/templates/WEB-INF/web.template.xml" toFile="${GeopediaLite}/war/WEB-INF/web.xml" />
+		<filterAndCopy templateConfigFile="${GeopediaLite}/config/development.cfg.properties" fromTemplate="${GeopediaLite}/config/templates/lite-base.template.jsp" toFile="${GeopediaLite}/war/lite-base.jsp" />
+	</target>
+	
+	<target name="buildWAR">
+		<build.gwt.webapp.war buildBaseDir="${buildDirectory}" webappSRC="${GeopediaLite}/war" GWTModules="SVNgeopedia" templateConfigFile="${GeopediaLite}/config/development.cfg.properties">
+		</build.gwt.webapp.war>
+	</target>
+	
+	<target name="buildGeopedia">
+		<mkdir dir="${buildDirectory}" />
+		<compile.gwt.GeopediaLite buildBaseDir="${buildDirectory}"  
+			entryPointClass="com.sinergise.geopedia.light.GeopediaLight"
+			moduleName="SVNgeopedia">
+		</compile.gwt.GeopediaLite>
+	</target>
+
+	<target name="buildServer">
+		<mkdir dir="${buildDirectory}" />
+		<compile.GeopediaServer buildBaseDir="${buildDirectory}" />
+		<compile.GeopediaLiteGWT buildBaseDir="${buildDirectory}" />
+        <jar.GeopediaServer buildBaseDir="${buildDirectory}"/>            		
+	</target>	
+	
+	
+	<target name="clean">
+		<delete dir="${buildDirectory}" />
+	</target>
+	
+	<target name="all" depends="clean, buildGeopediaDeps, buildServer, buildGeopedia, buildWAR" />
+	
+</project>

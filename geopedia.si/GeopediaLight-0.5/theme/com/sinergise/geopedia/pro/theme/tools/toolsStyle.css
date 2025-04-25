@@ -1,0 +1,144 @@
+@external *;
+
+/*********** TOOLS ************/
+.tools a.tool { margin: 10px 10px 5px; padding: 5px 5px 5px 50px; display: block; }
+.tools a.tool:hover { 
+	box-shadow: 0 2px 4px #aaa;
+	background: literal("-moz-linear-gradient(top, #fdfdfd 0%, #f5f5f5 100%)");
+	background: literal("-webkit-linear-gradient(top, #fdfdfd 0%,#f5f5f5 100%)");
+	background: literal("-o-linear-gradient(top, #fdfdfd 0%,#f5f5f5 100%)");
+	filter: literal("progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f5f5f5',GradientType=0 )");
+	background: literal("linear-gradient(top, #fdfdfd 0%,#f5f5f5 100%)");
+	border-radius: 5px;
+	cursor: pointer;
+}
+@if user.agent ie6 ie8 ie9 {
+	.tools a.tool:hover {
+		border: 1px solid #ccc;
+		padding: 4px 4px 4px 49px;
+	}
+}
+.tools .tool > img { 
+	float: left;
+	margin-left: -40px;
+	margin-top: 10px;
+	display: block;
+}
+.tools .tool .title {
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	display: block;
+}
+.tools a.tool:hover { text-decoration: none; }
+.tools .tool .details { color: #777; font-size: 11px; }
+
+/**** measurement panel ***/
+.measurementPanel {
+	height: 100%;
+}
+.measurementPanel > div { padding: 10px;}
+.measurementPanel .sgwebui-dummywidget {
+	border-radius: 5px;
+	box-shadow: 0 0 3px #aaa;
+	margin-right: 7px;
+}
+.measurementPanel .gwt-Label {
+	margin-right: 6px;
+	font-weight: bold;
+}
+.measurementPanel table td {
+	padding-bottom: 5px;
+}
+.featuresSummary > span {
+	border-right: 1px solid #CCCCCC;
+    display: inline-block;
+    font-size: 11px;
+    margin-right: 5px;
+    padding-right: 5px;
+    vertical-align: top;
+}
+
+/*** cordinates converter ***/
+.coordinatesConverter { padding: 10px; }
+.coordinatesConverter .gwt-InlineLabel {
+	margin-right: 6px;
+	display: inline-block;
+}
+.coordinatesConverter select { margin-right: 10px;}
+.coordinatesConverter input { 
+	width: 75px; 
+	margin: 3px 6px 3px 0;
+	padding-left: 35px; 
+}
+.coordinatesConverter .sgwebgis-zoomSelectWidget input {
+	padding-left: 5px;
+	width: 130px;
+}
+.coordinatesEditor > div {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+.coordinatesEditor b {
+	background: none repeat scroll 0 0 #eee;
+    border-radius: 3px 0 0 3px;
+    border-right: 1px solid #ccc;
+    height: 14px;
+    left: 1px;
+    padding: 4px 5px;
+    position: absolute;
+    text-align: center;
+    top: 4px;
+    width: 20px;
+}
+.coordinatesConverter td {
+    padding-bottom: 5px;
+}
+.coordinatesConverter td > b {
+	display: block;
+	text-align: right;
+	margin-right: 10px;
+}
+.coordinatesConverter .btn { white-space: nowrap;}
+.convertLabel {
+	cursor: text;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background: #eee;
+	padding: 3px 5px;
+	width: 94%;
+	min-width: 130px;
+	height:18px;
+	line-height: 18px;
+	white-space: nowrap;
+}
+.coordinateBtns {
+	margin: 5px;
+	border-top: 1px solid #ccc;
+	padding-top: 10px;
+}
+.coordinateBtns > * {
+	vertical-align: middle !important;
+	margin: 0 7px 0 0;
+}
+.coordinatesConverter .notifPanel {
+	border-radius: 5px;
+	border: 1px solid #D8CA29;
+	background-color: #f9f4c2;
+	margin-right: 7px;
+	margin-top: 4px;
+	padding: 5px;
+	width: 120px;
+}
+.coordinatesConverter .notifPanel:before {
+	content: "";
+	display: block;
+	float: left;
+	margin-left: 50px;
+	margin-top: -10px;
+	border-bottom: 4px solid #D8CA29;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+}

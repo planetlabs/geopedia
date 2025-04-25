@@ -1,0 +1,229 @@
+@external *;
+
+.sgwebgis-map-zoomWheelBox-outer {
+	border: double #F0C000 3px;
+}
+
+.sgwebgis-map-zoomWheelBox-inner {
+	background: #F8E800;
+	filter: literal("alpha(opacity = 25)");
+	opacity: .25;
+}
+
+.sgwebgis-map-zoomWindowBox-outer {
+	border: dashed #F0C000 1px;
+}
+
+.sgwebgis-map-zoomWindowBox-inner {
+	background: #F8E800;
+	filter: literal("alpha(opacity = 25)");
+	opacity: .25;
+}
+
+.sgwebgis-map-selectBox-outer {
+	border: dashed #2AAAFF 1px;
+}
+
+.sgwebgis-map-selectBox-inner {
+	background: #7FAAFF;
+	filter: literal("alpha(opacity = 25)");
+	opacity: .25;
+}
+
+.sgwebgis-coordsScaleInputWidget .sgwebgis-zoomSelectWidget input,
+.sgwebgis-coordsScaleInputWidget table.sgwebgis-zoomSelectWidget {
+	width: 99%;
+}
+
+.sgwebgis-coordsScaleInputWidget .sgwebgis-coordsEntryWidget > * {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+@if user.agent ie6 {
+	.sgwebgis-coordsScaleInputWidget .sgwebgis-coordsEntryWidget input {
+		width: 150px;
+	}
+}
+
+table.sgwebgis-coordsScaleInputWidget {
+	border-spacing: 2px;
+}
+
+.sgwebgis-structuredQuery.withIcon td.fieldWidget {
+	padding-right: 24px;
+}
+@sprite .sgwebgis-structuredQuery .btnShowLookup {
+	gwt-image: "search";
+	font-size: 0;
+	text-indent: -100px;
+	float: right;
+	margin-right: -20px;
+	margin-top: 4px;
+}
+.sgwebgis-structuredQuery.withIcon .sgwebgis-queryCondDatePeriodWidget > table {
+    margin-right: -22px;
+}
+
+.sgwebgis-structuredQuery tr td, .sgwebgis-structuredQuery tr td.first {
+	padding: 3px 0;
+}
+.sgwebgis-coordsScaleInputWidget table tr,
+.sgwebgis-selectableQueryWidget table tr,
+.sgwebui-unitConverter table tr,
+.sgwebgis-structuredQuery tr  {
+	background: transparent !important;	
+	border: none;
+}
+
+.sgwebgis-disclosureQueryWidget-buttons {
+	margin-top: 5px;
+}
+.sgwebgis-disclosureQueryWidget-buttons > * {
+	margin-right: 5px;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+.sgwebgis-structuredQuery .fieldWidget,
+.sgwebgis-structuredQuery .fieldWidget td {
+	text-align: right;
+}
+.sgwebgis-structuredQuery .fieldWidget .gwt-ListBox {
+	width: 148px;
+}
+.sgwebgis-coordsScaleInputWidget .gwt-PushButton {
+	float: left;
+}
+.sgwebgis-tabbedAttrPanel .sgwebui-table tr.filter, .sgwebgis-tabbedAttrPanel a.btnHideFilter {
+	display: none;
+}
+/*** measurements ****/
+.sgwebgis-measurementResults table tr > td:first-child {
+	width: 25px;
+}
+.sgwebgis-measurementResults td {
+	padding-bottom: 3px;
+}
+.sgwebgis-measurementResults .gwt-Label {
+	font-weight:bold;
+	margin-right: 5px;
+}
+@sprite .sgwebgis-measurementResults span {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 15px;
+	background-position: 5px center;
+	background-repeat: no-repeat;
+	gwt-image: "measureArrow";
+	margin: 2px 0;
+}
+.sgwebgis-measurementResults span:first-child {
+	background: none;
+	padding-left: 0;
+}
+
+table.sgwebgis-measurementResultsDEM {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.sgwebgis-measurementResultsDEM td {
+	margin-right: 5px;	
+}
+
+.sgwebgis-measurementResultsDEM td {
+	vertical-align: top;
+    padding-right: 5px !important;
+}
+
+.sgwebgis-measurementResultsDEM .gwt-Label {
+	padding-right: 10px !important;
+}	
+
+/******** GIS PRINTING **********/
+.printContainter table td {
+	padding: 3px;
+}
+.printContainter table td:first-child {
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: right;
+}
+.printContainter table select {
+	margin-right: 4px;
+}
+.printButtons {
+	text-align: center;
+	margin: 5px 0;
+}
+
+.sgwebgis-toolPanel { border: none; }
+
+/***MEASURE POINTS ON MAP ***/
+.edit-node {
+	-moz-border-radius:6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 2px solid #fff;
+	box-shadow: 0 0 3px #888;
+	-moz-box-shadow: 0 0 3px #888;
+	-webkit-box-shadow: 0 0 3px #888;
+	background: #15d515;
+}
+.edit-node.middle {
+	background: #189018;
+	opacity: .8;
+	filter: literal("alpha(opacity=80)");
+}
+.edit-node.selected,
+.edit-node.locked.selected,
+.edit-node.hover, 
+.edit-node.locked.hover, 
+.edit-node.middle.selected,
+.edit-node.middle.locked.selected,
+.edit-node.middle.hover, 
+.edit-node.middle.locked.hover {
+	opacity: 1;
+	filter: literal("alpha(opacity=100)");
+	background: #FFC84E; 
+	cursor: pointer;
+}
+.edit-node.active {
+	background: #ee33ae;
+}
+.edit-node.locked,
+.edit-node.middle.locked {
+    background-color: red;
+}
+
+/*** editor ribbon ****/
+.widgetsRibbon {
+	background: #eee;
+	padding: 3px 10px;
+	border-bottom: 1px solid #aaa;
+}
+.widgetsRibbon > *,
+.editorRibbonCurrentArea > *,
+.polygonAreaSnapWidget > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+.widgetBoxSeparator {
+	margin: 0 10px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #fff;
+	min-height: 16px;
+}
+.editorRibbonCurrentArea {
+	margin: 0 8px 0 2px;
+}
+.editorRibbonCurrentArea > *,
+.polygonAreaSnapWidget input {
+	margin-right: 5px;
+}
+
+.polygonAreaSnapWidget {
+	min-width: 150px;
+}

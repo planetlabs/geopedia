@@ -1,0 +1,52 @@
+.gwt-DecoratedTabBar {
+	background: url("../img/tab_single/tab_bg.png") left top repeat-x #9a0303;
+}
+.infoPanel > tbody > tr > td > table.gwt-DecoratedTabBar {
+	margin-top: 50px;
+}
+table.gwt-DecoratedTabBar > tbody > tr > td {
+	vertical-align: top !important;
+} 
+
+.gwt-TabBarItem {
+	margin: 0px 6px 2px 0;
+}
+.gwt-TabBarItem-selected {
+	margin-top: 3px;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem .tabMiddleCenter {
+	color: #fff;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem .tabMiddleCenter:hover {
+	color: #e3bd1a;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleCenter,
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleCenter:hover {
+	color: #850202;
+	padding-bottom: 5px;
+	line-height: 15px;
+}
+
+
+.gwt-TabPanelBottom {
+	background: url(../img/mainpanel_bg.png) left top repeat-x #fff;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopLeftInner, 
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopRightInner {
+	width: 4px;
+	height: 4px;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopCenterInner {
+	height: 4px;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleLeftInner,
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleRightInner {
+	width: 4px;
+}
+
+.gwt-TabPanelBottom > .tabContainer {
+	bottom: 39px;
+	top: 100px;
+}

@@ -1,0 +1,24 @@
+.sgwebgis-zoomCtrl-plus {
+	top: 2px;
+}
+.sgwebgis-zoomCtrl-minus {
+	top: 104px;
+}
+
+.sgwebgis-map-scaleDisplay td {
+	vertical-align: top !important;
+}
+.sgwebgis-map-scaleDisplay td div.sgwebgis-map-scaleDisplay-middle {
+	padding-top: 3px;
+	height: 16px;
+}
+.sgwebgis-coordinateslabel-projLb,
+.sgwebgis-coordinateslabel-latLonLb {
+	padding: 5px 10px;
+}
+.app-version {
+	right: 5px;
+	left: auto !important;
+	bottom: 30px;
+	top: auto !important;
+}

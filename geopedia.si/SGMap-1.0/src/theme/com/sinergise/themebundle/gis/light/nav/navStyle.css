@@ -1,0 +1,190 @@
+@external *;
+
+.sgwebgis-fixedOverlay {
+	width: 100% !important;
+	height: 100% !important;
+}
+.sgwebgis-mapComponent {
+	background: #fff;
+	height: 100%;
+} 
+.sgwebgis-mapComponent > div {
+	width: 100%;
+	height: 100%;	
+}
+
+.sgwebgis-panCtrl, .sgwebgis-zoomCtrl, .sgwebgis-map-scaleDisplay {
+	opacity: 0.7;
+	transition: all 0.4s ease;
+}
+.sgwebgis-panCtrl:hover, .sgwebgis-zoomCtrl:hover, .sgwebgis-map-scaleDisplay:hover {
+	opacity: 1;
+}
+
+/******************************** PAN CONTROL *****************************/
+@sprite div.sgwebgis-panCtrl {
+	gwt-image: "panBg";
+}
+.sgwebgis-panCtrl-main {
+	height: 100%;
+	width: 100%;
+}
+
+@sprite div.sgwebgis-panCtrl-left-on, 
+div.sgwebgis-panCtrl-right-on, 
+div.sgwebgis-panCtrl-up-on, 
+div.sgwebgis-panCtrl-down-on, 
+div.sgwebgis-panCtrl-dot-on {
+    position: absolute;
+    gwt-image: "panLeft";
+    display: block;
+    left: 6px;
+    top: 27px;
+    cursor: move;
+} 
+
+@sprite div.sgwebgis-panCtrl-right-on {
+    gwt-image: "panRight";
+    left: 42px;
+    top: 27px;
+}
+
+@sprite div.sgwebgis-panCtrl-up-on {
+    gwt-image: "panUp";
+    left: 26px;
+    top: 7px;
+}
+
+@sprite div.sgwebgis-panCtrl-down-on {
+    gwt-image: "panDown";
+    left: 26px;
+    top: 43px;
+}
+
+@sprite div.sgwebgis-panCtrl-dot-on {
+    gwt-image: "panCenter";
+    left: 26px;
+    top: 27px;
+} 
+
+
+/******************************** SCALE SLIDER CONTROL *****************************/
+div.sgwebgis-zoomCtrl {
+	width: value("slider.getWidth","px");
+	height: value("slider.getHeight","px");
+}
+@sprite div.sgwebgis-zoomCtrl-main {
+	gwt-image: "slider";
+	cursor: default;
+}
+
+@sprite div.sgwebgis-zoomCtrl-ind-off,
+div.sgwebgis-zoomCtrl-ind-on {
+	gwt-image: "sliderBall";
+	position: absolute;
+	left: 6px !important;
+	cursor:pointer;
+}
+@sprite div.sgwebgis-zoomCtrl-ind-off:hover,
+div.sgwebgis-zoomCtrl-ind-on:hover {
+	gwt-image: "sliderBallOver";
+}
+	
+@sprite div.sgwebgis-zoomCtrl-ind-off.down,
+div.sgwebgis-zoomCtrl-ind-on.down {
+	gwt-image: "sliderBallDown";
+}
+
+div.sgwebgis-zoomCtrl-plus,
+div.sgwebgis-zoomCtrl-minus {
+	position: absolute;
+	width: value("sliderPlus.getWidth","px");
+	height: value("sliderPlus.getHeight","px");
+	left: 3px;
+	top: 6px;
+	cursor:pointer;
+	display: block;
+	background: none;
+}
+div.sgwebgis-zoomCtrl-minus { 
+	top: auto; 
+	bottom: 6px;
+}
+@sprite div.sgwebgis-zoomCtrl-plus:hover,
+div.sgwebgis-zoomCtrl-plus.down {
+	gwt-image: "sliderPlus";
+}
+@sprite div.sgwebgis-zoomCtrl-minus:hover,
+ div.sgwebgis-zoomCtrl-minus.down {
+	gwt-image: "sliderMinus";
+}
+
+/******************************** COORDS AND SCALE INPUT *****************************/
+.sgwebgis-coordinateslabel {
+	bottom: 0;
+	left: 0 !important;
+	top: auto !important;
+	right: 0;
+	background: rgba(255,255,255,.5);
+	border-top: 1px solid #ccc;
+	padding: 3px 10px;
+	min-height: 20px;
+	width: auto !important;
+}
+.sgwebgis-coordinateslabel-projLb,
+.sgwebgis-coordinateslabel-latLonLb {
+	padding: 3px 10px;
+	display: inline-block;
+	zoom: 1;
+	margin-right: 15px;
+}
+@if user.agent ie6 ie8 {
+	.sgwebgis-coordinateslabel { background: #eee; filter: literal("alpha(opacity=60)"); }
+}
+@if user.agent ie6 {
+	.sgwebgis-coordinateslabel-projLb,
+	.sgwebgis-coordinateslabel-latLonLb {
+		zoom: 1;
+		float: left;
+	}
+}
+
+div.sgwebgis-map-scaleDisplay {
+	position: absolute;
+	border: none;
+	left: 20px !important;
+	top: auto !important;
+	bottom: 45px;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGVkZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #ffffff 0%, #ddd 100%)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ddd))");
+	background: literal("-webkit-linear-gradient(top, #ffffff 0%,#ddd 100%)");
+	background: literal("-o-linear-gradient(top, #ffffff 0%,#ddd 100%)");
+	background: literal("linear-gradient(top, #ffffff 0%,#ddd 100%)");
+	border-radius: 16px;
+	-moz-border-radius: 16px;
+	-webkit-border-radius: 16px;
+	padding: 4px 0px;
+	color: #333;
+	line-height: 11px;
+	font-size: 11px;
+	box-shadow: 0 0 3px #222;
+	-moz-box-shadow: 0 0 3px #222;
+	-webkit-box-shadow: 0 0 3px #222;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.copyright, .app-version {
+	right: 10px;
+	left: auto !important;
+	top: auto !important;
+	white-space: nowrap;
+	bottom: 5px;
+	font-size: 12px;
+}
+.app-version {
+	bottom: 35px;
+	text-shadow: 0 1px 0 #eee;
+	font-size: 11px;
+}

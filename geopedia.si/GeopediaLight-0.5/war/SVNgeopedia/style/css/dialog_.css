@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+.dialog-status {
+    background: rgb(255, 255, 255);
+}
+
+.dialog-title {
+    background: rgb(255, 255, 255);
+    font-size: 15pt;
+    padding-bottom: 6px;
+}
+
+.dialog-title-highlighted {
+    background: rgb(255, 210, 220);
+}

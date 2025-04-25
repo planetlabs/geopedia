@@ -1,0 +1,176 @@
+/* ########## DECORATED BUTTON ########## */
+#noIE .sgwebui-decoratedButton .butTopCenterInner,
+#IE9 .sgwebui-decoratedButton .butTopCenterInner, 
+#IE .sgwebui-decoratedButton .butTopCenterInner, 
+a.btn, a.btn.disabled.down, a.btn.disabled.down:hover, a.btn.disabled:hover,
+#IE a.btn, #IE a.btn.disabled.down, #IE a.btn.disabled:hover, #IE a.btn.disabled.down:hover, #IE a.btn:hover,
+.gwt-ToggleButton-up, .gwt-Button, .gwt-ToggleButton-up-disabled,
+.gwt-PushButton-up, .gwt-PushButton-up-disabled {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RjZGNkYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhYWFhYWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #dcdcdc 0%, #aaaaaa 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dcdcdc), color-stop(100%,#aaaaaa));
+	background: -webkit-linear-gradient(top, #dcdcdc 0%,#aaaaaa 100%);
+	background: -o-linear-gradient(top, #dcdcdc 0%,#aaaaaa 100%);
+	background: -ms-linear-gradient(top, #dcdcdc 0%,#aaaaaa 100%);
+	background: linear-gradient(top, #dcdcdc 0%,#aaaaaa 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcdcdc', endColorstr='#aaaaaa',GradientType=0 );
+	color: #666;
+	padding:6px 9px;
+	border: 1px solid #aaa;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+#noIE .gwt-PushButton-up-hovering .butTopCenterInner,
+#IE .gwt-PushButton-up-hovering .butTopCenterInner,
+#IE9 .gwt-PushButton-up-hovering .butTopCenterInner,
+a.btn:hover, #IE a.btn:hover, .gwt-ToggleButton-up-hovering,
+.gwt-PushButton-up-hovering, .gwt-Button:hover {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzUwOWFiYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzNjc0ODMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #509aba 0%, #367483 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#509aba), color-stop(100%,#367483));
+	background: -webkit-linear-gradient(top, #509aba 0%,#367483 100%);
+	background: -o-linear-gradient(top, #509aba 0%,#367483 100%);
+	background: -ms-linear-gradient(top, #509aba 0%,#367483 100%);
+	background: linear-gradient(top, #509aba 0%,#367483 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#509aba', endColorstr='#367483',GradientType=0 );
+	color: #fff;
+	border:1px solid #2a5f6c;
+}
+#IE a.btn .txt,
+#IE a.btn:hover .txt,
+#IE a.btn.down:hover .txt,
+#IE a.btn:hover .txt{
+	padding: 0 !important;
+	background: none !important;
+}
+
+#noIE .gwt-PushButton-down-hovering .butTopCenterInner,
+#IE9 .gwt-PushButton-down-hovering .butTopCenterInner,
+#IE .gwt-PushButton-down-hovering .butTopCenterInner,
+a.btn.down, a.btn.down:hover,
+#IE a.btn.down, #IE a.btn.down:hover,
+.gwt-ToggleButton-down-hovering, .gwt-ToggleButton-down,
+.gwt-PushButton-down, .gwt-PushButton-down-hovering,
+.gwt-Button:active {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM2NzQ4MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1MDlhYmEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #367483 0%, #509aba 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#367483), color-stop(100%,#509aba));
+	background: -webkit-linear-gradient(top, #367483 0%,#509aba 100%);
+	background: -o-linear-gradient(top, #367483 0%,#509aba 100%);
+	background: -ms-linear-gradient(top, #367483 0%,#509aba 100%);
+	background: linear-gradient(top, #367483 0%,#509aba 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#367483', endColorstr='#509aba',GradientType=0 );
+	border:1px solid #2a5f6c;
+	text-shadow: 0 1px 0 #000;
+	color: #fff;
+}
+#IE .gwt-PushButton .butTopLeft, #IE a.btn .rSide {
+	display: none !important;
+}
+.gwt-ToggleButton {
+	padding: 3px;
+}
+
+#IE a.btn.disabled {
+	background: #ccc !important;
+}
+#IE a.btn.disabled .txt {
+	color: #888 !important;
+}
+
+.sgwebui-ImageLabel .gwt-ToggleButton,
+.sgwebui-ImageLabel .gwt-PushButton {
+	padding: 2px 2px 0px;
+}
+.sgwebui-ImageLabel .gwt-ToggleButton-up-hovering,
+.sgwebui-ImageLabel .gwt-PushButton-up-hovering,
+.sgwebui-ImageLabel .gwt-ToggleButton-down-hovering,
+.sgwebui-ImageLabel .gwt-PushButton-down-hovering,
+.sgwebui-ImageLabel .gwt-ToggleButton-down,
+.sgwebui-ImageLabel .gwt-PushButton-down  {
+	background: #fff !important;
+}
+.sgwebui-ImageLabel .gwt-ToggleButton-up-hovering, 
+.sgwebui-ImageLabel .gwt-PushButton-up-hovering,
+.sgwebui-ImageLabel .gwt-ToggleButton-down-hovering, 
+.sgwebui-ImageLabel .gwt-PushButton-down-hovering  {
+	box-shadow: 0 0 3px #fff;
+}
+.sgwebui-ImageLabel .gwt-ToggleButton img, 
+.sgwebui-ImageLabel .gwt-PushButton img {
+	padding: 1px 1px 0;
+}
+
+
+/****** 
+
+
+
+.sgwebui-decoratedButton .butTopLeft,
+.sgwebui-decoratedButton .butBottom {
+	display: none;
+}
+
+div.gwt-PushButton-up, div.gwt-PushButton-up .butTopCenter, .sgwebui-decoratedButton .butTopCenter,
+.gwt-ToggleButton-up, .gwt-ToggleButton-up-hovering, .gwt-PushButton-up-disabled .butTopCenter,
+.gwt-Button, .btn, a.btn {
+	background: url(../img/buttons/btn.png) left top repeat-x;
+	color: #666;
+	padding:6px 9px;
+	border: 1px solid #aaa;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+div.gwt-PushButton-up-hovering .butTopCenter, .sgwebui-decoratedButton:hover .butTopCenter,
+.gwt-ToggleButton-up-hovering, div.gwt-PushButton-up-hovering,
+div.gwt-PushButton-down .gwt-Label,
+div.gwt-PushButton-down-hovering,
+div.gwt-PushButton-down,
+div.gwt-PushButton-down-hovering .butTopCenter,
+.gwt-ToggleButton-down-hovering, .gwt-ToggleButton-down,
+.gwt-Button:hover, .btn:hover, .btn:focus, .btn:active, a.btn:hover, a.btn.down {
+	background-position: left -85px;
+	background: url(../img/buttons/btn.png) left -85px repeat-x;
+	color: #fff;
+	border: 1px solid #337b95;
+	text-decoration: none;
+}
+
+.gwt-ToggleButton {
+	padding: 3px;
+}
+
+.gwt-PushButton-up-disabled .butTopCenter,
+a.btn.disabled, .gwt-PushButton-up-disabled:hover .butTopCenter {
+	background: url(../img/buttons/btn.png) left top repeat-x;
+	color: #666;
+	border: 1px solid #aaa;
+	opacity: .5;
+	cursor: default;
+	filter:alpha(opacity=50);
+	text-shadow: none;
+}
+a.btn.disabled .txt {
+	cursor: default;
+}
+
+div.gwt-PushButton.sgwebui-decoratedButton,
+.sgwebui-decoratedButton .butTopLeft, 
+.sgwebui-decoratedButton .butBottomLeft, 
+.sgwebui-decoratedButton .butBottomCenter {
+	background: none;
+	padding: 0;
+	border: none;
+}
+
+a.btn.icon, a.btn.icon.disabled {
+	padding-left: 30px;
+}
+a.btn.icon:hover, a.btn.icon.down {
+	padding: 6px 9px 6px 30px;
+}*/

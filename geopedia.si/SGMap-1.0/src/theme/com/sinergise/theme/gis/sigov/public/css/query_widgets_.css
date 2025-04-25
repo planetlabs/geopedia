@@ -1,0 +1,20 @@
+
+.sgwebgis-structuredQuery-fieldWidget .gwt-TextBox,
+.sgwebgis-structuredQuery-fieldWidget .gwt-ListBox {
+	border: 1px solid #ccc;
+	padding:3px;
+	color: #777;
+	width: 140px;
+}
+
+.sgwebgis-structuredQuery-fieldWidget .gwt-TextBox:focus {
+	-moz-box-shadow: 0 0 3px #aaa;
+	-webkit-box-shadow: 0 0 3px #aaa;
+	box-shadow: 0 0 3px #aaa;
+	border-color: #999;
+}
+
+.sgwebgis-structuredQuery-fieldWidget .gwt-ListBox {
+	width: 148px;
+	*width: 140px !important;
+}

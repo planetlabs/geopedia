@@ -1,0 +1,326 @@
+@external *;
+
+.genericsMainTableHolder {
+	position: relative;
+	padding-top: 25px;
+}
+.genericsMainTableHolder .exportButtonsPanel {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.exportButtonsPanel a {
+	margin-left: 8px;
+}
+/***************** FORM TABLE **************************************/
+td.sgwebui-table-title,
+tr.header > td {
+	background: #aaa;
+	text-transform: uppercase;
+    color: #fff;
+    vertical-align: top;
+    padding: 2px 5px;
+    border-bottom: 1px solid #aaa;
+}
+
+tr.header td.sortable {
+	background: #555;
+	
+}
+tr.filter td {
+	background: #aaa;
+	border-bottom: 1px solid #333;
+	padding: 2px 5px;
+}
+tr.filter td.sortable { 
+	background: #555; 
+}
+tr.header .columnorder {
+	padding: 5px 5px 0px 10px;
+	display: block;
+	cursor: pointer;
+}
+
+@if user.agent ie6 {
+	tr.header .columnorder {
+		padding: 2px 5px 0;
+	}
+}
+
+@sprite tr.header .columnorder .asc,
+tr.header .columnorder .desc {
+	gwt-image: "sortUp";
+	margin: -5px auto 0;
+	cursor: pointer;
+}
+@sprite tr.header .columnorder .desc {
+	gwt-image: "sortDown";
+}
+
+
+tr.filter td.first {
+	padding-left: 10px;
+}
+
+tr.filter input, tr.filter select {
+	font-size: 11px;
+	padding: 2px;
+	width: 92%;
+	opacity: .6;
+}
+tr.filter select { padding: 1px 2px; }
+tr.filter input:hover, tr.filter select:hover  {
+	opacity: .8;
+}
+tr.filter input:focus, tr.filter select:focus {
+	opacity: 1;
+}
+
+tr.even { 
+	background-color: #f4f4f4; 
+}
+tr.odd { 
+	background-color: #e6e6e6; 
+}
+tr.even > td, tr.odd > td {
+    color: #555555;
+    padding: 3px 5px;
+}
+tr.even > td.first,
+tr.odd > td.first { 
+	padding-left: 10px; 
+}
+@sprite tr.bottom,
+.paginator {
+	gwt-image: "shadow";
+}
+td.fieldWidget tr.bottom {
+	display: none;
+}
+
+td.label {
+	color: #555555; 
+}
+td.value {
+	color: #000000;
+}
+
+.selectable tr:hover {
+	cursor: pointer;
+	background: #ebf6f4;
+}
+
+.selectable tr.selected,
+.selectable tr.selected:hover { 
+	background: #e0e0e0; 
+	cursor: default; 
+}
+
+table.sgwebui-table td td {
+	border-bottom: none;
+}
+
+.sgwebui-table .bottom td,
+.sgwebui-table .last td,
+.sgwebui-table .first td {
+	border-bottom: none;
+}
+
+.sgwebui-table tr.title > td {
+	padding: 3px 5px;
+	color: #fff;
+	background: #333;
+	font-weight: bold;
+}
+.sgwebui-table tr.title > td:first-child {
+	padding-left: 10px;
+}
+
+.sgwebui-table td .centered {
+	margin: 1px auto;
+	width: 20px;
+	display: block;
+}
+
+/****** GLASS PANELS AND LOADERS *******/
+.WizardPanel-content-hidden {
+	display:none;
+}	
+.LookupGenericWidget {
+	position: relative;
+}
+
+/*********** PAGE SIZE **************/
+.pageSizeSelectors { text-align: right; margin-bottom: 3px; }
+@sprite .pageSizeSelectors a { 
+	display: inline-block; 
+	gwt-image: "size1"; 
+	border: 2px solid #bbb; 
+	border-radius: 4px;
+	font-size: 0;
+	width: 19px; 
+	height: 19px; 
+	text-indent: -100px; 
+	overflow: hidden; 
+	margin: 3px 0 0 7px;
+	opacity: .7; 
+	filter: literal("alpha(opacity=70)");
+}
+@sprite .pageSizeSelectors a.size1 {gwt-image: "size2"; }
+@sprite .pageSizeSelectors a.size2 {gwt-image: "size3"; }
+.pageSizeSelectors a:hover { 
+	box-shadow: 0 0 3px #999;
+	border-color: #999; 
+	cursor: pointer; 
+	opacity: 1; 
+	filter: literal("alpha(opacity=100)");
+}
+.pageSizeSelectors a.active, .pageSizeSelectors a.active:hover {
+	border-color: #4eafbe; 
+	box-shadow: none; cursor: default;
+	text-shadow: 0 -1px 0 #555;
+	margin-top: 0px; 
+	opacity: 1; 
+	filter: literal("alpha(opacity=100)");
+}
+
+/***** CELL STYLES ****/
+.genType-boolean { }
+
+.genType-int, .genType-float {text-align: right; padding-right: 15px;}
+.first.genType-int, .first.genType-float {text-align: left; padding-right: 5px;}
+
+.genType-date { }
+
+.genType-string { }
+
+.genType-stub { }
+
+.genType-raw { }
+
+.genType-unknown { }
+
+.sgDatePicker-dateEdit { margin-right: 7px; }
+
+/*** FILTER BUTTON ****/
+@sprite .btnHideFilter, .btnShowFilter {
+	gwt-image: "filterOn";
+	position: absolute;
+	top:0;
+	left: 0;
+	margin:9px 0 0 -6px;
+}
+
+@sprite .btnHideFilter {
+	gwt-image: "filterOff";
+}
+
+div.pagingTable {
+	overflow: visible !important;
+	margin: 0 10px;
+	display: block;
+}
+.genericTableWidget > div.pagingTable {
+	margin: 0;
+}
+div.pagingTable > table { width: 100%; }
+
+
+/****** rowButtonWidget ****/
+.rowButtonWidget {
+	white-space: nowrap;
+}
+.rowButtonWidget .radioToggleButton {
+	margin: 0 0 0 -1px;
+	background: #ddd;
+	color: #222;
+	text-shadow: 0 1px 0 #eee;
+	border: 1px solid #aaa;
+	display: inline-block;
+	padding: 3px 5px;
+	cursor: pointer;
+}
+@if user.agent ie6 {
+	.rowButtonWidget { min-width: 150px; }
+	.rowButtonWidget .radioToggleButton { float: left; }
+}
+.rowButtonWidget .radioToggleButton-up-hovering {
+	box-shadow: 0 0 2px #888;
+}
+.rowButtonWidget .radioToggleButton-down,
+.rowButtonWidget .radioToggleButton-down-hovering {
+	background: #fff;
+	border-color: #888;
+	box-shadow: 0 2px 2px #bbb inset;
+}
+.rowButtonWidget .radioToggleButton.first {
+	border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;
+}
+.rowButtonWidget .radioToggleButton.last {
+	border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	-webkit-border-radius: 0 3px 3px 0;
+}
+.rowButtonWidget .radioToggleButton-up-disabled,
+.rowButtonWidget .radioToggleButton-down-disabled {
+	color: #999;
+	cursor: default;
+}
+.rowButtonWidget .radioToggleButton-down-disabled {
+	box-shadow: 0 2px 2px #bbb inset;
+	background: #fff;
+}
+
+/*********** PAGINATOR *************/
+.paginator {
+	padding: 5px;
+	height: auto;
+}
+@sprite .paginator a.back, 
+.paginator a.back.disabled,
+.paginator a.back.disabled:active,
+.paginator a.fwd {
+	font-size: 0;
+	float: left;
+	padding: 0;
+	gwt-image: "prev";
+	text-indent: -10000px;
+	margin-right: 3px;
+	cursor: pointer;
+}
+@sprite .paginator a.fwd, 
+.paginator a.fwd.disabled,
+.paginator a.fwd.disabled:active  {
+	gwt-image: "next";
+}
+@sprite .paginator a.back:active {
+	gwt-image: "prevDown";
+}
+@sprite .paginator a.fwd:active {
+	gwt-image: "nextDown";	
+}
+.paginator a.disabled, .paginator a.disabled:active {
+	opacity: .5;
+	cursor: default !important;
+	filter: literal("alpha(opacity=50)");
+}
+
+@sprite .counter { 
+	float: right;
+	margin-top: 3px;
+	font-size: 11px;
+	color: #777;
+	padding-right: 20px;
+	min-height: 16px;
+	gwt-image: "info";
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+
+
+.gwt-DialogBox.lookupPanel tr.even,
+.gwt-DialogBox.lookupPanel tr.odd {
+	cursor: pointer;
+}

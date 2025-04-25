@@ -1,0 +1,40 @@
+
+tr.header td.sortable {
+	background-color: #93ca5f !important;
+	color: #fff;
+}
+
+tr.filter td.sortable {
+	background-color: #6ba534 !important;
+}
+
+tr.header td {
+	background-color: #6ba534 !important;
+	color: #000000;	
+}
+
+.sgwebgis-tabbedAttrPanel table.sgwebui-table > tbody > tr > td {
+	border-bottom: 1px solid #ccc;
+}
+
+tr.title > td {
+	height:24px;
+	background: url("../img/titled_panel/titled_panel_head_bg.png") #66A32D top repeat-x !important;
+	color: #FFF !important;
+	font-size: 13px;
+}
+
+tr.odd {
+	background: #f1f1f1; 
+}
+table.sgwebui-table > tbody > tr > td {
+	color: #444;
+}
+
+tr.even {
+	background: #fff; 
+}
+
+.sgwebui-table a {
+	color: #222;	
+}

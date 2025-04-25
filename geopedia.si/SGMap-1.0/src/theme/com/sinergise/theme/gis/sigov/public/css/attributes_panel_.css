@@ -1,0 +1,88 @@
+table.sgwebgis-tabbedAttrPanel {
+	height: auto !important;
+}
+
+.sgwebgis-tabbedAttrPanel div.gwt-DecoratedTabBar-flow {
+	background: none;
+}
+
+.sgwebgis-tabbedAttrPanel .gwt-DecoratedTabBar .gwt-TabBarItem .tabTopCenter { 
+	display: block !important;
+}
+
+.sgwebgis-tabbedAttrPanel .gwt-DecoratedTabBar tr.tabMiddle {
+	display: none;
+}
+
+.sgwebgis-tabbedAttrPanel .gwt-TabBarItem .tabTopCenter {
+	padding: 6px 9px;
+	color: #666;
+	background: url(../img/buttons/btn.png) left top repeat-x;
+}
+
+.sgwebgis-tabbedAttrPanel .gwt-TabBarItem .tabTopCenter:hover {
+	background-position: left -85px;
+}
+
+.sgwebgis-tabbedAttrPanel .gwt-TabBarItem .tabTopCenter:hover .gwt-Label,
+.sgwebgis-tabbedAttrPanel .gwt-TabBarItem.gwt-TabBarItem-selected .tabTopCenter .gwt-Label
+	{
+	color: #fff;
+}
+
+.sgwebgis-tabbedAttrPanel .gwt-TabBarItem.gwt-TabBarItem-selected .tabTopCenter
+	{
+	background: url(../img/decor_tab/tab_act.png) left top repeat-x #4f9aba;
+}
+
+div.sgwebui-detailsTab-close {
+	margin-bottom: 0;
+}
+
+.sgwebgis-tabbedAttrPanel .gwt-DecoratedTabBar .gwt-TabBarRest {
+	clear: both;
+	height: 0 !important;
+}
+
+.sgwebgis-tabbedAttrPanel tr.title > td {
+	background: url("../img/buttons/btn.png") repeat-x scroll left -85px;
+	padding: 0 2px;
+}
+.sgwebgis-tabbedAttrPanel tr.title .gwt-Label { 
+	color: #fff;
+	font-weight: bold;
+	font-size: 12px;
+	margin-left: 5px;
+}
+.gwt-DisclosurePanel tr.header > td { color: #666; }
+
+tr.odd {
+	background: #efefef;
+}
+
+tr.even {
+	background: #f8f8f8;
+}
+
+.sgwebui-table td.fieldLabel.first {
+	min-width: 120px;
+}
+
+tr.header > td {
+	background: url("../img/buttons/btn.png") repeat-x scroll left 10px #dcdadb;
+	color: #666;
+	border-bottom: 1px solid #999;
+}
+
+tr.header td.sortable {
+	background: url(../img/decor_tab/tab.png) left top repeat-x #dcdadb;
+	color: #444;
+}
+
+tr.filter > td {
+	background: #bdbdbd;
+}
+
+tr.filter td.sortable {
+	background: #DCDADB;
+}

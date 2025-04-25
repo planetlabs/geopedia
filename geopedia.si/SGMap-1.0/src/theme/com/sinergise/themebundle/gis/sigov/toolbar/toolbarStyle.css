@@ -1,0 +1,30 @@
+@external *;
+/*** css fix for javascript calculating ... extends nav_.css ***/ 
+@sprite div.sgwebui-toolbar-first-top-right,
+.sgwebui-toolbar-first {
+	gwt-image:"toolbarRight";
+}
+@sprite .sgwebui-toolbar > tbody > tr > td {
+	gwt-image: "separator";
+	background-position: right center;
+	background-repeat:no-repeat;
+	padding: 0px 1px 0px 0px;
+}
+.sgwebui-toolbar div.gwt-PushButton, 
+.sgwebui-toolbar div.gwt-ToggleButton {
+	background-color: transparent;
+	filter: none;
+}
+
+.sgwebui-toolbar div.gwt-PushButton-up-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-up-hovering {
+	background-color:#dcdadb;
+}
+
+.sgwebui-toolbar div.gwt-PushButton-down,
+.sgwebui-toolbar div.gwt-PushButton-down-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-down,
+.sgwebui-toolbar div.gwt-ToggleButton-down-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-down-disabled {
+	background-color:#4f9aba;
+}

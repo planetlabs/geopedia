@@ -1,0 +1,35 @@
+@external *;
+/*** css fix for javascript calculating ... extends nav_.css ***/ 
+
+@sprite table.sgwebui-toolbar-top-right,
+table.sgwebui-toolbar-top-left,
+table.sgwebui-toolbar {
+	gwt-image:"toolbar";
+}
+@sprite div.sgwebui-toolbar-first-top-right,
+.sgwebui-toolbar-first {
+	gwt-image:"toolbarRight";
+}
+@sprite div.sgwebui-toolbar-last-top-right,
+.sgwebui-toolbar-last {
+	width: 8px;
+	gwt-image:"toolbar";
+}
+
+.sgwebui-toolbar div.gwt-PushButton,
+.sgwebui-toolbar div.gwt-ToggleButton {
+	background: none;
+	height: 28px;
+}
+@sprite .sgwebui-toolbar div.gwt-PushButton-up-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-up-hovering {
+	gwt-image:"toolBtnOver";
+}
+
+@sprite .sgwebui-toolbar div.gwt-PushButton-down,
+.sgwebui-toolbar div.gwt-PushButton-down-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-down,
+.sgwebui-toolbar div.gwt-ToggleButton-down-hovering,
+.sgwebui-toolbar div.gwt-ToggleButton-down-disabled {
+	gwt-image:"toolBtnDown";
+}

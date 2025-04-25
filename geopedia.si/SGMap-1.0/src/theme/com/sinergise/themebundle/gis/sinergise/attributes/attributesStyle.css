@@ -1,0 +1,32 @@
+@external *;
+
+@if !user.agent ie6 ie8 {
+	.sgwebgis-resultActionsToolbar .gwt-PushButton,
+	.sgwebgis-resultActionsToolbar .gwt-ToggleButton,
+	.sgwebui-ImageLabel.title .gwt-PushButton,
+	.sgwebui-ImageLabel.title .gwt-ToggleButton,
+	.parcel_title .gwt-PushButton,
+	.parcel_title .gwt-ToggleButton {
+	border-radius: 4px;
+		box-shadow: -1px -1px 2px #ccc inset;
+		background: #fff;
+		border: 1px solid #777;
+		padding: 4px;
+	}
+	.sgwebgis-resultActionsToolbar .gwt-PushButton-down,
+	.sgwebgis-resultActionsToolbar .gwt-ToggleButton-down,
+	.sgwebui-ImageLabel.title .gwt-PushButton-down,
+	.sgwebui-ImageLabel.title .gwt-ToggleButton-down,
+	.sgwebgis-resultActionsToolbar .gwt-PushButton-down-hovering,
+	.sgwebgis-resultActionsToolbar .gwt-ToggleButton-down-hovering,
+	.sgwebui-ImageLabel.title .gwt-PushButton-down-hovering,
+	.sgwebui-ImageLabel.title .gwt-ToggleButton-down-hovering,
+	.parcel_title .gwt-PushButton-down-hovering,
+	.parcel_title .gwt-ToggleButton-down,
+	.parcel_title .gwt-ToggleButton-down-hovering {
+		background: #d8d359;
+		border-color: #aca72d;
+		box-shadow: 1px 1px 2px #6895ac inset;
+		padding: 4px;
+	}
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="/SineRepo/Util/apache-httpcomponents/client/4.2.3/lib/httpclient-4.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="/SineRepo/Util/apache-httpcomponents/core/4.2.3/lib/httpcore-4.2.3.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Util/apache-commons/codec/1.4/lib/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Util/apache-commons/io/2.0.1/lib/commons-io-2.0.1.jar" sourcepath="/SineRepo/Util/apache-commons/io/2.0.1/src/commons-io-2.0.1-sources.jar"/>
+	<classpathentry kind="src" path="src/common"/>
+	<classpathentry kind="src" path="src/server"/>
+	<classpathentry kind="src" path="src/external"/>
+	<classpathentry kind="src" path="src/legacy"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.core.runtimeTarget/J2EE Runtime Library 6"/>
+	<classpathentry kind="lib" path="lib/fastutil-5.0.9.jar"/>
+	<classpathentry kind="lib" path="lib/nekodtd.jar"/>
+	<classpathentry kind="lib" path="lib/nekohtml.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Web/gwt/2.4.0/lib/gwt-servlet.jar" sourcepath="/SineRepo/Web/gwt/2.4.0/lib/gwt-user.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Graphics/jts/1.11/lib/jts-1.11.jar" sourcepath="/SineRepo/Graphics/jts/1.11/src/jts-1.11-src.zip"/>
+	<classpathentry kind="lib" path="/SineRepo/Database/opencsv/2.3/lib/opencsv-2.3.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Database/javadbf/0.4.0/lib/javadbf.jar" sourcepath="/SineRepo/Database/javadbf/0.4.0/src/javadbf-0.4.0-src.zip"/>
+	<classpathentry exported="true" kind="lib" path="/SineRepo/Util/slf4j/1.6.1/lib/slf4j-api-1.6.1.jar" sourcepath="/SineRepo/Util/slf4j/1.6.1/src/slf4j-api-1.6.1-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="/SineRepo/Util/slf4j/1.6.1/lib/slf4j-ext-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Util/logback/0.9.28/lib/logback-core-0.9.28.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Util/logback/0.9.28/lib/logback-classic-0.9.28.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Util/apache-commons/fileupload/1.2.2/lib/commons-fileupload-1.2.2.jar" sourcepath="/SineRepo/Util/apache-commons/fileupload/1.2.2/src/commons-fileupload-1.2.2-src-java.zip"/>
+	<classpathentry kind="lib" path="/SineRepo/WebServer/json/gson/1.7.1/lib/gson-1.7.1.jar" sourcepath="/SineRepo/WebServer/json/gson/1.7.1/src/gson-1.7.1-sources.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.8beta4/ooxml-lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.8beta4/ooxml-lib/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.8beta4/ooxml-lib/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.8beta4/poi-3.8-beta4-20110826.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.8beta4/poi-ooxml-3.8-beta4-20110826.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.8beta4/poi-ooxml-schemas-3.8-beta4-20110826.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Web/jsr311/1.1.1/lib/jsr311-api-1.1.1.jar" sourcepath="C:/Users/MacGregor/.m2/repository/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1-sources.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/Database/MySQL/5.0.8/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/WebServer/rhino/1.7R4/lib/js.jar" sourcepath="C:/Users/pkolaric/.m2/repository/org/mozilla/rhino/1.7R4/rhino-1.7R4-sources.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/WebServer/xerces/2.11.0/lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/WebServer/xerces/2.11.0/lib/xml-apis.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SGGeometry-1.0"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SGUtil-1.0"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SGMap-1.0"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SGUiElements-1.0"/>
+	<classpathentry kind="lib" path="/SineRepo/WebServer/jetty/6.1.26/lib/jetty-6.1.26.jar" sourcepath="/SineRepo/WebServer/jetty/6.1.26/src/jetty-6.1.26.src.zip"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SGCluster-1.0"/>
+	<classpathentry kind="lib" path="/SineRepo/WebServer/jersey/1.12/lib/jersey-core-1.12.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/WebServer/jersey/1.12/lib/jersey-multipart-1.12.jar"/>
+	<classpathentry kind="lib" path="/SineRepo/WebServer/j2ee/6.0/lib/servlet-api.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

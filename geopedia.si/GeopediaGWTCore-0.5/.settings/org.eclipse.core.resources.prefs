@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/core/com/sinergise/geopedia/client/core/i18n/ExceptionMessages_cs.properties=UTF-8
+encoding//src/core/com/sinergise/geopedia/client/core/i18n/ExceptionMessages_sl.properties=UTF-8
+encoding//src/core/com/sinergise/geopedia/client/core/i18n/Messages.properties=UTF-8
+encoding//src/core/com/sinergise/geopedia/client/core/i18n/MessagesWithLookup_cs.properties=UTF-8
+encoding//src/core/com/sinergise/geopedia/client/core/i18n/MessagesWithLookup_sl.properties=UTF-8
+encoding//src/core/com/sinergise/geopedia/client/core/i18n/Messages_cs.properties=UTF-8
+encoding//src/core/com/sinergise/geopedia/client/core/i18n/Messages_me.properties=UTF-8
+encoding//src/core/com/sinergise/geopedia/client/core/i18n/Messages_sl.properties=UTF-8
+encoding/<project>=UTF-8

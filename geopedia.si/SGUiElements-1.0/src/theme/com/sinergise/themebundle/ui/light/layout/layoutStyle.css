@@ -1,0 +1,322 @@
+@external *;
+
+.sgwebui-localeBar.langAsPopup {
+	padding-right:20px;
+}
+.langAsPopup .gwt-ToggleButton {
+	position: absolute;
+	right: 5px;
+	top: 3px;
+	background: none;
+	border: none;
+}
+.langAsPopup .langImgHolder img {
+	display: none;
+}
+.langAsPopup .langImgHolder img.selected {
+	display: block;
+	position: absolute;
+	top: 0;
+}
+
+.langAsPopup.openedDropDown .langImgHolder img {
+	display: block;
+}
+.langAsPopup.openedDropDown .langImgHolder img:hover {
+	opacity:0.6;
+}
+.langAsPopup.openedDropDown > .langImgHolder {
+	position: absolute;
+	padding-top: 20px;
+	background: #eee;
+	cursor:pointer;
+}
+.langAsPopup .gwt-ToggleButton .gwt-Image {
+    position: absolute;
+    right: 14px;
+    top: 0;
+    opacity: 0.75;
+}
+.langAsPopup .gwt-ToggleButton .gwt-Image:hover {
+    opacity: 0.4;
+}
+
+/***************** Titled Panel ***********************/
+.sgwebui-TitledPanel {
+	width: auto !important;
+}
+.sgwebui-TitledPanel > div.body {
+	width: auto !important;
+}
+
+.sgwebui-TitledPanel .sgwebui-ImageLabel select { margin-right: 10px; }
+
+.sgwebui-TitledPanel > .title,
+.gwt-DisclosurePanel a.header {
+	padding: 3px 5px 3px 10px;
+	background: transparent;
+	border-bottom: 1px solid mainColor;
+	color: #555;
+	font-weight: bold;
+	font-size: 12px;
+	text-decoration: none;
+	min-height: 22px;
+}
+.gwt-DisclosurePanel a.header td > img {
+	margin: 1px 3px 0 0;
+}
+.sgwebui-TitledPanel.noImg > .title > .title-label { margin-top: 4px; }
+
+.gwt-DisclosurePanel .header > table {
+	height:100%;
+	vertical-align:middle;
+}
+
+.gwt-DisclosurePanel a.header:hover {
+	text-decoration: none;
+	color: mainColor;
+}
+.gwt-DisclosurePanel-open a.header {
+	background: #ededed;
+}
+
+.sgwebui-TitledPanel > div.body,
+.gwt-DisclosurePanel .content,
+.sgTogglePanelContent {
+	background-position: left top;
+	background: #eee;
+	color: #333;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+	overflow: visible;
+}
+
+.sgwebui-ImageLabel > .right {
+	float: right !important;
+	margin-top: 2px;
+}
+
+.gwt-DisclosurePanel .content {
+	margin-left: 0px;	
+	border-left: none;
+}
+
+.sgwebui-ImageLabel .title-image, 
+.sgwebui-ImageLabel .title-image > img,
+.sgwebui-ImageLabel .title-label {
+	display: inline-block;
+	vertical-align: middle;
+}
+.sgwebui-ImageLabel .title-image > img {
+	margin-right: 5px;
+}
+@if user.agent ie6 {
+	.sgwebui-ImageLabel .title-image {
+		display: inline;
+	}
+	.sgwebui-ImageLabel .title-label {
+		display: inline;
+	}
+	.sgwebui-ImageLabel > .right {
+		margin-top: -23px;
+	}
+}
+
+.sgwebui-TitledPanel .sgwebui-ImageLabel .title-image {
+	margin-top: 5px;
+}
+.sgwebui-TitledPanel .sgwebui-ImageLabel .title-label {
+	margin-left: 5px;
+	margin-top: 4px;	
+}
+.sgwebui-ImageLabel.noImg .title-label {
+	margin-left: 0;
+}
+
+.sgwebui-TitledPanel-noImg .sgwebui-ImageLabel td.sgwebui-ImageLabel-image  {
+	padding-left: 5px;
+    width: 0px;
+    visibility: hidden;
+}
+
+/*** reset gwt-TabBar ***/
+.gwt-TabPanelBottom,
+.gwt-TabBar, .gwt-DecoratedTabBar,
+.gwt-TabBar .gwt-TabBarItem,
+.gwt-TabBar .gwt-TabBarItem-selected, 
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected {
+	border: none;
+	padding: 0;
+	font-size: 12px;
+}
+
+/************************ QUICK SEARCH ******************************/
+.sgwebui-quickSearch {
+	position: relative;
+}
+.sgwebui-quickSearch {
+	box-shadow: 0 1px 2px #777 inset;
+	padding: 3px 20px 3px 5px;
+	background: #fff;
+	border: 1px solid #999;
+	border-top: 1px solid #777;
+	border-bottom: 1px solid #bbb;
+}
+
+
+.sgwebui-quickSearch input.textbox {
+	border: none;
+	margin: 0;
+	padding: 1px 0 0;
+	width: 100%;
+	height: 16px;
+	background: none;
+}
+.sgwebui-quickSearch input.textbox-empty {
+	color: #aaa;
+}
+.sgwebui-quickSearch input.textbox:focus {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+@sprite .sgwebui-quickSearch span.icon {
+	gwt-image: "search";
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+	opacity: .5
+}
+.sgwebui-quickSearch span.icon:hover {
+	opacity: 1;
+} 
+
+/* ###### LAYERS TREE FILTER ###### */
+
+.sgwebui-filter {
+	width: 130px;
+	position: relative;
+}
+.sgwebui-filter {
+	box-shadow: 0 1px 2px #777 inset;
+	padding: 3px 20px 3px 5px;
+	background: #fff;
+	border: 1px solid #999;
+	border-top: 1px solid #777;
+	border-bottom: 1px solid #bbb;
+}
+.sgwebui-filter input.textbox {
+	border: none;
+	margin: 0;
+	padding: 1px 0 0;
+	width: 100%;
+	height: 16px;
+	background: none;
+}
+.sgwebui-filter input.textbox-empty {
+	color: #aaa;
+}
+.sgwebui-filter input.textbox:focus {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.sgwebui-filter.on input.textbox {
+	color: #5A5A5A;
+}
+
+@sprite .sgwebui-filter span.icon {
+	gwt-image: "miniClose";
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	display: none;
+	cursor: pointer;
+	opacity: .5;
+}
+.sgwebui-filter.on span.icon {
+	display: block;
+}
+.sgwebui-filter.on span.icon:hover {
+	opacity: 1;
+}
+
+.sgTogglePanelHeader .sgToggleAnchor {
+	display: block;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.sgTogglePanelHeader .sgToggleAnchor img,
+.sgTogglePanelHeader.modifiedHeader .sgToggleAnchor {
+	float: left;
+	margin-right: 5px;
+	padding: 0;
+}
+.sgTogglePanelHeader.modifiedHeader {
+	padding: 5px 10px;
+}
+
+.sgFlowFormTabHeader .sgwebui-ImageLabel {
+	padding: 4px 0;
+	white-space: nowrap;
+	text-transform: uppercase;
+}
+.sgFlowFormTabHeader .sgwebui-ImageLabel .title-label {
+	margin-top: 1px;
+}
+.sgFlowFormTabHeader .imageAnchor {
+	float: right;
+    margin-left: 6px;
+    margin-top: 5px;
+}
+
+
+.closeTab, a.pin { display: inline-block; vertical-align: middle; }
+@sprite div.sgwebui-detailsTab-close, .closeableTab a {
+	gwt-image: "miniClose";
+	margin: 0 0 0 3px;
+	cursor: pointer;
+	opacity: .5;
+	filter: literal("alpha(opacity=50)");
+}
+.closeableTab a:hover,
+div.sgwebui-detailsTab-close-hover {
+	opacity: 1;
+	filter: literal("alpha(opacity=100)");
+}
+
+@sprite div.sgwebui-detailsTab-pin,
+div.pinnableTab a.pin {
+	gwt-image: "pin";	
+	margin-left: 6px;
+	opacity: .5;
+	filter: literal("alpha(opacity=50)");
+}
+
+@sprite div.sgwebui-detailsTab-pin-hover, div.pinnableTab a.pin:hover {
+	gwt-image: "pinned";	
+	cursor: pointer;
+	opacity: 1;
+	filter: literal("alpha(opacity=100)");
+}
+
+@sprite div.sgwebui-detailsTab-pinned, div.pinnableTab a.pinned, div.pinnableTab a.pinned:hover {
+	gwt-image: "pinned";
+	cursor: default;
+	opacity: 0.5;
+	filter: literal("alpha(opacity=50)");
+}
+
+
+/**** sgdatagrid chrome fix ****/
+.sgDataGrid > div > div > div > div > div > div {
+	overflow-y: scroll;
+	overflow-x: hidden !important;
+}
+.sgDataGrid > div > div > div > div > div > table {
+	position: relative;
+}

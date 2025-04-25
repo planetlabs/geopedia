@@ -1,0 +1,138 @@
+@def selectionBorderWidth 2px;
+.dataGridWidget {
+
+}
+
+.dataGridFirstColumn {
+}
+
+.dataGridLastColumn {
+  
+}
+
+.dataGridFooter {
+  border-top: 2px solid #6f7277;
+  padding: 8px 15px;
+  text-align: left;
+  color: #4b4a4a;
+  text-shadow: #ddf 1px 1px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.dataGridHeader {
+	padding: 7px 15px;
+	border-bottom: 1px solid #aaa;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwOTJkZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNTgwYzAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: literal("-moz-linear-gradient(top, #f2f2f2 50%, #ccc 100%)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(50%,#f2f2f2), color-stop(100%,#ccc))");
+	background: literal("-webkit-linear-gradient(top, #f2f2f2 50%,#ccc 100%)");
+	background: literal("-o-linear-gradient(top, #f2f2f2 50%,#ccc 100%)");
+	background: literal("linear-gradient(top, #f2f2f2 50%,#ccc 100%)");
+	color: #333;
+	text-shadow: none;
+	white-space: normal;
+	text-align: left;
+}
+.dataGridHeader:first-letter {
+    text-transform: uppercase;
+}
+
+.dataGridCell {
+  padding: 2px 15px;
+  overflow: hidden;
+}
+
+.dataGridFirstColumnFooter {
+  
+}
+
+.dataGridFirstColumnHeader {
+  
+}
+
+.dataGridLastColumnFooter {
+  
+}
+
+.dataGridLastColumnHeader {
+  
+}
+
+.dataGridSortableHeader {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.dataGridSortableHeader:hover {
+/*   color: #6c6b6b; */
+}
+
+.dataGridSortedHeaderAscending, .dataGridSortedHeaderDescending {
+	background: literal("-moz-linear-gradient(top, #ddd 50%, #aaa 100%)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, color-stop(50%,#ddd), color-stop(100%,#aaa))");
+	background: literal("-webkit-linear-gradient(top, #ddd 50%,#aaa 100%)");
+	background: literal("-o-linear-gradient(top, #ddd 50%,#aaa 100%)");
+	background: literal("linear-gradient(top, #ddd 50%,#aaa 100%)");
+}
+
+.dataGridEvenRow {
+  background: #ffffff;
+}
+
+.dataGridEvenRowCell {
+/*   border: selectionBorderWidth solid #ffffff; */
+}
+
+.dataGridOddRow {
+  background: #f4f4f4;
+}
+
+.dataGridOddRowCell {
+/*   border: selectionBorderWidth solid #f3f7fb; */
+}
+
+.dataGridHoveredRow {
+  background: #eee;
+}
+
+.dataGridHoveredRowCell {
+/*   border: selectionBorderWidth solid #eee; */
+}
+
+.dataGridKeyboardSelectedRow {
+/*   background: inherit; */
+}
+
+.dataGridKeyboardSelectedRowCell {
+/*   border: selectionBorderWidth solid #ffc; */
+}
+
+.dataGridSelectedRow {
+  background: #628cd5;
+  color: white;
+  height: auto;
+  overflow: auto;
+}
+
+.dataGridSelectedRowCell {
+/*   border: selectionBorderWidth solid #628cd5; */
+}
+
+/**
+ * The keyboard selected cell is visible over selection.
+ */
+.dataGridKeyboardSelectedCell {
+  border: none;
+}
+
+
+.cellShow {
+	text-align: center;
+}
+@sprite .cellShow button {
+	gwt-image: "zoomto";
+	border: none;
+	padding: 0;
+	margin: 3px auto;
+}

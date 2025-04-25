@@ -1,0 +1,4 @@
+.gwt-TabPanelBottom > .tabContainer {
+	bottom: 0;
+	top: 85px;
+}

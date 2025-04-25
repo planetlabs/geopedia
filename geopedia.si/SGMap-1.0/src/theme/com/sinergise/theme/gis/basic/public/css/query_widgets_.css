@@ -1,0 +1,22 @@
+.sgwebgis-disclosureQueryWidget td.fieldWidget {
+	text-align: right;
+	padding-right: 0;
+}
+
+div.sgwebgis-disclosureQueryWidget-buttons div.sgwebgis-disclosureQueryWidget-buttons-right {
+	float: right;
+}
+
+div.sgwebgis-disclosureQueryWidget-buttons div.sgwebgis-disclosureQueryWidget-buttons-left {
+	float: left;
+}
+
+div.sgwebgis-disclosureQueryWidget-buttons {
+	margin: 10px 0;
+}
+
+
+.sgwebui-menu-option-buffer input {
+	width: 20px;
+	margin-left: 3px;
+}

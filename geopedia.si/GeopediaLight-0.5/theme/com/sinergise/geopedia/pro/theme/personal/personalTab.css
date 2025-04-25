@@ -1,0 +1,151 @@
+@external .btnHolder, .btnInfo, .btnDelete, .listPanel, .resultsItem, .activateAnchor, .fl-right, .theme, .table, .gwt-ToggleButton*, .POLYGONS, .POLYGONS_M, .POINTS_M, .POINTS, .LINES, .LINES_M, .NONE;
+
+/************* PERSONAL TAB **************/
+.personalBlueBtnPanel a {
+	text-transform: uppercase;
+	color: #fff;
+	margin-right: 5px;
+	text-decoration: none;
+}
+.personalBlueBtnPanel a.fl-right {
+	margin-right: 0;
+	margin-left: 5px;
+}
+.groupHeader {
+	background: literal("-moz-linear-gradient(top, #efefef 0%, #e4e4e4 100%)");
+	background: literal("-webkit-linear-gradient(top, #efefef 0%,#e4e4e4 100%)");
+	background: literal("-o-linear-gradient(top, #efefef 0%,#e4e4e4 100%)");
+	background: literal("linear-gradient(top, #efefef 0%,#e4e4e4 100%)");
+	box-shadow: 0 1px 0 #FFFFFF inset;
+	-moz-box-shadow: 0 1px 0 #FFFFFF inset;
+	-webkit-box-shadow: 0 1px 0 #FFFFFF inset;
+	-o-box-shadow: 0 1px 0 #FFFFFF inset;
+	border-bottom:1px solid #bbb;
+	color: #555;
+	font-size: 12px;
+	padding: 9px 5px 7px;
+	position: relative;
+}
+.personalPanel > div {
+ 	overflow: auto;
+}
+.groupHeader img {
+	float: left;
+	margin-right: 5px;
+}
+
+.groupHeader .TLToggleBtn {
+	float: right;
+	opacity: .6;
+	padding: 4px;
+	border-radius: 0;
+	border: none !important;
+	background: none !important; 
+	margin: -6px 0 -4px;
+	cursor: pointer;
+	box-shadow: none;
+}
+.groupHeader .TLToggleBtn img,
+.groupHeader .ddArrow img {
+	margin: 0;
+	float: none;
+}
+.groupHeader .ddArrow {
+	opacity: .6;
+	float: right;
+	cursor: pointer;
+}
+.groupHeader .ddArrow:hover,
+.groupHeader .TLToggleBtn:hover,
+.groupHeader .TLToggleBtn.gwt-ToggleButton-down,
+.groupHeader .TLToggleBtn.gwt-ToggleButton-down-hovering {
+	opacity: 1;
+}
+
+
+.content.hideLayers .table  {
+	display: none;
+}
+.content.hideThemes .theme {
+	display: none;
+}
+.content.hidePoints .POINTS,
+.content.hidePoints .POINTS_M {
+	display: none;
+}
+.content.hideLines .LINES,
+.content.hideLines .LINES_M {
+	display: none;
+}
+.content.hidePolygons .POLYGONS,
+.content.hidePolygons .POLYGONS_M {
+	display: none;
+}
+.content.hideCodelists .NONE {
+	display: none;
+}
+.content.showAll .resultsItem{
+	display: block !important;
+}
+
+
+.personalPanel .listPanel > div:hover {
+	background: #f5fbfc;
+	background: literal("-moz-linear-gradient(top, #ffffff 0%, #dceff1 100%)");
+	background: literal("-webkit-linear-gradient(top, #ffffff 0%,#dceff1 100%)");
+	background: literal("-o-linear-gradient(top, #ffffff 0%,#dceff1 100%)");
+	background: literal("linear-gradient(top, #ffffff 0%,#dceff1 100%)");
+}
+.personalPanel .listPanel div.theme {
+	font-weight: bold;
+}
+.content > div {
+	overflow: hidden;
+}
+
+@if user.agent ie6 ie8 ie9 {
+	@sprite .groupHeader {
+		gwt-image: "layerGroup";
+		background-color: #E4E4E4;
+		height: auto;
+	}
+	@sprite .personalPanel .listPanel > div:hover {
+		gwt-image: "featHover";
+		background-position: left bottom;
+		height: auto;
+	}
+}
+
+.editable .personalPanel .btnInfo,
+.personalPanel .btnDelete,
+.personalPanel .activateAnchor {
+	display: none !important;
+}
+.editable .personalPanel .btnDelete {
+	display: block !important;
+}
+
+.filterPopup {
+	background: #f0f0f0;
+	padding: 5px;
+	box-shadow: 0 3px 5px #777;
+	-moz-box-shadow: 0 3px 5px #777;
+	-webkit-box-shadow: 0 3px 5px #777;
+}
+.filterPopup > div > div > span {
+	display: block;
+	padding: 2px 5px 2px 20px;
+	cursor: pointer;
+}
+.filterPopup > div > div > span.firstLvlFilter {
+	padding-left: 5px;
+	font-weight: bold;
+}
+.filterPopup > div > div > span input {
+	margin: 0;
+}
+.filterPopup > div > div > span label {
+	padding: 0 1px 3px 7px;
+	display: inline-block;
+	vertical-align: middle;
+}

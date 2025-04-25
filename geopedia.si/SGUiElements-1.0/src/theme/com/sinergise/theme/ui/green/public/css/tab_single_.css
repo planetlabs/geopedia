@@ -1,0 +1,41 @@
+.mainInfoPanel-tabBar tr.tabTop { display: none;}
+
+.mainInfoPanel-tabBar .gwt-TabBarItem .tabMiddleLeft, 
+.mainInfoPanel-tabBar .gwt-TabBarItem .tabMiddleRight,
+.mainInfoPanel-tabBar .gwt-TabBarItem .tabMiddleCenter {
+	background: url("../img/tab_single/tab.png") left top;
+}
+.mainInfoPanel-tabBar .gwt-TabBarItem .tabMiddleRight {
+	background-position: right top;
+}
+.mainInfoPanel-tabBar .gwt-TabBarItem .tabMiddleCenter {
+	background-position: -10px top;
+}
+.mainInfoPanel-tabBar .tabMiddleLeftInner, 
+.mainInfoPanel-tabBar .tabMiddleRightInner, 
+.mainInfoPanel-tabBar .tabMiddleRight, 
+.mainInfoPanel-tabBar .tabMiddleLeft {
+	width: 10px;
+}
+.mainInfoPanel-tabBar .gwt-TabBarItem .tabMiddleCenter {
+	padding: 0;
+	color: #fff;
+}
+.mainInfoPanel-tabBar .tabMiddleCenterInner {
+	height: 24px;
+	line-height: 24px;
+	text-transform: uppercase;
+	padding: 0 5px;
+}
+
+.mainInfoPanel-tabBar .gwt-TabBarItem-selected .tabMiddleLeft, 
+.mainInfoPanel-tabBar .gwt-TabBarItem-selected .tabMiddleRight,
+.mainInfoPanel-tabBar .gwt-TabBarItem-selected .tabMiddleCenter {
+	background: url("../img/tab_single/tab.png") left bottom;
+}
+.mainInfoPanel-tabBar .gwt-TabBarItem-selected .tabMiddleRight {
+	background-position: right bottom;
+}
+.mainInfoPanel-tabBar .gwt-TabBarItem-selected .tabMiddleCenter {
+	background-position: -10px bottom;
+}

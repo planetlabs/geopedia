@@ -1,0 +1,54 @@
+.editpoint {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+}
+
+.edit-node, .edit-midnode, .edit-active {
+	font-size: 0;
+	position: absolute;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.edit-node {
+	background: lime;
+	border-color: black;
+}
+
+.edit-midnode {
+	background: #bbffbb;
+	border-color: #00dd00;
+}
+
+.edit-active {
+	background: rgb(255, 128, 255);
+	border-color: #800080;
+}
+
+
+.edit-node-selected {
+	background: blue;
+	border-color: cyan;
+}
+
+.edit-midnode-selected {
+	background: blue;
+	border-color: cyan;
+}
+
+.edit-node-hover {
+	background: yellow;
+	border-color: orange;
+}
+
+.edit-midnode-hover {
+	background: yellow;
+	border-color: orange;
+}
+
+.lineeditor {
+	cursor: default;
+	overflow: hidden;
+	position: relative;
+}
